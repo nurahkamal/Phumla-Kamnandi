@@ -16,5 +16,17 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             InitializeComponent();
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // _3
+            // 
+            this.ClientSize = new System.Drawing.Size(1064, 541);
+            this.Name = "_3";
+            this.ResumeLayout(false);
+
+        }
     }
 }

@@ -54,6 +54,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentation Layer\1. Login Form.resx">
+      <DependentUpon>1. Login Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\3. Make a Booking.resx">
+      <DependentUpon>3. Make a Booking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -72,6 +78,36 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Business Layer\**\*.cs" />
+    <Compile Include="Data Layer\**\*.cs" />
+    <Compile Include="Presentation Layer\1. Login Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\1. Login Form.Designer.cs" />
+    <Compile Include="Presentation Layer\2. About Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\2. About Page.Designer.cs" />
+    <Compile Include="Presentation Layer\3. Make a Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\3. Make a Booking.Designer.cs" />
+    <Compile Include="Presentation Layer\4. Edit or Cancel Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\4. Edit or Cancel Booking.Designer.cs" />
+    <Compile Include="Presentation Layer\5. Guest Inquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\5. Guest Inquiry.Designer.cs" />
+    <Compile Include="Presentation Layer\6. FAQs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\6. FAQs.Designer.cs" />
+    <Compile Include="Presentation Layer\7. Report Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\7. Report Dashboard.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
