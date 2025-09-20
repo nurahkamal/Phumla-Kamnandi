@@ -23,7 +23,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             // 
             // _3
             // 
-            this.ClientSize = new System.Drawing.Size(1064, 541);
+            this.ClientSize = new System.Drawing.Size(1066, 624);
             this.Name = "_3";
             this.ResumeLayout(false);
 
