@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
-    public partial class _1 : Form
+    public partial class Login_Form : Form
     {
-        public _1()
+        public Login_Form()
         {
             InitializeComponent();
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
