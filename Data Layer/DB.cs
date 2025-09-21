@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Phumla_Kamnandi.Data_Layer
 {
-    internal class Class1
+    internal class DB
     {
     }
 }
