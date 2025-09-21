@@ -74,9 +74,9 @@
             this.panel1.Controls.Add(this.guna2ComboBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.panel1.Location = new System.Drawing.Point(198, 83);
+            this.panel1.Location = new System.Drawing.Point(277, 94);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1162, 653);
+            this.panel1.Size = new System.Drawing.Size(994, 603);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -92,7 +92,7 @@
             this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(686, 424);
+            this.guna2TextBox2.Location = new System.Drawing.Point(580, 408);
             this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PlaceholderText = "";
@@ -105,9 +105,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label6.Location = new System.Drawing.Point(438, 429);
+            this.label6.Location = new System.Drawing.Point(332, 413);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 25);
+            this.label6.Size = new System.Drawing.Size(131, 30);
             this.label6.TabIndex = 13;
             this.label6.Text = "Room Price:";
             // 
@@ -121,11 +121,12 @@
             this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(866, 563);
+            this.guna2Button2.Location = new System.Drawing.Point(728, 534);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(245, 45);
             this.guna2Button2.TabIndex = 12;
             this.guna2Button2.Text = "Confirm Reservation";
+            this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
             // guna2Button1
             // 
@@ -137,7 +138,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(444, 563);
+            this.guna2Button1.Location = new System.Drawing.Point(337, 534);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(192, 45);
             this.guna2Button1.TabIndex = 11;
@@ -148,9 +149,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label5.Location = new System.Drawing.Point(438, 177);
+            this.label5.Location = new System.Drawing.Point(332, 161);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(88, 25);
+            this.label5.Size = new System.Drawing.Size(103, 30);
             this.label5.TabIndex = 10;
             this.label5.Text = "Guest ID:";
             // 
@@ -166,7 +167,7 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(686, 172);
+            this.guna2TextBox1.Location = new System.Drawing.Point(580, 156);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PlaceholderText = "";
@@ -179,9 +180,9 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label4.Location = new System.Drawing.Point(438, 240);
+            this.label4.Location = new System.Drawing.Point(332, 224);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(174, 25);
+            this.label4.Size = new System.Drawing.Size(206, 30);
             this.label4.TabIndex = 9;
             this.label4.Text = "Number of Rooms: ";
             // 
@@ -190,9 +191,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label3.Location = new System.Drawing.Point(438, 366);
+            this.label3.Location = new System.Drawing.Point(332, 350);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(146, 25);
+            this.label3.Size = new System.Drawing.Size(178, 30);
             this.label3.TabIndex = 8;
             this.label3.Text = "Check-Out Date:";
             // 
@@ -204,7 +205,7 @@
             this.guna2DateTimePicker1.FillColor = System.Drawing.Color.Wheat;
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(686, 362);
+            this.guna2DateTimePicker1.Location = new System.Drawing.Point(580, 346);
             this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
@@ -218,9 +219,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label2.Location = new System.Drawing.Point(438, 303);
+            this.label2.Location = new System.Drawing.Point(332, 287);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(130, 25);
+            this.label2.Size = new System.Drawing.Size(159, 30);
             this.label2.TabIndex = 6;
             this.label2.Text = "Check-In Date:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -234,7 +235,7 @@
             this.dtpCheckIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCheckIn.ForeColor = System.Drawing.Color.Black;
             this.dtpCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpCheckIn.Location = new System.Drawing.Point(686, 300);
+            this.dtpCheckIn.Location = new System.Drawing.Point(580, 284);
             this.dtpCheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpCheckIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpCheckIn.Name = "dtpCheckIn";
@@ -260,7 +261,7 @@
             "3",
             "4",
             "5"});
-            this.guna2ComboBox1.Location = new System.Drawing.Point(686, 238);
+            this.guna2ComboBox1.Location = new System.Drawing.Point(580, 222);
             this.guna2ComboBox1.Name = "guna2ComboBox1";
             this.guna2ComboBox1.Size = new System.Drawing.Size(202, 36);
             this.guna2ComboBox1.TabIndex = 4;
@@ -270,9 +271,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label1.Location = new System.Drawing.Point(683, 67);
+            this.label1.Location = new System.Drawing.Point(567, 73);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 25);
+            this.label1.Size = new System.Drawing.Size(213, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Reservation Details";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -282,9 +283,9 @@
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(622, 17);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(506, 23);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(278, 38);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(351, 47);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Make a Guest Booking";
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
@@ -299,9 +300,9 @@
             this.panel2.Controls.Add(this.guna2TextBox5);
             this.panel2.Controls.Add(this.guna2TextBox4);
             this.panel2.Controls.Add(this.guna2TextBox3);
-            this.panel2.Location = new System.Drawing.Point(198, 83);
+            this.panel2.Location = new System.Drawing.Point(277, 94);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(364, 653);
+            this.panel2.Size = new System.Drawing.Size(301, 603);
             this.panel2.TabIndex = 1;
             // 
             // label7
@@ -309,9 +310,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.label7.Location = new System.Drawing.Point(84, 235);
+            this.label7.Location = new System.Drawing.Point(49, 210);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(167, 30);
+            this.label7.Size = new System.Drawing.Size(216, 38);
             this.label7.TabIndex = 15;
             this.label7.Text = "User\'s Name/ID";
             // 
@@ -319,9 +320,9 @@
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(91, 47);
+            this.pictureBox1.Location = new System.Drawing.Point(56, 47);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(187, 185);
+            this.pictureBox1.Size = new System.Drawing.Size(169, 160);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -343,7 +344,7 @@
             this.guna2TextBox6.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox6.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox6.IconLeft")));
             this.guna2TextBox6.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.guna2TextBox6.Location = new System.Drawing.Point(56, 564);
+            this.guna2TextBox6.Location = new System.Drawing.Point(22, 525);
             this.guna2TextBox6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox6.Name = "guna2TextBox6";
             this.guna2TextBox6.PlaceholderText = "";
@@ -368,7 +369,7 @@
             this.guna2TextBox5.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox5.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox5.IconLeft")));
             this.guna2TextBox5.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.guna2TextBox5.Location = new System.Drawing.Point(56, 497);
+            this.guna2TextBox5.Location = new System.Drawing.Point(22, 458);
             this.guna2TextBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox5.Name = "guna2TextBox5";
             this.guna2TextBox5.PlaceholderText = "";
@@ -393,7 +394,7 @@
             this.guna2TextBox4.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox4.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox4.IconLeft")));
             this.guna2TextBox4.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.guna2TextBox4.Location = new System.Drawing.Point(56, 427);
+            this.guna2TextBox4.Location = new System.Drawing.Point(22, 388);
             this.guna2TextBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox4.Name = "guna2TextBox4";
             this.guna2TextBox4.PlaceholderText = "";
@@ -418,7 +419,7 @@
             this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox3.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox3.IconLeft")));
             this.guna2TextBox3.IconLeftSize = new System.Drawing.Size(25, 25);
-            this.guna2TextBox3.Location = new System.Drawing.Point(56, 355);
+            this.guna2TextBox3.Location = new System.Drawing.Point(22, 316);
             this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox3.Name = "guna2TextBox3";
             this.guna2TextBox3.PlaceholderText = "";
@@ -429,7 +430,6 @@
             // _3
             // 
             this.BackColor = System.Drawing.Color.White;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1445, 783);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Phumla_Kamnandi.Presentation_Layer;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
@@ -47,6 +48,13 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+            _8 form8 = new _8();   // create an instance of Form _8
+            form8.Show();          // show Form _8
+            this.Hide();           // hide the current Form _3 (optional)
         }
     }
 }
