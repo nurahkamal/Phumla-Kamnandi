@@ -41,6 +41,7 @@
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPlease = new System.Windows.Forms.Label();
+            this.btnForgotPassword = new Guna.UI2.WinForms.Guna2Button();
             this.loginPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -49,6 +50,7 @@
             // loginPanel
             // 
             this.loginPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
+            this.loginPanel.Controls.Add(this.btnForgotPassword);
             this.loginPanel.Controls.Add(this.lblTermsandConditions);
             this.loginPanel.Controls.Add(this.btnLogin);
             this.loginPanel.Controls.Add(this.panel1);
@@ -85,9 +87,9 @@
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(378, 332);
+            this.btnLogin.Location = new System.Drawing.Point(388, 332);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(219, 54);
+            this.btnLogin.Size = new System.Drawing.Size(219, 41);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -222,6 +224,25 @@
             this.lblPlease.TabIndex = 0;
             this.lblPlease.Text = "Please Login With Your Details : ";
             // 
+            // btnForgotPassword
+            // 
+            this.btnForgotPassword.AutoRoundedCorners = true;
+            this.btnForgotPassword.BackColor = System.Drawing.Color.Transparent;
+            this.btnForgotPassword.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.btnForgotPassword.BorderThickness = 1;
+            this.btnForgotPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnForgotPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnForgotPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnForgotPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnForgotPassword.FillColor = System.Drawing.Color.Transparent;
+            this.btnForgotPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnForgotPassword.ForeColor = System.Drawing.Color.White;
+            this.btnForgotPassword.Location = new System.Drawing.Point(761, 332);
+            this.btnForgotPassword.Name = "btnForgotPassword";
+            this.btnForgotPassword.Size = new System.Drawing.Size(219, 41);
+            this.btnForgotPassword.TabIndex = 8;
+            this.btnForgotPassword.Text = "Forgot Password?";
+            // 
             // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -258,5 +279,6 @@
         private System.Windows.Forms.Label lblWelcome;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblTermsandConditions;
+        private Guna.UI2.WinForms.Guna2Button btnForgotPassword;
     }
 }
