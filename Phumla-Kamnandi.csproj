@@ -122,6 +122,9 @@
     <Compile Include="Presentation Layer\7. Report Dashboard.Designer.cs">
       <DependentUpon>7. Report Dashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Presentation Layer\8. Payment.resx">
+      <DependentUpon>8. Payment.cs</DependentUpon>
+    </EmbeddedResource>
     <!-- General Resources -->
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
