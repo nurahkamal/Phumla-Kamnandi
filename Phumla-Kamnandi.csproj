@@ -52,68 +52,76 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <!-- Program and assembly -->
+    <Compile Include="Presentation Layer\8. Payment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Presentation Layer\8. Payment.Designer.cs">
+      <DependentUpon>8. Payment.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <!-- 1. Login Form -->
+    <Compile Include="Presentation Layer\1. Login Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\1. Login Form.Designer.cs">
+      <DependentUpon>1. Login Form.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Presentation Layer\1. Login Form.resx">
       <DependentUpon>1. Login Form.cs</DependentUpon>
     </EmbeddedResource>
+    <!-- 2. About Page -->
+    <Compile Include="Presentation Layer\2. About Page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\2. About Page.Designer.cs">
+      <DependentUpon>2. About Page.cs</DependentUpon>
+    </Compile>
+    <!-- 3. Make a Booking -->
+    <Compile Include="Presentation Layer\3. Make a Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\3. Make a Booking.Designer.cs">
+      <DependentUpon>3. Make a Booking.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Presentation Layer\3. Make a Booking.resx">
       <DependentUpon>3. Make a Booking.cs</DependentUpon>
     </EmbeddedResource>
+    <!-- 4. Edit or Cancel Booking -->
+    <Compile Include="Presentation Layer\4. Edit or Cancel Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\4. Edit or Cancel Booking.Designer.cs">
+      <DependentUpon>4. Edit or Cancel Booking.cs</DependentUpon>
+    </Compile>
+    <!-- 5. Guest Inquiry -->
+    <Compile Include="Presentation Layer\5. Guest Inquiry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\5. Guest Inquiry.Designer.cs">
+      <DependentUpon>5. Guest Inquiry.cs</DependentUpon>
+    </Compile>
+    <!-- 6. FAQs -->
+    <Compile Include="Presentation Layer\6. FAQs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\6. FAQs.Designer.cs">
+      <DependentUpon>6. FAQs.cs</DependentUpon>
+    </Compile>
+    <!-- 7. Report Dashboard -->
+    <Compile Include="Presentation Layer\7. Report Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\7. Report Dashboard.Designer.cs">
+      <DependentUpon>7. Report Dashboard.cs</DependentUpon>
+    </Compile>
+    <!-- General Resources -->
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Settings.settings</DependentUpon>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="Business Layer\**\*.cs" />
-    <Compile Include="Data Layer\**\*.cs" />
-    <Compile Include="Presentation Layer\1. Login Form.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\1. Login Form.Designer.cs" />
-    <Compile Include="Presentation Layer\2. About Page.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\2. About Page.Designer.cs" />
-    <Compile Include="Presentation Layer\3. Make a Booking.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\3. Make a Booking.Designer.cs" />
-    <Compile Include="Presentation Layer\4. Edit or Cancel Booking.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\4. Edit or Cancel Booking.Designer.cs" />
-    <Compile Include="Presentation Layer\5. Guest Inquiry.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\5. Guest Inquiry.Designer.cs" />
-    <Compile Include="Presentation Layer\6. FAQs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\6. FAQs.Designer.cs" />
-    <Compile Include="Presentation Layer\7. Report Dashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\7. Report Dashboard.Designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

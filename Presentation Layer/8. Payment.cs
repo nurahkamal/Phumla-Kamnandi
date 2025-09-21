@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
-    public partial class _3 : Form
+    public partial class _8 : Form
     {
-        public _3()
+        public _8()
         {
             InitializeComponent();
-        }
-
-       
-
-        private void _3_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

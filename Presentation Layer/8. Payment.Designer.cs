@@ -1,6 +1,6 @@
 ﻿namespace Phumla_Kamnandi.Presentation_Layer
 {
-    partial class _3
+    partial class _8
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // _3
-            // 
-            this.ClientSize = new System.Drawing.Size(1457, 764);
-            this.Name = "_3";
-            this.Load += new System.EventHandler(this._3_Load);
-            this.ResumeLayout(false);
-
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "_8";
         }
 
         #endregion
