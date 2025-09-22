@@ -112,8 +112,14 @@
     <Compile Include="Presentation Layer\7. Report Dashboard.Designer.cs">
       <DependentUpon>7. Report Dashboard.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Presentation Layer\3. Make a Booking.resx">
+      <DependentUpon>3. Make a Booking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\4. Edit or Cancel Booking.resx">
       <DependentUpon>4. Edit or Cancel Booking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\6. FAQs.resx">
+      <DependentUpon>6. FAQs.cs</DependentUpon>
     </EmbeddedResource>
     <!-- General Resources -->
     <EmbeddedResource Include="Properties\Resources.resx">
