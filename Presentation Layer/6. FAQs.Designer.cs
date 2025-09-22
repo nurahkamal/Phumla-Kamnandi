@@ -44,9 +44,9 @@
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel1);
-            this.guna2Panel2.Location = new System.Drawing.Point(492, 29);
+            this.guna2Panel2.Location = new System.Drawing.Point(492, 119);
             this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.Size = new System.Drawing.Size(592, 473);
+            this.guna2Panel2.Size = new System.Drawing.Size(223, 383);
             this.guna2Panel2.TabIndex = 1;
             this.guna2Panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2Panel2_Paint);
             // 
