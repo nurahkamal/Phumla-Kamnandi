@@ -33,7 +33,7 @@
             // 
             // guna2Panel1
             // 
-            this.guna2Panel1.Location = new System.Drawing.Point(198, 129);
+            this.guna2Panel1.Location = new System.Drawing.Point(71, 60);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(200, 100);
             this.guna2Panel1.TabIndex = 0;
