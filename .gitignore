@@ -4,3 +4,12 @@ bin/
 obj/
 *.user
 *.suo
+# Ignore SQL Server database files
+*.mdf
+*.ldf
+*.ndf
+
+# Ignore user-specific files
+*.user
+*.suo
+*.cache
