@@ -21,5 +21,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
 
         }
+
+        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
