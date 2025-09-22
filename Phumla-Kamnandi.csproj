@@ -53,6 +53,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <!-- Business Layer -->
+    <Compile Include="Business Layer\Class1.cs" />
+    <!-- Data Layer -->
     <!-- Program and assembly -->
     <Compile Include="Presentation Layer\8. Payment.cs">
       <SubType>Form</SubType>
@@ -135,6 +138,10 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data Layer\" />
+    <Folder Include="Database\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
