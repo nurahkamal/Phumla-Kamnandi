@@ -54,6 +54,12 @@
   <ItemGroup>
     <!-- Business Layer -->
     <Compile Include="Business Layer\Class1.cs" />
+    <Compile Include="Presentation Layer\ManageEdits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ManageEdits.Designer.cs">
+      <DependentUpon>ManageEdits.cs</DependentUpon>
+    </Compile>
     <!-- Data Layer -->
     <!-- Program and assembly -->
     <Compile Include="Program.cs" />
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\6. FAQs.resx">
       <DependentUpon>6. FAQs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ManageEdits.resx">
+      <DependentUpon>ManageEdits.cs</DependentUpon>
     </EmbeddedResource>
     <!-- General Resources -->
     <EmbeddedResource Include="Properties\Resources.resx">
