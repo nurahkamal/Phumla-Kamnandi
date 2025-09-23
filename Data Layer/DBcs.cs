@@ -7,8 +7,9 @@ namespace Phumla_Kamnandi.Data_Layer
 {
     public class DB
     {
+        #region CONNECTION STRING
         private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiDB;Integrated Security=True";
-
+        #endregion
         public DB()
         {
             CreateTables(); 
