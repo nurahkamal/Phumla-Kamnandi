@@ -16,5 +16,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             InitializeComponent();
         }
+
+        private void _4_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

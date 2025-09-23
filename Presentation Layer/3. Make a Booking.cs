@@ -52,7 +52,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            _8 form8 = new _8();   // create an instance of Form _8
+            PaymentForm form8 = new PaymentForm();   // create an instance of Form _8
             form8.Show();          // show Form _8
             this.Hide();           // hide the current Form _3 (optional)
         }
