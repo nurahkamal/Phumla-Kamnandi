@@ -64,15 +64,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.guna2TextBox7);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.guna2Button10);
             this.panel1.Controls.Add(this.guna2TextBox2);
             this.panel1.Controls.Add(this.guna2Button3);
@@ -109,7 +115,7 @@
             this.guna2Button10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.guna2Button10.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button10.ForeColor = System.Drawing.Color.White;
-            this.guna2Button10.Location = new System.Drawing.Point(99, 214);
+            this.guna2Button10.Location = new System.Drawing.Point(480, 136);
             this.guna2Button10.Name = "guna2Button10";
             this.guna2Button10.Size = new System.Drawing.Size(192, 45);
             this.guna2Button10.TabIndex = 18;
@@ -199,7 +205,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label5.Location = new System.Drawing.Point(92, 166);
+            this.label5.Location = new System.Drawing.Point(73, 149);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(129, 37);
             this.label5.TabIndex = 10;
@@ -242,7 +248,7 @@
             this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(275, 163);
+            this.guna2TextBox1.Location = new System.Drawing.Point(237, 141);
             this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PlaceholderText = "";
@@ -620,7 +626,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.label7.Location = new System.Drawing.Point(49, 166);
+            this.label7.Location = new System.Drawing.Point(40, 163);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(266, 45);
             this.label7.TabIndex = 15;
@@ -653,6 +659,47 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
+            this.panel3.Controls.Add(this.label8);
+            this.panel3.Location = new System.Drawing.Point(151, 239);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(610, 340);
+            this.panel3.TabIndex = 19;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label8.Location = new System.Drawing.Point(27, 17);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(129, 37);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Guest ID:";
+            // 
+            // guna2TextBox7
+            // 
+            this.guna2TextBox7.AutoRoundedCorners = true;
+            this.guna2TextBox7.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox7.DefaultText = "";
+            this.guna2TextBox7.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox7.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox7.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox7.Location = new System.Drawing.Point(393, 320);
+            this.guna2TextBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox7.Name = "guna2TextBox7";
+            this.guna2TextBox7.PlaceholderText = "";
+            this.guna2TextBox7.SelectedText = "";
+            this.guna2TextBox7.Size = new System.Drawing.Size(210, 40);
+            this.guna2TextBox7.TabIndex = 21;
+            // 
             // _6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -667,6 +714,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -707,5 +756,8 @@
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton5;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton4;
         private Guna.UI2.WinForms.Guna2Button guna2Button10;
+        private System.Windows.Forms.Panel panel3;
+        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox7;
+        private System.Windows.Forms.Label label8;
     }
 }

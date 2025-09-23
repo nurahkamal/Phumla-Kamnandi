@@ -61,5 +61,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
 
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
