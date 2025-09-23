@@ -16,5 +16,15 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ImageButton6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

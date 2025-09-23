@@ -63,6 +63,26 @@ namespace Phumla_Kamnandi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2460877 {
+            get {
+                object obj = ResourceManager.GetObject("2460877", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4086679 {
+            get {
+                object obj = ResourceManager.GetObject("4086679", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4226577 {
             get {
                 object obj = ResourceManager.GetObject("4226577", resourceCulture);

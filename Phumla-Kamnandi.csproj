@@ -166,5 +166,11 @@
   <ItemGroup>
     <None Include="Resources\free-refresh-icon-3104-thumb.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4086679.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2460877.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
