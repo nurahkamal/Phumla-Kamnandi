@@ -60,6 +60,12 @@
     <Compile Include="Presentation Layer\ManageEdits.Designer.cs">
       <DependentUpon>ManageEdits.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\ManageGuestFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ManageGuestFrm.Designer.cs">
+      <DependentUpon>ManageGuestFrm.cs</DependentUpon>
+    </Compile>
     <!-- Data Layer -->
     <!-- Program and assembly -->
     <Compile Include="Program.cs" />
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\ManageEdits.resx">
       <DependentUpon>ManageEdits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ManageGuestFrm.resx">
+      <DependentUpon>ManageGuestFrm.cs</DependentUpon>
     </EmbeddedResource>
     <!-- General Resources -->
     <EmbeddedResource Include="Properties\Resources.resx">
