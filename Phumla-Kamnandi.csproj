@@ -136,5 +136,26 @@
     <Folder Include="Data Layer\" />
     <Folder Include="Database\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_4219.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4226577.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\refresh-icon-png-ico-11563051035ndqy3wvdcc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\free-refresh-icon-3104-thumb.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
