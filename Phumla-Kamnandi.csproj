@@ -72,6 +72,7 @@
   <ItemGroup>
     <!-- Business Layer -->
     <Compile Include="Business Layer\Class1.cs" />
+    <Compile Include="Data Layer\DBcs.cs" />
     <!-- Presentation Layer Forms -->
     <Compile Include="Presentation Layer\1. Login Form.cs">
       <SubType>Form</SubType>
@@ -180,12 +181,7 @@
   </ItemGroup>
   <!-- Folders -->
   <ItemGroup>
-    <Folder Include="Data Layer\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Database\PhumlaKamnandi.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Folder Include="Database\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
