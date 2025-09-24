@@ -1,6 +1,6 @@
 ﻿namespace Phumla_Kamnandi.Presentation_Layer
 {
-    partial class _1
+    partial class Login_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
             this.loginPanel = new System.Windows.Forms.Panel();
             this.btnForgotPassword = new Guna.UI2.WinForms.Guna2Button();
             this.lblTermsandConditions = new System.Windows.Forms.Label();
@@ -241,14 +241,14 @@
             this.lblPlease.TabIndex = 0;
             this.lblPlease.Text = "Please Login With Your Details : ";
             // 
-            // _1
+            // Login_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1149, 665);
             this.Controls.Add(this.loginPanel);
-            this.Name = "_1";
-            this.Text = "_1";
+            this.Name = "Login_Form";
+            this.Text = "Login_Form";
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -263,7 +263,6 @@
         private System.Windows.Forms.Panel loginPanel;
         private Guna.UI2.WinForms.Guna2Button btnForgotPassword;
         private System.Windows.Forms.Label lblTermsandConditions;
-        private Guna.UI2.WinForms.Guna2Button btnLogin;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblWelcome;
@@ -273,5 +272,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.Label lblPlease;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
     }
 }
