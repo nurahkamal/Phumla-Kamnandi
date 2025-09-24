@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
-    public partial class _2 : Form
+    public partial class About_Page : Form
     {
-        public _2()
+        public About_Page()
         {
             InitializeComponent();
         }

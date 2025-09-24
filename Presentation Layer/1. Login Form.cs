@@ -16,5 +16,25 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             InitializeComponent();
         }
+        #region Buttons
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "admin" && txtPassword.Text == "admin")
+            {
+                this.Hide();
+                About_Page aboutPage = new About_Page();
+                aboutPage.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password");
+            }
+        }
+
+        #endregion
     }
 }

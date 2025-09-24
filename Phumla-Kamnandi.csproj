@@ -142,6 +142,9 @@
     <EmbeddedResource Include="Presentation Layer\1. Login Form.resx">
       <DependentUpon>1. Login Form.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\2. About Page.resx">
+      <DependentUpon>2. About Page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\3. Make a Booking.resx">
       <DependentUpon>3. Make a Booking.cs</DependentUpon>
       <SubType>Designer</SubType>
