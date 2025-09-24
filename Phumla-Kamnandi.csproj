@@ -72,6 +72,7 @@
   <ItemGroup>
     <!-- Business Layer -->
     <Compile Include="Business Layer\Class1.cs" />
+    <Compile Include="Data Layer\DB.cs" />
     <!-- Presentation Layer Forms -->
     <Compile Include="Presentation Layer\1. Login Form.cs">
       <SubType>Form</SubType>
@@ -136,6 +137,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Properties\Settings.settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <!-- Embedded resources -->
   <ItemGroup>
@@ -171,6 +177,10 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Resources\images_2.png" />
     <None Include="Resources\delete_4219.png" />
     <None Include="Resources\4226577.png" />
@@ -182,9 +192,7 @@
     <None Include="Resources\2460877.png" />
   </ItemGroup>
   <!-- Folders -->
-  <ItemGroup>
-    <Folder Include="Data Layer\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
