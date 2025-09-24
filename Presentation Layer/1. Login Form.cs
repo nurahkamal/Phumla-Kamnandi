@@ -10,11 +10,31 @@ using System.Windows.Forms;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
-    public partial class _1 : Form
+    public partial class Login_Form : Form
     {
-        public _1()
+        public Login_Form()
         {
             InitializeComponent();
         }
+        #region Buttons
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if (txtUsername.Text == "admin" && txtPassword.Text == "admin")
+            {
+                this.Hide();
+                About_Page aboutPage = new About_Page();
+                aboutPage.Show();
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password");
+            }
+        }
+
+        #endregion
     }
 }
