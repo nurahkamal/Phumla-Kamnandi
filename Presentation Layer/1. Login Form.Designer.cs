@@ -60,7 +60,7 @@
             this.loginPanel.Controls.Add(this.txtPassword);
             this.loginPanel.Controls.Add(this.txtUsername);
             this.loginPanel.Controls.Add(this.lblPlease);
-            this.loginPanel.Location = new System.Drawing.Point(277, 158);
+            this.loginPanel.Location = new System.Drawing.Point(476, 274);
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(1052, 602);
             this.loginPanel.TabIndex = 2;
@@ -83,6 +83,7 @@
             this.btnForgotPassword.Size = new System.Drawing.Size(219, 41);
             this.btnForgotPassword.TabIndex = 8;
             this.btnForgotPassword.Text = "Forgot Password?";
+            this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
             // 
             // lblTermsandConditions
             // 

@@ -23,7 +23,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             txtPassword.UseSystemPasswordChar = true;
         }
 
-        #region Buttons
+        #region  Exit and LoginButtons
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -90,9 +90,20 @@ namespace Phumla_Kamnandi.Presentation_Layer
             }
         }
 
-        
-        
 
+
+
+        #endregion
+        #region Forgot Password Button
+        private void btnForgotPassword_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(
+        "Please contact the system administrator or IT support to reset your password.",
+        "Forgot Password",
+        MessageBoxButtons.OK,
+        MessageBoxIcon.Information
+    );
+        }
         #endregion
     }
 }
