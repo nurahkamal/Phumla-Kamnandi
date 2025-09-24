@@ -29,5 +29,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
             form6.Show();          // show Form _8
             this.Hide();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

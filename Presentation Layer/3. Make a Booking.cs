@@ -56,5 +56,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
             form8.Show();          // show Form _8
             this.Hide();           // hide the current Form _3 (optional)
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

@@ -18,7 +18,7 @@ namespace Phumla_Kamnandi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Report_Dashboard());
+            Application.Run(new _3());
         }
     }
 }
