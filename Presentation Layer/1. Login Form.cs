@@ -36,14 +36,14 @@ namespace Phumla_Kamnandi.Presentation_Layer
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-           
+           ///Validation 1 : when the username is empty
             if (string.IsNullOrWhiteSpace(username))
             {
                 MessageBox.Show("Please enter your username.");
                 txtUsername.Focus();
                 return;
             }
-
+            ///validation 2 : when the password is empty
             if (string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please enter your password.");
@@ -51,7 +51,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
-           
+           ///validation 3 : when there is spaces in the username
             if (username.Contains(" "))
             {
                 MessageBox.Show("Username cannot contain spaces.");
@@ -59,6 +59,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
+            //validation 4 : when ther password is less than 4 characters
             
             if (password.Length < 4)
             {
@@ -67,7 +68,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
-            
+            //validation 5:when teh user  has exceeded the login attempts
             loginAttempts++;
             if (loginAttempts > MaxLoginAttempts)
             {
@@ -76,7 +77,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
-            
+            /// password is succesful takes you to the about page
             if (username.Equals("admin", StringComparison.OrdinalIgnoreCase) && password == "admin")
             {
                 this.Hide();
