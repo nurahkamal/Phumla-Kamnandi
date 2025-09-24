@@ -60,7 +60,7 @@
             this.loginPanel.Controls.Add(this.txtPassword);
             this.loginPanel.Controls.Add(this.txtUsername);
             this.loginPanel.Controls.Add(this.lblPlease);
-            this.loginPanel.Location = new System.Drawing.Point(46, 29);
+            this.loginPanel.Location = new System.Drawing.Point(277, 158);
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(1052, 602);
             this.loginPanel.TabIndex = 2;
@@ -245,10 +245,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1149, 665);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1432, 772);
             this.Controls.Add(this.loginPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login_Form";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login_Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
