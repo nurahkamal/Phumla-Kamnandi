@@ -4,3 +4,5 @@ bin/
 obj/
 *.user
 *.suo
+/Database/PhumlaKamnandiHotelsDB.mdf
+/Database/PhumlaKamnandiHotelsDB_log.ldf
