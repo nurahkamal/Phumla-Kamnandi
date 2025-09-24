@@ -58,6 +58,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,7 +73,10 @@
   <ItemGroup>
     <!-- Business Layer -->
     <Compile Include="Business Layer\Class1.cs" />
+    <Compile Include="Business Layer\Persons.cs" />
+    <Compile Include="Business Layer\ReportController.cs" />
     <Compile Include="Data Layer\DB.cs" />
+    <Compile Include="Data Layer\ReportDB.cs" />
     <!-- Presentation Layer Forms -->
     <Compile Include="Presentation Layer\1. Login Form.cs">
       <SubType>Form</SubType>
@@ -160,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\6. FAQs.resx">
       <DependentUpon>6. FAQs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\7. Report Dashboard.resx">
+      <DependentUpon>7. Report Dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\PaymentForm.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>
