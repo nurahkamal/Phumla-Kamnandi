@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
-    public partial class _7 : Form
+    public partial class Report_Dashboard : Form
     {
-        public _7()
+        public Report_Dashboard()
         {
             InitializeComponent();
         }
+
+        #region exit button
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        #endregion
     }
 }
