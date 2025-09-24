@@ -101,8 +101,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         "Please contact the system administrator or IT support to reset your password.",
         "Forgot Password",
         MessageBoxButtons.OK,
-        MessageBoxIcon.Information
-    );
+        MessageBoxIcon.Information );
         }
         #endregion
     }
