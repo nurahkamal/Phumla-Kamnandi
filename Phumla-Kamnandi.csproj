@@ -76,9 +76,12 @@
     <Compile Include="Business Layer\Guest.cs" />
     <Compile Include="Business Layer\Persons.cs" />
     <Compile Include="Business Layer\ReportController.cs" />
-    <Compile Include="Business Layer\TravelAgent.cs" />
+    <Compile Include="Business Layer\ReservationController.cs" />
+    <Compile Include="Business Layer\RoomController.cs" />
+    <Compile Include="Data Layer\ReservationDB.cs" />
     <Compile Include="Data Layer\DB.cs" />
     <Compile Include="Data Layer\ReportDB.cs" />
+    <Compile Include="Data Layer\RoomDB.cs" />
     <!-- Presentation Layer Forms -->
     <Compile Include="Presentation Layer\1. Login Form.cs">
       <SubType>Form</SubType>
