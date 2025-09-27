@@ -112,6 +112,11 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void guna2NumericUpDown1_ValueChanged(object sender, EventArgs e)
         {
+        }
+
+        private void NumberOfGuests_ValueChanged(object sender, EventArgs e)
+        {
+
             NumberOfGuests.Minimum = 1;
             NumberOfGuests.Maximum = 12;
 
