@@ -76,6 +76,7 @@
     <Compile Include="Business Layer\Guest.cs" />
     <Compile Include="Business Layer\Persons.cs" />
     <Compile Include="Business Layer\ReportController.cs" />
+    <Compile Include="Business Layer\TravelAgent.cs" />
     <Compile Include="Data Layer\DB.cs" />
     <Compile Include="Data Layer\ReportDB.cs" />
     <!-- Presentation Layer Forms -->

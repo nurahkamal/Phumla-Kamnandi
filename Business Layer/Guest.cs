@@ -11,7 +11,7 @@ namespace Phumla_Kamnandi.Business_Layer
     {
         #region Data Members 
         private int _GID;
-        private static int newID = 1; //stores new ID 
+       
         private int _loyaltyPoints;
         #endregion
 
