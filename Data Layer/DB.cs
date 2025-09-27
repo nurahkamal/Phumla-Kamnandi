@@ -13,8 +13,8 @@ namespace Phumla_Kamnandi.Data_Layer
 {
     public class DB
     {
-        //protected string strConn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database\PhumlaKamnandiDB.mdf;Integrated Security=True";
-        protected string strConn = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False";
+        protected string strConn = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database\PhumlaKamnandiDB.mdf;Integrated Security=True";
+
         protected SqlConnection cnMain;
         protected DataSet dsMain;
         protected SqlDataAdapter daMain;
