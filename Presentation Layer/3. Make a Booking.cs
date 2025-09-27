@@ -61,7 +61,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);
             decimal roomRate = ReservationController.GetRoomRate(checkInDate);
 
-            // Insert reservation
+            
             ReservationController controller = new ReservationController();
             controller.CreateReservation(guestID, numberOfGuests, checkInDate, checkOutDate);
 
@@ -82,22 +82,22 @@ namespace Phumla_Kamnandi.Presentation_Layer
             DateTime checkInDate = dtpCheckIn.Value.Date;
             DateTime checkOutDate = dtpCheckOut.Value.Date;
 
-            // Validate dates
+           
             if (checkOutDate <= checkInDate)
             {
                 MessageBox.Show("Check-out date must be after check-in date.");
                 return;
             }
 
-            // Calculate number of rooms
+           
             int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);
             txtNumberOfRooms.Text = numberOfRooms.ToString();
 
-            // Determine room rate based on season
+            
             decimal roomRate = ReservationController.GetRoomRate(checkInDate);
             txtRoomPrice.Text = roomRate.ToString("F2");
 
-            // Check availability
+            
             ReservationController controller = new ReservationController();
             bool fullyBooked = controller.IsFullyBooked(checkInDate, checkOutDate, numberOfRooms);
 

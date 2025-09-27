@@ -17,11 +17,10 @@ namespace Phumla_Kamnandi.Data_Layer
             {
                 connection.Open();
 
-                // Step 1: Get total rooms in the hotel
                 SqlCommand totalRoomsCmd = new SqlCommand("SELECT COUNT(*) FROM Rooms", connection);
                 int totalRooms = (int)totalRoomsCmd.ExecuteScalar();
 
-                // Step 2: Get total reserved rooms that overlap with the requested dates
+               
                 string reservedQuery = @"SELECT COUNT(rr.ReservationRoomID)
                                  FROM Reservations r
                                  INNER JOIN ReservationRooms rr ON r.ReservationID = rr.ReservationID
@@ -35,7 +34,7 @@ namespace Phumla_Kamnandi.Data_Layer
 
                 int reservedRooms = (int)reservedCmd.ExecuteScalar();
 
-                // Step 3: Fully booked if remaining rooms are less than requested
+              
                 return (reservedRooms + requestedRooms) > totalRooms;
             }
         }
@@ -49,7 +48,7 @@ namespace Phumla_Kamnandi.Data_Layer
             {
                 connection.Open();
 
-                // Get all rooms
+               
                 SqlCommand allRoomsCmd = new SqlCommand("SELECT RoomID FROM Rooms", connection);
                 SqlDataReader reader = allRoomsCmd.ExecuteReader();
                 List<int> allRooms = new List<int>();
@@ -57,7 +56,7 @@ namespace Phumla_Kamnandi.Data_Layer
                     allRooms.Add(reader.GetInt32(0));
                 reader.Close();
 
-                // Get rooms already allocated in the requested period
+              
                 string query = @"SELECT DISTINCT RoomID 
                              FROM RoomAllocation
                              WHERE DateAllocated >= @CheckIn AND DateAllocated < @CheckOut";
@@ -72,7 +71,6 @@ namespace Phumla_Kamnandi.Data_Layer
                     occupiedRooms.Add(reader.GetInt32(0));
                 reader.Close();
 
-                // Available rooms = all rooms - occupied rooms
                 rooms = allRooms.Except(occupiedRooms).Take(requestedRooms).ToList();
             }
 

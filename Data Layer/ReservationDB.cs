@@ -17,7 +17,7 @@ namespace Phumla_Kamnandi.Data_Layer
             {
                 connection.Open();
 
-                // 1️⃣ Insert into Reservations
+               
                 string resQuery = @"INSERT INTO Reservations 
                     (GuestID, NumberOfGuests, CheckInDate, CheckOutDate, ReservationDate, BookingStatus, PaymentStatus)
                     VALUES (@GuestID, @NumberOfGuests, @CheckIn, @CheckOut, @ReservationDate, 'Confirmed', 'Paid');
@@ -32,13 +32,13 @@ namespace Phumla_Kamnandi.Data_Layer
 
                 int reservationID = Convert.ToInt32(cmdRes.ExecuteScalar());
 
-                // 2️⃣ Insert into ReservationRooms and RoomAllocation
+               
                 for (int i = 0; i < roomIDs.Count; i++)
                 {
                     int guestsInRoom = (i == roomIDs.Count - 1) ? (numberOfGuests - i * 4) : 4;
                     int roomID = roomIDs[i];
 
-                    // ReservationRooms
+                    
                     string roomQuery = @"INSERT INTO ReservationRooms (ReservationID, RoomID, RateApplied, DiscountApplied, NumberOfGuests)
                                      VALUES (@ResID, @RoomID, @Rate, 0, @GuestsInRoom)";
                     SqlCommand cmdRoom = new SqlCommand(roomQuery, connection);
@@ -48,7 +48,7 @@ namespace Phumla_Kamnandi.Data_Layer
                     cmdRoom.Parameters.AddWithValue("@GuestsInRoom", guestsInRoom);
                     cmdRoom.ExecuteNonQuery();
 
-                    // RoomAllocation for each night
+                    
                     for (DateTime day = checkIn; day < checkOut; day = day.AddDays(1))
                     {
                         string allocQuery = @"INSERT INTO RoomAllocation (RoomID, DateAllocated, ReservationID)

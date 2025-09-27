@@ -13,7 +13,7 @@ namespace Phumla_Kamnandi.Business_Layer
         private ReservationDB reservationDB = new ReservationDB();
         private RoomDB roomDB = new RoomDB();
 
-        // Get room rate based on check-in date
+       
         public static decimal GetRoomRate(DateTime checkInDate)
         {
             if (checkInDate.Day >= 1 && checkInDate.Day <= 7)      // Low Season
@@ -24,24 +24,23 @@ namespace Phumla_Kamnandi.Business_Layer
                 return 995;
         }
 
-        // Check availability for requested number of rooms and dates
         public bool IsFullyBooked(DateTime checkIn, DateTime checkOut, int requestedRooms)
         {
             return roomDB.IsFullyBooked(checkIn, checkOut, requestedRooms);
         }
 
-        // Add reservation with automatic room allocation
+        
         public void CreateReservation(int guestID, int numberOfGuests, DateTime checkIn, DateTime checkOut)
         {
             int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);
             decimal roomRate = GetRoomRate(checkIn);
 
-            // Get list of available RoomIDs
+         
             List<int> availableRooms = roomDB.GetAvailableRooms(checkIn, checkOut, numberOfRooms);
             if (availableRooms.Count < numberOfRooms)
                 throw new Exception("Not enough rooms available.");
 
-            // Insert into DB
+          
             reservationDB.InsertReservationWithRoomsAndAllocation(guestID, numberOfGuests, checkIn, checkOut, availableRooms, roomRate);
         }
     }
