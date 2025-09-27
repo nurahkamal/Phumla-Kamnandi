@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Phumla_Kamnandi.Business_Layer
 {
-    internal class travelAgentcs
+    public class travelAgentcs 
     {
     }
 }

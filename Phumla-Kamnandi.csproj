@@ -72,6 +72,7 @@
   <!-- Compile files -->
   <ItemGroup>
     <!-- Business Layer -->
+    <Compile Include="Business Layer\Agency.cs" />
     <Compile Include="Business Layer\Class1.cs" />
     <Compile Include="Business Layer\Guest.cs" />
     <Compile Include="Business Layer\Persons.cs" />
