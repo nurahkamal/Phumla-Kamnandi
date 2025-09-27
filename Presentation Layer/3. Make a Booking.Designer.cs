@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_3));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -52,7 +53,6 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -82,6 +82,25 @@
             this.panel1.Size = new System.Drawing.Size(994, 603);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnExit.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnExit.ImageRotate = 0F;
+            this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Location = new System.Drawing.Point(917, -1);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Size = new System.Drawing.Size(76, 64);
+            this.btnExit.TabIndex = 6;
+            this.btnExit.UseTransparentBackground = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // guna2TextBox2
             // 
@@ -146,6 +165,7 @@
             this.guna2Button1.Size = new System.Drawing.Size(192, 45);
             this.guna2Button1.TabIndex = 11;
             this.guna2Button1.Text = "Check Availability";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // label5
             // 
@@ -420,25 +440,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnExit.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnExit.ImageRotate = 0F;
-            this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Location = new System.Drawing.Point(917, -1);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Size = new System.Drawing.Size(76, 64);
-            this.btnExit.TabIndex = 6;
-            this.btnExit.UseTransparentBackground = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // _3
             // 
