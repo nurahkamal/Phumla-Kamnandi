@@ -79,7 +79,6 @@
     <Compile Include="Business Layer\PaymentController.cs" />
     <Compile Include="Business Layer\Payment.cs" />
     <Compile Include="Business Layer\Persons.cs" />
-    <Compile Include="Business Layer\ReportController.cs" />
     <Compile Include="Business Layer\Reservation.cs" />
     <Compile Include="Business Layer\ReservationController.cs" />
     <Compile Include="Business Layer\Room.cs" />
@@ -87,7 +86,6 @@
     <Compile Include="Data Layer\PaymentDB.cs" />
     <Compile Include="Data Layer\ReservationDB.cs" />
     <Compile Include="Data Layer\DB.cs" />
-    <Compile Include="Data Layer\ReportDB.cs" />
     <Compile Include="Data Layer\RoomDB.cs" />
     <!-- Presentation Layer Forms -->
     <Compile Include="Presentation Layer\1. Login Form.cs">
