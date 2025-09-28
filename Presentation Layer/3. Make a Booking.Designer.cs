@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_3));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblRP2 = new System.Windows.Forms.Label();
             this.NumberOfGuests = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.txtNumberOfRooms = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,7 +56,6 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfGuests)).BeginInit();
             this.panel2.SuspendLayout();
@@ -66,7 +66,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.lblRP2);
             this.panel1.Controls.Add(this.NumberOfGuests);
             this.panel1.Controls.Add(this.txtNumberOfRooms);
             this.panel1.Controls.Add(this.label8);
@@ -89,6 +89,17 @@
             this.panel1.Size = new System.Drawing.Size(994, 603);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // lblRP2
+            // 
+            this.lblRP2.AutoSize = true;
+            this.lblRP2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.lblRP2.Location = new System.Drawing.Point(332, 476);
+            this.lblRP2.Name = "lblRP2";
+            this.lblRP2.Size = new System.Drawing.Size(171, 23);
+            this.lblRP2.TabIndex = 19;
+            this.lblRP2.Text = "(per night, per room)";
             // 
             // NumberOfGuests
             // 
@@ -473,17 +484,6 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label6.Location = new System.Drawing.Point(332, 476);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(171, 23);
-            this.label6.TabIndex = 19;
-            this.label6.Text = "(per night, per room)";
-            // 
             // _3
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -536,6 +536,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtNumberOfRooms;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2NumericUpDown NumberOfGuests;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblRP2;
     }
 }

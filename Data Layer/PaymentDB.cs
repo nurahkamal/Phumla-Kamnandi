@@ -12,35 +12,39 @@ namespace Phumla_Kamnandi.Data_Layer
     {
         private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True";
 
-        public void AddPayment(Payment payment)
+        public void AddPayment(Payment payment, Reservation reservation)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
 
-                // Insert into Payments table
-                string paymentSql = @"INSERT INTO Payments (AccountID, ReservationID, PaymentDate, PaymentType, AmountPaid) 
-                              VALUES (@AccountID, @ReservationID, @PaymentDate, @PaymentType, @AmountPaid)";
-                using (SqlCommand cmd = new SqlCommand(paymentSql, conn))
-                {
-                    cmd.Parameters.AddWithValue("@AccountID", payment.AccountID);
-                    cmd.Parameters.AddWithValue("@ReservationID", payment.ReservationID);
-                    cmd.Parameters.AddWithValue("@PaymentDate", payment.PaymentDate);
-                    cmd.Parameters.AddWithValue("@PaymentType", payment.PaymentType);
-                    cmd.Parameters.AddWithValue("@AmountPaid", payment.AmountPaid);
-                    cmd.ExecuteNonQuery();
-                }
+                // Insert into Accounts table 
+                string accountSql = @"INSERT INTO Accounts (ReservationID, Status, TotalAmount, Balance)
+                              VALUES (@ReservationID, @Status, @TotalAmount, @Balance);
+                              SELECT SCOPE_IDENTITY();";
 
-                // Insert into Accounts table
-                string accountSql = @"INSERT INTO Accounts (ReservationID, Status, TotalAmount, Balance) 
-                              VALUES (@ReservationID, @Status, @TotalAmount, @Balance)";
+                int accountID;
                 using (SqlCommand cmdAcc = new SqlCommand(accountSql, conn))
                 {
-                    cmdAcc.Parameters.AddWithValue("@ReservationID", payment.ReservationID);
+                    cmdAcc.Parameters.AddWithValue("@ReservationID", reservation.ReservationID);
                     cmdAcc.Parameters.AddWithValue("@Status", payment.Status);
                     cmdAcc.Parameters.AddWithValue("@TotalAmount", payment.TotalAmount);
                     cmdAcc.Parameters.AddWithValue("@Balance", payment.Balance);
-                    cmdAcc.ExecuteNonQuery();
+
+                    accountID = Convert.ToInt32(cmdAcc.ExecuteScalar()); // get generated AccountID
+                }
+
+                // Insert into Payments
+                string paymentSql = @"INSERT INTO Payments (AccountID, PaymentDate, PaymentType, AmountPaid) 
+                              VALUES (@AccountID, @PaymentDate, @PaymentType, @AmountPaid)";
+                using (SqlCommand cmd = new SqlCommand(paymentSql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@AccountID", accountID);
+                    cmd.Parameters.AddWithValue("@PaymentDate", payment.PaymentDate);
+                    cmd.Parameters.AddWithValue("@PaymentType", payment.PaymentType);
+                    cmd.Parameters.AddWithValue("@AmountPaid", payment.AmountPaid);
+
+                    cmd.ExecuteNonQuery();
                 }
             }
         }

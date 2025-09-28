@@ -28,6 +28,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             btnConfirm.Hide();  
             lblRoomPrice.Hide();
             txtRoomPrice.Hide();
+            lblRP2.Hide();
 
         }
 
@@ -117,6 +118,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 
                 lblRoomPrice.Show();
                 txtRoomPrice.Show();
+                lblRP2.Show();
                 txtRoomPrice.Text = roomRate.ToString("F2");
 
                 btnConfirm.Show();

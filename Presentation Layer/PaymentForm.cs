@@ -92,7 +92,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             // Save to DB
             PaymentDB paymentDB = new PaymentDB();
-            paymentDB.AddPayment(payment);
+            paymentDB.AddPayment(payment, _reservation);
 
             // Optionally display confirmation
             MessageBox.Show("Payment and account successfully recorded!");

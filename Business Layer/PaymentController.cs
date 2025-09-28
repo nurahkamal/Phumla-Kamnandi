@@ -40,9 +40,9 @@ namespace Phumla_Kamnandi.Business_Layer
         }
 
         // Save payment
-        public void SavePayment(Payment payment)
+        public void SavePayment(Payment payment, Reservation reservation)
         {
-            paymentDB.AddPayment(payment);
+            paymentDB.AddPayment(payment, reservation);
         }
     }
 }
