@@ -1,0 +1,5 @@
+﻿DELETE FROM Payments;
+DBCC CHECKIDENT ('Payments', RESEED, 0); 
+
+DELETE FROM Accounts;
+DBCC CHECKIDENT ('Accounts', RESEED, 0); 
