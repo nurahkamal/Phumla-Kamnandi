@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Phumla_Kamnandi.Business_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,10 +12,13 @@ using System.Windows.Forms;
 namespace Phumla_Kamnandi.Presentation_Layer
 {
     public partial class _6 : Form
+
     {
+        private GuestController guestController; 
         public _6()
         {
             InitializeComponent();
+            guestController = new GuestController();
         }
 
         private void guna2Panel1_Paint(object sender, PaintEventArgs e)
@@ -85,6 +89,19 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void _6_Load(object sender, EventArgs e)
+        {
+            //Display the data from the Guest Table 
+
+            DataTable guests = guestController.SeeAllGuests();
+            GuestView.DataSource = guests; 
         }
     }
 }

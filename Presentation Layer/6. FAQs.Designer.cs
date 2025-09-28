@@ -63,16 +63,19 @@
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.GuestView = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GuestView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.GuestView);
             this.panel1.Controls.Add(this.guna2Button3);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.guna2Button10);
@@ -135,7 +138,7 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label9.Location = new System.Drawing.Point(12, 90);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(206, 30);
+            this.label9.Size = new System.Drawing.Size(255, 37);
             this.label9.TabIndex = 20;
             this.label9.Text = "Number of Rooms: ";
             this.label9.Click += new System.EventHandler(this.label9_Click);
@@ -153,6 +156,7 @@
             this.guna2TextBox7.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox7.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox7.Location = new System.Drawing.Point(250, 23);
+            this.guna2TextBox7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2TextBox7.Name = "guna2TextBox7";
             this.guna2TextBox7.PlaceholderText = "";
             this.guna2TextBox7.SelectedText = "";
@@ -172,6 +176,7 @@
             this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox2.Location = new System.Drawing.Point(250, 154);
+            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2TextBox2.Name = "guna2TextBox2";
             this.guna2TextBox2.PlaceholderText = "";
             this.guna2TextBox2.SelectedText = "";
@@ -185,7 +190,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label8.Location = new System.Drawing.Point(24, 14);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(103, 30);
+            this.label8.Size = new System.Drawing.Size(129, 37);
             this.label8.TabIndex = 20;
             this.label8.Text = "Guest ID:";
             // 
@@ -219,7 +224,7 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label6.Location = new System.Drawing.Point(24, 157);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 30);
+            this.label6.Size = new System.Drawing.Size(163, 37);
             this.label6.TabIndex = 13;
             this.label6.Text = "Room Price:";
             // 
@@ -230,7 +235,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label2.Location = new System.Drawing.Point(468, 26);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 30);
+            this.label2.Size = new System.Drawing.Size(195, 37);
             this.label2.TabIndex = 6;
             this.label2.Text = "Check-In Date:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -261,7 +266,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label3.Location = new System.Drawing.Point(483, 111);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 30);
+            this.label3.Size = new System.Drawing.Size(217, 37);
             this.label3.TabIndex = 8;
             this.label3.Text = "Check-Out Date:";
             this.label3.Click += new System.EventHandler(this.label3_Click);
@@ -346,7 +351,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label5.Location = new System.Drawing.Point(65, 119);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 30);
+            this.label5.Size = new System.Drawing.Size(129, 37);
             this.label5.TabIndex = 10;
             this.label5.Text = "Guest ID:";
             // 
@@ -363,6 +368,7 @@
             this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.guna2TextBox1.Location = new System.Drawing.Point(211, 113);
+            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.guna2TextBox1.Name = "guna2TextBox1";
             this.guna2TextBox1.PlaceholderText = "";
             this.guna2TextBox1.SelectedText = "";
@@ -376,7 +382,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label1.Location = new System.Drawing.Point(367, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 31);
+            this.label1.Size = new System.Drawing.Size(259, 38);
             this.label1.TabIndex = 1;
             this.label1.Text = "Reservation Details";
             // 
@@ -388,7 +394,7 @@
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(332, 22);
             this.guna2HtmlLabel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(268, 47);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(327, 56);
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Update Bookings";
             this.guna2HtmlLabel2.Click += new System.EventHandler(this.guna2HtmlLabel2_Click);
@@ -589,7 +595,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
             this.label7.Location = new System.Drawing.Point(36, 130);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(225, 38);
+            this.label7.Size = new System.Drawing.Size(266, 45);
             this.label7.TabIndex = 15;
             this.label7.Text = "Phumlani Hotels";
             // 
@@ -622,6 +628,17 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // GuestView
+            // 
+            this.GuestView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GuestView.GridColor = System.Drawing.SystemColors.Control;
+            this.GuestView.Location = new System.Drawing.Point(102, 171);
+            this.GuestView.Name = "GuestView";
+            this.GuestView.RowHeadersWidth = 62;
+            this.GuestView.RowTemplate.Height = 28;
+            this.GuestView.Size = new System.Drawing.Size(774, 250);
+            this.GuestView.TabIndex = 21;
+            // 
             // _6
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -632,6 +649,7 @@
             this.Name = "_6";
             this.Text = "_6";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this._6_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
@@ -639,6 +657,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GuestView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -678,5 +697,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private System.Windows.Forms.DataGridView GuestView;
     }
 }
