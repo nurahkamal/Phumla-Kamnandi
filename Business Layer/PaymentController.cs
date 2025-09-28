@@ -24,16 +24,19 @@ namespace Phumla_Kamnandi.Business_Layer
         }
 
         // Display payment details in RichTextBox
-        public void DisplayPaymentDetails(System.Windows.Forms.RichTextBox richTextBox, Payment payment)
+        public void DisplayPaymentDetails(System.Windows.Forms.RichTextBox richTextBox, Payment payment, Reservation reservation)//!!!
         {
             richTextBox.Clear();
-            richTextBox.AppendText($"Reservation ID: {payment.ReservationID}\n");
-            richTextBox.AppendText($"Account ID: {payment.AccountID}\n");
-            richTextBox.AppendText($"Payment Date: {payment.PaymentDate:d}\n");
-            richTextBox.AppendText($"Payment Type: {payment.PaymentType}\n");
+            richTextBox.AppendText($"Reservation ID: {payment.ReservationID}\n\n");
+            richTextBox.AppendText($"Check-In Date: {reservation.CheckInDate:d}\n");
+            richTextBox.AppendText($"Check-Out Date: {reservation.CheckOutDate:d}\n");
+            int numberOfDays = (reservation.CheckOutDate - reservation.CheckInDate).Days;
+            richTextBox.AppendText($"Number of Days: {numberOfDays}\n");
+            richTextBox.AppendText($"Number of Rooms: {reservation.NumberOfRooms}\n");
+            richTextBox.AppendText($"Room Rate: {reservation.RoomRate:C}\n\n");
             richTextBox.AppendText($"Total Amount: {payment.TotalAmount:C}\n");
             richTextBox.AppendText($"Deposit (10%): {payment.Deposit:C}\n");
-            richTextBox.AppendText($"Amount Paid: {payment.AmountPaid:C}\n");
+
         }
 
         // Save payment

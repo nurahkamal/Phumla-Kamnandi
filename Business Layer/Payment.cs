@@ -17,6 +17,8 @@ namespace Phumla_Kamnandi.Business_Layer
         private decimal _amountPaid;
         private decimal _totalAmount;
         private decimal _deposit;
+        private decimal _balance;
+        private string _status;
         #endregion
 
         #region Property Methods
@@ -60,6 +62,16 @@ namespace Phumla_Kamnandi.Business_Layer
             get { return _deposit; }
             set { _deposit = value; }
         }
+        public string Status
+        {
+            get { return _status; }
+            set { _status = value; }
+        }
+        public decimal Balance
+        {
+            get { return _balance; }
+            set { _balance = value; }
+        }
         #endregion
 
         #region Constructors
@@ -73,8 +85,10 @@ namespace Phumla_Kamnandi.Business_Layer
             _amountPaid = 0.0m;
             _totalAmount = 0.0m;
             _deposit = 0.0m;
+            _status = "Open";
+            _balance = 0;
         }
-        public Payment(int paymentID, int accountID, int reservationID, DateTime paymentDate, string paymentType, decimal amountPaid, decimal totalAmount, decimal deposit)
+        public Payment(int paymentID, int accountID, int reservationID, DateTime paymentDate, string paymentType, decimal amountPaid, decimal totalAmount, decimal deposit, string status, decimal balance)
         {
             _paymentID = paymentID;
             _accountID = accountID;
@@ -84,7 +98,11 @@ namespace Phumla_Kamnandi.Business_Layer
             _amountPaid = amountPaid;
             _totalAmount = totalAmount;
             _deposit = deposit;
+            _status = status;
+            _balance = balance;
         }
         #endregion
+
     }
 }
+

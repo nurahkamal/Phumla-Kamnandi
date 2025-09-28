@@ -24,10 +24,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             InitializeComponent();
             _reservation = reservation;
         }
-        public PaymentForm()
-        {
-            InitializeComponent();
-        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -53,21 +49,58 @@ namespace Phumla_Kamnandi.Presentation_Layer
             decimal totalAmount = _reservation.RoomRate * _reservation.NumberOfRooms * numberOfDays;
             decimal deposit = totalAmount * 0.10m;
 
-            // Create Payment object with PaymentType = "Card"
+            
             Payment payment = new Payment
             {
                 AccountID = _reservation.GuestID,
                 ReservationID = _reservation.ReservationID,
                 PaymentDate = DateTime.Today,
-                PaymentType = "Card", // All payments are card
+                PaymentType = "Card", 
                 TotalAmount = totalAmount,
                 Deposit = deposit,
                 AmountPaid = deposit // default initial payment
             };
 
             // Display details in RichTextBox
-            _paymentController.DisplayPaymentDetails(rtbSummary, payment);
+            _paymentController.DisplayPaymentDetails(rtbSummary, payment, _reservation);
 
         }
+
+        private void btnPayment_Click(object sender, EventArgs e)
+        {
+            // Calculate number of days
+            int numberOfDays = (_reservation.CheckOutDate - _reservation.CheckInDate).Days;
+
+            // Calculate total, deposit, balance
+            decimal totalAmount = _reservation.RoomRate * _reservation.NumberOfRooms * numberOfDays;
+            decimal deposit = totalAmount * 0.10m;
+            decimal balance = totalAmount - deposit;
+
+            // Create Payment object
+            Payment payment = new Payment
+            {
+                AccountID = _reservation.GuestID,
+                ReservationID = _reservation.ReservationID,
+                PaymentDate = DateTime.Today,
+                PaymentType = "Card",
+                TotalAmount = totalAmount,
+                Deposit = deposit,
+                AmountPaid = deposit,
+                Balance = balance,
+                Status = "Open"
+            };
+
+            // Save to DB
+            PaymentDB paymentDB = new PaymentDB();
+            paymentDB.AddPayment(payment);
+
+            // Optionally display confirmation
+            MessageBox.Show("Payment and account successfully recorded!");
+
+            // Close or hide the form
+            this.Hide();
+        }
+
     }
 }
+

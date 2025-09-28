@@ -17,9 +17,11 @@ namespace Phumla_Kamnandi.Data_Layer
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
-                string sql = "INSERT INTO Payments (AccountID, ReservationID, PaymentDate, PaymentType, AmountPaid) " +
-                             "VALUES (@AccountID, @ReservationID, @PaymentDate, @PaymentType, @AmountPaid)";
-                using (SqlCommand cmd = new SqlCommand(sql, conn))
+
+                // Insert into Payments table
+                string paymentSql = @"INSERT INTO Payments (AccountID, ReservationID, PaymentDate, PaymentType, AmountPaid) 
+                              VALUES (@AccountID, @ReservationID, @PaymentDate, @PaymentType, @AmountPaid)";
+                using (SqlCommand cmd = new SqlCommand(paymentSql, conn))
                 {
                     cmd.Parameters.AddWithValue("@AccountID", payment.AccountID);
                     cmd.Parameters.AddWithValue("@ReservationID", payment.ReservationID);
@@ -27,6 +29,18 @@ namespace Phumla_Kamnandi.Data_Layer
                     cmd.Parameters.AddWithValue("@PaymentType", payment.PaymentType);
                     cmd.Parameters.AddWithValue("@AmountPaid", payment.AmountPaid);
                     cmd.ExecuteNonQuery();
+                }
+
+                // Insert into Accounts table
+                string accountSql = @"INSERT INTO Accounts (ReservationID, Status, TotalAmount, Balance) 
+                              VALUES (@ReservationID, @Status, @TotalAmount, @Balance)";
+                using (SqlCommand cmdAcc = new SqlCommand(accountSql, conn))
+                {
+                    cmdAcc.Parameters.AddWithValue("@ReservationID", payment.ReservationID);
+                    cmdAcc.Parameters.AddWithValue("@Status", payment.Status);
+                    cmdAcc.Parameters.AddWithValue("@TotalAmount", payment.TotalAmount);
+                    cmdAcc.Parameters.AddWithValue("@Balance", payment.Balance);
+                    cmdAcc.ExecuteNonQuery();
                 }
             }
         }

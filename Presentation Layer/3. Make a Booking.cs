@@ -71,9 +71,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
             Reservation reservation = new Reservation(reservationID,guestID,checkInDate,checkOutDate,numberOfRooms,roomRate);
 
             MessageBox.Show("Reservation successfully added to the database!");
-            // PaymentForm form8 = new PaymentForm();   // create an instance of Form _8
-            //form8.Show();          // show Form _8
-            //this.Hide();           // hide the current Form _3 (optional)
+
+            PaymentForm paymentForm = new PaymentForm(reservation); 
+            paymentForm.Show();
+            this.Hide();           
         }
 
         private void btnExit_Click(object sender, EventArgs e)
