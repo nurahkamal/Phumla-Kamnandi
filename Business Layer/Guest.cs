@@ -38,7 +38,17 @@ namespace Phumla_Kamnandi.Business_Layer
         #endregion
         #region Constructors 
 
+        public Guest ()
+        {
+            _loyaltyPoints = 0; 
+        }
 
+        public Guest (int GuestID ,  int LoyaltyPoints)
+        {
+
+            _GID = GuestID;
+            _loyaltyPoints = LoyaltyPoints;
+        }
         #endregion
     }
 

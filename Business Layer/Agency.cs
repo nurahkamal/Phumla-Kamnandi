@@ -35,7 +35,7 @@ namespace Phumla_Kamnandi.Business_Layer
         public Agency()
         {
 
-            _Tid = 0;
+           
             _TName = ""; 
         }
 

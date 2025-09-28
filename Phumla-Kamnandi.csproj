@@ -75,10 +75,12 @@
     <Compile Include="Business Layer\Agency.cs" />
     <Compile Include="Business Layer\Class1.cs" />
     <Compile Include="Business Layer\Guest.cs" />
+    <Compile Include="Business Layer\GuestController.cs" />
     <Compile Include="Business Layer\Persons.cs" />
     <Compile Include="Business Layer\ReportController.cs" />
     <Compile Include="Business Layer\ReservationController.cs" />
     <Compile Include="Business Layer\Room.cs" />
+    <Compile Include="Data Layer\GuestDB.cs" />
     <Compile Include="Data Layer\ReservationDB.cs" />
     <Compile Include="Data Layer\DB.cs" />
     <Compile Include="Data Layer\ReportDB.cs" />
