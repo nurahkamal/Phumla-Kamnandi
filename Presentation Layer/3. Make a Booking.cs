@@ -25,6 +25,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void _3_Load(object sender, EventArgs e)
         {
             this.ActiveControl = null;
+            btnConfirm.Hide();  
+            lblRoomPrice.Hide();
+            txtRoomPrice.Hide();
+
         }
 
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
@@ -82,29 +86,37 @@ namespace Phumla_Kamnandi.Presentation_Layer
             DateTime checkInDate = dtpCheckIn.Value.Date;
             DateTime checkOutDate = dtpCheckOut.Value.Date;
 
-           
+
             if (checkOutDate <= checkInDate)
             {
                 MessageBox.Show("Check-out date must be after check-in date.");
                 return;
             }
 
-           
+
             int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);
             txtNumberOfRooms.Text = numberOfRooms.ToString();
 
-            
-            decimal roomRate = ReservationController.GetRoomRate(checkInDate);
-            txtRoomPrice.Text = roomRate.ToString("F2");
 
-            
+            decimal roomRate = ReservationController.GetRoomRate(checkInDate);
+
+
             ReservationController controller = new ReservationController();
             bool fullyBooked = controller.IsFullyBooked(checkInDate, checkOutDate, numberOfRooms);
 
             if (fullyBooked)
-                MessageBox.Show("Sorry, the hotel is fully booked for the selected dates.");
+                MessageBox.Show("Sorry, accommodation is not available for the selected dates, Please select new dates");
             else
-                MessageBox.Show("Rooms are available!");
+            {
+                MessageBox.Show("Accommadation is available!");
+                
+                lblRoomPrice.Show();
+                txtRoomPrice.Show();
+                txtRoomPrice.Text = roomRate.ToString("F2");
+
+                btnConfirm.Show();
+
+            }
         }
 
            
