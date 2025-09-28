@@ -11,7 +11,7 @@ namespace Phumla_Kamnandi.Data_Layer
     {
         private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True;";
 
-        public void InsertReservationWithRoomsAndAllocation(int guestID, int numberOfGuests, DateTime checkIn, DateTime checkOut, List<int> roomIDs, decimal roomRate)
+        public int InsertReservation(int guestID, int numberOfGuests, DateTime checkIn, DateTime checkOut, List<int> roomIDs, decimal roomRate)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -60,6 +60,8 @@ namespace Phumla_Kamnandi.Data_Layer
                         cmdAlloc.ExecuteNonQuery();
                     }
                 }
+
+                return reservationID;
             }
         }
     }

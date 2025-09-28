@@ -67,7 +67,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             
             ReservationController controller = new ReservationController();
-            controller.CreateReservation(guestID, numberOfGuests, checkInDate, checkOutDate);
+            int reservationID = controller.CreateReservation(guestID, numberOfGuests, checkInDate, checkOutDate);
+            Reservation reservation = new Reservation(reservationID,guestID,checkInDate,checkOutDate,numberOfRooms,roomRate);
 
             MessageBox.Show("Reservation successfully added to the database!");
             // PaymentForm form8 = new PaymentForm();   // create an instance of Form _8
@@ -92,6 +93,9 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 MessageBox.Show("Check-out date must be after check-in date.");
                 return;
             }
+
+            TimeSpan duration = checkOutDate - checkInDate;
+            int numberOfDays = duration.Days;
 
 
             int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);

@@ -40,8 +40,9 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label2 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.rtbSummary = new System.Windows.Forms.RichTextBox();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.label6 = new System.Windows.Forms.Label();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -193,7 +193,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.rtbSummary);
             this.panel1.Controls.Add(this.guna2Button2);
             this.panel1.Controls.Add(this.guna2Button1);
             this.panel1.Controls.Add(this.label1);
@@ -204,6 +204,25 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.panel1.Size = new System.Drawing.Size(1033, 615);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnExit.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnExit.ImageRotate = 0F;
+            this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Location = new System.Drawing.Point(956, -4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Size = new System.Drawing.Size(76, 64);
+            this.btnExit.TabIndex = 26;
+            this.btnExit.UseTransparentBackground = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label2
             // 
@@ -216,13 +235,13 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.label2.TabIndex = 16;
             this.label2.Text = "Reservation Summary: ";
             // 
-            // richTextBox1
+            // rtbSummary
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(309, 143);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(685, 239);
-            this.richTextBox1.TabIndex = 15;
-            this.richTextBox1.Text = "";
+            this.rtbSummary.Location = new System.Drawing.Point(309, 143);
+            this.rtbSummary.Name = "rtbSummary";
+            this.rtbSummary.Size = new System.Drawing.Size(685, 239);
+            this.rtbSummary.TabIndex = 15;
+            this.rtbSummary.Text = "";
             // 
             // guna2Button2
             // 
@@ -353,25 +372,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.guna2TextBox1.Size = new System.Drawing.Size(210, 40);
             this.guna2TextBox1.TabIndex = 2;
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnExit.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnExit.ImageRotate = 0F;
-            this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Location = new System.Drawing.Point(956, -4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Size = new System.Drawing.Size(76, 64);
-            this.btnExit.TabIndex = 26;
-            this.btnExit.UseTransparentBackground = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // PaymentForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -385,6 +385,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Payment Form";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.PaymentForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -411,7 +412,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbSummary;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;

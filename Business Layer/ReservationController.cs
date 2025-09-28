@@ -30,19 +30,23 @@ namespace Phumla_Kamnandi.Business_Layer
         }
 
         
-        public void CreateReservation(int guestID, int numberOfGuests, DateTime checkIn, DateTime checkOut)
+        public int CreateReservation(int guestID, int numberOfGuests, DateTime checkIn, DateTime checkOut)
         {
+           
+
             int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);
             decimal roomRate = GetRoomRate(checkIn);
 
-         
             List<int> availableRooms = roomDB.GetAvailableRooms(checkIn, checkOut, numberOfRooms);
             if (availableRooms.Count < numberOfRooms)
                 throw new Exception("Not enough rooms available.");
 
-          
-            reservationDB.InsertReservationWithRoomsAndAllocation(guestID, numberOfGuests, checkIn, checkOut, availableRooms, roomRate);
+            // Return the reservationID from DB
+            int reservationID = reservationDB.InsertReservation(guestID, numberOfGuests, checkIn, checkOut, availableRooms, roomRate);
+
+            return reservationID;
         }
+
     }
 
 }
