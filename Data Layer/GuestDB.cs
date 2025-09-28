@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,59 +12,36 @@ using System.Web.UI.WebControls;
 
 namespace Phumla_Kamnandi.Data_Layer
 {
-    public class GuestDB : DB
-    { // Insert Connection String private string ConnectionString =
-
-        #region DataMembers
-        private string table1 = "Guests";
-        private string sqlLocal1 = "SELECT * FROM Guests";
-        private Collection<Guest> guests;
-
-
-
-        #endregion
-
-        #region Property Methods
-
-        public Collection<Guest> AllGuests
-        {
-            get
-            {
-                return guests;
-            }
-        }
-
-        #endregion
-        #region Constructor 
-       public GuestDB(): base() 
-        {
-            guests = new Collection<Guest>();
-            FillDataSet(sqlLocal1, table1);
-            //Add2Collection(table1);
-            
-
-
-
-        }
-
-
-
-
-
-        #endregion
-
+    public class GuestDB
+    { //Connection String 
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True;";
         #region Utility Methods
 
-        // Gets all guests 
-        public DataSet GetDataSet()
+        // Gets Guest List 
+
+        public DataTable SeeGuests()
         {
-            return dsMain;
+            DataTable guestsTable = new DataTable();
+
+           using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM Guest";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(guestsTable); // Data Table gets filled 
+            }
+
+            return guestsTable; // Guest Table is returned 
         }
 
+        //
+
+        #endregion 
 
 
 
-        #endregion
+
 
 
     }
