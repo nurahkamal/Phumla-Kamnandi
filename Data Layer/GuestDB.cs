@@ -25,7 +25,7 @@ namespace Phumla_Kamnandi.Data_Layer
 
            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM Guest";
+                string query = "SELECT * FROM dbo.Guests";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
