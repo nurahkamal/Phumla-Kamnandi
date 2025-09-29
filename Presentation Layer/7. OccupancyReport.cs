@@ -1,4 +1,5 @@
-﻿using Phumla_Kamnandi.Business_Layer;
+﻿using Guna.UI2.WinForms.Suite;
+using Phumla_Kamnandi.Business_Layer;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -15,13 +16,18 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             InitializeComponent();
             _reportController = new ReportOccupancyController();
+
+            // Wire up the buttons to their events
+            btnOkay.Click += btnOkay_Click;
+            btnToday.Click += btnToday_Click;
+            btnLast7days.Click += btnLast7days_Click;
+            btnLast30Days.Click += btnLast30Days_Click;
+            btnLastMonth.Click += btnLastMonth_Click;
         }
 
-        private void btnGenerateReport_Click(object sender, EventArgs e)
+        // =================== Report Generation ===================
+        private void GenerateReport(DateTime startDate, DateTime endDate)
         {
-            DateTime startDate = new DateTime(2025, 12, 1);
-            DateTime endDate = new DateTime(2025, 12, 31);
-
             // 1️⃣ Rooms by Season (Bar Chart)
             DataTable dtSeason = _reportController.GetRoomsBySeason(startDate, endDate);
             chartRoomsBySeason.Series["Guests"].Points.Clear();
@@ -62,6 +68,39 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 DateTime end = Convert.ToDateTime(row["CheckOutDate"]);
                 chartRoomOccupancyOverTime.Series["Occupancy"].Points.AddXY(roomNumber, new double[] { start.ToOADate(), end.ToOADate() });
             }
+        }
+
+        // =================== Button Events ===================
+        private void btnOkay_Click(object sender, EventArgs e)
+        {
+            GenerateReport(dtpStartDate.Value.Date, dtpEndDate.Value.Date);
+        }
+
+        private void btnToday_Click(object sender, EventArgs e)
+        {
+            DateTime today = DateTime.Today;
+            GenerateReport(today, today);
+        }
+
+        private void btnLast7days_Click(object sender, EventArgs e)
+        {
+            DateTime endDate = DateTime.Today;
+            DateTime startDate = endDate.AddDays(-6);
+            GenerateReport(startDate, endDate);
+        }
+
+        private void btnLast30Days_Click(object sender, EventArgs e)
+        {
+            DateTime endDate = DateTime.Today;
+            DateTime startDate = endDate.AddDays(-29);
+            GenerateReport(startDate, endDate);
+        }
+
+        private void btnLastMonth_Click(object sender, EventArgs e)
+        {
+            DateTime firstDayLastMonth = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1).AddMonths(-1);
+            DateTime lastDayLastMonth = firstDayLastMonth.AddMonths(1).AddDays(-1);
+            GenerateReport(firstDayLastMonth, lastDayLastMonth);
         }
     }
 }
