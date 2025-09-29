@@ -33,6 +33,10 @@
             this.GuestView = new System.Windows.Forms.DataGridView();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
@@ -60,10 +64,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GuestView)).BeginInit();
             this.panel3.SuspendLayout();
@@ -96,11 +96,11 @@
             // 
             this.GuestView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GuestView.GridColor = System.Drawing.SystemColors.Control;
-            this.GuestView.Location = new System.Drawing.Point(102, 171);
+            this.GuestView.Location = new System.Drawing.Point(62, 187);
             this.GuestView.Name = "GuestView";
             this.GuestView.RowHeadersWidth = 62;
             this.GuestView.RowTemplate.Height = 28;
-            this.GuestView.Size = new System.Drawing.Size(774, 250);
+            this.GuestView.Size = new System.Drawing.Size(951, 247);
             this.GuestView.TabIndex = 21;
             this.GuestView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GuestView_CellContentClick);
             this.GuestView.SelectionChanged += new System.EventHandler(this.GuestView_SelectionChanged);
@@ -137,12 +137,56 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.guna2ComboBox1);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(40, 439);
+            this.panel3.Location = new System.Drawing.Point(50, 469);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1007, 261);
             this.panel3.TabIndex = 19;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label3.Location = new System.Drawing.Point(503, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(188, 37);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Loyalty Points";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label2.Location = new System.Drawing.Point(34, 210);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 37);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Address :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label10.Location = new System.Drawing.Point(503, 68);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(245, 37);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Passport Number :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label4.Location = new System.Drawing.Point(503, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 37);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "ID :";
             // 
             // label9
             // 
@@ -579,50 +623,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label4.Location = new System.Drawing.Point(503, 14);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 37);
-            this.label4.TabIndex = 22;
-            this.label4.Text = "ID :";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label10.Location = new System.Drawing.Point(503, 68);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(245, 37);
-            this.label10.TabIndex = 23;
-            this.label10.Text = "Passport Number :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label2.Location = new System.Drawing.Point(34, 210);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(129, 37);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Address :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label3.Location = new System.Drawing.Point(503, 161);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(188, 37);
-            this.label3.TabIndex = 25;
-            this.label3.Text = "Loyalty Points";
             // 
             // _6
             // 
