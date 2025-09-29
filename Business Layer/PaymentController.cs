@@ -35,14 +35,15 @@ namespace Phumla_Kamnandi.Business_Layer
             richTextBox.AppendText($"Number of Rooms: {reservation.NumberOfRooms}\n");
             richTextBox.AppendText($"Room Rate: {reservation.RoomRate:C}\n\n");
             richTextBox.AppendText($"Total Amount: {payment.TotalAmount:C}\n");
-            richTextBox.AppendText($"Deposit (10%): {payment.Deposit:C}\n");
+            richTextBox.AppendText($"Deposit (10%): {payment.Deposit:C}\n\n");
+            
 
         }
 
         // Save payment
         public void SavePayment(Payment payment, Reservation reservation)
         {
-            paymentDB.AddPayment(payment, reservation);
+            paymentDB.AddPaymentAndAccount(payment, reservation);
         }
     }
 }

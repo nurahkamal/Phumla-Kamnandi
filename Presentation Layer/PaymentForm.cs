@@ -44,6 +44,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void PaymentForm_Load(object sender, EventArgs e)
         {
+            pnlCard.Hide();
             // Calculate total and deposit
             int numberOfDays = (_reservation.CheckOutDate - _reservation.CheckInDate).Days;
             decimal totalAmount = _reservation.RoomRate * _reservation.NumberOfRooms * numberOfDays;
@@ -92,15 +93,59 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             // Save to DB
             PaymentDB paymentDB = new PaymentDB();
-            paymentDB.AddPayment(payment, _reservation);
+            paymentDB.AddPaymentAndAccount(payment, _reservation);
 
             // Optionally display confirmation
-            MessageBox.Show("Payment and account successfully recorded!");
+            MessageBox.Show("Payment successful");
 
             // Close or hide the form
-            this.Hide();
+           // this.Hide();
         }
 
+        private void btnPaymentLater_Click(object sender, EventArgs e)
+        {
+            // Calculate number of days
+            int numberOfDays = (_reservation.CheckOutDate - _reservation.CheckInDate).Days;
+
+            // Calculate total, deposit, balance
+            decimal totalAmount = _reservation.RoomRate * _reservation.NumberOfRooms * numberOfDays;
+            decimal deposit = totalAmount * 0.10m;
+            decimal balance = totalAmount - deposit;
+
+            // Create Payment object
+            Payment payment = new Payment
+            {
+                AccountID = _reservation.GuestID,
+                ReservationID = _reservation.ReservationID,
+                PaymentDate = DateTime.Today,
+                PaymentType = "Card",
+                TotalAmount = totalAmount,
+                Deposit = deposit,
+                AmountPaid = deposit,
+                Balance = balance,
+                Status = "Open"
+            };
+
+            // Save to DB
+            PaymentDB paymentDB = new PaymentDB();
+            paymentDB.AddAccount(payment, _reservation);
+
+            // Optionally display confirmation
+            MessageBox.Show("Account successfully recorded!");
+
+            btnPaymentNow.Hide();
+
+            // Close or hide the form
+           // this.Hide();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            pnlCard.Show();
+            btnPaymentNow.Hide();
+            btnPaymentLater.Hide();
+
+        }
     }
 }
 
