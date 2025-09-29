@@ -85,10 +85,10 @@
             this.panel1.Controls.Add(this.guna2TextBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.guna2HtmlLabel2);
-            this.panel1.Location = new System.Drawing.Point(318, 24);
+            this.panel1.Location = new System.Drawing.Point(303, 25);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1081, 764);
+            this.panel1.Size = new System.Drawing.Size(928, 609);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -96,11 +96,11 @@
             // 
             this.GuestView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GuestView.GridColor = System.Drawing.SystemColors.Control;
-            this.GuestView.Location = new System.Drawing.Point(62, 187);
+            this.GuestView.Location = new System.Drawing.Point(26, 179);
             this.GuestView.Name = "GuestView";
             this.GuestView.RowHeadersWidth = 62;
             this.GuestView.RowTemplate.Height = 28;
-            this.GuestView.Size = new System.Drawing.Size(951, 247);
+            this.GuestView.Size = new System.Drawing.Size(883, 142);
             this.GuestView.TabIndex = 21;
             this.GuestView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GuestView_CellContentClick);
             this.GuestView.SelectionChanged += new System.EventHandler(this.GuestView_SelectionChanged);
@@ -117,7 +117,7 @@
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
             this.guna2Button3.Image = global::Phumla_Kamnandi.Properties.Resources.delete_4219;
             this.guna2Button3.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button3.Location = new System.Drawing.Point(771, 130);
+            this.guna2Button3.Location = new System.Drawing.Point(704, 129);
             this.guna2Button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(188, 36);
@@ -137,10 +137,10 @@
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.guna2ComboBox1);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Location = new System.Drawing.Point(50, 469);
+            this.panel3.Location = new System.Drawing.Point(26, 332);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1007, 261);
+            this.panel3.Size = new System.Drawing.Size(866, 252);
             this.panel3.TabIndex = 19;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -160,7 +160,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label2.Location = new System.Drawing.Point(34, 210);
+            this.label2.Location = new System.Drawing.Point(39, 199);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(129, 37);
             this.label2.TabIndex = 24;
@@ -193,7 +193,7 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label9.Location = new System.Drawing.Point(25, 86);
+            this.label9.Location = new System.Drawing.Point(24, 74);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(164, 37);
             this.label9.TabIndex = 20;
@@ -279,7 +279,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label6.Location = new System.Drawing.Point(24, 157);
+            this.label6.Location = new System.Drawing.Point(24, 137);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(153, 37);
             this.label6.TabIndex = 13;
@@ -314,7 +314,7 @@
             this.guna2Button6.ForeColor = System.Drawing.Color.White;
             this.guna2Button6.Image = global::Phumla_Kamnandi.Properties.Resources.free_refresh_icon_3104_thumb;
             this.guna2Button6.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button6.Location = new System.Drawing.Point(780, 22);
+            this.guna2Button6.Location = new System.Drawing.Point(704, 11);
             this.guna2Button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button6.Name = "guna2Button6";
             this.guna2Button6.Size = new System.Drawing.Size(179, 37);
@@ -333,7 +333,7 @@
             this.guna2Button7.ForeColor = System.Drawing.Color.White;
             this.guna2Button7.Image = global::Phumla_Kamnandi.Properties.Resources._4226577;
             this.guna2Button7.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2Button7.Location = new System.Drawing.Point(771, 81);
+            this.guna2Button7.Location = new System.Drawing.Point(695, 70);
             this.guna2Button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button7.Name = "guna2Button7";
             this.guna2Button7.Size = new System.Drawing.Size(188, 36);
@@ -412,10 +412,10 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.guna2Button1);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(53, 24);
+            this.panel2.Location = new System.Drawing.Point(25, 25);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(289, 764);
+            this.panel2.Size = new System.Drawing.Size(285, 609);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -511,7 +511,7 @@
             this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(74, 171);
+            this.guna2Button2.Location = new System.Drawing.Point(53, 179);
             this.guna2Button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(171, 36);
@@ -589,7 +589,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.label7.Location = new System.Drawing.Point(36, 130);
+            this.label7.Location = new System.Drawing.Point(15, 132);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(266, 45);
             this.label7.TabIndex = 15;
@@ -626,12 +626,15 @@
             // 
             // _6
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(1461, 785);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = global::Phumla_Kamnandi.Properties.Resources.BackgroundImage;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1259, 677);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "_6";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "_6";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this._6_Load);
