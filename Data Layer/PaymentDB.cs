@@ -12,7 +12,7 @@ namespace Phumla_Kamnandi.Data_Layer
     {
         private string connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True";
 
-        public void AddPayment(Payment payment, Reservation reservation)
+        public void AddPaymentAndAccount(Payment payment, Reservation reservation)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -48,5 +48,48 @@ namespace Phumla_Kamnandi.Data_Layer
                 }
             }
         }
+        public void AddAccount(Payment payment, Reservation reservation)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                conn.Open();
+
+                // Insert into Accounts table 
+                string accountSql = @"INSERT INTO Accounts (ReservationID, Status, TotalAmount, Balance)
+                              VALUES (@ReservationID, @Status, @TotalAmount, @Balance);
+                              SELECT SCOPE_IDENTITY();";
+
+                int newAccountId;
+                using (SqlCommand cmdAcc = new SqlCommand(accountSql, conn))
+                {
+                    cmdAcc.Parameters.AddWithValue("@ReservationID", reservation.ReservationID);
+                    cmdAcc.Parameters.AddWithValue("@Status", payment.Status);
+                    cmdAcc.Parameters.AddWithValue("@TotalAmount", payment.TotalAmount);
+                    cmdAcc.Parameters.AddWithValue("@Balance", payment.TotalAmount);
+
+                    newAccountId = Convert.ToInt32(cmdAcc.ExecuteScalar());
+                }
+
+                string updateReservationSql = @"UPDATE Reservations
+                                                SET PaymentStatus = @PaymentStatus
+                                                WHERE ReservationID = @ReservationID";
+
+                using (SqlCommand cmdUpdate = new SqlCommand(updateReservationSql, conn))
+                {
+                    cmdUpdate.Parameters.AddWithValue("@PaymentStatus", "Outstanding"); // or whatever status you need
+                    cmdUpdate.Parameters.AddWithValue("@ReservationID", reservation.ReservationID);
+
+                    cmdUpdate.ExecuteNonQuery();
+                }
+
+
+
+
+
+            }
+
+
+        }
+
     }
 }

@@ -111,7 +111,7 @@
             this.NumberOfGuests.Location = new System.Drawing.Point(588, 215);
             this.NumberOfGuests.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NumberOfGuests.Name = "NumberOfGuests";
-            this.NumberOfGuests.Size = new System.Drawing.Size(114, 38);
+            this.NumberOfGuests.Size = new System.Drawing.Size(210, 38);
             this.NumberOfGuests.TabIndex = 18;
             this.NumberOfGuests.UpDownButtonFillColor = System.Drawing.Color.Tan;
             this.NumberOfGuests.ValueChanged += new System.EventHandler(this.NumberOfGuests_ValueChanged);
@@ -134,7 +134,7 @@
             this.txtNumberOfRooms.PlaceholderText = "";
             this.txtNumberOfRooms.ReadOnly = true;
             this.txtNumberOfRooms.SelectedText = "";
-            this.txtNumberOfRooms.Size = new System.Drawing.Size(202, 40);
+            this.txtNumberOfRooms.Size = new System.Drawing.Size(210, 38);
             this.txtNumberOfRooms.TabIndex = 17;
             // 
             // label8
@@ -184,7 +184,7 @@
             this.txtRoomPrice.Name = "txtRoomPrice";
             this.txtRoomPrice.PlaceholderText = "";
             this.txtRoomPrice.SelectedText = "";
-            this.txtRoomPrice.Size = new System.Drawing.Size(202, 40);
+            this.txtRoomPrice.Size = new System.Drawing.Size(215, 40);
             this.txtRoomPrice.TabIndex = 14;
             // 
             // lblRoomPrice
@@ -208,7 +208,7 @@
             this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.btnConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(728, 534);
+            this.btnConfirm.Location = new System.Drawing.Point(716, 534);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(245, 45);
             this.btnConfirm.TabIndex = 12;
@@ -225,7 +225,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(337, 534);
+            this.guna2Button1.Location = new System.Drawing.Point(327, 534);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(192, 45);
             this.guna2Button1.TabIndex = 11;
@@ -260,7 +260,7 @@
             this.txtGuestID.Name = "txtGuestID";
             this.txtGuestID.PlaceholderText = "";
             this.txtGuestID.SelectedText = "";
-            this.txtGuestID.Size = new System.Drawing.Size(210, 40);
+            this.txtGuestID.Size = new System.Drawing.Size(210, 38);
             this.txtGuestID.TabIndex = 2;
             // 
             // label4
@@ -327,7 +327,7 @@
             this.dtpCheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpCheckIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpCheckIn.Name = "dtpCheckIn";
-            this.dtpCheckIn.Size = new System.Drawing.Size(320, 36);
+            this.dtpCheckIn.Size = new System.Drawing.Size(312, 36);
             this.dtpCheckIn.TabIndex = 5;
             this.dtpCheckIn.Value = new System.DateTime(2025, 9, 21, 12, 17, 23, 979);
             this.dtpCheckIn.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
