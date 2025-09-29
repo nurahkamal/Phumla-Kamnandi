@@ -141,6 +141,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
                 txtAddress.Text = SelectedGuest.Cells["Address"].Value.ToString();
 
+                //Display Loyalty Points on Stars
                 int LPoints = Convert.ToInt32(SelectedGuest.Cells["LoyaltyPoints"].Value);
                 strlPoints.Value = LPoints;
 
