@@ -30,18 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_6));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.GuestView = new System.Windows.Forms.DataGridView();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.guna2TextBox7 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dtpCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.label3 = new System.Windows.Forms.Label();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.guna2Button10 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
@@ -63,12 +64,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.GuestView = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GuestView)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GuestView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,9 +88,22 @@
             this.panel1.Location = new System.Drawing.Point(318, 24);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(984, 668);
+            this.panel1.Size = new System.Drawing.Size(1081, 764);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // GuestView
+            // 
+            this.GuestView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GuestView.GridColor = System.Drawing.SystemColors.Control;
+            this.GuestView.Location = new System.Drawing.Point(62, 187);
+            this.GuestView.Name = "GuestView";
+            this.GuestView.RowHeadersWidth = 62;
+            this.GuestView.RowTemplate.Height = 28;
+            this.GuestView.Size = new System.Drawing.Size(951, 247);
+            this.GuestView.TabIndex = 21;
+            this.GuestView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GuestView_CellContentClick);
+            this.GuestView.SelectionChanged += new System.EventHandler(this.GuestView_SelectionChanged);
             // 
             // guna2Button3
             // 
@@ -114,33 +127,77 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
+            this.panel3.Controls.Add(this.label3);
+            this.panel3.Controls.Add(this.label2);
+            this.panel3.Controls.Add(this.label10);
+            this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.guna2TextBox7);
             this.panel3.Controls.Add(this.guna2TextBox2);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.guna2ComboBox1);
             this.panel3.Controls.Add(this.label6);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Controls.Add(this.dtpCheckIn);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.guna2DateTimePicker1);
-            this.panel3.Location = new System.Drawing.Point(71, 450);
+            this.panel3.Location = new System.Drawing.Point(50, 469);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(839, 202);
+            this.panel3.Size = new System.Drawing.Size(1007, 261);
             this.panel3.TabIndex = 19;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label3.Location = new System.Drawing.Point(503, 161);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(188, 37);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Loyalty Points";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label2.Location = new System.Drawing.Point(34, 210);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(129, 37);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Address :";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label10.Location = new System.Drawing.Point(503, 68);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(245, 37);
+            this.label10.TabIndex = 23;
+            this.label10.Text = "Passport Number :";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label4.Location = new System.Drawing.Point(503, 14);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 37);
+            this.label4.TabIndex = 22;
+            this.label4.Text = "ID :";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label9.Location = new System.Drawing.Point(12, 90);
+            this.label9.Location = new System.Drawing.Point(25, 86);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(255, 37);
+            this.label9.Size = new System.Drawing.Size(164, 37);
             this.label9.TabIndex = 20;
-            this.label9.Text = "Number of Rooms: ";
+            this.label9.Text = "First Name: ";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // guna2TextBox7
@@ -224,70 +281,9 @@
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label6.Location = new System.Drawing.Point(24, 157);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(163, 37);
+            this.label6.Size = new System.Drawing.Size(153, 37);
             this.label6.TabIndex = 13;
-            this.label6.Text = "Room Price:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label2.Location = new System.Drawing.Point(468, 26);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 37);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Check-In Date:";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // dtpCheckIn
-            // 
-            this.dtpCheckIn.AutoRoundedCorners = true;
-            this.dtpCheckIn.BackColor = System.Drawing.Color.Transparent;
-            this.dtpCheckIn.Checked = true;
-            this.dtpCheckIn.FillColor = System.Drawing.Color.Wheat;
-            this.dtpCheckIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCheckIn.ForeColor = System.Drawing.Color.Black;
-            this.dtpCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpCheckIn.Location = new System.Drawing.Point(475, 70);
-            this.dtpCheckIn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dtpCheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpCheckIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpCheckIn.Name = "dtpCheckIn";
-            this.dtpCheckIn.Size = new System.Drawing.Size(315, 30);
-            this.dtpCheckIn.TabIndex = 5;
-            this.dtpCheckIn.Value = new System.DateTime(2025, 9, 21, 12, 17, 23, 979);
-            this.dtpCheckIn.ValueChanged += new System.EventHandler(this.dtpCheckIn_ValueChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label3.Location = new System.Drawing.Point(483, 111);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(217, 37);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Check-Out Date:";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // guna2DateTimePicker1
-            // 
-            this.guna2DateTimePicker1.AutoRoundedCorners = true;
-            this.guna2DateTimePicker1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.Wheat;
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(468, 154);
-            this.guna2DateTimePicker1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(321, 29);
-            this.guna2DateTimePicker1.TabIndex = 7;
-            this.guna2DateTimePicker1.UseTransparentBackground = true;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2025, 9, 21, 12, 22, 26, 596);
+            this.label6.Text = "Last Name:";
             // 
             // guna2Button10
             // 
@@ -382,9 +378,9 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label1.Location = new System.Drawing.Point(367, 70);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(259, 38);
+            this.label1.Size = new System.Drawing.Size(184, 38);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Reservation Details";
+            this.label1.Text = "Guest Details";
             // 
             // guna2HtmlLabel2
             // 
@@ -419,7 +415,7 @@
             this.panel2.Location = new System.Drawing.Point(53, 24);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(289, 668);
+            this.panel2.Size = new System.Drawing.Size(289, 764);
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -628,21 +624,10 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // GuestView
-            // 
-            this.GuestView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GuestView.GridColor = System.Drawing.SystemColors.Control;
-            this.GuestView.Location = new System.Drawing.Point(102, 171);
-            this.GuestView.Name = "GuestView";
-            this.GuestView.RowHeadersWidth = 62;
-            this.GuestView.RowTemplate.Height = 28;
-            this.GuestView.Size = new System.Drawing.Size(774, 250);
-            this.GuestView.TabIndex = 21;
-            // 
             // _6
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(1325, 701);
+            this.ClientSize = new System.Drawing.Size(1461, 785);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -652,12 +637,12 @@
             this.Load += new System.EventHandler(this._6_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GuestView)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GuestView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -670,10 +655,6 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private System.Windows.Forms.Label label3;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckIn;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
@@ -698,5 +679,9 @@
         private System.Windows.Forms.Label label9;
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private System.Windows.Forms.DataGridView GuestView;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label4;
     }
 }

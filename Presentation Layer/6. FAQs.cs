@@ -103,5 +103,19 @@ namespace Phumla_Kamnandi.Presentation_Layer
             DataTable guests = guestController.SeeAllGuests();
             GuestView.DataSource = guests; 
         }
+
+        private void GuestView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void GuestView_SelectionChanged(object sender, EventArgs e)
+        {  // if User selects a row it wil display in the textboxes 
+            if (GuestView.SelectedRows.Count > 0)
+
+            { 
+            
+            }
+        }
     }
 }
