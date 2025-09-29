@@ -49,8 +49,23 @@
   </PropertyGroup>
   <!-- References -->
   <ItemGroup>
+    <Reference Include="Guna.Charts.WinForms, Version=1.1.0.0, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>packages\Guna.Charts.WinForms.1.1.0\lib\net472\Guna.Charts.WinForms.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.7\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.ReportViewer.WinForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Reporting.WinForms.v11.1.0.0.0\lib\Microsoft.SqlServer.Types.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
@@ -79,11 +94,13 @@
     <Compile Include="Business Layer\PaymentController.cs" />
     <Compile Include="Business Layer\Payment.cs" />
     <Compile Include="Business Layer\Persons.cs" />
+    <Compile Include="Business Layer\ReportOccupancyController.cs" />
     <Compile Include="Business Layer\Reservation.cs" />
     <Compile Include="Business Layer\ReservationController.cs" />
     <Compile Include="Business Layer\Room.cs" />
     <Compile Include="Data Layer\GuestDB.cs" />
     <Compile Include="Data Layer\PaymentDB.cs" />
+    <Compile Include="Data Layer\ReportOccupancyDB.cs" />
     <Compile Include="Data Layer\ReservationDB.cs" />
     <Compile Include="Data Layer\DB.cs" />
     <Compile Include="Data Layer\RoomDB.cs" />
@@ -124,11 +141,11 @@
     <Compile Include="Presentation Layer\6. FAQs.Designer.cs">
       <DependentUpon>6. FAQs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\7. Report Dashboard.cs">
+    <Compile Include="Presentation Layer\7. OccupancyReport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Presentation Layer\7. Report Dashboard.Designer.cs">
-      <DependentUpon>7. Report Dashboard.cs</DependentUpon>
+    <Compile Include="Presentation Layer\7. OccupancyReport.Designer.cs">
+      <DependentUpon>7. OccupancyReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\PaymentForm.cs">
       <SubType>Form</SubType>
@@ -175,8 +192,8 @@
     <EmbeddedResource Include="Presentation Layer\6. FAQs.resx">
       <DependentUpon>6. FAQs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\7. Report Dashboard.resx">
-      <DependentUpon>7. Report Dashboard.cs</DependentUpon>
+    <EmbeddedResource Include="Presentation Layer\7. OccupancyReport.resx">
+      <DependentUpon>7. OccupancyReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\PaymentForm.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>

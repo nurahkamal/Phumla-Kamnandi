@@ -1,6 +1,6 @@
 ﻿namespace Phumla_Kamnandi.Presentation_Layer
 {
-    partial class Report_Dashboard
+    partial class OccupancyReport
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Report_Dashboard));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.dtpEndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpStartDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.lblPhumla = new System.Windows.Forms.Label();
@@ -46,8 +60,20 @@
             this.btnLast7days = new Guna.UI2.WinForms.Guna2Button();
             this.btnToday = new Guna.UI2.WinForms.Guna2Button();
             this.btnCustom = new Guna.UI2.WinForms.Guna2Button();
+            this.chartRoomsBySeason = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnGenerateReport = new Guna.UI2.WinForms.Guna2Button();
+            this.chartRoomOccupancyOverTime = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartRoomsByDay = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartDeposits = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartDailyDeposits = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lblTotalDeposits = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.leftPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRoomsBySeason)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRoomOccupancyOverTime)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRoomsByDay)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDeposits)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDailyDeposits)).BeginInit();
             this.SuspendLayout();
             // 
             // dtpEndDate
@@ -93,7 +119,6 @@
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.Location = new System.Drawing.Point(86, 12);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(155, 127);
@@ -221,7 +246,6 @@
             this.btnExit.Size = new System.Drawing.Size(180, 45);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnOkay
             // 
@@ -314,12 +338,128 @@
             this.btnCustom.TabIndex = 12;
             this.btnCustom.Text = "Custom";
             // 
-            // Report_Dashboard
+            // chartRoomsBySeason
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartRoomsBySeason.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartRoomsBySeason.Legends.Add(legend1);
+            this.chartRoomsBySeason.Location = new System.Drawing.Point(383, 153);
+            this.chartRoomsBySeason.Name = "chartRoomsBySeason";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartRoomsBySeason.Series.Add(series1);
+            this.chartRoomsBySeason.Size = new System.Drawing.Size(300, 300);
+            this.chartRoomsBySeason.TabIndex = 13;
+            this.chartRoomsBySeason.Text = "chart1";
+            // 
+            // btnGenerateReport
+            // 
+            this.btnGenerateReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnGenerateReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnGenerateReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnGenerateReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnGenerateReport.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnGenerateReport.ForeColor = System.Drawing.Color.White;
+            this.btnGenerateReport.Location = new System.Drawing.Point(458, 82);
+            this.btnGenerateReport.Name = "btnGenerateReport";
+            this.btnGenerateReport.Size = new System.Drawing.Size(180, 45);
+            this.btnGenerateReport.TabIndex = 26;
+            this.btnGenerateReport.Text = "Generate";
+            this.btnGenerateReport.Click += new System.EventHandler(this.btnGenerateReport_Click);
+            // 
+            // chartRoomOccupancyOverTime
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartRoomOccupancyOverTime.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartRoomOccupancyOverTime.Legends.Add(legend2);
+            this.chartRoomOccupancyOverTime.Location = new System.Drawing.Point(743, 153);
+            this.chartRoomOccupancyOverTime.Name = "chartRoomOccupancyOverTime";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeColumn;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.YValuesPerPoint = 2;
+            this.chartRoomOccupancyOverTime.Series.Add(series2);
+            this.chartRoomOccupancyOverTime.Size = new System.Drawing.Size(300, 300);
+            this.chartRoomOccupancyOverTime.TabIndex = 27;
+            this.chartRoomOccupancyOverTime.Text = "chart1";
+            // 
+            // chartRoomsByDay
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chartRoomsByDay.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartRoomsByDay.Legends.Add(legend3);
+            this.chartRoomsByDay.Location = new System.Drawing.Point(411, 363);
+            this.chartRoomsByDay.Name = "chartRoomsByDay";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartRoomsByDay.Series.Add(series3);
+            this.chartRoomsByDay.Size = new System.Drawing.Size(300, 300);
+            this.chartRoomsByDay.TabIndex = 28;
+            this.chartRoomsByDay.Text = "chart1";
+            // 
+            // chartDeposits
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chartDeposits.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartDeposits.Legends.Add(legend4);
+            this.chartDeposits.Location = new System.Drawing.Point(499, 245);
+            this.chartDeposits.Name = "chartDeposits";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chartDeposits.Series.Add(series4);
+            this.chartDeposits.Size = new System.Drawing.Size(300, 300);
+            this.chartDeposits.TabIndex = 29;
+            this.chartDeposits.Text = "chart1";
+            // 
+            // chartDailyDeposits
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.chartDailyDeposits.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartDailyDeposits.Legends.Add(legend5);
+            this.chartDailyDeposits.Location = new System.Drawing.Point(608, 336);
+            this.chartDailyDeposits.Name = "chartDailyDeposits";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartDailyDeposits.Series.Add(series5);
+            this.chartDailyDeposits.Size = new System.Drawing.Size(300, 300);
+            this.chartDailyDeposits.TabIndex = 30;
+            this.chartDailyDeposits.Text = "chart1";
+            // 
+            // lblTotalDeposits
+            // 
+            this.lblTotalDeposits.AutoSize = true;
+            this.lblTotalDeposits.Location = new System.Drawing.Point(955, 528);
+            this.lblTotalDeposits.Name = "lblTotalDeposits";
+            this.lblTotalDeposits.Size = new System.Drawing.Size(44, 16);
+            this.lblTotalDeposits.TabIndex = 31;
+            this.lblTotalDeposits.Text = "label1";
+            // 
+            // OccupancyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(1826, 826);
+            this.Controls.Add(this.lblTotalDeposits);
+            this.Controls.Add(this.chartDailyDeposits);
+            this.Controls.Add(this.chartDeposits);
+            this.Controls.Add(this.chartRoomsByDay);
+            this.Controls.Add(this.chartRoomOccupancyOverTime);
+            this.Controls.Add(this.btnGenerateReport);
+            this.Controls.Add(this.chartRoomsBySeason);
             this.Controls.Add(this.btnCustom);
             this.Controls.Add(this.btnToday);
             this.Controls.Add(this.btnLast7days);
@@ -330,12 +470,17 @@
             this.Controls.Add(this.dtpStartDate);
             this.Controls.Add(this.dtpEndDate);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Report_Dashboard";
+            this.Name = "OccupancyReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.leftPanel.ResumeLayout(false);
             this.leftPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRoomsBySeason)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRoomOccupancyOverTime)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRoomsByDay)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDeposits)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDailyDeposits)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,5 +504,12 @@
         private Guna.UI2.WinForms.Guna2Button btnLast7days;
         private Guna.UI2.WinForms.Guna2Button btnToday;
         private Guna.UI2.WinForms.Guna2Button btnCustom;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomsBySeason;
+        private Guna.UI2.WinForms.Guna2Button btnGenerateReport;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomOccupancyOverTime;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomsByDay;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDeposits;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDailyDeposits;
+        private System.Windows.Forms.Label lblTotalDeposits;
     }
 }
