@@ -1,4 +1,5 @@
 ﻿using Phumla_Kamnandi.Business_Layer;
+using Phumla_Kamnandi.Data_Layer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -110,11 +111,43 @@ namespace Phumla_Kamnandi.Presentation_Layer
         }
 
         private void GuestView_SelectionChanged(object sender, EventArgs e)
-        {  // if User selects a row it wil display in the textboxes 
-            if (GuestView.SelectedRows.Count > 0)
+        {  
 
-            { 
             
+          // If a user chooses a selected row 
+            if ( GuestView.SelectedRows.Count > 0)
+
+            { //declare Selected Guest
+                DataGridViewRow SelectedGuest = GuestView.SelectedRows[0];
+
+                //Display in TextBoxes
+                int GuestID= Convert.ToInt32(SelectedGuest.Cells["GuestID"].Value);
+
+
+                txtGid.Text = GuestID.ToString();
+
+                //txtPid.Text = SelectedGuest.Cells["IDNumber"].Value.ToString();
+
+                txtGName.Text = SelectedGuest.Cells["FirstName"].Value.ToString();
+
+                txtGSurname.Text = SelectedGuest.Cells["LastName"].Value.ToString();
+
+               // txtPassNum.Text = SelectedGuest.Cells["PassportNo"].Value.ToString(); 
+
+                txtPhone.Text = SelectedGuest.Cells["Phone"].Value.ToString();
+
+
+                txtEmail.Text = SelectedGuest.Cells["Email"].Value.ToString();
+
+                txtAddress.Text = SelectedGuest.Cells["Address"].Value.ToString();
+
+                int LPoints = Convert.ToInt32(SelectedGuest.Cells["LoyaltyPoints"].Value);
+                strlPoints.Value = LPoints;
+
+
+
+
+
             }
         }
 
