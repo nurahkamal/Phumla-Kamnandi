@@ -117,5 +117,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
             
             }
         }
+
+        private void guna2TextBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
