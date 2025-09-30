@@ -1,9 +1,11 @@
-﻿using System;
+﻿using Phumla_Kamnandi.Data_Layer;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using Phumla_Kamnandi.Data_Layer;
 
 namespace Phumla_Kamnandi.Business_Layer
 {
@@ -24,7 +26,7 @@ namespace Phumla_Kamnandi.Business_Layer
         }
 
         // Display payment details in RichTextBox
-        public void DisplayPaymentDetails(System.Windows.Forms.RichTextBox richTextBox, Payment payment, Reservation reservation)//!!!
+        public void DisplayPaymentDetails(System.Windows.Forms.RichTextBox richTextBox, Payment payment, Reservation reservation)
         {
             richTextBox.Clear();
             richTextBox.AppendText($"Reservation ID: {payment.ReservationID}\n\n");
@@ -36,9 +38,34 @@ namespace Phumla_Kamnandi.Business_Layer
             richTextBox.AppendText($"Room Rate: {reservation.RoomRate:C}\n\n");
             richTextBox.AppendText($"Total Amount: {payment.TotalAmount:C}\n");
             richTextBox.AppendText($"Deposit (10%): {payment.Deposit:C}\n\n");
+
+            // Fetch Loyalty Points from Guests table
+            int loyaltyPoints = 0;
+            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True"))
+            {
+                conn.Open();
+                string query = "SELECT LoyaltyPoints FROM Guests WHERE GuestID = @GuestID";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@GuestID", reservation.GuestID);
+
+                object result = cmd.ExecuteScalar();
+                loyaltyPoints = (result != DBNull.Value) ? Convert.ToInt32(result) : 0;
+            }
+
+            richTextBox.AppendText($"Loyalty Points: {loyaltyPoints}\n");
+
+            // Show Discount if applicable
+            if (loyaltyPoints >= 5)
+            {
+                decimal discount = 100; // R100 discount
+                payment.TotalAmount = payment.TotalAmount - discount;
+                richTextBox.AppendText($"Loyalty Discount: {discount:C}\n");
+                richTextBox.AppendText($"Total After Discount: {payment.TotalAmount:C}\n");
+            }
+        }
             
 
-        }
+        
 
         // Save payment
         public void SavePayment(Payment payment, Reservation reservation)
