@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Phumla_Kamnandi.Presentation_Layer;
 
 namespace Phumla_Kamnandi
 {
@@ -18,7 +17,7 @@ namespace Phumla_Kamnandi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new _3());
+            Application.Run(new _6());
         }
     }
 }
