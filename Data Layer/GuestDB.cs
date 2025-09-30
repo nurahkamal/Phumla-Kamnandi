@@ -88,15 +88,7 @@ namespace Phumla_Kamnandi.Data_Layer
                         // Commit transaction if successful
                         transaction.Commit();
 
-                        // Show feedback
-                        MessageBox.Show(
-                            affectedRows > 0
-                                ? "Guest and all related records successfully deleted!"
-                                : "No records were deleted. Please check if the Guest ID is correct.",
-                            affectedRows > 0 ? "Success" : "No Deletions",
-                            MessageBoxButtons.OK,
-                            affectedRows > 0 ? MessageBoxIcon.Information : MessageBoxIcon.Warning
-                        );
+                        
                     }
                     catch (Exception ex)
                     {
