@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Phumla_Kamnandi.Business_Layer
 {
@@ -31,6 +32,13 @@ namespace Phumla_Kamnandi.Business_Layer
         {
 
             return guestDB.SeeGuests();
+        }
+
+
+        public void DeleteGuest(string guestId)
+        {
+            guestDB.DeleteGuest(guestId);
+
         }
         #endregion
     }

@@ -9,6 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
+using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Phumla_Kamnandi.Data_Layer
 {
@@ -35,7 +37,77 @@ namespace Phumla_Kamnandi.Data_Layer
             return guestsTable; // Guest Table is returned 
         }
 
-        //
+
+        //Delete a guest 
+
+        // Delete a guest and all related records
+        public void DeleteGuest(string guestId)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SqlTransaction transaction = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        int affectedRows = 0;
+
+                        // Queries in the correct delete order (Payments → Accounts → Reservation_Room → Reservations → Guest)
+                        var deleteQueries = new List<string>
+                {
+
+                    // Step 1: Delete payments linked via accounts
+                    "DELETE FROM dbo.Payments WHERE AccountID IN (SELECT AccountID FROM dbo.Accounts WHERE ReservationID IN (SELECT ReservationID FROM dbo.Reservations WHERE GuestID = @GuestId))",
+
+                    "DELETE FROM dbo.RoomAllocation WHERE ReservationID  IN (SELECT AccountID FROM dbo.Accounts WHERE ReservationID IN (SELECT ReservationID FROM dbo.Reservations WHERE GuestID = @GuestId))",
+
+                    // Step 2: Delete accounts linked to reservations
+                    "DELETE FROM dbo.Accounts WHERE ReservationID IN (SELECT ReservationID FROM dbo.Reservations WHERE GuestID = @GuestId)",
+
+                    // Step 3: Delete reservation-room links
+                    "DELETE FROM dbo.ReservationRooms WHERE ReservationID IN (SELECT ReservationID FROM dbo.Reservations WHERE GuestID = @GuestId)",
+
+                    // Step 4: Delete reservations
+                    "DELETE FROM dbo.Reservations WHERE GuestID = @GuestId",
+
+                    // Step 5: Delete guest
+                    "DELETE FROM dbo.Guests WHERE GuestID = @GuestId"
+                };
+
+                        // Execute each query
+                        foreach (var query in deleteQueries)
+                        {
+                            using (SqlCommand command = new SqlCommand(query, connection, transaction))
+                            {
+                                command.Parameters.AddWithValue("@GuestId", guestId);
+                                affectedRows += command.ExecuteNonQuery();
+                            }
+                        }
+
+                        // Commit transaction if successful
+                        transaction.Commit();
+
+                        // Show feedback
+                        MessageBox.Show(
+                            affectedRows > 0
+                                ? "Guest and all related records successfully deleted!"
+                                : "No records were deleted. Please check if the Guest ID is correct.",
+                            affectedRows > 0 ? "Success" : "No Deletions",
+                            MessageBoxButtons.OK,
+                            affectedRows > 0 ? MessageBoxIcon.Information : MessageBoxIcon.Warning
+                        );
+                    }
+                    catch (Exception ex)
+                    {
+                        // Roll back if something fails
+                        transaction.Rollback();
+                        MessageBox.Show("An error occurred while deleting the guest: " + ex.Message,
+                                        "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
 
         #endregion 
 

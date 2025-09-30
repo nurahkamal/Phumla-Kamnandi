@@ -156,5 +156,21 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
 
         }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            if (GuestView.SelectedRows.Count > 0)
+            {
+                string SelectedGuest = GuestView.SelectedRows[0].Cells[0].Value.ToString();
+                guestController.DeleteGuest(SelectedGuest);
+
+               
+            }
+
+            else
+            {
+                MessageBox.Show("No Guest ID found in the selected row.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
