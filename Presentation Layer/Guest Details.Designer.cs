@@ -58,23 +58,23 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ImageButton11 = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblName = new System.Windows.Forms.Label();
-            this.lblPhoneNo = new System.Windows.Forms.Label();
-            this.lblID = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtPhoneNo = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPhoneNo = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtName = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
+            this.lblAddress = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.lblPhoneNo = new System.Windows.Forms.Label();
+            this.lblNam = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2ImageButton11 = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -547,72 +547,6 @@
             this.panel3.Size = new System.Drawing.Size(754, 586);
             this.panel3.TabIndex = 6;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label5.Location = new System.Drawing.Point(34, 47);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(161, 30);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Enter Guest ID:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.AutoRoundedCorners = true;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(216, 47);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(239, 32);
-            this.txtSearch.TabIndex = 34;
-            // 
-            // guna2ImageButton11
-            // 
-            this.guna2ImageButton11.BackColor = System.Drawing.Color.White;
-            this.guna2ImageButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.guna2ImageButton11.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton11.HoverState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton11.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton11.Image")));
-            this.guna2ImageButton11.ImageOffset = new System.Drawing.Point(0, 0);
-            this.guna2ImageButton11.ImageRotate = 0F;
-            this.guna2ImageButton11.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton11.Location = new System.Drawing.Point(216, 47);
-            this.guna2ImageButton11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.guna2ImageButton11.Name = "guna2ImageButton11";
-            this.guna2ImageButton11.PressedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.guna2ImageButton11.Size = new System.Drawing.Size(44, 30);
-            this.guna2ImageButton11.TabIndex = 35;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.AutoRoundedCorners = true;
-            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.Location = new System.Drawing.Point(488, 47);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(171, 36);
-            this.btnSearch.TabIndex = 36;
-            this.btnSearch.Text = "Search ";
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
@@ -626,160 +560,30 @@
             this.panel4.Controls.Add(this.lblAddress);
             this.panel4.Controls.Add(this.lblID);
             this.panel4.Controls.Add(this.lblPhoneNo);
-            this.panel4.Controls.Add(this.lblName);
+            this.panel4.Controls.Add(this.lblNam);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Location = new System.Drawing.Point(30, 135);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(656, 440);
             this.panel4.TabIndex = 37;
             // 
-            // label2
+            // btnAdd
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.label2.Location = new System.Drawing.Point(218, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 38);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "New Guest";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // lblName
-            // 
-            this.lblName.AutoSize = true;
-            this.lblName.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.lblName.Location = new System.Drawing.Point(30, 87);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(135, 30);
-            this.lblName.TabIndex = 34;
-            this.lblName.Text = "Enter Name:\r\n";
-            this.lblName.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // lblPhoneNo
-            // 
-            this.lblPhoneNo.AutoSize = true;
-            this.lblPhoneNo.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPhoneNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.lblPhoneNo.Location = new System.Drawing.Point(30, 150);
-            this.lblPhoneNo.Name = "lblPhoneNo";
-            this.lblPhoneNo.Size = new System.Drawing.Size(229, 30);
-            this.lblPhoneNo.TabIndex = 35;
-            this.lblPhoneNo.Text = "Enter Phone Number:\r\n";
-            // 
-            // lblID
-            // 
-            this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.lblID.Location = new System.Drawing.Point(30, 207);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(187, 30);
-            this.lblID.TabIndex = 36;
-            this.lblID.Text = "Enter ID Number:";
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.lblAddress.Location = new System.Drawing.Point(30, 268);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(221, 30);
-            this.lblAddress.TabIndex = 37;
-            this.lblAddress.Text = "Enter Home Address:";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.lblEmail.Location = new System.Drawing.Point(32, 319);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(211, 30);
-            this.lblEmail.TabIndex = 38;
-            this.lblEmail.Text = "Enter email address:";
-            // 
-            // txtName
-            // 
-            this.txtName.AutoRoundedCorners = true;
-            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtName.DefaultText = "";
-            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtName.Location = new System.Drawing.Point(339, 87);
-            this.txtName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtName.Name = "txtName";
-            this.txtName.PlaceholderText = "";
-            this.txtName.SelectedText = "";
-            this.txtName.Size = new System.Drawing.Size(239, 32);
-            this.txtName.TabIndex = 39;
-            // 
-            // txtID
-            // 
-            this.txtID.AutoRoundedCorners = true;
-            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtID.DefaultText = "";
-            this.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtID.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtID.Location = new System.Drawing.Point(339, 207);
-            this.txtID.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtID.Name = "txtID";
-            this.txtID.PlaceholderText = "";
-            this.txtID.SelectedText = "";
-            this.txtID.Size = new System.Drawing.Size(239, 32);
-            this.txtID.TabIndex = 40;
-            // 
-            // txtPhoneNo
-            // 
-            this.txtPhoneNo.AutoRoundedCorners = true;
-            this.txtPhoneNo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPhoneNo.DefaultText = "";
-            this.txtPhoneNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPhoneNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPhoneNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPhoneNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhoneNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPhoneNo.Location = new System.Drawing.Point(339, 148);
-            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtPhoneNo.Name = "txtPhoneNo";
-            this.txtPhoneNo.PlaceholderText = "";
-            this.txtPhoneNo.SelectedText = "";
-            this.txtPhoneNo.Size = new System.Drawing.Size(239, 32);
-            this.txtPhoneNo.TabIndex = 41;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.AutoRoundedCorners = true;
-            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtEmail.DefaultText = "";
-            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(339, 319);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.PlaceholderText = "";
-            this.txtEmail.SelectedText = "";
-            this.txtEmail.Size = new System.Drawing.Size(239, 32);
-            this.txtEmail.TabIndex = 42;
+            this.btnAdd.AutoRoundedCorners = true;
+            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(467, 391);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(171, 36);
+            this.btnAdd.TabIndex = 38;
+            this.btnAdd.Text = "Add Guest";
+            this.btnAdd.Click += new System.EventHandler(this.guna2Button14_Click);
             // 
             // txtAddress
             // 
@@ -801,23 +605,219 @@
             this.txtAddress.Size = new System.Drawing.Size(239, 32);
             this.txtAddress.TabIndex = 43;
             // 
-            // btnAdd
+            // txtEmail
             // 
-            this.btnAdd.AutoRoundedCorners = true;
-            this.btnAdd.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAdd.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAdd.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(467, 391);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(171, 36);
-            this.btnAdd.TabIndex = 38;
-            this.btnAdd.Text = "Add Guest";
-            this.btnAdd.Click += new System.EventHandler(this.guna2Button14_Click);
+            this.txtEmail.AutoRoundedCorners = true;
+            this.txtEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtEmail.DefaultText = "";
+            this.txtEmail.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtEmail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtEmail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtEmail.Location = new System.Drawing.Point(339, 319);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PlaceholderText = "";
+            this.txtEmail.SelectedText = "";
+            this.txtEmail.Size = new System.Drawing.Size(239, 32);
+            this.txtEmail.TabIndex = 42;
+            // 
+            // txtPhoneNo
+            // 
+            this.txtPhoneNo.AutoRoundedCorners = true;
+            this.txtPhoneNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPhoneNo.DefaultText = "";
+            this.txtPhoneNo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPhoneNo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPhoneNo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPhoneNo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNo.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhoneNo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPhoneNo.Location = new System.Drawing.Point(339, 148);
+            this.txtPhoneNo.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtPhoneNo.Name = "txtPhoneNo";
+            this.txtPhoneNo.PlaceholderText = "";
+            this.txtPhoneNo.SelectedText = "";
+            this.txtPhoneNo.Size = new System.Drawing.Size(239, 32);
+            this.txtPhoneNo.TabIndex = 41;
+            // 
+            // txtID
+            // 
+            this.txtID.AutoRoundedCorners = true;
+            this.txtID.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtID.DefaultText = "";
+            this.txtID.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtID.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtID.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtID.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtID.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtID.Location = new System.Drawing.Point(339, 207);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtID.Name = "txtID";
+            this.txtID.PlaceholderText = "";
+            this.txtID.SelectedText = "";
+            this.txtID.Size = new System.Drawing.Size(239, 32);
+            this.txtID.TabIndex = 40;
+            // 
+            // txtName
+            // 
+            this.txtName.AutoRoundedCorners = true;
+            this.txtName.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtName.DefaultText = "";
+            this.txtName.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtName.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtName.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtName.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtName.Location = new System.Drawing.Point(339, 87);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtName.Name = "txtName";
+            this.txtName.PlaceholderText = "";
+            this.txtName.SelectedText = "";
+            this.txtName.Size = new System.Drawing.Size(239, 32);
+            this.txtName.TabIndex = 39;
+            // 
+            // lblEmail
+            // 
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.lblEmail.Location = new System.Drawing.Point(32, 319);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(211, 30);
+            this.lblEmail.TabIndex = 38;
+            this.lblEmail.Text = "Enter email address:";
+            // 
+            // lblAddress
+            // 
+            this.lblAddress.AutoSize = true;
+            this.lblAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.lblAddress.Location = new System.Drawing.Point(30, 268);
+            this.lblAddress.Name = "lblAddress";
+            this.lblAddress.Size = new System.Drawing.Size(221, 30);
+            this.lblAddress.TabIndex = 37;
+            this.lblAddress.Text = "Enter Home Address:";
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.lblID.Location = new System.Drawing.Point(30, 207);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(187, 30);
+            this.lblID.TabIndex = 36;
+            this.lblID.Text = "Enter ID Number:";
+            // 
+            // lblPhoneNo
+            // 
+            this.lblPhoneNo.AutoSize = true;
+            this.lblPhoneNo.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPhoneNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.lblPhoneNo.Location = new System.Drawing.Point(30, 150);
+            this.lblPhoneNo.Name = "lblPhoneNo";
+            this.lblPhoneNo.Size = new System.Drawing.Size(229, 30);
+            this.lblPhoneNo.TabIndex = 35;
+            this.lblPhoneNo.Text = "Enter Phone Number:\r\n";
+            // 
+            // lblNam
+            // 
+            this.lblNam.AutoSize = true;
+            this.lblNam.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNam.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.lblNam.Location = new System.Drawing.Point(30, 87);
+            this.lblNam.Name = "lblNam";
+            this.lblNam.Size = new System.Drawing.Size(135, 30);
+            this.lblNam.TabIndex = 34;
+            this.lblNam.Text = "Enter Name:\r\n";
+            this.lblNam.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.label2.Location = new System.Drawing.Point(218, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 38);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "New Guest";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.AutoRoundedCorners = true;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(488, 47);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(171, 36);
+            this.btnSearch.TabIndex = 36;
+            this.btnSearch.Text = "Search ";
+            // 
+            // guna2ImageButton11
+            // 
+            this.guna2ImageButton11.BackColor = System.Drawing.Color.White;
+            this.guna2ImageButton11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.guna2ImageButton11.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton11.HoverState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton11.Image = ((System.Drawing.Image)(resources.GetObject("guna2ImageButton11.Image")));
+            this.guna2ImageButton11.ImageOffset = new System.Drawing.Point(0, 0);
+            this.guna2ImageButton11.ImageRotate = 0F;
+            this.guna2ImageButton11.ImageSize = new System.Drawing.Size(30, 30);
+            this.guna2ImageButton11.Location = new System.Drawing.Point(216, 47);
+            this.guna2ImageButton11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.guna2ImageButton11.Name = "guna2ImageButton11";
+            this.guna2ImageButton11.PressedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.guna2ImageButton11.Size = new System.Drawing.Size(44, 30);
+            this.guna2ImageButton11.TabIndex = 35;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.AutoRoundedCorners = true;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Location = new System.Drawing.Point(216, 47);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(239, 32);
+            this.txtSearch.TabIndex = 34;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label5.Location = new System.Drawing.Point(34, 47);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(161, 30);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Enter Guest ID:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // frmCreateGuest
             // 
@@ -886,7 +886,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblPhoneNo;
-        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblNam;
         private System.Windows.Forms.Label lblAddress;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Guna.UI2.WinForms.Guna2TextBox txtAddress;
