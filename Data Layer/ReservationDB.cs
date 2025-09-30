@@ -32,7 +32,15 @@ namespace Phumla_Kamnandi.Data_Layer
 
                 int reservationID = Convert.ToInt32(cmdRes.ExecuteScalar());
 
-               
+                string loyaltyQuery = @"UPDATE Guests 
+                        SET LoyaltyPoints = LoyaltyPoints + 1 
+                        WHERE GuestID = @GuestID";
+
+                SqlCommand cmdLoyalty = new SqlCommand(loyaltyQuery, connection);
+                cmdLoyalty.Parameters.AddWithValue("@GuestID", guestID);
+                cmdLoyalty.ExecuteNonQuery();
+
+
                 for (int i = 0; i < roomIDs.Count; i++)
                 {
                     int guestsInRoom = (i == roomIDs.Count - 1) ? (numberOfGuests - i * 4) : 4;

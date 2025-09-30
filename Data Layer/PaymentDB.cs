@@ -18,6 +18,26 @@ namespace Phumla_Kamnandi.Data_Layer
             {
                 conn.Open();
 
+                string loyaltyQuery = "SELECT LoyaltyPoints FROM Guests WHERE GuestID = @GuestID";
+                SqlCommand cmdLoyalty = new SqlCommand(loyaltyQuery, conn);
+                cmdLoyalty.Parameters.AddWithValue("@GuestID", reservation.GuestID);
+                object result = cmdLoyalty.ExecuteScalar();
+                int loyaltyPoints = (result != DBNull.Value) ? Convert.ToInt32(result) : 0;
+
+                // Step 2: Apply discount if loyalty points >= 5
+                if (loyaltyPoints >= 5)
+                {
+                    decimal discount = 100; // R100
+                    payment.TotalAmount = payment.TotalAmount - discount;
+                    payment.Balance = payment.TotalAmount - payment.AmountPaid;
+
+                    // Reset loyalty points
+                    string resetQuery = "UPDATE Guests SET LoyaltyPoints = 0 WHERE GuestID = @GuestID";
+                    SqlCommand resetCmd = new SqlCommand(resetQuery, conn);
+                    resetCmd.Parameters.AddWithValue("@GuestID", reservation.GuestID);
+                    resetCmd.ExecuteNonQuery();
+                }
+
                 // Insert into Accounts table 
                 string accountSql = @"INSERT INTO Accounts (ReservationID, Status, TotalAmount, Balance)
                               VALUES (@ReservationID, @Status, @TotalAmount, @Balance);
@@ -53,6 +73,25 @@ namespace Phumla_Kamnandi.Data_Layer
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 conn.Open();
+
+                string loyaltyQuery = "SELECT LoyaltyPoints FROM Guests WHERE GuestID = @GuestID";
+                SqlCommand cmdLoyalty = new SqlCommand(loyaltyQuery, conn);
+                cmdLoyalty.Parameters.AddWithValue("@GuestID", reservation.GuestID);
+                object result = cmdLoyalty.ExecuteScalar();
+                int loyaltyPoints = (result != DBNull.Value) ? Convert.ToInt32(result) : 0;
+
+                // Apply discount if loyalty points >= 5
+                if (loyaltyPoints >= 5)
+                {
+                    decimal discount = 100; //R100
+                    payment.TotalAmount = payment.TotalAmount - discount;
+
+                    // Reset loyalty points
+                    string resetQuery = "UPDATE Guests SET LoyaltyPoints = 0 WHERE GuestID = @GuestID";
+                    SqlCommand resetCmd = new SqlCommand(resetQuery, conn);
+                    resetCmd.Parameters.AddWithValue("@GuestID", reservation.GuestID);
+                    resetCmd.ExecuteNonQuery();
+                }
 
                 // Insert into Accounts table 
                 string accountSql = @"INSERT INTO Accounts (ReservationID, Status, TotalAmount, Balance)
