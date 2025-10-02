@@ -103,6 +103,16 @@ namespace Phumla_Kamnandi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap BackgroundImage1 {
+            get {
+                object obj = ResourceManager.GetObject("BackgroundImage1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete_4219 {
             get {
                 object obj = ResourceManager.GetObject("delete_4219", resourceCulture);
