@@ -32,8 +32,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            _6 form6 = new _6();   // create an instance of Form _8
-            form6.Show();          // show Form _8
+            //_6 form6 = new _6();   // create an instance of Form _8
+            //form6.Show();          // show Form _8
             this.Hide();
         }
 
