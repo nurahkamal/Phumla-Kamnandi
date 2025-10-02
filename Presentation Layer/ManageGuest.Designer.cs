@@ -58,7 +58,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.txtGid = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblGuestID = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.GuestData = new System.Windows.Forms.DataGridView();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
@@ -69,7 +69,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GuestData)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -222,7 +222,7 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.GuestData);
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.guna2HtmlLabel1);
@@ -527,15 +527,16 @@
             this.lblGuestID.TabIndex = 17;
             this.lblGuestID.Text = "Guest ID:";
             // 
-            // dataGridView1
+            // GuestData
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(36, 93);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(934, 183);
-            this.dataGridView1.TabIndex = 28;
+            this.GuestData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GuestData.Location = new System.Drawing.Point(36, 93);
+            this.GuestData.Name = "GuestData";
+            this.GuestData.RowHeadersWidth = 62;
+            this.GuestData.RowTemplate.Height = 28;
+            this.GuestData.Size = new System.Drawing.Size(934, 183);
+            this.GuestData.TabIndex = 28;
+            this.GuestData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GuestData_CellContentClick);
             // 
             // btnExit
             // 
@@ -578,11 +579,12 @@
             this.btnDelete.ForeColor = System.Drawing.Color.White;
             this.btnDelete.Image = global::Phumla_Kamnandi.Properties.Resources.delete_4219;
             this.btnDelete.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnDelete.Location = new System.Drawing.Point(702, 272);
+            this.btnDelete.Location = new System.Drawing.Point(758, 275);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(171, 37);
             this.btnDelete.TabIndex = 23;
             this.btnDelete.Text = "Delete";
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnRefresh
             // 
@@ -614,7 +616,7 @@
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.Image = global::Phumla_Kamnandi.Properties.Resources._4226577;
             this.btnEdit.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnEdit.Location = new System.Drawing.Point(466, 242);
+            this.btnEdit.Location = new System.Drawing.Point(412, 282);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(162, 34);
             this.btnEdit.TabIndex = 21;
@@ -632,7 +634,7 @@
             this.btnSEdits.ForeColor = System.Drawing.Color.White;
             this.btnSEdits.Image = global::Phumla_Kamnandi.Properties.Resources._4226577;
             this.btnSEdits.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSEdits.Location = new System.Drawing.Point(466, 282);
+            this.btnSEdits.Location = new System.Drawing.Point(590, 278);
             this.btnSEdits.Name = "btnSEdits";
             this.btnSEdits.Size = new System.Drawing.Size(162, 39);
             this.btnSEdits.TabIndex = 34;
@@ -650,6 +652,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageGuest";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ManageGuest_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -657,7 +660,7 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GuestData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -695,7 +698,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2RatingStar strLpoints;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView GuestData;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnEdit;
         private Guna.UI2.WinForms.Guna2Button btnRefresh;
