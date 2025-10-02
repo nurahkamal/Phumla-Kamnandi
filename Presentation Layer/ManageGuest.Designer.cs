@@ -306,6 +306,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "";
+            this.txtEmail.ReadOnly = true;
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(210, 40);
             this.txtEmail.TabIndex = 30;
@@ -326,6 +327,7 @@
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderText = "";
+            this.txtAddress.ReadOnly = true;
             this.txtAddress.SelectedText = "";
             this.txtAddress.Size = new System.Drawing.Size(210, 40);
             this.txtAddress.TabIndex = 29;
@@ -357,6 +359,7 @@
             this.txtPassNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassNum.Name = "txtPassNum";
             this.txtPassNum.PlaceholderText = "";
+            this.txtPassNum.ReadOnly = true;
             this.txtPassNum.SelectedText = "";
             this.txtPassNum.Size = new System.Drawing.Size(210, 40);
             this.txtPassNum.TabIndex = 27;
@@ -388,6 +391,7 @@
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
             this.txtID.PlaceholderText = "";
+            this.txtID.ReadOnly = true;
             this.txtID.SelectedText = "";
             this.txtID.Size = new System.Drawing.Size(210, 40);
             this.txtID.TabIndex = 25;
@@ -419,6 +423,7 @@
             this.txtPhone.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.PlaceholderText = "";
+            this.txtPhone.ReadOnly = true;
             this.txtPhone.SelectedText = "";
             this.txtPhone.Size = new System.Drawing.Size(210, 40);
             this.txtPhone.TabIndex = 23;
@@ -450,6 +455,7 @@
             this.txtSurname.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSurname.Name = "txtSurname";
             this.txtSurname.PlaceholderText = "";
+            this.txtSurname.ReadOnly = true;
             this.txtSurname.SelectedText = "";
             this.txtSurname.Size = new System.Drawing.Size(210, 40);
             this.txtSurname.TabIndex = 21;
@@ -481,6 +487,7 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtName.Name = "txtName";
             this.txtName.PlaceholderText = "";
+            this.txtName.ReadOnly = true;
             this.txtName.SelectedText = "";
             this.txtName.Size = new System.Drawing.Size(210, 40);
             this.txtName.TabIndex = 19;
@@ -512,6 +519,7 @@
             this.txtGid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGid.Name = "txtGid";
             this.txtGid.PlaceholderText = "";
+            this.txtGid.ReadOnly = true;
             this.txtGid.SelectedText = "";
             this.txtGid.Size = new System.Drawing.Size(210, 40);
             this.txtGid.TabIndex = 17;
@@ -530,13 +538,17 @@
             // GuestData
             // 
             this.GuestData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GuestData.GridColor = System.Drawing.SystemColors.ButtonFace;
             this.GuestData.Location = new System.Drawing.Point(36, 93);
             this.GuestData.Name = "GuestData";
+            this.GuestData.ReadOnly = true;
             this.GuestData.RowHeadersWidth = 62;
             this.GuestData.RowTemplate.Height = 28;
+            this.GuestData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.GuestData.Size = new System.Drawing.Size(934, 183);
             this.GuestData.TabIndex = 28;
             this.GuestData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GuestData_CellContentClick);
+            this.GuestData.SelectionChanged += new System.EventHandler(this.GuestData_SelectionChanged);
             // 
             // btnExit
             // 

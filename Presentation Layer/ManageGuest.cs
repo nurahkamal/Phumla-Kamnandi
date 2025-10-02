@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -40,6 +41,33 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void GuestData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void GuestData_SelectionChanged(object sender, EventArgs e)
+        {
+            
+            //If at least One cell is selcted populate the tables
+            if (GuestData.CurrentRow !=null)
+            {
+                DataGridViewRow SelectedGuest = GuestData.CurrentRow;
+
+                txtGid.Text = SelectedGuest.Cells["GuestID"].Value.ToString();
+                txtName.Text = SelectedGuest.Cells["FirstName"].Value.ToString();
+                txtSurname.Text = SelectedGuest.Cells["LastName"].Value.ToString();
+                txtPhone.Text = SelectedGuest.Cells["Phone"].Value.ToString();
+                txtEmail.Text = SelectedGuest.Cells["Email"].Value.ToString();
+                txtID.Text = SelectedGuest.Cells["IDNumber"].Value.ToString();
+                txtPassNum.Text = SelectedGuest.Cells["PassportNo"].Value.ToString();
+                txtAddress.Text = SelectedGuest.Cells["Address"].Value.ToString();
+                
+                strLpoints.Value = Convert.ToInt32(SelectedGuest.Cells["LoyaltyPoints"].Value);
+
+
+
+
+
+
+            }
         }
     }
 }
