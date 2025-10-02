@@ -74,15 +74,15 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
            //Allows User to edit textboxes
 
-            txtName.ReadOnly = false;
-            txtSurname.ReadOnly = false;
-            txtPhone.ReadOnly = false;
-            txtEmail.ReadOnly = false;
-            txtID.ReadOnly = false;
-            txtPassNum.ReadOnly = false;
-            txtAddress.ReadOnly = false;
+            txtName.Enabled = true;
+            txtSurname.Enabled = true;
+            txtPhone.Enabled = true;
+            txtEmail.Enabled = true;
+            txtID.Enabled = true;
+            txtPassNum.Enabled = true;
+            txtAddress.Enabled = true;
 
-           
+
         }
     }
 }
