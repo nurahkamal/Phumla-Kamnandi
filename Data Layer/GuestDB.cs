@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
+using System.Windows.Input;
+using System.Xml.Linq;
 
 namespace Phumla_Kamnandi.Data_Layer
 {
@@ -25,7 +27,7 @@ namespace Phumla_Kamnandi.Data_Layer
         {
             DataTable guestsTable = new DataTable();
 
-           using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT * FROM dbo.Guests";
                 SqlCommand command = new SqlCommand(query, connection);
@@ -88,7 +90,7 @@ namespace Phumla_Kamnandi.Data_Layer
                         // Commit transaction if successful
                         transaction.Commit();
 
-                        
+
                     }
                     catch (Exception ex)
                     {
@@ -101,12 +103,56 @@ namespace Phumla_Kamnandi.Data_Layer
             }
         }
 
-        #endregion 
+        //Update a Guest 
+
+        public void UpdateGuest(string gID, string guestName, string gLastName, string gPhone, string gEmail, string pID, string gPassNum, string gAddress)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string queryUpdate = "UPDATE dbo.Guests SET FirstName =@GName , LastName =@lName , Phone =@guestPhone , Email =@guestEmail , IDNumber =@gIDNum, PassportNo =@passNum , Address =@guestAddress WHERE GuestID = @GuestID";
+
+
+                using (SqlCommand command = new SqlCommand(queryUpdate, connection))
+                {
+
+                    command.Parameters.AddWithValue("@GuestID", gID);
+                    command.Parameters.AddWithValue("@GName", guestName );
+                    command.Parameters.AddWithValue("@lName", gLastName);
+                    command.Parameters.AddWithValue("@guestPhone", gPhone);
+                    command.Parameters.AddWithValue("@guestEmail", gEmail);
+                    command.Parameters.AddWithValue("@gIDNum", pID);
+                    command.Parameters.AddWithValue("@passNum", gPassNum);
+                    command.Parameters.AddWithValue("@guestAddress", gAddress);
+                   
+
+                    int AffrectedRows = command.ExecuteNonQuery(); 
+
+                    if (AffrectedRows > 0)
+                    {
+                        MessageBox.Show("Updated Guest Details", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information );
+                    }
+                }
 
 
 
 
+
+
+
+
+            }
+
+
+
+        }
+
+        #endregion
 
 
     }
 }
+
+
+

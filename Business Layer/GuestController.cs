@@ -40,6 +40,12 @@ namespace Phumla_Kamnandi.Business_Layer
             guestDB.DeleteGuest(guestId);
 
         }
+
+
+        public void UpdateGuest(string gID, string guestName, string gLastName, string gPhone, string gEmail, string pID, string gPassNum, string gAddress)
+        { 
+            guestDB.UpdateGuest(gID , guestName , gLastName , gPhone , gEmail , pID , gPassNum , gAddress );
+                }
         #endregion
     }
 }

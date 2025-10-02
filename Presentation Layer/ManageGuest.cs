@@ -123,5 +123,17 @@ namespace Phumla_Kamnandi.Presentation_Layer
             //Displays on DataGrid
             GuestData.DataSource = guestList;
         }
+
+        private void btnSEdits_Click(object sender, EventArgs e)
+        {
+
+            if (GuestData.CurrentRow != null)
+            {
+                string gid = GuestData.CurrentRow.Cells["GuestID"].Value.ToString();
+                gController.UpdateGuest(txtGid.Text,txtName.Text ,txtSurname.Text,txtPhone.Text,txtEmail.Text,txtID.Text,txtPassNum.Text,txtAddress.Text); 
+                
+            
+            }
+        }
     }
 }
