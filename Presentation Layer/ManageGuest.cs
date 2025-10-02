@@ -69,5 +69,20 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             }
         }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+           //Allows User to edit textboxes
+
+            txtName.ReadOnly = false;
+            txtSurname.ReadOnly = false;
+            txtPhone.ReadOnly = false;
+            txtEmail.ReadOnly = false;
+            txtID.ReadOnly = false;
+            txtPassNum.ReadOnly = false;
+            txtAddress.ReadOnly = false;
+
+           
+        }
     }
 }

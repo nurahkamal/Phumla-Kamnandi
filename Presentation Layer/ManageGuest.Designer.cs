@@ -633,6 +633,7 @@
             this.btnEdit.Size = new System.Drawing.Size(162, 34);
             this.btnEdit.TabIndex = 21;
             this.btnEdit.Text = "Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnSEdits
             // 
