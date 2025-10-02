@@ -1,4 +1,5 @@
 ﻿using Phumla_Kamnandi.Business_Layer;
+using Phumla_Kamnandi.Data_Layer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,7 +36,37 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (GuestData.CurrentRow != null)
+                {
+                DataGridViewRow SelectedGuest = GuestData.CurrentRow;
 
+                string gID = SelectedGuest.Cells["GuestID"].Value.ToString(); 
+                string FName = SelectedGuest.Cells["FirstName"].Value.ToString();
+                string LName =SelectedGuest.Cells["LastName"].Value.ToString();
+                
+                //MessageBox to confirm Deletion 
+
+                DialogResult msgDelete = MessageBox.Show("Are you sure you want to delte this guest ?\n\n"
+                    + "GuestID: " + gID + "\n"
+                    + "Name " + FName + " " + LName + "\n",
+                    "Confirm Deleted Guest ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning
+                    ); 
+
+                if ( msgDelete == DialogResult.Yes)
+                {
+                    //Get Guest ID to delte from tables
+                    gController.DeleteGuest(gID);
+
+                    MessageBox.Show("Guest Deleted Successfully ", "Deleted Success",MessageBoxButtons.OK ,  MessageBoxIcon.Information); 
+
+                }
+
+
+
+             
+
+
+            }
         }
 
         private void GuestData_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -83,6 +114,14 @@ namespace Phumla_Kamnandi.Presentation_Layer
             txtAddress.Enabled = true;
 
 
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            //Allows guest list to be displayed 
+            DataTable guestList = gController.SeeAllGuests();
+            //Displays on DataGrid
+            GuestData.DataSource = guestList;
         }
     }
 }

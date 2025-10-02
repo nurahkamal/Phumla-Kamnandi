@@ -623,6 +623,7 @@
             this.btnRefresh.Size = new System.Drawing.Size(201, 46);
             this.btnRefresh.TabIndex = 22;
             this.btnRefresh.Text = "Refresh ";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnEdit
             // 
