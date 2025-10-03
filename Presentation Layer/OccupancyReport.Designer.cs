@@ -46,6 +46,11 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
             this.panel1 = new System.Windows.Forms.Panel();
             this.picBoxLogo = new System.Windows.Forms.PictureBox();
             this.lblWelcome = new System.Windows.Forms.Label();
@@ -55,6 +60,7 @@
             this.chartGuestTrends = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartSeasonalRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartRoomTimeline = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartDepositStatus = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDailyOccupancy)).BeginInit();
@@ -62,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartGuestTrends)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartSeasonalRevenue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRoomTimeline)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDepositStatus)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -244,12 +251,36 @@
             this.chartRoomTimeline.TabIndex = 11;
             this.chartRoomTimeline.Text = "chart1";
             // 
+            // chartDepositStatus
+            // 
+            chartArea6.Name = "ChartArea1";
+            this.chartDepositStatus.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chartDepositStatus.Legends.Add(legend6);
+            this.chartDepositStatus.Location = new System.Drawing.Point(656, 218);
+            this.chartDepositStatus.Name = "chartDepositStatus";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series8.IsValueShownAsLabel = true;
+            series8.LabelFormat = "{0} deposits";
+            series8.Legend = "Legend1";
+            series8.Name = "DepositStatus";
+            dataPoint1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            dataPoint2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            series8.Points.Add(dataPoint1);
+            series8.Points.Add(dataPoint2);
+            this.chartDepositStatus.Series.Add(series8);
+            this.chartDepositStatus.Size = new System.Drawing.Size(462, 300);
+            this.chartDepositStatus.TabIndex = 12;
+            this.chartDepositStatus.Text = "chart1";
+            // 
             // OccupancyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(1942, 847);
+            this.Controls.Add(this.chartDepositStatus);
             this.Controls.Add(this.chartRoomTimeline);
             this.Controls.Add(this.chartSeasonalRevenue);
             this.Controls.Add(this.chartGuestTrends);
@@ -269,6 +300,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartGuestTrends)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartSeasonalRevenue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRoomTimeline)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDepositStatus)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -284,5 +316,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartGuestTrends;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartSeasonalRevenue;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomTimeline;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDepositStatus;
     }
 }
