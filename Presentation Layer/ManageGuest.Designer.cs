@@ -247,7 +247,7 @@
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = global::Phumla_Kamnandi.Properties.Resources.search_icon_png_5;
             this.btnSearch.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSearch.Location = new System.Drawing.Point(57, 86);
+            this.btnSearch.Location = new System.Drawing.Point(274, 218);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(231, 46);
             this.btnSearch.TabIndex = 31;
@@ -618,7 +618,7 @@
             // 
             this.GuestData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GuestData.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.GuestData.Location = new System.Drawing.Point(36, 157);
+            this.GuestData.Location = new System.Drawing.Point(36, 93);
             this.GuestData.Name = "GuestData";
             this.GuestData.ReadOnly = true;
             this.GuestData.RowHeadersWidth = 62;
@@ -641,7 +641,7 @@
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Image = global::Phumla_Kamnandi.Properties.Resources.free_refresh_icon_3104_thumb;
             this.btnRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnRefresh.Location = new System.Drawing.Point(735, 86);
+            this.btnRefresh.Location = new System.Drawing.Point(738, 41);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(201, 46);
             this.btnRefresh.TabIndex = 22;
@@ -690,7 +690,7 @@
             this.txtSearchGid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchGid.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchGid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchGid.Location = new System.Drawing.Point(57, 31);
+            this.txtSearchGid.Location = new System.Drawing.Point(57, 219);
             this.txtSearchGid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearchGid.Name = "txtSearchGid";
             this.txtSearchGid.PlaceholderText = "";
