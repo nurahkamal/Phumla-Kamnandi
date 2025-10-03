@@ -239,7 +239,7 @@
             this.btnExit.Size = new System.Drawing.Size(180, 45);
             this.btnExit.TabIndex = 7;
             this.btnExit.Text = "Exit";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            
             // 
             // btnOkay
             // 
@@ -256,7 +256,7 @@
             this.btnOkay.Size = new System.Drawing.Size(51, 31);
             this.btnOkay.TabIndex = 6;
             this.btnOkay.Text = "OK";
-            this.btnOkay.Click += new System.EventHandler(this.btnOkay_Click);
+            
             // 
             // chartRoomsBySeason
             // 
@@ -363,7 +363,7 @@
             this.Name = "_7OccupancyReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this._7OccupancyReport_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
             this.leftPanel.ResumeLayout(false);
             this.leftPanel.PerformLayout();
