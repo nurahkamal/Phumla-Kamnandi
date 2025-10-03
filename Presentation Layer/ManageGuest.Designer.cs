@@ -247,7 +247,7 @@
             this.txtSearchGid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchGid.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchGid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchGid.Location = new System.Drawing.Point(57, 219);
+            this.txtSearchGid.Location = new System.Drawing.Point(57, 14);
             this.txtSearchGid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearchGid.Name = "txtSearchGid";
             this.txtSearchGid.PlaceholderText = "";
@@ -267,9 +267,9 @@
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Image = global::Phumla_Kamnandi.Properties.Resources.search_icon_png_5;
             this.btnSearch.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSearch.Location = new System.Drawing.Point(274, 218);
+            this.btnSearch.Location = new System.Drawing.Point(64, 61);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(231, 46);
+            this.btnSearch.Size = new System.Drawing.Size(178, 33);
             this.btnSearch.TabIndex = 31;
             this.btnSearch.Text = "Search Guest ID";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -639,13 +639,13 @@
             // 
             this.GuestData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GuestData.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.GuestData.Location = new System.Drawing.Point(36, 93);
+            this.GuestData.Location = new System.Drawing.Point(27, 117);
             this.GuestData.Name = "GuestData";
             this.GuestData.ReadOnly = true;
             this.GuestData.RowHeadersWidth = 62;
             this.GuestData.RowTemplate.Height = 28;
             this.GuestData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GuestData.Size = new System.Drawing.Size(962, 119);
+            this.GuestData.Size = new System.Drawing.Size(962, 148);
             this.GuestData.TabIndex = 28;
             this.GuestData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GuestData_CellContentClick);
             this.GuestData.SelectionChanged += new System.EventHandler(this.GuestData_SelectionChanged);
