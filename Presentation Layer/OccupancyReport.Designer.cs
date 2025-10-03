@@ -29,12 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OccupancyReport));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picBoxLogo = new System.Windows.Forms.PictureBox();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
+            this.chartDailyOccupancy = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDailyOccupancy)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -88,12 +94,49 @@
             this.btnExit.UseTransparentBackground = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // chartDailyOccupancy
+            // 
+            chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea1.AxisX.IsLabelAutoFit = false;
+            chartArea1.AxisX.LabelStyle.Format = "MMM dd";
+            chartArea1.AxisY.Maximum = 5D;
+            chartArea1.AxisY.Minimum = 0D;
+            chartArea1.AxisY.Title = "Rooms Occupied";
+            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea1.AxisY2.Maximum = 100D;
+            chartArea1.AxisY2.Minimum = 0D;
+            chartArea1.AxisY2.Title = "Occupancy Rate %";
+            chartArea1.Name = "ChartArea1";
+            this.chartDailyOccupancy.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartDailyOccupancy.Legends.Add(legend1);
+            this.chartDailyOccupancy.Location = new System.Drawing.Point(420, 30);
+            this.chartDailyOccupancy.Name = "chartDailyOccupancy";
+            series1.BorderWidth = 3;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.IsValueShownAsLabel = true;
+            series1.Label = "{0}%";
+            series1.Legend = "Legend1";
+            series1.Name = "OccupancyRate";
+            series1.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            series2.ChartArea = "ChartArea1";
+            series2.Color = System.Drawing.Color.Black;
+            series2.Legend = "Legend1";
+            series2.Name = "RoomsOccupied";
+            this.chartDailyOccupancy.Series.Add(series1);
+            this.chartDailyOccupancy.Series.Add(series2);
+            this.chartDailyOccupancy.Size = new System.Drawing.Size(600, 300);
+            this.chartDailyOccupancy.TabIndex = 7;
+            this.chartDailyOccupancy.Text = "chart1";
+            // 
             // OccupancyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(1414, 725);
+            this.Controls.Add(this.chartDailyOccupancy);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -101,6 +144,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDailyOccupancy)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -111,5 +155,6 @@
         private System.Windows.Forms.PictureBox picBoxLogo;
         private System.Windows.Forms.Label lblWelcome;
         private Guna.UI2.WinForms.Guna2ImageButton btnExit;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDailyOccupancy;
     }
 }
