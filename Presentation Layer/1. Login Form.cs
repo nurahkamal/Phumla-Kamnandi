@@ -104,5 +104,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
         MessageBoxIcon.Information );
         }
         #endregion
+
+        private void Login_Form_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

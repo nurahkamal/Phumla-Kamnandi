@@ -151,6 +151,12 @@
     <Compile Include="Presentation Layer\ManageGuest.Designer.cs">
       <DependentUpon>ManageGuest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\OccupancyReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\OccupancyReport.Designer.cs">
+      <DependentUpon>OccupancyReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\PaymentForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\ManageGuest.resx">
       <DependentUpon>ManageGuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\OccupancyReport.resx">
+      <DependentUpon>OccupancyReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\PaymentForm.resx">
       <DependentUpon>PaymentForm.cs</DependentUpon>
