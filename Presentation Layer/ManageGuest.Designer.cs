@@ -114,7 +114,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
             this.label7.Location = new System.Drawing.Point(22, 202);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(193, 32);
+            this.label7.Size = new System.Drawing.Size(225, 38);
             this.label7.TabIndex = 28;
             this.label7.Text = "Phumlani Hotels";
             // 
@@ -244,9 +244,6 @@
             this.txtSearchGid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSearchGid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearchGid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-
-            this.txtSearchGid.Enabled = false;
-
             this.txtSearchGid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchGid.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearchGid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -378,7 +375,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label2.Location = new System.Drawing.Point(459, 186);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 30);
+            this.label2.Size = new System.Drawing.Size(195, 37);
             this.label2.TabIndex = 32;
             this.label2.Text = "Loyalty Points:";
             // 
@@ -389,7 +386,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label1.Location = new System.Drawing.Point(20, 272);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(71, 30);
+            this.label1.Size = new System.Drawing.Size(90, 37);
             this.label1.TabIndex = 31;
             this.label1.Text = "Email:";
             // 
@@ -442,7 +439,7 @@
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.lblAddress.Location = new System.Drawing.Point(490, 128);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(97, 30);
+            this.lblAddress.Size = new System.Drawing.Size(122, 37);
             this.lblAddress.TabIndex = 28;
             this.lblAddress.Text = "Address:";
             // 
@@ -474,7 +471,7 @@
             this.lblPassNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.lblPassNum.Location = new System.Drawing.Point(389, 76);
             this.lblPassNum.Name = "lblPassNum";
-            this.lblPassNum.Size = new System.Drawing.Size(191, 30);
+            this.lblPassNum.Size = new System.Drawing.Size(239, 37);
             this.lblPassNum.TabIndex = 26;
             this.lblPassNum.Text = "Passport Number:";
             // 
@@ -506,7 +503,7 @@
             this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.lblID.Location = new System.Drawing.Point(561, 24);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(40, 30);
+            this.lblID.Size = new System.Drawing.Size(51, 37);
             this.lblID.TabIndex = 24;
             this.lblID.Text = "ID:";
             // 
@@ -538,7 +535,7 @@
             this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.lblPhone.Location = new System.Drawing.Point(13, 218);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(82, 30);
+            this.lblPhone.Size = new System.Drawing.Size(102, 37);
             this.lblPhone.TabIndex = 22;
             this.lblPhone.Text = "Phone:";
             // 
@@ -570,7 +567,7 @@
             this.lblSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.lblSurname.Location = new System.Drawing.Point(13, 143);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(106, 30);
+            this.lblSurname.Size = new System.Drawing.Size(133, 37);
             this.lblSurname.TabIndex = 20;
             this.lblSurname.Text = "Surname:";
             // 
@@ -602,7 +599,7 @@
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.lblName.Location = new System.Drawing.Point(13, 76);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(77, 30);
+            this.lblName.Size = new System.Drawing.Size(97, 37);
             this.lblName.TabIndex = 18;
             this.lblName.Text = "Name:";
             // 
@@ -634,7 +631,7 @@
             this.lblGuestID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.lblGuestID.Location = new System.Drawing.Point(13, 12);
             this.lblGuestID.Name = "lblGuestID";
-            this.lblGuestID.Size = new System.Drawing.Size(103, 30);
+            this.lblGuestID.Size = new System.Drawing.Size(129, 37);
             this.lblGuestID.TabIndex = 17;
             this.lblGuestID.Text = "Guest ID:";
             // 
@@ -697,7 +694,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(337, 31);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(276, 47);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(336, 56);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Edit Guest Details";
             // 
