@@ -37,16 +37,21 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picBoxLogo = new System.Windows.Forms.PictureBox();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.chartDailyOccupancy = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartRoomUtilization = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartGuestTrends = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDailyOccupancy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRoomUtilization)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGuestTrends)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -162,12 +167,35 @@
             this.chartRoomUtilization.TabIndex = 8;
             this.chartRoomUtilization.Text = "chart1";
             // 
+            // chartGuestTrends
+            // 
+            chartArea3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.Center;
+            chartArea3.Name = "ChartArea1";
+            chartArea3.ShadowOffset = 2;
+            this.chartGuestTrends.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartGuestTrends.Legends.Add(legend3);
+            this.chartGuestTrends.Location = new System.Drawing.Point(406, 434);
+            this.chartGuestTrends.Name = "chartGuestTrends";
+            series5.BorderColor = System.Drawing.Color.DarkOrange;
+            series5.BorderWidth = 2;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series5.Color = System.Drawing.Color.Orange;
+            series5.Legend = "Legend1";
+            series5.Name = "GuestCount";
+            this.chartGuestTrends.Series.Add(series5);
+            this.chartGuestTrends.Size = new System.Drawing.Size(523, 300);
+            this.chartGuestTrends.TabIndex = 9;
+            this.chartGuestTrends.Text = "chart1";
+            // 
             // OccupancyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(1772, 773);
+            this.Controls.Add(this.chartGuestTrends);
             this.Controls.Add(this.chartRoomUtilization);
             this.Controls.Add(this.chartDailyOccupancy);
             this.Controls.Add(this.btnExit);
@@ -179,6 +207,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDailyOccupancy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRoomUtilization)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGuestTrends)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -191,5 +220,6 @@
         private Guna.UI2.WinForms.Guna2ImageButton btnExit;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDailyOccupancy;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomUtilization;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartGuestTrends;
     }
 }
