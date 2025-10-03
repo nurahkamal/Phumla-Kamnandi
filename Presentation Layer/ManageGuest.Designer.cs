@@ -39,6 +39,7 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnSEdits = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
@@ -65,6 +66,7 @@
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtSearchGid = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -221,6 +223,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txtSearchGid);
+            this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.GuestData);
             this.panel1.Controls.Add(this.btnRefresh);
@@ -230,6 +234,24 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1012, 628);
             this.panel1.TabIndex = 5;
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.AutoRoundedCorners = true;
+            this.btnSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSearch.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Image = global::Phumla_Kamnandi.Properties.Resources.search_icon_png_5;
+            this.btnSearch.ImageSize = new System.Drawing.Size(30, 30);
+            this.btnSearch.Location = new System.Drawing.Point(57, 86);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(231, 46);
+            this.btnSearch.TabIndex = 31;
+            this.btnSearch.Text = "Search Guest ID";
             // 
             // panel3
             // 
@@ -596,13 +618,13 @@
             // 
             this.GuestData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GuestData.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.GuestData.Location = new System.Drawing.Point(36, 93);
+            this.GuestData.Location = new System.Drawing.Point(36, 157);
             this.GuestData.Name = "GuestData";
             this.GuestData.ReadOnly = true;
             this.GuestData.RowHeadersWidth = 62;
             this.GuestData.RowTemplate.Height = 28;
             this.GuestData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GuestData.Size = new System.Drawing.Size(934, 183);
+            this.GuestData.Size = new System.Drawing.Size(934, 119);
             this.GuestData.TabIndex = 28;
             this.GuestData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GuestData_CellContentClick);
             this.GuestData.SelectionChanged += new System.EventHandler(this.GuestData_SelectionChanged);
@@ -619,7 +641,7 @@
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
             this.btnRefresh.Image = global::Phumla_Kamnandi.Properties.Resources.free_refresh_icon_3104_thumb;
             this.btnRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnRefresh.Location = new System.Drawing.Point(722, 41);
+            this.btnRefresh.Location = new System.Drawing.Point(735, 86);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(201, 46);
             this.btnRefresh.TabIndex = 22;
@@ -655,12 +677,33 @@
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Edit Guest Details";
             // 
+            // txtSearchGid
+            // 
+            this.txtSearchGid.AutoRoundedCorners = true;
+            this.txtSearchGid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchGid.DefaultText = "";
+            this.txtSearchGid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchGid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchGid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchGid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchGid.Enabled = false;
+            this.txtSearchGid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchGid.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchGid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchGid.Location = new System.Drawing.Point(57, 31);
+            this.txtSearchGid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearchGid.Name = "txtSearchGid";
+            this.txtSearchGid.PlaceholderText = "";
+            this.txtSearchGid.SelectedText = "";
+            this.txtSearchGid.Size = new System.Drawing.Size(210, 40);
+            this.txtSearchGid.TabIndex = 35;
+            // 
             // ManageGuest
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackgroundImage = global::Phumla_Kamnandi.Properties.Resources.BackgroundImage1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1307, 691);
+            this.ClientSize = new System.Drawing.Size(1355, 698);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "ManageGuest";
@@ -718,5 +761,7 @@
         private Guna.UI2.WinForms.Guna2Button btnEdit;
         private Guna.UI2.WinForms.Guna2Button btnRefresh;
         private Guna.UI2.WinForms.Guna2Button btnSEdits;
+        private Guna.UI2.WinForms.Guna2Button btnSearch;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchGid;
     }
 }
