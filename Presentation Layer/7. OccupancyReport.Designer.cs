@@ -56,12 +56,10 @@
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.btnOkay = new Guna.UI2.WinForms.Guna2Button();
             this.chartRoomsBySeason = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.btnGenerateReport = new Guna.UI2.WinForms.Guna2Button();
             this.chartRoomOccupancyOverTime = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartRoomsByDay = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartDeposits = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartDailyDeposits = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.lblTotalDeposits = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.leftPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartRoomsBySeason)).BeginInit();
@@ -78,7 +76,7 @@
             this.dtpEndDate.CustomFormat = "MMM dd, yyyy";
             this.dtpEndDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndDate.Location = new System.Drawing.Point(586, 25);
+            this.dtpEndDate.Location = new System.Drawing.Point(1016, 85);
             this.dtpEndDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpEndDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpEndDate.Name = "dtpEndDate";
@@ -93,7 +91,7 @@
             this.dtpStartDate.CustomFormat = "MMM dd, yyyy";
             this.dtpStartDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDate.Location = new System.Drawing.Point(359, 25);
+            this.dtpStartDate.Location = new System.Drawing.Point(755, 85);
             this.dtpStartDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpStartDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpStartDate.Name = "dtpStartDate";
@@ -253,7 +251,7 @@
             this.btnOkay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnOkay.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOkay.ForeColor = System.Drawing.Color.White;
-            this.btnOkay.Location = new System.Drawing.Point(807, 26);
+            this.btnOkay.Location = new System.Drawing.Point(1273, 86);
             this.btnOkay.Name = "btnOkay";
             this.btnOkay.Size = new System.Drawing.Size(51, 31);
             this.btnOkay.TabIndex = 6;
@@ -276,20 +274,6 @@
             this.chartRoomsBySeason.Size = new System.Drawing.Size(507, 300);
             this.chartRoomsBySeason.TabIndex = 13;
             this.chartRoomsBySeason.Text = "chart1";
-            // 
-            // btnGenerateReport
-            // 
-            this.btnGenerateReport.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGenerateReport.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGenerateReport.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGenerateReport.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGenerateReport.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnGenerateReport.ForeColor = System.Drawing.Color.White;
-            this.btnGenerateReport.Location = new System.Drawing.Point(458, 82);
-            this.btnGenerateReport.Name = "btnGenerateReport";
-            this.btnGenerateReport.Size = new System.Drawing.Size(180, 45);
-            this.btnGenerateReport.TabIndex = 26;
-            this.btnGenerateReport.Text = "Generate";
             // 
             // chartRoomOccupancyOverTime
             // 
@@ -316,13 +300,13 @@
             this.chartRoomsByDay.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chartRoomsByDay.Legends.Add(legend3);
-            this.chartRoomsByDay.Location = new System.Drawing.Point(383, 473);
+            this.chartRoomsByDay.Location = new System.Drawing.Point(1236, 471);
             this.chartRoomsByDay.Name = "chartRoomsByDay";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
             series3.Name = "RoomsOccupied";
             this.chartRoomsByDay.Series.Add(series3);
-            this.chartRoomsByDay.Size = new System.Drawing.Size(507, 300);
+            this.chartRoomsByDay.Size = new System.Drawing.Size(566, 343);
             this.chartRoomsByDay.TabIndex = 28;
             this.chartRoomsByDay.Text = "chart1";
             // 
@@ -349,25 +333,16 @@
             this.chartDailyDeposits.ChartAreas.Add(chartArea5);
             legend5.Name = "Legend1";
             this.chartDailyDeposits.Legends.Add(legend5);
-            this.chartDailyDeposits.Location = new System.Drawing.Point(993, 494);
+            this.chartDailyDeposits.Location = new System.Drawing.Point(383, 471);
             this.chartDailyDeposits.Name = "chartDailyDeposits";
             series5.ChartArea = "ChartArea1";
             series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series5.Legend = "Legend1";
             series5.Name = "DailyDeposits";
             this.chartDailyDeposits.Series.Add(series5);
-            this.chartDailyDeposits.Size = new System.Drawing.Size(776, 343);
+            this.chartDailyDeposits.Size = new System.Drawing.Size(833, 343);
             this.chartDailyDeposits.TabIndex = 30;
             this.chartDailyDeposits.Text = "chart1";
-            // 
-            // lblTotalDeposits
-            // 
-            this.lblTotalDeposits.AutoSize = true;
-            this.lblTotalDeposits.Location = new System.Drawing.Point(896, 101);
-            this.lblTotalDeposits.Name = "lblTotalDeposits";
-            this.lblTotalDeposits.Size = new System.Drawing.Size(44, 16);
-            this.lblTotalDeposits.TabIndex = 31;
-            this.lblTotalDeposits.Text = "label1";
             // 
             // _7OccupancyReport
             // 
@@ -375,12 +350,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(1826, 826);
-            this.Controls.Add(this.lblTotalDeposits);
             this.Controls.Add(this.chartDailyDeposits);
             this.Controls.Add(this.chartDeposits);
             this.Controls.Add(this.chartRoomsByDay);
             this.Controls.Add(this.chartRoomOccupancyOverTime);
-            this.Controls.Add(this.btnGenerateReport);
             this.Controls.Add(this.chartRoomsBySeason);
             this.Controls.Add(this.btnOkay);
             this.Controls.Add(this.leftPanel);
@@ -418,11 +391,9 @@
         private Guna.UI2.WinForms.Guna2Button btnOkay;
         private Guna.UI2.WinForms.Guna2Button btnExit;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomsBySeason;
-        private Guna.UI2.WinForms.Guna2Button btnGenerateReport;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomOccupancyOverTime;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomsByDay;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDeposits;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDailyDeposits;
-        private System.Windows.Forms.Label lblTotalDeposits;
     }
 }

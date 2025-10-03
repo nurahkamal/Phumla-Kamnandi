@@ -24,10 +24,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             CreateSeries(chartRoomOccupancyOverTime, "Occupancy", SeriesChartType.RangeBar, Color.SkyBlue);
 
             btnOkay.Click += btnOkay_Click;
-            btnToday.Click += btnToday_Click;
-            btnLast7days.Click += btnLast7days_Click;
-            btnLast30Days.Click += btnLast30Days_Click;
-            btnLastMonth.Click += btnLastMonth_Click;
+           
             btnExit.Click += btnExit_Click;
         }
 
@@ -108,7 +105,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             if (seriesPie.Points.Count == 0)
                 seriesPie.Points.AddXY("No Data", 1);
 
-            lblTotalDeposits.Text = "Total Deposits: R " + _reportController.GetTotalDeposits(startDate, endDate).ToString("N2");
+           
 
             // Room Occupancy Gantt Chart with range bars
             var yAxis = chartRoomOccupancyOverTime.ChartAreas[0].AxisY;
