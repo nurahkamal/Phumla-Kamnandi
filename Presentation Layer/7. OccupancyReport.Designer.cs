@@ -55,11 +55,6 @@
             this.btnAboutUs = new Guna.UI2.WinForms.Guna2Button();
             this.btnExit = new Guna.UI2.WinForms.Guna2Button();
             this.btnOkay = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLastMonth = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLast30Days = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLast7days = new Guna.UI2.WinForms.Guna2Button();
-            this.btnToday = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCustom = new Guna.UI2.WinForms.Guna2Button();
             this.chartRoomsBySeason = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.btnGenerateReport = new Guna.UI2.WinForms.Guna2Button();
             this.chartRoomOccupancyOverTime = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -265,85 +260,6 @@
             this.btnOkay.Text = "OK";
             this.btnOkay.Click += new System.EventHandler(this.btnOkay_Click);
             // 
-            // btnLastMonth
-            // 
-            this.btnLastMonth.AutoRoundedCorners = true;
-            this.btnLastMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLastMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLastMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLastMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLastMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLastMonth.ForeColor = System.Drawing.Color.White;
-            this.btnLastMonth.Location = new System.Drawing.Point(1632, 26);
-            this.btnLastMonth.Name = "btnLastMonth";
-            this.btnLastMonth.Size = new System.Drawing.Size(180, 31);
-            this.btnLastMonth.TabIndex = 8;
-            this.btnLastMonth.Text = "Last Month";
-            this.btnLastMonth.Click += new System.EventHandler(this.btnLastMonth_Click);
-            // 
-            // btnLast30Days
-            // 
-            this.btnLast30Days.AutoRoundedCorners = true;
-            this.btnLast30Days.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLast30Days.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLast30Days.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLast30Days.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLast30Days.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLast30Days.ForeColor = System.Drawing.Color.White;
-            this.btnLast30Days.Location = new System.Drawing.Point(1446, 25);
-            this.btnLast30Days.Name = "btnLast30Days";
-            this.btnLast30Days.Size = new System.Drawing.Size(180, 33);
-            this.btnLast30Days.TabIndex = 9;
-            this.btnLast30Days.Text = "Last 30 Days";
-            this.btnLast30Days.Click += new System.EventHandler(this.btnLast30Days_Click);
-            // 
-            // btnLast7days
-            // 
-            this.btnLast7days.AutoRoundedCorners = true;
-            this.btnLast7days.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnLast7days.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnLast7days.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnLast7days.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLast7days.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnLast7days.ForeColor = System.Drawing.Color.White;
-            this.btnLast7days.Location = new System.Drawing.Point(1260, 26);
-            this.btnLast7days.Name = "btnLast7days";
-            this.btnLast7days.Size = new System.Drawing.Size(180, 32);
-            this.btnLast7days.TabIndex = 10;
-            this.btnLast7days.Text = "Last 7 Days";
-            this.btnLast7days.Click += new System.EventHandler(this.btnLast7days_Click);
-            // 
-            // btnToday
-            // 
-            this.btnToday.AutoRoundedCorners = true;
-            this.btnToday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnToday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnToday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnToday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnToday.ForeColor = System.Drawing.Color.White;
-            this.btnToday.Location = new System.Drawing.Point(1074, 26);
-            this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(180, 32);
-            this.btnToday.TabIndex = 11;
-            this.btnToday.Text = "Today";
-            this.btnToday.Click += new System.EventHandler(this.btnToday_Click);
-            // 
-            // btnCustom
-            // 
-            this.btnCustom.AutoRoundedCorners = true;
-            this.btnCustom.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnCustom.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnCustom.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnCustom.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnCustom.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCustom.ForeColor = System.Drawing.Color.White;
-            this.btnCustom.Location = new System.Drawing.Point(888, 26);
-            this.btnCustom.Name = "btnCustom";
-            this.btnCustom.Size = new System.Drawing.Size(180, 31);
-            this.btnCustom.TabIndex = 12;
-            this.btnCustom.Text = "Custom";
-            // 
             // chartRoomsBySeason
             // 
             chartArea1.Name = "ChartArea1";
@@ -466,11 +382,6 @@
             this.Controls.Add(this.chartRoomOccupancyOverTime);
             this.Controls.Add(this.btnGenerateReport);
             this.Controls.Add(this.chartRoomsBySeason);
-            this.Controls.Add(this.btnCustom);
-            this.Controls.Add(this.btnToday);
-            this.Controls.Add(this.btnLast7days);
-            this.Controls.Add(this.btnLast30Days);
-            this.Controls.Add(this.btnLastMonth);
             this.Controls.Add(this.btnOkay);
             this.Controls.Add(this.leftPanel);
             this.Controls.Add(this.dtpStartDate);
@@ -506,11 +417,6 @@
         private Guna.UI2.WinForms.Guna2Button btnReports;
         private Guna.UI2.WinForms.Guna2Button btnOkay;
         private Guna.UI2.WinForms.Guna2Button btnExit;
-        private Guna.UI2.WinForms.Guna2Button btnLastMonth;
-        private Guna.UI2.WinForms.Guna2Button btnLast30Days;
-        private Guna.UI2.WinForms.Guna2Button btnLast7days;
-        private Guna.UI2.WinForms.Guna2Button btnToday;
-        private Guna.UI2.WinForms.Guna2Button btnCustom;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomsBySeason;
         private Guna.UI2.WinForms.Guna2Button btnGenerateReport;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomOccupancyOverTime;
