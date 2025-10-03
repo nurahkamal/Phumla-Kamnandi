@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data.SqlClient;
+﻿using System.Data.SqlClient;
 using System.Data;
+using System;
 
 namespace Phumla_Kamnandi.Data_Layer
 {
@@ -24,13 +20,13 @@ namespace Phumla_Kamnandi.Data_Layer
                     WHERE ra.DateAllocated BETWEEN @StartDate AND @EndDate
                     GROUP BY ro.RoomType
                     ORDER BY ro.RoomType ASC";
+
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@StartDate", startDate);
                 cmd.Parameters.AddWithValue("@EndDate", endDate);
 
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
-                da.Fill(dt);
+                new SqlDataAdapter(cmd).Fill(dt);
                 return dt;
             }
         }
@@ -42,17 +38,16 @@ namespace Phumla_Kamnandi.Data_Layer
                 string query = @"
                     SELECT ra.DateAllocated, COUNT(ra.RoomID) AS RoomsOccupied
                     FROM RoomAllocation ra
-                    JOIN Reservations r ON ra.ReservationID = r.ReservationID
                     WHERE ra.DateAllocated BETWEEN @StartDate AND @EndDate
                     GROUP BY ra.DateAllocated
                     ORDER BY ra.DateAllocated ASC";
+
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@StartDate", startDate);
                 cmd.Parameters.AddWithValue("@EndDate", endDate);
 
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
-                da.Fill(dt);
+                new SqlDataAdapter(cmd).Fill(dt);
                 return dt;
             }
         }
@@ -62,20 +57,20 @@ namespace Phumla_Kamnandi.Data_Layer
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = @"
-                    SELECT p.PaymentDate, COUNT(p.AccountID) AS Guests
+                    SELECT p.PaymentDate, COUNT(*) AS Guests
                     FROM Payments p
                     JOIN Reservations r ON p.AccountID = r.GuestID
                     WHERE p.PaymentType='Deposit'
                       AND r.ReservationDate BETWEEN @StartDate AND @EndDate
                     GROUP BY p.PaymentDate
                     ORDER BY p.PaymentDate ASC";
+
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@StartDate", startDate);
                 cmd.Parameters.AddWithValue("@EndDate", endDate);
 
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
-                da.Fill(dt);
+                new SqlDataAdapter(cmd).Fill(dt);
                 return dt;
             }
         }
@@ -90,6 +85,7 @@ namespace Phumla_Kamnandi.Data_Layer
                     JOIN Reservations r ON p.AccountID = r.GuestID
                     WHERE p.PaymentType='Deposit'
                       AND r.ReservationDate BETWEEN @StartDate AND @EndDate";
+
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@StartDate", startDate);
                 cmd.Parameters.AddWithValue("@EndDate", endDate);
@@ -112,13 +108,13 @@ namespace Phumla_Kamnandi.Data_Layer
                     JOIN Reservations r ON ra.ReservationID = r.ReservationID
                     WHERE ra.DateAllocated BETWEEN @StartDate AND @EndDate
                     ORDER BY ro.RoomNumber ASC";
+
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@StartDate", startDate);
                 cmd.Parameters.AddWithValue("@EndDate", endDate);
 
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
-                da.Fill(dt);
+                new SqlDataAdapter(cmd).Fill(dt);
                 return dt;
             }
         }
