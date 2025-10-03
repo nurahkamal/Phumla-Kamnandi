@@ -40,6 +40,29 @@ namespace Phumla_Kamnandi.Data_Layer
         }
 
 
+        //Search Guest ID
+
+        public DataTable SearchGid (string gid)
+        {
+            DataTable guestsTable = new DataTable();
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                
+                string query = "SELECT * FROM dbo.Guests WHERE GuestID = @guestID";
+                SqlCommand command = new SqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@guestID", gid);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(guestsTable); // Data Table gets filled 
+            }
+
+            return guestsTable; // Guest Table is returned 
+
+
+        }
+
+
         //Delete a guest 
 
         // Delete a guest and all related records
@@ -146,6 +169,24 @@ namespace Phumla_Kamnandi.Data_Layer
 
 
 
+        }
+
+
+        //Search GuestID
+        public DataTable SearchID(int gIDNum)
+        {
+            DataTable dataTable = new DataTable();
+            string SearchQuery = "Select * FROM dbo.Guests WHERE GuestID = @guestID";
+
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand command = new SqlCommand(SearchQuery, conn))
+            {
+                command.Parameters.AddWithValue("@guestID",gIDNum);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+                adapter.Fill(dataTable);
+
+            }
+            return dataTable;
         }
 
         #endregion

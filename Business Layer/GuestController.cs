@@ -33,7 +33,11 @@ namespace Phumla_Kamnandi.Business_Layer
 
             return guestDB.SeeGuests();
         }
+        public DataTable SearchGid(string gid)
+        {
+            return guestDB.SearchGid(gid); 
 
+        }
 
         public void DeleteGuest(string guestId)
         {
