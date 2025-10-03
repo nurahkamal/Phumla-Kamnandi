@@ -64,9 +64,19 @@ namespace Phumla_Kamnandi.Presentation_Layer
             foreach (DataRow row in dtGantt.Rows)
             {
                 string roomNumber = row["RoomNumber"].ToString();
-                DateTime start = Convert.ToDateTime(row["CheckInDate"]);
-                DateTime end = Convert.ToDateTime(row["CheckOutDate"]);
-                chartRoomOccupancyOverTime.Series["Occupancy"].Points.AddXY(roomNumber, new double[] { start.ToOADate(), end.ToOADate() });
+                    DateTime checkIn = Convert.ToDateTime(row["CheckInDate"]);
+                    DateTime checkOut = Convert.ToDateTime(row["CheckOutDate"]);
+
+                    var point = new DataPoint();
+                    point.AxisLabel = roomNumber;
+                    point.YValues = new double[] { checkIn.ToOADate(), checkOut.ToOADate() };
+                    seriesGantt.Points.Add(point);
+                }
+
+                // Set X-axis as DateTime
+                chartRoomOccupancyOverTime.ChartAreas[0].AxisX.Minimum = Convert.ToDateTime(dtGantt.Rows[0]["CheckInDate"]).ToOADate();
+                chartRoomOccupancyOverTime.ChartAreas[0].AxisX.Maximum = Convert.ToDateTime(dtGantt.Rows[dtGantt.Rows.Count - 1]["CheckOutDate"]).ToOADate();
+                chartRoomOccupancyOverTime.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.Days;
             }
         }
 
