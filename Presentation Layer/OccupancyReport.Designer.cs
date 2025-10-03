@@ -43,6 +43,9 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.picBoxLogo = new System.Windows.Forms.PictureBox();
             this.lblWelcome = new System.Windows.Forms.Label();
@@ -51,12 +54,14 @@
             this.chartRoomUtilization = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartGuestTrends = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartSeasonalRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartRoomTimeline = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDailyOccupancy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRoomUtilization)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartGuestTrends)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartSeasonalRevenue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRoomTimeline)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,9 +69,9 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
             this.panel1.Controls.Add(this.picBoxLogo);
             this.panel1.Controls.Add(this.lblWelcome);
-            this.panel1.Location = new System.Drawing.Point(2, 0);
+            this.panel1.Location = new System.Drawing.Point(-2, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(348, 812);
+            this.panel1.Size = new System.Drawing.Size(352, 1200);
             this.panel1.TabIndex = 1;
             // 
             // picBoxLogo
@@ -101,7 +106,7 @@
             this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnExit.ImageRotate = 0F;
             this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Location = new System.Drawing.Point(1674, 0);
+            this.btnExit.Location = new System.Drawing.Point(1901, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
@@ -180,7 +185,7 @@
             this.chartGuestTrends.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chartGuestTrends.Legends.Add(legend3);
-            this.chartGuestTrends.Location = new System.Drawing.Point(369, 432);
+            this.chartGuestTrends.Location = new System.Drawing.Point(369, 439);
             this.chartGuestTrends.Name = "chartGuestTrends";
             series5.BorderColor = System.Drawing.Color.DarkOrange;
             series5.BorderWidth = 2;
@@ -200,7 +205,7 @@
             this.chartSeasonalRevenue.ChartAreas.Add(chartArea4);
             legend4.Name = "Legend1";
             this.chartSeasonalRevenue.Legends.Add(legend4);
-            this.chartSeasonalRevenue.Location = new System.Drawing.Point(990, 432);
+            this.chartSeasonalRevenue.Location = new System.Drawing.Point(1492, 105);
             this.chartSeasonalRevenue.Name = "chartSeasonalRevenue";
             series6.ChartArea = "ChartArea1";
             series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
@@ -210,16 +215,42 @@
             series6.Name = "SeasonalRevenue";
             series6.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             this.chartSeasonalRevenue.Series.Add(series6);
-            this.chartSeasonalRevenue.Size = new System.Drawing.Size(464, 300);
+            this.chartSeasonalRevenue.Size = new System.Drawing.Size(464, 730);
             this.chartSeasonalRevenue.TabIndex = 10;
             this.chartSeasonalRevenue.Text = "chart1";
+            // 
+            // chartRoomTimeline
+            // 
+            chartArea5.AxisX.Interval = 1D;
+            chartArea5.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea5.AxisX.LabelStyle.Format = "MMM dd";
+            chartArea5.AxisX.Maximum = 6D;
+            chartArea5.AxisX.Minimum = 0D;
+            chartArea5.AxisX.Title = "Room Numbers";
+            chartArea5.AxisX.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea5.Name = "ChartArea1";
+            this.chartRoomTimeline.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartRoomTimeline.Legends.Add(legend5);
+            this.chartRoomTimeline.Location = new System.Drawing.Point(990, 439);
+            this.chartRoomTimeline.Name = "chartRoomTimeline";
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.RangeBar;
+            series7.Legend = "Legend1";
+            series7.Name = "Series1";
+            series7.YValuesPerPoint = 2;
+            this.chartRoomTimeline.Series.Add(series7);
+            this.chartRoomTimeline.Size = new System.Drawing.Size(464, 300);
+            this.chartRoomTimeline.TabIndex = 11;
+            this.chartRoomTimeline.Text = "chart1";
             // 
             // OccupancyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
-            this.ClientSize = new System.Drawing.Size(1808, 810);
+            this.ClientSize = new System.Drawing.Size(1942, 847);
+            this.Controls.Add(this.chartRoomTimeline);
             this.Controls.Add(this.chartSeasonalRevenue);
             this.Controls.Add(this.chartGuestTrends);
             this.Controls.Add(this.chartRoomUtilization);
@@ -228,6 +259,8 @@
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "OccupancyReport";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
@@ -235,6 +268,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartRoomUtilization)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartGuestTrends)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartSeasonalRevenue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRoomTimeline)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -249,5 +283,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomUtilization;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartGuestTrends;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartSeasonalRevenue;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomTimeline;
     }
 }
