@@ -33,6 +33,15 @@ namespace Phumla_Kamnandi.Business_Layer
             return reservationDB.GetAllReservations();
         }
 
+        //Update a Reservation 
+
+        public bool UpdateReservation(string rID, string guestID, DateTime rDate, DateTime InDate, DateTime OutDate, int gNum, string bStatus, string pStatus)
+        {
+
+           return reservationDB.UpdateReservation(rID,guestID,rDate,InDate,OutDate,gNum,bStatus,pStatus);
+
+
+        }
         // Create a reservation for a guest
         public int CreateReservation(int guestID, int numberOfGuests, DateTime checkIn, DateTime checkOut, int requestedRooms)
         {

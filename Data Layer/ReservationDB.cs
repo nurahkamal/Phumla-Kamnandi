@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Phumla_Kamnandi.Data_Layer
 {
@@ -19,6 +20,43 @@ namespace Phumla_Kamnandi.Data_Layer
         {
             FillDataSet("SELECT * FROM dbo.Reservations", rtable);
             return dsMain.Tables[rtable];
+        }
+
+        //Update Reservation
+
+        public bool UpdateReservation(string rID, string guestID, DateTime rDate, DateTime InDate, DateTime OutDate, int gNum, string bStatus, string pStatus)
+        {
+            try
+            {
+                FillDataSet("SELECT * FROM dbo.Reservation", rtable);
+                DataRow[] rows = dsMain.Tables[rtable].Select($"ReservationID = {rID}");
+                if (rows.Length == 0)
+                {
+                    MessageBox.Show("ReservationID not found.");
+                    return false;
+                }
+
+                DataRow row = rows[0];
+
+                // Step 3: Update the values in memory
+                row["CheckInDate"] = InDate;
+                row["CheckOutDate"] = OutDate;
+                row["NumberOfGuests"] = gNum;
+                
+                row["BookingStatus"] = bStatus;
+                row["PaymentStatus"] = pStatus;
+                
+
+                return UpdateDataSource("SELECT * FROM dbo.Guests", rtable);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating guest: " + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
         }
 
 

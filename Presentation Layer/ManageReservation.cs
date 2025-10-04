@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
@@ -69,9 +70,15 @@ namespace Phumla_Kamnandi.Presentation_Layer
             
         }
 
+        private void btnSEdits_Click(object sender, EventArgs e)
+        {
+            if (ReservationData.CurrentRow != null)
+            {
+                string gid = ReservationData.CurrentRow.Cells["ReservationID"].Value.ToString();
+               // rController.UpdateReservation(txttxtGid.Text, txtName.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtID.Text, txtPassNum.Text, txtAddress.Text);
 
 
-
-
+            }
+        }
     }
 }

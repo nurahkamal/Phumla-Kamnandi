@@ -332,6 +332,7 @@
             this.btnSEdits.Size = new System.Drawing.Size(162, 39);
             this.btnSEdits.TabIndex = 34;
             this.btnSEdits.Text = "Save Edits";
+            this.btnSEdits.Click += new System.EventHandler(this.btnSEdits_Click);
             // 
             // btnDelete
             // 
