@@ -472,9 +472,9 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnToday_Click(object sender, EventArgs e)
         {
-           
-            dtpStartDate.Value = new DateTime(2025, 12, 25);
-            dtpEndDate.Value = new DateTime(2025, 12, 25);
+            
+            dtpStartDate.Value = new DateTime(2025, 12, 12);
+            dtpEndDate.Value = new DateTime(2025, 12, 12);
             LoadCharts();
         }
 
@@ -488,7 +488,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnThisMonth_Click(object sender, EventArgs e)
         {
-          
+            
             dtpStartDate.Value = new DateTime(2025, 12, 1);
             dtpEndDate.Value = new DateTime(2025, 12, 31);
             LoadCharts();
