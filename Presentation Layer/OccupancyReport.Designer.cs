@@ -153,7 +153,7 @@
             // 
             // chartDailyOccupancy
             // 
-            this.chartDailyOccupancy.BackColor = System.Drawing.Color.DimGray;
+            this.chartDailyOccupancy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
             chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
             chartArea1.AxisX.IsLabelAutoFit = false;
             chartArea1.AxisX.LabelStyle.Format = "MMM dd";
@@ -191,7 +191,7 @@
             // 
             // chartRoomUtilization
             // 
-            this.chartRoomUtilization.BackColor = System.Drawing.Color.DimGray;
+            this.chartRoomUtilization.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
             chartArea2.Name = "ChartArea1";
             this.chartRoomUtilization.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
@@ -219,7 +219,7 @@
             // 
             // chartGuestTrends
             // 
-            this.chartGuestTrends.BackColor = System.Drawing.Color.DimGray;
+            this.chartGuestTrends.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
             chartArea3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.Center;
             chartArea3.Name = "ChartArea1";
             chartArea3.ShadowOffset = 2;
@@ -243,6 +243,8 @@
             // 
             // chartSeasonalRevenue
             // 
+            this.chartSeasonalRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
             chartArea4.Name = "ChartArea1";
             this.chartSeasonalRevenue.ChartAreas.Add(chartArea4);
             legend4.Name = "Legend1";
@@ -264,7 +266,8 @@
             // 
             // chartDepositStatus
             // 
-            this.chartDepositStatus.BackColor = System.Drawing.Color.DimGray;
+            this.chartDepositStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            chartArea5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
             chartArea5.Name = "ChartArea1";
             this.chartDepositStatus.ChartAreas.Add(chartArea5);
             legend5.Name = "Legend1";
@@ -401,6 +404,7 @@
             // 
             // chartRoomTimeline
             // 
+            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
             chartArea6.Name = "ChartArea1";
             this.chartRoomTimeline.ChartAreas.Add(chartArea6);
             legend6.Name = "Legend1";

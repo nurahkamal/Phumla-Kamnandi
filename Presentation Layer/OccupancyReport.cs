@@ -481,8 +481,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void btnLastSevenDays_Click(object sender, EventArgs e)
         {
             
-            dtpStartDate.Value = new DateTime(2025, 12, 24);
-            dtpEndDate.Value = new DateTime(2025, 12, 31);
+            dtpStartDate.Value = new DateTime(2025, 12, 5);
+            dtpEndDate.Value = new DateTime(2025, 12, 11);
             LoadCharts();
         }
 
