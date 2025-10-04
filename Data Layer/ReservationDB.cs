@@ -48,9 +48,8 @@ namespace Phumla_Kamnandi.Data_Layer
                 for (int i = 0; i < roomIDs.Count; i++) // Loop through each available room to assign guests and allocate it in the database
                 {
 
-                    int roomsLeft = roomIDs.Count - i;
-                                // Ensure at least 1 guest per remaining room
-                    int guestsInRoom = Math.Max(1, (int)Math.Ceiling((double)remainingGuests / roomsLeft));
+                    int roomsLeft = roomIDs.Count - i;           
+                    int guestsInRoom = Math.Max(1, (int)Math.Ceiling((double)remainingGuests / roomsLeft)); // Ensure at least 1 guest per remaining room
                     int roomID = roomIDs[i]; //Get the current room ID from the list of available rooms
 
                     // Insert into ReservationRooms table
