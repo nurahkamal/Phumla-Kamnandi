@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -31,6 +32,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             btnLastSevenDays.Click += btnLastSevenDays_Click;
             btnThisMonth.Click += btnThisMonth_Click;
             btnDecember.Click += btnDecember_Click;
+            btnPrint.Click += btnPrint_Click;
         }
 
         private void SetDefaultDates()
@@ -383,7 +385,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnOkay_Click(object sender, EventArgs e) => LoadCharts();
         private void btnExit_Click(object sender, EventArgs e) => this.Close();
-
+        private void btnPrint_Click(object sender, EventArgs e) => PrintScreenshot();
         private void btnToday_Click(object sender, EventArgs e)
         {
             dtpStartDate.Value = DateTime.Today;
@@ -410,6 +412,66 @@ namespace Phumla_Kamnandi.Presentation_Layer
             dtpStartDate.Value = new DateTime(2025, 12, 1);
             dtpEndDate.Value = new DateTime(2025, 12, 31);
             LoadCharts();
+        }
+
+       
+
+        private void PrintScreenshot()
+        {
+            try
+            {
+                using (Bitmap bitmap = new Bitmap(this.Width, this.Height))
+                {
+                    this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
+
+                    PrintDocument printDocument = new PrintDocument();
+                    printDocument.PrintPage += (s, e) =>
+                    {
+                        e.Graphics.DrawImage(bitmap, e.MarginBounds);
+                    };
+
+                    PrintDialog printDialog = new PrintDialog();
+                    printDialog.Document = printDocument;
+
+                    if (printDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        printDocument.Print();
+                        MessageBox.Show("Report sent to printer successfully!", "Print Complete",
+                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Print error: {ex.Message}", "Print Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SaveAsImage()
+        {
+            try
+            {
+                SaveFileDialog saveDialog = new SaveFileDialog();
+                saveDialog.Filter = "PNG Image (*.png)|*.png|JPEG Image (*.jpg)|*.jpg";
+                saveDialog.Title = "Save Report as Image";
+
+                if (saveDialog.ShowDialog() == DialogResult.OK)
+                {
+                    using (Bitmap bitmap = new Bitmap(this.Width, this.Height))
+                    {
+                        this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
+                        bitmap.Save(saveDialog.FileName);
+                        MessageBox.Show("Report saved as image successfully!", "Save Complete",
+                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Save error: {ex.Message}", "Save Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
