@@ -130,9 +130,10 @@
             this.guna2Button8.FillColor = System.Drawing.Color.White;
             this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.guna2Button8.Location = new System.Drawing.Point(9, 349);
+            this.guna2Button8.Image = global::Phumla_Kamnandi.Properties.Resources.AboutUS;
+            this.guna2Button8.Location = new System.Drawing.Point(16, 349);
             this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(210, 47);
+            this.guna2Button8.Size = new System.Drawing.Size(222, 43);
             this.guna2Button8.TabIndex = 25;
             this.guna2Button8.Text = "About Us";
             // 
@@ -148,9 +149,11 @@
             this.guna2Button7.FillColor = System.Drawing.Color.White;
             this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.guna2Button7.Location = new System.Drawing.Point(4, 565);
+            this.guna2Button7.Image = global::Phumla_Kamnandi.Properties.Resources.NewReport;
+            this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button7.Location = new System.Drawing.Point(14, 565);
             this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(215, 43);
+            this.guna2Button7.Size = new System.Drawing.Size(222, 43);
             this.guna2Button7.TabIndex = 24;
             this.guna2Button7.Text = "View Reports";
             // 
@@ -166,9 +169,11 @@
             this.guna2Button6.FillColor = System.Drawing.Color.White;
             this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button6.Image = global::Phumla_Kamnandi.Properties.Resources.search_icon_png_5;
+            this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button6.Location = new System.Drawing.Point(9, 512);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(210, 47);
+            this.guna2Button6.Size = new System.Drawing.Size(222, 43);
             this.guna2Button6.TabIndex = 23;
             this.guna2Button6.Text = "Guest Enquiries";
             // 
@@ -184,15 +189,18 @@
             this.guna2Button5.FillColor = System.Drawing.Color.White;
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button5.Image = global::Phumla_Kamnandi.Properties.Resources.free_refresh_icon_3104_thumb;
+            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.guna2Button5.Location = new System.Drawing.Point(16, 463);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(203, 43);
+            this.guna2Button5.Size = new System.Drawing.Size(222, 43);
             this.guna2Button5.TabIndex = 22;
-            this.guna2Button5.Text = "Update a Reservation";
+            this.guna2Button5.Text = "Update a Booking";
             // 
             // guna2Button3
             // 
             this.guna2Button3.AutoRoundedCorners = true;
+            this.guna2Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
             this.guna2Button3.BorderThickness = 2;
             this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -202,11 +210,14 @@
             this.guna2Button3.FillColor = System.Drawing.Color.White;
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.guna2Button3.Location = new System.Drawing.Point(9, 402);
+            this.guna2Button3.Image = global::Phumla_Kamnandi.Properties.Resources._2460877;
+            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button3.Location = new System.Drawing.Point(16, 405);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(210, 46);
+            this.guna2Button3.Size = new System.Drawing.Size(222, 43);
             this.guna2Button3.TabIndex = 21;
-            this.guna2Button3.Text = "Make a Reservation";
+            this.guna2Button3.Text = " Make a Reservation";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // pictureBox1
             // 

@@ -93,6 +93,16 @@ namespace Phumla_Kamnandi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AboutUS {
+            get {
+                object obj = ResourceManager.GetObject("AboutUS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap BackgroundImage {
             get {
                 object obj = ResourceManager.GetObject("BackgroundImage", resourceCulture);
@@ -153,6 +163,16 @@ namespace Phumla_Kamnandi.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NewReport {
+            get {
+                object obj = ResourceManager.GetObject("NewReport", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Refresh_icon {
             get {
                 object obj = ResourceManager.GetObject("Refresh_icon", resourceCulture);
@@ -166,6 +186,16 @@ namespace Phumla_Kamnandi.Properties {
         internal static System.Drawing.Bitmap refresh_icon_png_ico_11563051035ndqy3wvdcc {
             get {
                 object obj = ResourceManager.GetObject("refresh-icon-png-ico-11563051035ndqy3wvdcc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap report {
+            get {
+                object obj = ResourceManager.GetObject("report", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
