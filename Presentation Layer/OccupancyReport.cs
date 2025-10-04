@@ -13,16 +13,59 @@ namespace Phumla_Kamnandi.Presentation_Layer
 {
     public partial class OccupancyReport : Form
     {
+        #region ui for buttons ( colour setting (global))
         private ReportOccupancyController _reportController;
-
+        //FOR BUTTON UI - Fixed type declaration
+        private Guna.UI2.WinForms.Guna2Button currentButton;
+        private readonly Color BeigeColor = Color.FromArgb(195, 189, 171); // #C3BDAB
+        private readonly Color GoldColor = Color.FromArgb(200, 157, 67);   // #C89343
+        private readonly Color NearBlackColor = Color.FromArgb(8, 8, 7);   // #080807
+        #endregion
         public OccupancyReport()
         {
             InitializeComponent();
             _reportController = new ReportOccupancyController();
             WireUpEvents();
+            InitializeButtonStyles();
             SetDefaultDates();
             LoadCharts();
         }
+
+        #region this is for the ui of the buttons 
+        private void InitializeButtonStyles()
+        {
+           
+            btnToday.FillColor = BeigeColor;
+            btnToday.ForeColor = NearBlackColor;
+            btnToday.BorderRadius = 8;
+
+            btnLastSevenDays.FillColor = BeigeColor;
+            btnLastSevenDays.ForeColor = NearBlackColor;
+            btnLastSevenDays.BorderRadius = 8;
+
+            btnThisMonth.FillColor = BeigeColor;
+            btnThisMonth.ForeColor = NearBlackColor;
+            btnThisMonth.BorderRadius = 8;
+
+            btnDecember.FillColor = BeigeColor;
+            btnDecember.ForeColor = NearBlackColor;
+            btnDecember.BorderRadius = 8;
+
+            
+            btnOkay.FillColor = GoldColor;
+            btnOkay.ForeColor = NearBlackColor;
+            btnOkay.BorderRadius = 8;
+
+            btnPrint.FillColor = GoldColor;
+            btnPrint.ForeColor = NearBlackColor;
+            btnPrint.BorderRadius = 8;
+
+            
+            currentButton = btnThisMonth;
+            currentButton.FillColor = GoldColor;
+            currentButton.ForeColor = Color.White;
+        }
+        #endregion
 
         #region Event Wiring
         private void WireUpEvents()
@@ -37,7 +80,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         }
         #endregion
 
-        #region Date Configuration
+        #region Date config
         private void SetDefaultDates()
         {
             dtpStartDate.Value = new DateTime(2025, 12, 1);
@@ -438,6 +481,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             }
         }
 
+        #region to save the screenshot as an image
         private void SaveAsImage()
         {
             try
@@ -464,42 +508,65 @@ namespace Phumla_Kamnandi.Presentation_Layer
             }
         }
         #endregion
+        #endregion
 
         #region Event Handlers
         private void btnOkay_Click(object sender, EventArgs e) => LoadCharts();
         private void btnExit_Click(object sender, EventArgs e) => this.Close();
         private void btnPrint_Click(object sender, EventArgs e) => PrintScreenshot();
 
+        #region this os for the buttons on top of the page
         private void btnToday_Click(object sender, EventArgs e)
         {
-            
             dtpStartDate.Value = new DateTime(2025, 12, 12);
             dtpEndDate.Value = new DateTime(2025, 12, 12);
             LoadCharts();
+            SetDateMenuButtonsUI(sender);
         }
 
         private void btnLastSevenDays_Click(object sender, EventArgs e)
         {
-            
             dtpStartDate.Value = new DateTime(2025, 12, 5);
             dtpEndDate.Value = new DateTime(2025, 12, 11);
             LoadCharts();
+            SetDateMenuButtonsUI(sender);
         }
 
         private void btnThisMonth_Click(object sender, EventArgs e)
         {
-            
             dtpStartDate.Value = new DateTime(2025, 12, 1);
             dtpEndDate.Value = new DateTime(2025, 12, 31);
             LoadCharts();
+            SetDateMenuButtonsUI(sender);
         }
 
         private void btnDecember_Click(object sender, EventArgs e)
         {
-            
             dtpStartDate.Value = new DateTime(2025, 12, 1);
             dtpEndDate.Value = new DateTime(2025, 12, 31);
             LoadCharts();
+            SetDateMenuButtonsUI(sender);
+        }
+        #endregion
+        #endregion
+
+        #region Button UI Method
+        private void SetDateMenuButtonsUI(object button)
+        {
+            var btn = button as Guna.UI2.WinForms.Guna2Button;
+            if (btn == null) return;
+
+            // Highlight the selected button
+            btn.FillColor = GoldColor;
+            btn.ForeColor = Color.White;
+
+            // Unhighlight previous button
+            if (currentButton != null && currentButton != btn)
+            {
+                currentButton.FillColor = BeigeColor;
+                currentButton.ForeColor = NearBlackColor;
+            }
+            currentButton = btn;
         }
         #endregion
     }
