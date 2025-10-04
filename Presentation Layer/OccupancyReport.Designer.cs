@@ -29,28 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OccupancyReport));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea7 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea8 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea9 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.picBoxLogo = new System.Windows.Forms.PictureBox();
@@ -69,6 +64,12 @@
             this.btnDecember = new Guna.UI2.WinForms.Guna2Button();
             this.btnOkay = new Guna.UI2.WinForms.Guna2Button();
             this.chartRoomTimeline = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.lblDaily = new System.Windows.Forms.Label();
+            this.lblRoom = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartDailyOccupancy)).BeginInit();
@@ -86,7 +87,7 @@
             this.panel1.Controls.Add(this.picBoxLogo);
             this.panel1.Controls.Add(this.lblWelcome);
             this.panel1.Location = new System.Drawing.Point(-2, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(264, 975);
             this.panel1.TabIndex = 1;
@@ -101,7 +102,7 @@
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPrint.ForeColor = System.Drawing.Color.White;
             this.btnPrint.Location = new System.Drawing.Point(76, 292);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(135, 29);
             this.btnPrint.TabIndex = 21;
@@ -112,7 +113,7 @@
             // 
             this.picBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("picBoxLogo.Image")));
             this.picBoxLogo.Location = new System.Drawing.Point(76, 33);
-            this.picBoxLogo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picBoxLogo.Margin = new System.Windows.Forms.Padding(2);
             this.picBoxLogo.Name = "picBoxLogo";
             this.picBoxLogo.Size = new System.Drawing.Size(113, 116);
             this.picBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -142,151 +143,135 @@
             this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnExit.ImageRotate = 0F;
             this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Location = new System.Drawing.Point(1437, 1);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExit.Location = new System.Drawing.Point(1486, 0);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
             this.btnExit.Name = "btnExit";
             this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Size = new System.Drawing.Size(57, 52);
+            this.btnExit.Size = new System.Drawing.Size(42, 39);
             this.btnExit.TabIndex = 6;
             this.btnExit.UseTransparentBackground = true;
             // 
             // chartDailyOccupancy
             // 
             this.chartDailyOccupancy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea1.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
-            chartArea1.AxisX.IsLabelAutoFit = false;
-            chartArea1.AxisX.LabelStyle.Format = "MMM dd";
-            chartArea1.AxisY.Maximum = 5D;
-            chartArea1.AxisY.Minimum = 0D;
-            chartArea1.AxisY.Title = "Rooms Occupied";
-            chartArea1.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY2.Maximum = 100D;
-            chartArea1.AxisY2.Minimum = 0D;
-            chartArea1.AxisY2.Title = "Occupancy Rate %";
-            chartArea1.Name = "ChartArea1";
-            this.chartDailyOccupancy.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartDailyOccupancy.Legends.Add(legend1);
-            this.chartDailyOccupancy.Location = new System.Drawing.Point(277, 85);
-            this.chartDailyOccupancy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            chartArea7.AxisX.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Days;
+            chartArea7.AxisX.IsLabelAutoFit = false;
+            chartArea7.AxisX.LabelStyle.Format = "MMM dd";
+            chartArea7.AxisY.Maximum = 5D;
+            chartArea7.AxisY.Minimum = 0D;
+            chartArea7.AxisY.Title = "Rooms Occupied";
+            chartArea7.AxisY.TitleFont = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea7.AxisY2.Maximum = 100D;
+            chartArea7.AxisY2.Minimum = 0D;
+            chartArea7.AxisY2.Title = "Occupancy Rate %";
+            chartArea7.Name = "ChartArea1";
+            this.chartDailyOccupancy.ChartAreas.Add(chartArea7);
+            this.chartDailyOccupancy.Location = new System.Drawing.Point(800, 111);
+            this.chartDailyOccupancy.Margin = new System.Windows.Forms.Padding(2);
             this.chartDailyOccupancy.Name = "chartDailyOccupancy";
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.IsValueShownAsLabel = true;
-            series1.Label = "{0}%";
-            series1.Legend = "Legend1";
-            series1.Name = "OccupancyRate";
-            series1.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
-            series2.ChartArea = "ChartArea1";
-            series2.Color = System.Drawing.Color.Black;
-            series2.Legend = "Legend1";
-            series2.Name = "RoomsOccupied";
-            this.chartDailyOccupancy.Series.Add(series1);
-            this.chartDailyOccupancy.Series.Add(series2);
-            this.chartDailyOccupancy.Size = new System.Drawing.Size(450, 244);
+            series9.BorderWidth = 3;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.IsValueShownAsLabel = true;
+            series9.Label = "{0}%";
+            series9.Name = "OccupancyRate";
+            series9.YAxisType = System.Windows.Forms.DataVisualization.Charting.AxisType.Secondary;
+            series10.ChartArea = "ChartArea1";
+            series10.Color = System.Drawing.Color.Black;
+            series10.Name = "RoomsOccupied";
+            this.chartDailyOccupancy.Series.Add(series9);
+            this.chartDailyOccupancy.Series.Add(series10);
+            this.chartDailyOccupancy.Size = new System.Drawing.Size(499, 244);
             this.chartDailyOccupancy.TabIndex = 7;
             this.chartDailyOccupancy.Text = "chart1";
             // 
             // chartRoomUtilization
             // 
             this.chartRoomUtilization.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea2.Name = "ChartArea1";
-            this.chartRoomUtilization.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartRoomUtilization.Legends.Add(legend2);
-            this.chartRoomUtilization.Location = new System.Drawing.Point(742, 85);
-            this.chartRoomUtilization.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            chartArea8.Name = "ChartArea1";
+            this.chartRoomUtilization.ChartAreas.Add(chartArea8);
+            this.chartRoomUtilization.Location = new System.Drawing.Point(276, 111);
+            this.chartRoomUtilization.Margin = new System.Windows.Forms.Padding(2);
             this.chartRoomUtilization.Name = "chartRoomUtilization";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series3.Color = System.Drawing.Color.SeaGreen;
-            series3.IsValueShownAsLabel = true;
-            series3.Legend = "Legend1";
-            series3.Name = "OccupiedRooms";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
-            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            series4.IsValueShownAsLabel = true;
-            series4.Legend = "Legend1";
-            series4.Name = "AvailableRooms";
-            this.chartRoomUtilization.Series.Add(series3);
-            this.chartRoomUtilization.Series.Add(series4);
-            this.chartRoomUtilization.Size = new System.Drawing.Size(348, 244);
+            this.chartRoomUtilization.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.EarthTones;
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series11.Color = System.Drawing.Color.SeaGreen;
+            series11.IsValueShownAsLabel = true;
+            series11.Name = "OccupiedRooms";
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.StackedColumn;
+            series12.Color = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            series12.IsValueShownAsLabel = true;
+            series12.Name = "AvailableRooms";
+            this.chartRoomUtilization.Series.Add(series11);
+            this.chartRoomUtilization.Series.Add(series12);
+            this.chartRoomUtilization.Size = new System.Drawing.Size(497, 244);
             this.chartRoomUtilization.TabIndex = 8;
             this.chartRoomUtilization.Text = "chart1";
             // 
             // chartGuestTrends
             // 
             this.chartGuestTrends.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.Center;
-            chartArea3.Name = "ChartArea1";
-            chartArea3.ShadowOffset = 2;
-            this.chartGuestTrends.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartGuestTrends.Legends.Add(legend3);
-            this.chartGuestTrends.Location = new System.Drawing.Point(742, 334);
-            this.chartGuestTrends.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            chartArea9.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.Center;
+            chartArea9.Name = "ChartArea1";
+            chartArea9.ShadowOffset = 2;
+            this.chartGuestTrends.ChartAreas.Add(chartArea9);
+            this.chartGuestTrends.Location = new System.Drawing.Point(276, 392);
+            this.chartGuestTrends.Margin = new System.Windows.Forms.Padding(2);
             this.chartGuestTrends.Name = "chartGuestTrends";
-            series5.BorderColor = System.Drawing.Color.DarkOrange;
-            series5.BorderWidth = 2;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series5.Color = System.Drawing.Color.Orange;
-            series5.Legend = "Legend1";
-            series5.Name = "GuestCount";
-            this.chartGuestTrends.Series.Add(series5);
-            this.chartGuestTrends.Size = new System.Drawing.Size(348, 244);
+            series13.BorderColor = System.Drawing.Color.DarkOrange;
+            series13.BorderWidth = 2;
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series13.Color = System.Drawing.Color.Orange;
+            series13.Name = "GuestCount";
+            this.chartGuestTrends.Series.Add(series13);
+            this.chartGuestTrends.Size = new System.Drawing.Size(497, 244);
             this.chartGuestTrends.TabIndex = 9;
             this.chartGuestTrends.Text = "chart1";
             // 
             // chartSeasonalRevenue
             // 
             this.chartSeasonalRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea4.Name = "ChartArea1";
-            this.chartSeasonalRevenue.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartSeasonalRevenue.Legends.Add(legend4);
-            this.chartSeasonalRevenue.Location = new System.Drawing.Point(1126, 85);
-            this.chartSeasonalRevenue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            chartArea10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            chartArea10.Name = "ChartArea1";
+            this.chartSeasonalRevenue.ChartAreas.Add(chartArea10);
+            this.chartSeasonalRevenue.Location = new System.Drawing.Point(1331, 111);
+            this.chartSeasonalRevenue.Margin = new System.Windows.Forms.Padding(2);
             this.chartSeasonalRevenue.Name = "chartSeasonalRevenue";
-            series6.ChartArea = "ChartArea1";
-            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series6.IsValueShownAsLabel = true;
-            series6.LabelFormat = "{0:C}";
-            series6.Legend = "Legend1";
-            series6.Name = "SeasonalRevenue";
-            series6.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            this.chartSeasonalRevenue.Series.Add(series6);
-            this.chartSeasonalRevenue.Size = new System.Drawing.Size(348, 493);
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series14.IsValueShownAsLabel = true;
+            series14.LabelFormat = "{0:C}";
+            series14.Name = "SeasonalRevenue";
+            series14.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            this.chartSeasonalRevenue.Series.Add(series14);
+            this.chartSeasonalRevenue.Size = new System.Drawing.Size(197, 525);
             this.chartSeasonalRevenue.TabIndex = 10;
             this.chartSeasonalRevenue.Text = "chart1";
             // 
             // chartDepositStatus
             // 
             this.chartDepositStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea5.Name = "ChartArea1";
-            this.chartDepositStatus.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartDepositStatus.Legends.Add(legend5);
-            this.chartDepositStatus.Location = new System.Drawing.Point(277, 334);
-            this.chartDepositStatus.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            chartArea11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            chartArea11.Name = "ChartArea1";
+            this.chartDepositStatus.ChartAreas.Add(chartArea11);
+            this.chartDepositStatus.Location = new System.Drawing.Point(810, 392);
+            this.chartDepositStatus.Margin = new System.Windows.Forms.Padding(2);
             this.chartDepositStatus.Name = "chartDepositStatus";
-            series7.ChartArea = "ChartArea1";
-            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
-            series7.IsValueShownAsLabel = true;
-            series7.LabelFormat = "{0} deposits";
-            series7.Legend = "Legend1";
-            series7.Name = "DepositStatus";
-            dataPoint1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
-            dataPoint2.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            series7.Points.Add(dataPoint1);
-            series7.Points.Add(dataPoint2);
-            this.chartDepositStatus.Series.Add(series7);
-            this.chartDepositStatus.Size = new System.Drawing.Size(450, 244);
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Doughnut;
+            series15.IsValueShownAsLabel = true;
+            series15.LabelFormat = "{0} deposits";
+            series15.Name = "DepositStatus";
+            dataPoint3.Color = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            dataPoint4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            series15.Points.Add(dataPoint3);
+            series15.Points.Add(dataPoint4);
+            this.chartDepositStatus.Series.Add(series15);
+            this.chartDepositStatus.Size = new System.Drawing.Size(499, 244);
             this.chartDepositStatus.TabIndex = 12;
             this.chartDepositStatus.Text = "chart1";
             // 
@@ -298,7 +283,7 @@
             this.dtpStartDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpStartDate.Location = new System.Drawing.Point(277, 23);
-            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpStartDate.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
             this.dtpStartDate.MinDate = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
             this.dtpStartDate.Name = "dtpStartDate";
@@ -314,7 +299,7 @@
             this.dtpEndDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpEndDate.Location = new System.Drawing.Point(431, 23);
-            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpEndDate.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
             this.dtpEndDate.MinDate = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
             this.dtpEndDate.Name = "dtpEndDate";
@@ -324,15 +309,19 @@
             // 
             // btnToday
             // 
-            this.btnToday.AutoRoundedCorners = true;
+            this.btnToday.BackColor = System.Drawing.Color.Transparent;
+            this.btnToday.BorderRadius = 3;
+            this.btnToday.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.btnToday.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnToday.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnToday.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnToday.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnToday.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnToday.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnToday.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.btnToday.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnToday.ForeColor = System.Drawing.Color.White;
-            this.btnToday.Location = new System.Drawing.Point(794, 23);
-            this.btnToday.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnToday.Location = new System.Drawing.Point(839, 23);
+            this.btnToday.Margin = new System.Windows.Forms.Padding(2);
             this.btnToday.Name = "btnToday";
             this.btnToday.Size = new System.Drawing.Size(135, 29);
             this.btnToday.TabIndex = 15;
@@ -340,15 +329,19 @@
             // 
             // btnLastSevenDays
             // 
-            this.btnLastSevenDays.AutoRoundedCorners = true;
+            this.btnLastSevenDays.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(70)))), ((int)(((byte)(54)))));
+            this.btnLastSevenDays.BorderRadius = 2;
+            this.btnLastSevenDays.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.btnLastSevenDays.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnLastSevenDays.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnLastSevenDays.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnLastSevenDays.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnLastSevenDays.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnLastSevenDays.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnLastSevenDays.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.btnLastSevenDays.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnLastSevenDays.ForeColor = System.Drawing.Color.White;
-            this.btnLastSevenDays.Location = new System.Drawing.Point(945, 23);
-            this.btnLastSevenDays.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLastSevenDays.Location = new System.Drawing.Point(973, 23);
+            this.btnLastSevenDays.Margin = new System.Windows.Forms.Padding(2);
             this.btnLastSevenDays.Name = "btnLastSevenDays";
             this.btnLastSevenDays.Size = new System.Drawing.Size(135, 29);
             this.btnLastSevenDays.TabIndex = 16;
@@ -356,15 +349,20 @@
             // 
             // btnThisMonth
             // 
-            this.btnThisMonth.AutoRoundedCorners = true;
+            this.btnThisMonth.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(70)))), ((int)(((byte)(54)))));
+            this.btnThisMonth.BorderRadius = 2;
+            this.btnThisMonth.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.btnThisMonth.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnThisMonth.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnThisMonth.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnThisMonth.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnThisMonth.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnThisMonth.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnThisMonth.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.btnThisMonth.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(249)))), ((int)(((byte)(238)))));
+            this.btnThisMonth.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnThisMonth.ForeColor = System.Drawing.Color.White;
-            this.btnThisMonth.Location = new System.Drawing.Point(1094, 23);
-            this.btnThisMonth.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThisMonth.Location = new System.Drawing.Point(1106, 23);
+            this.btnThisMonth.Margin = new System.Windows.Forms.Padding(2);
             this.btnThisMonth.Name = "btnThisMonth";
             this.btnThisMonth.Size = new System.Drawing.Size(135, 29);
             this.btnThisMonth.TabIndex = 17;
@@ -372,15 +370,19 @@
             // 
             // btnDecember
             // 
-            this.btnDecember.AutoRoundedCorners = true;
+            this.btnDecember.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(70)))), ((int)(((byte)(54)))));
+            this.btnDecember.BorderRadius = 2;
+            this.btnDecember.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.btnDecember.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnDecember.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnDecember.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnDecember.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnDecember.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDecember.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDecember.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(86)))), ((int)(((byte)(49)))));
+            this.btnDecember.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnDecember.ForeColor = System.Drawing.Color.White;
-            this.btnDecember.Location = new System.Drawing.Point(1243, 23);
-            this.btnDecember.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDecember.Location = new System.Drawing.Point(1241, 23);
+            this.btnDecember.Margin = new System.Windows.Forms.Padding(2);
             this.btnDecember.Name = "btnDecember";
             this.btnDecember.Size = new System.Drawing.Size(135, 29);
             this.btnDecember.TabIndex = 18;
@@ -389,44 +391,113 @@
             // btnOkay
             // 
             this.btnOkay.AutoRoundedCorners = true;
+            this.btnOkay.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnOkay.BackgroundImage")));
+            this.btnOkay.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnOkay.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnOkay.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnOkay.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnOkay.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnOkay.FillColor = System.Drawing.Color.Transparent;
             this.btnOkay.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOkay.ForeColor = System.Drawing.Color.White;
-            this.btnOkay.Location = new System.Drawing.Point(592, 23);
-            this.btnOkay.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOkay.Location = new System.Drawing.Point(585, 23);
+            this.btnOkay.Margin = new System.Windows.Forms.Padding(2);
             this.btnOkay.Name = "btnOkay";
-            this.btnOkay.Size = new System.Drawing.Size(61, 29);
+            this.btnOkay.Size = new System.Drawing.Size(52, 29);
             this.btnOkay.TabIndex = 19;
-            this.btnOkay.Text = "Okay";
             // 
             // chartRoomTimeline
             // 
-            chartArea6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea6.Name = "ChartArea1";
-            this.chartRoomTimeline.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.chartRoomTimeline.Legends.Add(legend6);
-            this.chartRoomTimeline.Location = new System.Drawing.Point(277, 598);
-            this.chartRoomTimeline.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            chartArea12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            chartArea12.Name = "ChartArea1";
+            this.chartRoomTimeline.ChartAreas.Add(chartArea12);
+            legend2.Name = "Legend1";
+            this.chartRoomTimeline.Legends.Add(legend2);
+            this.chartRoomTimeline.Location = new System.Drawing.Point(277, 661);
+            this.chartRoomTimeline.Margin = new System.Windows.Forms.Padding(2);
             this.chartRoomTimeline.Name = "chartRoomTimeline";
-            series8.ChartArea = "ChartArea1";
-            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series8.Legend = "Legend1";
-            series8.Name = "Series1";
-            this.chartRoomTimeline.Series.Add(series8);
-            this.chartRoomTimeline.Size = new System.Drawing.Size(1197, 244);
+            series16.ChartArea = "ChartArea1";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series16.Legend = "Legend1";
+            series16.Name = "Series1";
+            this.chartRoomTimeline.Series.Add(series16);
+            this.chartRoomTimeline.Size = new System.Drawing.Size(1252, 203);
             this.chartRoomTimeline.TabIndex = 20;
             this.chartRoomTimeline.Text = "chart1";
+            // 
+            // lblDaily
+            // 
+            this.lblDaily.AutoSize = true;
+            this.lblDaily.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDaily.Location = new System.Drawing.Point(795, 75);
+            this.lblDaily.Name = "lblDaily";
+            this.lblDaily.Size = new System.Drawing.Size(223, 25);
+            this.lblDaily.TabIndex = 21;
+            this.lblDaily.Text = "Daily Occupancy Trends";
+            // 
+            // lblRoom
+            // 
+            this.lblRoom.AutoSize = true;
+            this.lblRoom.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoom.Location = new System.Drawing.Point(272, 75);
+            this.lblRoom.Name = "lblRoom";
+            this.lblRoom.Size = new System.Drawing.Size(237, 25);
+            this.lblRoom.TabIndex = 22;
+            this.lblRoom.Text = "Room Utilization Analysis";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(1326, 75);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(183, 25);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "Revenue by Season";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(272, 365);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(188, 25);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Guest Count Trends";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(795, 365);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(223, 25);
+            this.label3.TabIndex = 25;
+            this.label3.Text = "Deposit Payment Status";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(273, 634);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(203, 25);
+            this.label4.TabIndex = 26;
+            this.label4.Text = "Daily Room Bookings";
             // 
             // OccupancyReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
-            this.ClientSize = new System.Drawing.Size(1485, 688);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblRoom);
+            this.Controls.Add(this.lblDaily);
             this.Controls.Add(this.chartRoomTimeline);
             this.Controls.Add(this.btnOkay);
             this.Controls.Add(this.btnDecember);
@@ -442,8 +513,9 @@
             this.Controls.Add(this.chartDailyOccupancy);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OccupancyReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -457,6 +529,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.chartDepositStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartRoomTimeline)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -480,5 +553,11 @@
         private Guna.UI2.WinForms.Guna2Button btnOkay;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartRoomTimeline;
         private Guna.UI2.WinForms.Guna2Button btnPrint;
+        private System.Windows.Forms.Label lblDaily;
+        private System.Windows.Forms.Label lblRoom;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
