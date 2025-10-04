@@ -37,24 +37,23 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnPaymentNow = new Guna.UI2.WinForms.Guna2Button();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label2 = new System.Windows.Forms.Label();
             this.rtbSummary = new System.Windows.Forms.RichTextBox();
             this.btnPaymentLater = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPayment = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlCard = new System.Windows.Forms.Panel();
+            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnPaymentNow = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnPayment = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -70,7 +69,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.panel2.Controls.Add(this.guna2Button6);
             this.panel2.Controls.Add(this.guna2Button5);
             this.panel2.Controls.Add(this.guna2Button3);
-            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Location = new System.Drawing.Point(221, 146);
             this.panel2.Name = "panel2";
@@ -168,17 +166,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.guna2Button3.TabIndex = 21;
             this.guna2Button3.Text = "Make a Reservation";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.label7.Location = new System.Drawing.Point(37, 208);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(216, 38);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "User\'s Name/ID";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -207,6 +194,24 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.panel1.Size = new System.Drawing.Size(1033, 615);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // btnPaymentNow
+            // 
+            this.btnPaymentNow.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
+            this.btnPaymentNow.AutoRoundedCorners = true;
+            this.btnPaymentNow.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPaymentNow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPaymentNow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPaymentNow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPaymentNow.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.btnPaymentNow.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnPaymentNow.ForeColor = System.Drawing.Color.White;
+            this.btnPaymentNow.Location = new System.Drawing.Point(309, 550);
+            this.btnPaymentNow.Name = "btnPaymentNow";
+            this.btnPaymentNow.Size = new System.Drawing.Size(236, 45);
+            this.btnPaymentNow.TabIndex = 27;
+            this.btnPaymentNow.Text = "Pay Deposit Now?";
+            this.btnPaymentNow.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // btnExit
             // 
@@ -240,7 +245,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             // 
             // rtbSummary
             // 
-            this.rtbSummary.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rtbSummary.Font = new System.Drawing.Font("Segoe UI Semibold", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rtbSummary.Location = new System.Drawing.Point(309, 134);
             this.rtbSummary.Name = "rtbSummary";
             this.rtbSummary.Size = new System.Drawing.Size(685, 239);
@@ -261,26 +266,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.btnPaymentLater.Name = "btnPaymentLater";
             this.btnPaymentLater.Size = new System.Drawing.Size(245, 45);
             this.btnPaymentLater.TabIndex = 12;
-            this.btnPaymentLater.Text = "Make Payment Later?";
+            this.btnPaymentLater.Text = "Pay Deposit Later?";
             this.btnPaymentLater.Click += new System.EventHandler(this.btnPaymentLater_Click);
-            // 
-            // btnPayment
-            // 
-            this.btnPayment.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
-            this.btnPayment.AutoRoundedCorners = true;
-            this.btnPayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.btnPayment.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnPayment.ForeColor = System.Drawing.Color.White;
-            this.btnPayment.Location = new System.Drawing.Point(455, 51);
-            this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(209, 45);
-            this.btnPayment.TabIndex = 11;
-            this.btnPayment.Text = "Confirm Payment";
-            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // label1
             // 
@@ -319,6 +306,26 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.pnlCard.Size = new System.Drawing.Size(685, 151);
             this.pnlCard.TabIndex = 17;
             // 
+            // guna2TextBox3
+            // 
+            this.guna2TextBox3.AutoRoundedCorners = true;
+            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2TextBox3.DefaultText = "";
+            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.guna2TextBox3.Location = new System.Drawing.Point(181, 8);
+            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.guna2TextBox3.Name = "guna2TextBox3";
+            this.guna2TextBox3.PlaceholderText = "";
+            this.guna2TextBox3.SelectedText = "";
+            this.guna2TextBox3.Size = new System.Drawing.Size(210, 40);
+            this.guna2TextBox3.TabIndex = 15;
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -329,6 +336,17 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.label5.Size = new System.Drawing.Size(153, 30);
             this.label5.TabIndex = 10;
             this.label5.Text = "Card Number:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label3.Location = new System.Drawing.Point(3, 13);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 30);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Payable amount:";
             // 
             // label6
             // 
@@ -381,54 +399,23 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.guna2TextBox1.Size = new System.Drawing.Size(210, 40);
             this.guna2TextBox1.TabIndex = 2;
             // 
-            // btnPaymentNow
+            // btnPayment
             // 
-            this.btnPaymentNow.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
-            this.btnPaymentNow.AutoRoundedCorners = true;
-            this.btnPaymentNow.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPaymentNow.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPaymentNow.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPaymentNow.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPaymentNow.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.btnPaymentNow.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
-            this.btnPaymentNow.ForeColor = System.Drawing.Color.White;
-            this.btnPaymentNow.Location = new System.Drawing.Point(309, 550);
-            this.btnPaymentNow.Name = "btnPaymentNow";
-            this.btnPaymentNow.Size = new System.Drawing.Size(236, 45);
-            this.btnPaymentNow.TabIndex = 27;
-            this.btnPaymentNow.Text = "Make Payment Now?";
-            this.btnPaymentNow.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
-            // guna2TextBox3
-            // 
-            this.guna2TextBox3.AutoRoundedCorners = true;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(181, 8);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(210, 40);
-            this.guna2TextBox3.TabIndex = 15;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label3.Location = new System.Drawing.Point(3, 13);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 30);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Payable amount:";
+            this.btnPayment.AccessibleRole = System.Windows.Forms.AccessibleRole.Caret;
+            this.btnPayment.AutoRoundedCorners = true;
+            this.btnPayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPayment.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.btnPayment.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.btnPayment.ForeColor = System.Drawing.Color.White;
+            this.btnPayment.Location = new System.Drawing.Point(455, 51);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(209, 45);
+            this.btnPayment.TabIndex = 11;
+            this.btnPayment.Text = "Confirm Payment";
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
             // PaymentForm
             // 
@@ -445,7 +432,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.PaymentForm_Load);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -458,7 +444,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
         #endregion
 
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
