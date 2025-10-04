@@ -366,7 +366,7 @@
             this.chartRoomTimeline.ChartAreas.Add(chartArea6);
             legend6.Name = "Legend1";
             this.chartRoomTimeline.Legends.Add(legend6);
-            this.chartRoomTimeline.Location = new System.Drawing.Point(369, 717);
+            this.chartRoomTimeline.Location = new System.Drawing.Point(369, 736);
             this.chartRoomTimeline.Name = "chartRoomTimeline";
             series8.ChartArea = "ChartArea1";
             series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
