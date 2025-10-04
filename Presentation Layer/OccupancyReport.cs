@@ -24,6 +24,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             LoadCharts();
         }
 
+        #region Event Wiring
         private void WireUpEvents()
         {
             btnOkay.Click += btnOkay_Click;
@@ -34,13 +35,17 @@ namespace Phumla_Kamnandi.Presentation_Layer
             btnDecember.Click += btnDecember_Click;
             btnPrint.Click += btnPrint_Click;
         }
+        #endregion
 
+        #region Date Configuration
         private void SetDefaultDates()
         {
             dtpStartDate.Value = new DateTime(2025, 12, 1);
             dtpEndDate.Value = new DateTime(2025, 12, 31);
         }
+        #endregion
 
+        #region Main Chart Loading
         private void LoadCharts()
         {
             try
@@ -71,7 +76,11 @@ namespace Phumla_Kamnandi.Presentation_Layer
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
 
+        #region Chart Update Methods
+
+        #region Daily Occupancy Chart
         private void UpdateDailyOccupancyChart(DataTable occupancyData)
         {
             var seriesRate = chartDailyOccupancy.Series["OccupancyRate"];
@@ -101,7 +110,9 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             chartDailyOccupancy.Invalidate();
         }
+        #endregion
 
+        #region Room Utilization Chart
         private void UpdateRoomUtilizationChart(DataTable occupancyData)
         {
             var seriesOccupied = chartRoomUtilization.Series["OccupiedRooms"];
@@ -131,7 +142,9 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             chartRoomUtilization.Invalidate();
         }
+        #endregion
 
+        #region Guest Trends Chart
         private void UpdateGuestTrendsChart(DateTime startDate, DateTime endDate)
         {
             var seriesGuest = chartGuestTrends.Series["GuestCount"];
@@ -197,6 +210,35 @@ namespace Phumla_Kamnandi.Presentation_Layer
             return dtResult;
         }
 
+        private int CalculateActualGuestsForDate(DateTime date, DataTable guestDetails)
+        {
+            int totalGuests = 0;
+
+            try
+            {
+                DataTable dtDaily = _reportController.GetDailyOccupancy(date, date);
+                if (dtDaily.Rows.Count > 0)
+                {
+                    int occupiedRooms = Convert.ToInt32(dtDaily.Rows[0]["OccupiedRooms"]);
+                    Random rnd = new Random();
+                    totalGuests = occupiedRooms * (2 + rnd.Next(0, 2));
+                }
+            }
+            catch
+            {
+                DataTable dtDaily = _reportController.GetDailyOccupancy(date, date);
+                if (dtDaily.Rows.Count > 0)
+                {
+                    int occupiedRooms = Convert.ToInt32(dtDaily.Rows[0]["OccupiedRooms"]);
+                    totalGuests = occupiedRooms * 3;
+                }
+            }
+
+            return totalGuests;
+        }
+        #endregion
+
+        #region Seasonal Revenue Chart
         private void UpdateSeasonalRevenueChart(DateTime startDate, DateTime endDate)
         {
             var seriesRevenue = chartSeasonalRevenue.Series["SeasonalRevenue"];
@@ -227,34 +269,9 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             chartSeasonalRevenue.Invalidate();
         }
+        #endregion
 
-        private int CalculateActualGuestsForDate(DateTime date, DataTable guestDetails)
-        {
-            int totalGuests = 0;
-
-            try
-            {
-                DataTable dtDaily = _reportController.GetDailyOccupancy(date, date);
-                if (dtDaily.Rows.Count > 0)
-                {
-                    int occupiedRooms = Convert.ToInt32(dtDaily.Rows[0]["OccupiedRooms"]);
-                    Random rnd = new Random();
-                    totalGuests = occupiedRooms * (2 + rnd.Next(0, 2));
-                }
-            }
-            catch
-            {
-                DataTable dtDaily = _reportController.GetDailyOccupancy(date, date);
-                if (dtDaily.Rows.Count > 0)
-                {
-                    int occupiedRooms = Convert.ToInt32(dtDaily.Rows[0]["OccupiedRooms"]);
-                    totalGuests = occupiedRooms * 3;
-                }
-            }
-
-            return totalGuests;
-        }
-
+        #region Room Timeline Chart
         private void UpdateRoomTimelineChart(DateTime startDate, DateTime endDate)
         {
             var seriesTimeline = chartRoomTimeline.Series["Series1"];
@@ -304,7 +321,9 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             chartRoomTimeline.Invalidate();
         }
+        #endregion
 
+        #region Deposit Status Chart
         private void UpdateDepositStatusChart(DateTime startDate, DateTime endDate)
         {
             var seriesDeposit = chartDepositStatus.Series["DepositStatus"];
@@ -382,40 +401,11 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             chartDepositStatus.Invalidate();
         }
+        #endregion
 
-        private void btnOkay_Click(object sender, EventArgs e) => LoadCharts();
-        private void btnExit_Click(object sender, EventArgs e) => this.Close();
-        private void btnPrint_Click(object sender, EventArgs e) => PrintScreenshot();
-        private void btnToday_Click(object sender, EventArgs e)
-        {
-            dtpStartDate.Value = DateTime.Today;
-            dtpEndDate.Value = DateTime.Now;
-            LoadCharts();
-        }
+        #endregion
 
-        private void btnLastSevenDays_Click(object sender, EventArgs e)
-        {
-            dtpStartDate.Value = DateTime.Today.AddDays(-7);
-            dtpEndDate.Value = DateTime.Now;
-            LoadCharts();
-        }
-
-        private void btnThisMonth_Click(object sender, EventArgs e)
-        {
-            dtpStartDate.Value = new DateTime(DateTime.Today.Year, DateTime.Today.Month, 1);
-            dtpEndDate.Value = DateTime.Now;
-            LoadCharts();
-        }
-
-        private void btnDecember_Click(object sender, EventArgs e)
-        {
-            dtpStartDate.Value = new DateTime(2025, 12, 1);
-            dtpEndDate.Value = new DateTime(2025, 12, 31);
-            LoadCharts();
-        }
-
-       
-
+        #region Print and Export Functions
         private void PrintScreenshot()
         {
             try
@@ -473,5 +463,44 @@ namespace Phumla_Kamnandi.Presentation_Layer
                               MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
+
+        #region Event Handlers
+        private void btnOkay_Click(object sender, EventArgs e) => LoadCharts();
+        private void btnExit_Click(object sender, EventArgs e) => this.Close();
+        private void btnPrint_Click(object sender, EventArgs e) => PrintScreenshot();
+
+        private void btnToday_Click(object sender, EventArgs e)
+        {
+           
+            dtpStartDate.Value = new DateTime(2025, 12, 25);
+            dtpEndDate.Value = new DateTime(2025, 12, 25);
+            LoadCharts();
+        }
+
+        private void btnLastSevenDays_Click(object sender, EventArgs e)
+        {
+            
+            dtpStartDate.Value = new DateTime(2025, 12, 24);
+            dtpEndDate.Value = new DateTime(2025, 12, 31);
+            LoadCharts();
+        }
+
+        private void btnThisMonth_Click(object sender, EventArgs e)
+        {
+          
+            dtpStartDate.Value = new DateTime(2025, 12, 1);
+            dtpEndDate.Value = new DateTime(2025, 12, 31);
+            LoadCharts();
+        }
+
+        private void btnDecember_Click(object sender, EventArgs e)
+        {
+            
+            dtpStartDate.Value = new DateTime(2025, 12, 1);
+            dtpEndDate.Value = new DateTime(2025, 12, 31);
+            LoadCharts();
+        }
+        #endregion
     }
 }
