@@ -9,18 +9,21 @@ namespace Phumla_Kamnandi.Business_Layer
     public class Room
     {
         #region Data Members 
-        private int _roomID;
+        private int _roomID; // Private fields storing room data
         private int _HID;
-        private string _roomNum; //Musnt this be a int ? On table it shows VarChar
-        private string _roomType;//Do we need a room type
+        private string _roomNum; 
+        private string _roomType;
         private int _MaxOcc;
         private string _roomStatus;
         #endregion
 
         #region Property Methods
 
-        public int RoomID
-        { get { return _roomID; } set { _roomID = value; }}
+        public int RoomID         // Accessor and Mutator methods 
+        { 
+          get { return _roomID; }  // returns the current room ID
+          set { _roomID = value; }  // sets a new room ID
+        }
 
         public int HID 
         {
@@ -56,11 +59,11 @@ namespace Phumla_Kamnandi.Business_Layer
 
         #region Constructors 
 
-        public Room() 
+        public Room()  // Default constructor initializes fields with default values
         {
             _roomID = 0; 
             _HID = 0;
-            _roomNum = ""; //need to chaneg to ) if number
+            _roomNum = ""; 
             _roomType = ""; 
             _MaxOcc = 0;
             _roomStatus = ""; 
@@ -69,7 +72,7 @@ namespace Phumla_Kamnandi.Business_Layer
 
         public Room ( int Rid , int Hid , string RNum ,string Rtype , int RMax , string Rstatus)
         {
-            _roomID = Rid; 
+            _roomID = Rid; // Parameterized constructor allows setting of all fields 
             _HID = Hid;
             _roomNum = RNum;
             _roomType = Rtype;

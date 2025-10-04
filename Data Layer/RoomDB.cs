@@ -17,10 +17,10 @@ namespace Phumla_Kamnandi.Data_Layer
             {
                 connection.Open();
 
-                SqlCommand totalRoomsCmd = new SqlCommand("SELECT COUNT(*) FROM Rooms", connection);
+                SqlCommand totalRoomsCmd = new SqlCommand("SELECT COUNT(*) FROM Rooms", connection); // Get total number of rooms in the hotel
                 int totalRooms = (int)totalRoomsCmd.ExecuteScalar();
 
-               
+                // Count how many rooms are already reserved during the requested dates
                 string reservedQuery = @"SELECT COUNT(rr.ReservationRoomID)
                                  FROM Reservations r
                                  INNER JOIN ReservationRooms rr ON r.ReservationID = rr.ReservationID
@@ -34,12 +34,12 @@ namespace Phumla_Kamnandi.Data_Layer
 
                 int reservedRooms = (int)reservedCmd.ExecuteScalar();
 
-              
+                // Check if adding the requested rooms exceeds total available rooms
                 return (reservedRooms + requestedRooms) > totalRooms;
             }
         }
 
-
+        // Get a list of available room IDs between two dates(Assigning rooms to reservation)
         public List<int> GetAvailableRooms(DateTime checkIn, DateTime checkOut, int requestedRooms)
         {
             List<int> rooms = new List<int>();
@@ -48,7 +48,7 @@ namespace Phumla_Kamnandi.Data_Layer
             {
                 connection.Open();
 
-               
+                // Retrieve all room IDs from the database
                 SqlCommand allRoomsCmd = new SqlCommand("SELECT RoomID FROM Rooms", connection);
                 SqlDataReader reader = allRoomsCmd.ExecuteReader();
                 List<int> allRooms = new List<int>();
@@ -56,7 +56,7 @@ namespace Phumla_Kamnandi.Data_Layer
                     allRooms.Add(reader.GetInt32(0));
                 reader.Close();
 
-              
+              // Retrieve all occupied rooms within the requested date range
                 string query = @"SELECT DISTINCT RoomID 
                              FROM RoomAllocation
                              WHERE DateAllocated >= @CheckIn AND DateAllocated < @CheckOut";
@@ -71,7 +71,7 @@ namespace Phumla_Kamnandi.Data_Layer
                     occupiedRooms.Add(reader.GetInt32(0));
                 reader.Close();
 
-                rooms = allRooms.Except(occupiedRooms).Take(requestedRooms).ToList();
+                rooms = allRooms.Except(occupiedRooms).Take(requestedRooms).ToList(); // Get the list of rooms that are not occupied and limit to requestedRooms count
             }
 
             return rooms;

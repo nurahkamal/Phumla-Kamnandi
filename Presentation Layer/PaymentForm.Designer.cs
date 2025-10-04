@@ -51,8 +51,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCVV = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtCardNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnPayment = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -298,8 +298,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.pnlCard.Controls.Add(this.label5);
             this.pnlCard.Controls.Add(this.label3);
             this.pnlCard.Controls.Add(this.label6);
-            this.pnlCard.Controls.Add(this.guna2TextBox2);
-            this.pnlCard.Controls.Add(this.guna2TextBox1);
+            this.pnlCard.Controls.Add(this.txtCVV);
+            this.pnlCard.Controls.Add(this.txtCardNumber);
             this.pnlCard.Controls.Add(this.btnPayment);
             this.pnlCard.Location = new System.Drawing.Point(309, 388);
             this.pnlCard.Name = "pnlCard";
@@ -322,6 +322,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.txtPayableAmt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPayableAmt.Name = "txtPayableAmt";
             this.txtPayableAmt.PlaceholderText = "";
+            this.txtPayableAmt.ReadOnly = true;
             this.txtPayableAmt.SelectedText = "";
             this.txtPayableAmt.Size = new System.Drawing.Size(210, 40);
             this.txtPayableAmt.TabIndex = 15;
@@ -359,45 +360,45 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.label6.TabIndex = 13;
             this.label6.Text = "CVV:";
             // 
-            // guna2TextBox2
+            // txtCVV
             // 
-            this.guna2TextBox2.AutoRoundedCorners = true;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Location = new System.Drawing.Point(181, 104);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PlaceholderText = "";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(210, 40);
-            this.guna2TextBox2.TabIndex = 14;
+            this.txtCVV.AutoRoundedCorners = true;
+            this.txtCVV.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCVV.DefaultText = "";
+            this.txtCVV.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCVV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCVV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCVV.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCVV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCVV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCVV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCVV.Location = new System.Drawing.Point(181, 104);
+            this.txtCVV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCVV.Name = "txtCVV";
+            this.txtCVV.PlaceholderText = "";
+            this.txtCVV.SelectedText = "";
+            this.txtCVV.Size = new System.Drawing.Size(210, 40);
+            this.txtCVV.TabIndex = 14;
             // 
-            // guna2TextBox1
+            // txtCardNumber
             // 
-            this.guna2TextBox1.AutoRoundedCorners = true;
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(181, 56);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(210, 40);
-            this.guna2TextBox1.TabIndex = 2;
+            this.txtCardNumber.AutoRoundedCorners = true;
+            this.txtCardNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCardNumber.DefaultText = "";
+            this.txtCardNumber.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtCardNumber.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtCardNumber.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCardNumber.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtCardNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCardNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCardNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtCardNumber.Location = new System.Drawing.Point(181, 56);
+            this.txtCardNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtCardNumber.Name = "txtCardNumber";
+            this.txtCardNumber.PlaceholderText = "";
+            this.txtCardNumber.SelectedText = "";
+            this.txtCardNumber.Size = new System.Drawing.Size(210, 40);
+            this.txtCardNumber.TabIndex = 2;
             // 
             // btnPayment
             // 
@@ -446,12 +447,12 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
+        private Guna.UI2.WinForms.Guna2TextBox txtCVV;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button btnPaymentLater;
         private Guna.UI2.WinForms.Guna2Button btnPayment;
         private System.Windows.Forms.Label label5;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox txtCardNumber;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.Label label2;

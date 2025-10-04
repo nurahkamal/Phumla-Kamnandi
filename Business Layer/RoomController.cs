@@ -9,10 +9,11 @@ namespace Phumla_Kamnandi.Business_Layer
 {
     internal class RoomController
     {
+        // Access to database classes
         private ReservationDB reservationDB = new ReservationDB();
         private RoomDB roomDB = new RoomDB();
 
-
+        // get room rate based on check-in date
         public static decimal GetRoomRate(DateTime checkInDate)
         {
             if (checkInDate.Day >= 1 && checkInDate.Day <= 7)      // Low Season
@@ -23,6 +24,7 @@ namespace Phumla_Kamnandi.Business_Layer
                 return 995;
         }
 
+        // Check if the hotel is fully booked for the requested dates and number of rooms
         public bool IsFullyBooked(DateTime checkIn, DateTime checkOut, int requestedRooms)
         {
             return roomDB.IsFullyBooked(checkIn, checkOut, requestedRooms);

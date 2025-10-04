@@ -8,8 +8,8 @@ namespace Phumla_Kamnandi.Business_Layer
 {
     public class Reservation
     {
-        #region Data Members
-        private int _reservationID;
+        #region Data Members 
+        private int _reservationID; // Private fields storing reservation data
         private int _guestID;
         private DateTime _checkInDate;
         private DateTime _checkOutDate;
@@ -18,10 +18,10 @@ namespace Phumla_Kamnandi.Business_Layer
         #endregion
 
         #region Property Methods
-        public int ReservationID
+        public int ReservationID    // Accessor and Mutator methods 
         {
-            get { return _reservationID; }
-            set { _reservationID = value; }
+            get { return _reservationID; } // returns the current reservation ID
+            set { _reservationID = value; } // sets a new reservation ID
         }
 
         public int GuestID
@@ -56,7 +56,7 @@ namespace Phumla_Kamnandi.Business_Layer
         #endregion
 
         #region Constructors
-        public Reservation()
+        public Reservation() // Default constructor initializes fields with default values
         {
             _reservationID = 0;
             _guestID = 0;
@@ -68,7 +68,7 @@ namespace Phumla_Kamnandi.Business_Layer
 
         public Reservation(int reservationID, int guestID, DateTime checkInDate, DateTime checkOutDate, int numberOfRooms, decimal roomRate)
         {
-            _reservationID = reservationID;
+            _reservationID = reservationID; // Parameterized constructor allows setting all fields when creating a reservation
             _guestID = guestID;
             _checkInDate = checkInDate;
             _checkOutDate = checkOutDate;

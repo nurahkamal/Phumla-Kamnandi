@@ -9,7 +9,7 @@ namespace Phumla_Kamnandi.Business_Layer
     internal class Payment
     {
         #region Data Members
-        private int _paymentID;
+        private int _paymentID; // Private fields storing payment data
         private int _accountID;
         private int _reservationID;
         private DateTime _paymentDate;
@@ -22,10 +22,10 @@ namespace Phumla_Kamnandi.Business_Layer
         #endregion
 
         #region Property Methods
-        public int PaymentID
+        public int PaymentID        // Accessor and Mutator methods 
         {
-            get { return _paymentID; }
-            set { _paymentID = value; }
+            get { return _paymentID; } // returns the current payment ID
+            set { _paymentID = value; } // sets a new payment ID
         }
         public int AccountID
         {
@@ -90,7 +90,7 @@ namespace Phumla_Kamnandi.Business_Layer
         }
         public Payment(int paymentID, int accountID, int reservationID, DateTime paymentDate, string paymentType, decimal amountPaid, decimal totalAmount, decimal deposit, string status, decimal balance)
         {
-            _paymentID = paymentID;
+            _paymentID = paymentID; // Parameterized constructor allows setting all fields when creating a payment
             _accountID = accountID;
             _reservationID = reservationID;
             _paymentDate = paymentDate;

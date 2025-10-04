@@ -110,10 +110,25 @@
             this.NumberOfGuests.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.NumberOfGuests.Location = new System.Drawing.Point(588, 215);
             this.NumberOfGuests.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NumberOfGuests.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.NumberOfGuests.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.NumberOfGuests.Name = "NumberOfGuests";
             this.NumberOfGuests.Size = new System.Drawing.Size(210, 38);
             this.NumberOfGuests.TabIndex = 18;
             this.NumberOfGuests.UpDownButtonFillColor = System.Drawing.Color.Tan;
+            this.NumberOfGuests.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.NumberOfGuests.ValueChanged += new System.EventHandler(this.NumberOfGuests_ValueChanged);
             // 
             // txtNumberOfRooms
@@ -300,7 +315,7 @@
             this.dtpCheckOut.Size = new System.Drawing.Size(312, 36);
             this.dtpCheckOut.TabIndex = 7;
             this.dtpCheckOut.UseTransparentBackground = true;
-            this.dtpCheckOut.Value = new System.DateTime(2025, 9, 21, 12, 22, 26, 596);
+            this.dtpCheckOut.Value = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
             // 
             // label2
             // 
@@ -329,7 +344,7 @@
             this.dtpCheckIn.Name = "dtpCheckIn";
             this.dtpCheckIn.Size = new System.Drawing.Size(312, 36);
             this.dtpCheckIn.TabIndex = 5;
-            this.dtpCheckIn.Value = new System.DateTime(2025, 9, 21, 12, 17, 23, 979);
+            this.dtpCheckIn.Value = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
             this.dtpCheckIn.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
             // 
             // label1

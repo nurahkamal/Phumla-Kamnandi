@@ -11,7 +11,7 @@ namespace Phumla_Kamnandi.Business_Layer
 {
     internal class PaymentController
     {
-        private PaymentDB paymentDB = new PaymentDB();
+        private PaymentDB paymentDB = new PaymentDB(); // Instance of the PaymentDB class to interact with the database
 
         // Calculate total based on number of rooms and days
         public decimal CalculateTotal(decimal roomPrice, int numberOfRooms, int numberOfDays)
@@ -41,17 +41,19 @@ namespace Phumla_Kamnandi.Business_Layer
 
             // Fetch Loyalty Points from Guests table
             int loyaltyPoints = 0;
+            // Open a connection to the database and retrieve the loyalty points 
             using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True"))
             {
-                conn.Open();
+                conn.Open(); // Open the SQL database connection
                 string query = "SELECT LoyaltyPoints FROM Guests WHERE GuestID = @GuestID";
-                SqlCommand cmd = new SqlCommand(query, conn);
+                SqlCommand cmd = new SqlCommand(query, conn); // Create a SQL command with the query and connection
                 cmd.Parameters.AddWithValue("@GuestID", reservation.GuestID);
 
-                object result = cmd.ExecuteScalar();
-                loyaltyPoints = (result != DBNull.Value) ? Convert.ToInt32(result) : 0;
+                object result = cmd.ExecuteScalar(); // Execute the query and retrieve the single value (LoyaltyPoints)
+                loyaltyPoints = (result != DBNull.Value) ? Convert.ToInt32(result) : 0;  // Convert the result to an integer if not null, otherwise default to 0
             }
 
+            // Display loyalty points
             richTextBox.AppendText($"Loyalty Points: {loyaltyPoints}\n");
 
             // Show Discount if applicable
@@ -63,11 +65,8 @@ namespace Phumla_Kamnandi.Business_Layer
                 richTextBox.AppendText($"Total After Discount: {payment.TotalAmount:C}\n");
             }
         }
-            
 
-        
-
-        // Save payment
+        // Save payment information to the database
         public void SavePayment(Payment payment, Reservation reservation)
         {
             paymentDB.AddPaymentAndAccount(payment, reservation);

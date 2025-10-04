@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Rebar;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
@@ -32,6 +33,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         }
 
+        #region UI components
         private void guna2HtmlLabel1_Click(object sender, EventArgs e)
         {
 
@@ -56,19 +58,22 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
 
         }
+        #endregion
 
-        private void guna2Button2_Click(object sender, EventArgs e)
+        private void guna2Button2_Click(object sender, EventArgs e)// "Confirm Reservation"
         {
             int guestID = int.Parse(txtGuestID.Text);
             int numberOfGuests = (int)NumberOfGuests.Value;
             DateTime checkInDate = dtpCheckIn.Value.Date;
             DateTime checkOutDate = dtpCheckOut.Value.Date;
-            int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);
-            decimal roomRate = RoomController.GetRoomRate(checkInDate);
+            int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);  // Calculate required number of rooms (max 4 guests per room)
+            decimal roomRate = RoomController.GetRoomRate(checkInDate);   // Get room rate based on check -in date
 
-            
+            // Create a reservation using the controller
             ReservationController controller = new ReservationController();
             int reservationID = controller.CreateReservation(guestID, numberOfGuests, checkInDate, checkOutDate);
+
+            // Create a Reservation object to pass to PaymentForm
             Reservation reservation = new Reservation(reservationID,guestID,checkInDate,checkOutDate,numberOfRooms,roomRate);
 
             MessageBox.Show("Reservation successfully added to the database!");
@@ -89,24 +94,25 @@ namespace Phumla_Kamnandi.Presentation_Layer
             DateTime checkInDate = dtpCheckIn.Value.Date;
             DateTime checkOutDate = dtpCheckOut.Value.Date;
 
-
+            // Validate that check-out is after check-in
             if (checkOutDate <= checkInDate)
             {
                 MessageBox.Show("Check-out date must be after check-in date.");
                 return;
             }
 
+            // Calculate duration of stay
             TimeSpan duration = checkOutDate - checkInDate;
             int numberOfDays = duration.Days;
 
-
+            // Calculate required rooms
             int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);
             txtNumberOfRooms.Text = numberOfRooms.ToString();
 
-
+            // Get room rate based on check-in date
             decimal roomRate = RoomController.GetRoomRate(checkInDate);
 
-
+            // Check if rooms are fully booked
             RoomController controller = new RoomController();
             bool fullyBooked = controller.IsFullyBooked(checkInDate, checkOutDate, numberOfRooms);
 
@@ -127,18 +133,13 @@ namespace Phumla_Kamnandi.Presentation_Layer
         }
 
            
-        
-
-        private void guna2NumericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-        }
-
         private void NumberOfGuests_ValueChanged(object sender, EventArgs e)
         {
 
             NumberOfGuests.Minimum = 1;
-            NumberOfGuests.Maximum = 12;
+            NumberOfGuests.Maximum = 20;
 
+            // Update required rooms based on guest count
             int NumOfGuests = (int)NumberOfGuests.Value;
             int requiredRooms = (int)Math.Ceiling((double)NumOfGuests / 4);
             txtNumberOfRooms.Text = requiredRooms.ToString();
