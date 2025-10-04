@@ -64,7 +64,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             DateTime checkInDate = dtpCheckIn.Value.Date;
             DateTime checkOutDate = dtpCheckOut.Value.Date;
             int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);
-            decimal roomRate = ReservationController.GetRoomRate(checkInDate);
+            decimal roomRate = RoomController.GetRoomRate(checkInDate);
 
             
             ReservationController controller = new ReservationController();
@@ -104,10 +104,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
             txtNumberOfRooms.Text = numberOfRooms.ToString();
 
 
-            decimal roomRate = ReservationController.GetRoomRate(checkInDate);
+            decimal roomRate = RoomController.GetRoomRate(checkInDate);
 
 
-            ReservationController controller = new ReservationController();
+            RoomController controller = new RoomController();
             bool fullyBooked = controller.IsFullyBooked(checkInDate, checkOutDate, numberOfRooms);
 
             if (fullyBooked)
