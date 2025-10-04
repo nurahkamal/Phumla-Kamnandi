@@ -141,22 +141,24 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-        //    DataTable guestbl=gController.SearchGid(txtSearchGid.Text);
-        //    if (guestbl.Rows.Count > 0)
-        //    {
-        //        DataRow row = guestbl.Rows[0];
-        //        txtGid.Text = row["GuestID"].ToString();
-        //        txtName.Text = row["FirstName"].ToString();
-        //        txtSurname.Text = row["LastName"].ToString();
-        //        txtPhone.Text = row["Phone"].ToString();
-        //        txtEmail.Text = row["Email"].ToString();
-        //        txtID.Text = row["IDNumber"].ToString();
-        //        txtPassNum.Text = row["PassportNo"].ToString();
-        //        txtAddress.Text = row["Address"].ToString();
+            string searchID = txtSearchGid.Text;
 
-        //        strLpoints.Value = Convert.ToInt32(row["LoyaltyPoints"]);
-        //    }
+            foreach (DataGridViewRow gRow in GuestData.Rows)
+            {
+                
+
+                if (gRow.Cells["GuestID"].Value != null && gRow.Cells["GuestID"].Value.ToString() == searchID)
+                {
+                    // Scroll the DataGridView so this row is visible
+                    GuestData.FirstDisplayedScrollingRowIndex = gRow.Index;
+
+                    
+
+                    
+                }
+            }
 
         }
+    
     }
 }
