@@ -64,17 +64,22 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             int guestID = int.Parse(txtGuestID.Text);
             int numberOfGuests = (int)NumberOfGuests.Value;
+            int numberOfRooms = (int)NumberOfRooms.Value;
             DateTime checkInDate = dtpCheckIn.Value.Date;
             DateTime checkOutDate = dtpCheckOut.Value.Date;
-            int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);  // Calculate required number of rooms (max 4 guests per room)
-            decimal roomRate = RoomController.GetRoomRate(checkInDate);   // Get room rate based on check -in date
+            // Minimum rooms required (4 guests per room)
+            int requiredRooms = (int)Math.Ceiling(numberOfGuests / 4.0);            
 
-            // Create a reservation using the controller
+            decimal roomRate = RoomController.GetRoomRate(checkInDate);
+
+            // Create a reservation using the controller, passing the selected number of rooms
             ReservationController controller = new ReservationController();
-            int reservationID = controller.CreateReservation(guestID, numberOfGuests, checkInDate, checkOutDate);
+            int reservationID = controller.CreateReservation(guestID, numberOfGuests, checkInDate, checkOutDate, numberOfRooms);
+
 
             // Create a Reservation object to pass to PaymentForm
-            Reservation reservation = new Reservation(reservationID,guestID,checkInDate,checkOutDate,numberOfRooms,roomRate);
+            Reservation reservation = new Reservation(reservationID, guestID, checkInDate, checkOutDate, numberOfRooms, roomRate);
+
 
             MessageBox.Show("Reservation successfully added to the database!");
 
@@ -91,6 +96,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             int numberOfGuests = (int)NumberOfGuests.Value;
+            int numberOfRooms = (int)NumberOfRooms.Value;
             DateTime checkInDate = dtpCheckIn.Value.Date;
             DateTime checkOutDate = dtpCheckOut.Value.Date;
 
@@ -106,8 +112,14 @@ namespace Phumla_Kamnandi.Presentation_Layer
             int numberOfDays = duration.Days;
 
             // Calculate required rooms
-            int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);
-            txtNumberOfRooms.Text = numberOfRooms.ToString();
+            int requiredRooms = (int)Math.Ceiling((double)numberOfGuests / 4);
+
+            // Ensure the user selected enough rooms
+            if (numberOfRooms < requiredRooms)
+            {
+                MessageBox.Show($"Not enough rooms for {numberOfGuests} guests. Minimum required: {requiredRooms}.");
+                return;
+            }
 
             // Get room rate based on check-in date
             decimal roomRate = RoomController.GetRoomRate(checkInDate);
@@ -142,7 +154,13 @@ namespace Phumla_Kamnandi.Presentation_Layer
             // Update required rooms based on guest count
             int NumOfGuests = (int)NumberOfGuests.Value;
             int requiredRooms = (int)Math.Ceiling((double)NumOfGuests / 4);
-            txtNumberOfRooms.Text = requiredRooms.ToString();
+            NumberOfRooms.Text = requiredRooms.ToString();
+        }
+
+        private void NumberOfRooms_ValueChanged(object sender, EventArgs e)
+        {
+            NumberOfRooms.Minimum = 1;
+            NumberOfRooms.Maximum = 5;
         }
     }
 }

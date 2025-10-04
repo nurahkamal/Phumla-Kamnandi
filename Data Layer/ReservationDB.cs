@@ -43,11 +43,14 @@ namespace Phumla_Kamnandi.Data_Layer
                 cmdLoyalty.Parameters.AddWithValue("@GuestID", guestID);
                 cmdLoyalty.ExecuteNonQuery();
 
+                int remainingGuests = numberOfGuests;
                 // Allocate rooms for this reservation
                 for (int i = 0; i < roomIDs.Count; i++) // Loop through each available room to assign guests and allocate it in the database
                 {
-                    
-                    int guestsInRoom = (i == roomIDs.Count - 1) ? (numberOfGuests - i * 4) : 4; // Assign up to 4 guests per room
+
+                    int roomsLeft = roomIDs.Count - i;
+                                // Ensure at least 1 guest per remaining room
+                    int guestsInRoom = Math.Max(1, (int)Math.Ceiling((double)remainingGuests / roomsLeft));
                     int roomID = roomIDs[i]; //Get the current room ID from the list of available rooms
 
                     // Insert into ReservationRooms table
@@ -71,6 +74,8 @@ namespace Phumla_Kamnandi.Data_Layer
                         cmdAlloc.Parameters.AddWithValue("@ResID", reservationID);
                         cmdAlloc.ExecuteNonQuery();
                     }
+
+                    remainingGuests -= guestsInRoom; // Update remaining guests
                 }
 
                 return reservationID;

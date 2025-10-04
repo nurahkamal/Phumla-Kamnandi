@@ -15,23 +15,31 @@ namespace Phumla_Kamnandi.Business_Layer
         private RoomDB roomDB = new RoomDB();
 
         // Create a reservation for a guest
-        public int CreateReservation(int guestID, int numberOfGuests, DateTime checkIn, DateTime checkOut)
+        public int CreateReservation(int guestID, int numberOfGuests, DateTime checkIn, DateTime checkOut, int requestedRooms)
         {
+            // Calculate minimum rooms required (max 4 guests per room)
+            int minRoomsRequired = (int)Math.Ceiling(numberOfGuests / 4.0);
 
-            
-            int numberOfRooms = (int)Math.Ceiling(numberOfGuests / 4.0);  // Calculate the number of rooms required (max 4 guests per room)
-            decimal roomRate = RoomController.GetRoomRate(checkIn);       // Get the room rate based on the check-in date
+            // Use the greater of requestedRooms or minimum required
+            int numberOfRooms = Math.Max(requestedRooms, minRoomsRequired);
 
-            List<int> availableRooms = roomDB.GetAvailableRooms(checkIn, checkOut, numberOfRooms); // Get a list of available rooms for the requested dates
-            if (availableRooms.Count < numberOfRooms)   // If there are not enough rooms available, throw an exception
+            // Get the room rate based on check-in date
+            decimal roomRate = RoomController.GetRoomRate(checkIn);
+
+            // Get a list of available rooms for the requested dates
+            List<int> availableRooms = roomDB.GetAvailableRooms(checkIn, checkOut, numberOfRooms);
+
+            // If there are not enough rooms available, throw an exception
+            if (availableRooms.Count < numberOfRooms)
                 throw new Exception("Not enough rooms available.");
 
-            // Return the reservationID from DB and insert into DB
+            // Insert the reservation into the database and return the generated reservationID
             int reservationID = reservationDB.InsertReservation(guestID, numberOfGuests, checkIn, checkOut, availableRooms, roomRate);
 
             return reservationID;
         }
-
     }
 
 }
+
+

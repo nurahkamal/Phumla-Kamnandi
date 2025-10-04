@@ -32,7 +32,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblRP2 = new System.Windows.Forms.Label();
             this.NumberOfGuests = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.txtNumberOfRooms = new Guna.UI2.WinForms.Guna2TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.txtRoomPrice = new Guna.UI2.WinForms.Guna2TextBox();
@@ -56,19 +55,21 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.NumberOfRooms = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfGuests)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.NumberOfRooms);
             this.panel1.Controls.Add(this.lblRP2);
             this.panel1.Controls.Add(this.NumberOfGuests);
-            this.panel1.Controls.Add(this.txtNumberOfRooms);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.txtRoomPrice);
@@ -130,27 +131,6 @@
             0,
             0});
             this.NumberOfGuests.ValueChanged += new System.EventHandler(this.NumberOfGuests_ValueChanged);
-            // 
-            // txtNumberOfRooms
-            // 
-            this.txtNumberOfRooms.AutoRoundedCorners = true;
-            this.txtNumberOfRooms.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtNumberOfRooms.DefaultText = "";
-            this.txtNumberOfRooms.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtNumberOfRooms.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtNumberOfRooms.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNumberOfRooms.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtNumberOfRooms.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNumberOfRooms.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumberOfRooms.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtNumberOfRooms.Location = new System.Drawing.Point(588, 272);
-            this.txtNumberOfRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtNumberOfRooms.Name = "txtNumberOfRooms";
-            this.txtNumberOfRooms.PlaceholderText = "";
-            this.txtNumberOfRooms.ReadOnly = true;
-            this.txtNumberOfRooms.SelectedText = "";
-            this.txtNumberOfRooms.Size = new System.Drawing.Size(210, 38);
-            this.txtNumberOfRooms.TabIndex = 17;
             // 
             // label8
             // 
@@ -499,6 +479,36 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // NumberOfRooms
+            // 
+            this.NumberOfRooms.AutoRoundedCorners = true;
+            this.NumberOfRooms.BackColor = System.Drawing.Color.Transparent;
+            this.NumberOfRooms.BorderRadius = 18;
+            this.NumberOfRooms.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NumberOfRooms.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.NumberOfRooms.Location = new System.Drawing.Point(588, 270);
+            this.NumberOfRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NumberOfRooms.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NumberOfRooms.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumberOfRooms.Name = "NumberOfRooms";
+            this.NumberOfRooms.Size = new System.Drawing.Size(210, 38);
+            this.NumberOfRooms.TabIndex = 20;
+            this.NumberOfRooms.UpDownButtonFillColor = System.Drawing.Color.Tan;
+            this.NumberOfRooms.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumberOfRooms.ValueChanged += new System.EventHandler(this.NumberOfRooms_ValueChanged);
+            // 
             // _3
             // 
             this.BackColor = System.Drawing.SystemColors.Control;
@@ -519,6 +529,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -548,9 +559,9 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private Guna.UI2.WinForms.Guna2ImageButton btnExit;
-        private Guna.UI2.WinForms.Guna2TextBox txtNumberOfRooms;
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2NumericUpDown NumberOfGuests;
         private System.Windows.Forms.Label lblRP2;
+        private Guna.UI2.WinForms.Guna2NumericUpDown NumberOfRooms;
     }
 }
