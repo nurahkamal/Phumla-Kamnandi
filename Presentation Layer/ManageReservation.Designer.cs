@@ -53,7 +53,7 @@
             this.lblName = new System.Windows.Forms.Label();
             this.txtGid = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblGuestID = new System.Windows.Forms.Label();
-            this.GuestData = new System.Windows.Forms.DataGridView();
+            this.ReservationData = new System.Windows.Forms.DataGridView();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -71,7 +71,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GuestData)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReservationData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfGuests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).BeginInit();
             this.SuspendLayout();
@@ -238,7 +238,7 @@
             this.panel1.Controls.Add(this.txtSearchGid);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.GuestData);
+            this.panel1.Controls.Add(this.ReservationData);
             this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.guna2HtmlLabel1);
@@ -477,18 +477,19 @@
             this.lblGuestID.TabIndex = 17;
             this.lblGuestID.Text = "Guest ID:";
             // 
-            // GuestData
+            // ReservationData
             // 
-            this.GuestData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GuestData.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.GuestData.Location = new System.Drawing.Point(27, 117);
-            this.GuestData.Name = "GuestData";
-            this.GuestData.ReadOnly = true;
-            this.GuestData.RowHeadersWidth = 62;
-            this.GuestData.RowTemplate.Height = 28;
-            this.GuestData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GuestData.Size = new System.Drawing.Size(962, 148);
-            this.GuestData.TabIndex = 28;
+            this.ReservationData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ReservationData.GridColor = System.Drawing.SystemColors.ButtonFace;
+            this.ReservationData.Location = new System.Drawing.Point(57, 117);
+            this.ReservationData.Name = "ReservationData";
+            this.ReservationData.ReadOnly = true;
+            this.ReservationData.RowHeadersWidth = 62;
+            this.ReservationData.RowTemplate.Height = 28;
+            this.ReservationData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.ReservationData.Size = new System.Drawing.Size(882, 148);
+            this.ReservationData.TabIndex = 28;
+            this.ReservationData.SelectionChanged += new System.EventHandler(this.ReservationData_SelectionChanged);
             // 
             // btnRefresh
             // 
@@ -729,6 +730,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManageReservation";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.ManageReservation_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -736,7 +738,7 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GuestData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReservationData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfGuests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).EndInit();
             this.ResumeLayout(false);
@@ -769,7 +771,7 @@
         private System.Windows.Forms.Label lblName;
         private Guna.UI2.WinForms.Guna2TextBox txtGid;
         private System.Windows.Forms.Label lblGuestID;
-        private System.Windows.Forms.DataGridView GuestData;
+        private System.Windows.Forms.DataGridView ReservationData;
         private Guna.UI2.WinForms.Guna2Button btnRefresh;
         private Guna.UI2.WinForms.Guna2ImageButton btnExit;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;

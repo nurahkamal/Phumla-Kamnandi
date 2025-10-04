@@ -1,6 +1,7 @@
 ﻿using Phumla_Kamnandi.Data_Layer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -13,6 +14,24 @@ namespace Phumla_Kamnandi.Business_Layer
         private ReservationDB reservationDB = new ReservationDB();
         private RoomController roomController = new RoomController(); 
         private RoomDB roomDB = new RoomDB();
+
+        #region Constructor
+        public ReservationController()
+        {
+
+            reservationDB = new ReservationDB();
+        }
+        #endregion
+
+        #region Methods
+
+        // Get all Reservations
+
+        public DataTable GetAllReservations()
+        {
+
+            return reservationDB.GetAllReservations();
+        }
 
         // Create a reservation for a guest
         public int CreateReservation(int guestID, int numberOfGuests, DateTime checkIn, DateTime checkOut, int requestedRooms)
@@ -34,6 +53,9 @@ namespace Phumla_Kamnandi.Business_Layer
 
             return reservationID;
         }
+
+
+        #endregion
     }
 
 }

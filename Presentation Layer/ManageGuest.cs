@@ -93,12 +93,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 txtID.Text = SelectedGuest.Cells["IDNumber"].Value.ToString();
                 txtPassNum.Text = SelectedGuest.Cells["PassportNo"].Value.ToString();
                 txtAddress.Text = SelectedGuest.Cells["Address"].Value.ToString();
-                
+
                 strLpoints.Value = Convert.ToInt32(SelectedGuest.Cells["LoyaltyPoints"].Value);
-
-
-
-
 
 
             }

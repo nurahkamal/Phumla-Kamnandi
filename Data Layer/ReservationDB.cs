@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -7,9 +8,21 @@ using System.Threading.Tasks;
 
 namespace Phumla_Kamnandi.Data_Layer
 {
-    internal class ReservationDB
+    public class ReservationDB:DB
     {
         private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True;";
+        private string rtable = "dbo.Reservations";
+
+
+        //Gets Reservation Table
+        public DataTable GetAllReservations()
+        {
+            FillDataSet("SELECT * FROM dbo.Reservations", rtable);
+            return dsMain.Tables[rtable];
+        }
+
+
+
 
         // Inserts a new reservation into the database and returns the generated ReservationID
         public int InsertReservation(int guestID, int numberOfGuests, DateTime checkIn, DateTime checkOut, List<int> roomIDs, decimal roomRate)
