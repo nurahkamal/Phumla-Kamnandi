@@ -159,6 +159,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
             }
 
         }
-    
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
