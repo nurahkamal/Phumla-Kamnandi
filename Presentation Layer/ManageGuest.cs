@@ -29,7 +29,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
 
         {  //Allows guest list to be displayed 
-            DataTable guestList = gController.SeeAllGuests();
+            DataTable guestList = gController.GetAllGuests();
             //Displays on DataGrid
             GuestData.DataSource = guestList;
         }
@@ -37,37 +37,40 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (GuestData.CurrentRow != null)
-                {
-                DataGridViewRow SelectedGuest = GuestData.CurrentRow;
+            {
+                DataGridViewRow selectedRow = GuestData.CurrentRow;
+                int SelectedGuestID = Convert.ToInt32(GuestData.CurrentRow.Cells["GuestID"].Value);
 
-                string gID = SelectedGuest.Cells["GuestID"].Value.ToString(); 
-                string FName = SelectedGuest.Cells["FirstName"].Value.ToString();
-                string LName =SelectedGuest.Cells["LastName"].Value.ToString();
-                
+                string gID = selectedRow.Cells["GuestID"].Value.ToString();
+                string FName = selectedRow.Cells["FirstName"].Value.ToString();
+                string LName = selectedRow.Cells["LastName"].Value.ToString();
+
                 //MessageBox to confirm Deletion 
 
                 DialogResult msgDelete = MessageBox.Show("Are you sure you want to delte this guest ?\n\n"
-                    + "GuestID: " + gID + "\n"
+                     + "GuestID: " + gID + "\n"
                     + "Name " + FName + " " + LName + "\n",
                     "Confirm Deleted Guest ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning
-                    ); 
+                     );
 
-                if ( msgDelete == DialogResult.Yes)
+                if (msgDelete == DialogResult.Yes)
                 {
                     //Get Guest ID to delte from tables
                     gController.DeleteGuest(gID);
 
-                    MessageBox.Show("Guest Deleted Successfully ", "Deleted Success",MessageBoxButtons.OK ,  MessageBoxIcon.Information); 
+                    MessageBox.Show("Guest Deleted Successfully ", "Deleted Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }
-
-
-
-             
-
-
             }
         }
+
+
+
+            
+
+
+            
+
 
         private void GuestData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -119,7 +122,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             //Allows guest list to be displayed 
-            DataTable guestList = gController.SeeAllGuests();
+            DataTable guestList = gController.GetAllGuests();
             //Displays on DataGrid
             GuestData.DataSource = guestList;
         }
@@ -130,7 +133,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             if (GuestData.CurrentRow != null)
             {
                 string gid = GuestData.CurrentRow.Cells["GuestID"].Value.ToString();
-                gController.UpdateGuest(txtGid.Text,txtName.Text ,txtSurname.Text,txtPhone.Text,txtEmail.Text,txtID.Text,txtPassNum.Text,txtAddress.Text); 
+               gController.UpdateGuest(txtGid.Text,txtName.Text ,txtSurname.Text,txtPhone.Text,txtEmail.Text,txtID.Text,txtPassNum.Text,txtAddress.Text); 
                 
             
             }
@@ -138,21 +141,21 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            DataTable guestbl=gController.SearchGid(txtSearchGid.Text);
-            if (guestbl.Rows.Count > 0)
-            {
-                DataRow row = guestbl.Rows[0];
-                txtGid.Text = row["GuestID"].ToString();
-                txtName.Text = row["FirstName"].ToString();
-                txtSurname.Text = row["LastName"].ToString();
-                txtPhone.Text = row["Phone"].ToString();
-                txtEmail.Text = row["Email"].ToString();
-                txtID.Text = row["IDNumber"].ToString();
-                txtPassNum.Text = row["PassportNo"].ToString();
-                txtAddress.Text = row["Address"].ToString();
+        //    DataTable guestbl=gController.SearchGid(txtSearchGid.Text);
+        //    if (guestbl.Rows.Count > 0)
+        //    {
+        //        DataRow row = guestbl.Rows[0];
+        //        txtGid.Text = row["GuestID"].ToString();
+        //        txtName.Text = row["FirstName"].ToString();
+        //        txtSurname.Text = row["LastName"].ToString();
+        //        txtPhone.Text = row["Phone"].ToString();
+        //        txtEmail.Text = row["Email"].ToString();
+        //        txtID.Text = row["IDNumber"].ToString();
+        //        txtPassNum.Text = row["PassportNo"].ToString();
+        //        txtAddress.Text = row["Address"].ToString();
 
-                strLpoints.Value = Convert.ToInt32(row["LoyaltyPoints"]);
-            }
+        //        strLpoints.Value = Convert.ToInt32(row["LoyaltyPoints"]);
+        //    }
 
         }
     }

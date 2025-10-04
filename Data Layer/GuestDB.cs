@@ -6,6 +6,7 @@ using System.Collections.ObjectModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
@@ -13,62 +14,65 @@ using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
 using System.Windows.Input;
 using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Phumla_Kamnandi.Data_Layer
 {
-    public class GuestDB
-    { //Connection String 
-        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True;";
+    public class GuestDB : DB
+    {
+        private string gtableName = "dbo.Guests";
+        protected string stringConn = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True;";
         #region Utility Methods
 
         // Gets Guest List 
 
-        public DataTable SeeGuests()
+        public DataTable GetAllGuests()
         {
-            DataTable guestsTable = new DataTable();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "SELECT * FROM dbo.Guests";
-                SqlCommand command = new SqlCommand(query, connection);
-
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(guestsTable); // Data Table gets filled 
-            }
-
-            return guestsTable; // Guest Table is returned 
+            FillDataSet("SELECT * FROM dbo.Guests", gtableName);
+            return dsMain.Tables[gtableName];
         }
 
-
-        //Search Guest ID
-
-        public DataTable SearchGid (string gid)
+        public bool UpdateGuest(string gID, string guestName, string gLastName, string gPhone, string gEmail, string pID, string gPassNum, string gAddress)
         {
-            DataTable guestsTable = new DataTable();
-
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                
-                string query = "SELECT * FROM dbo.Guests WHERE GuestID = @guestID";
-                SqlCommand command = new SqlCommand(query, connection);
+                FillDataSet("SELECT * FROM dbo.Guests", gtableName);
+                DataRow[] rows = dsMain.Tables[gtableName].Select($"GuestID = {gID}");
+                if (rows.Length == 0)
+                {
+                    MessageBox.Show("Guest not found.");
+                    return false;
+                }
 
-                command.Parameters.AddWithValue("@guestID", gid);
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(guestsTable); // Data Table gets filled 
+                DataRow row = rows[0];
+
+                // Step 3: Update the values in memory
+                row["FirstName"] = guestName;
+                row["LastName"] = gLastName;
+                row["Phone"] = gPhone;
+                row["Email"] = gEmail;
+                row["IDNumber"] = pID;
+                row["PassportNo"] = gPassNum;
+                row["Address"] = gAddress;
+
+                return UpdateDataSource("SELECT * FROM dbo.Guests", gtableName);
             }
 
-            return guestsTable; // Guest Table is returned 
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error updating guest: " + ex.Message,
+                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
 
         }
-
 
         //Delete a guest 
 
         // Delete a guest and all related records
         public void DeleteGuest(string guestId)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            using (SqlConnection connection = new SqlConnection(stringConn))
             {
                 connection.Open();
 
@@ -126,74 +130,13 @@ namespace Phumla_Kamnandi.Data_Layer
             }
         }
 
-        //Update a Guest 
-
-        public void UpdateGuest(string gID, string guestName, string gLastName, string gPhone, string gEmail, string pID, string gPassNum, string gAddress)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                connection.Open();
-
-                string queryUpdate = "UPDATE dbo.Guests SET FirstName =@GName , LastName =@lName , Phone =@guestPhone , Email =@guestEmail , IDNumber =@gIDNum, PassportNo =@passNum , Address =@guestAddress WHERE GuestID = @GuestID";
-
-
-                using (SqlCommand command = new SqlCommand(queryUpdate, connection))
-                {
-
-                    command.Parameters.AddWithValue("@GuestID", gID);
-                    command.Parameters.AddWithValue("@GName", guestName );
-                    command.Parameters.AddWithValue("@lName", gLastName);
-                    command.Parameters.AddWithValue("@guestPhone", gPhone);
-                    command.Parameters.AddWithValue("@guestEmail", gEmail);
-                    command.Parameters.AddWithValue("@gIDNum", pID);
-                    command.Parameters.AddWithValue("@passNum", gPassNum);
-                    command.Parameters.AddWithValue("@guestAddress", gAddress);
-                   
-
-                    int AffrectedRows = command.ExecuteNonQuery(); 
-
-                    if (AffrectedRows > 0)
-                    {
-                        MessageBox.Show("Updated Guest Details", "Sucess", MessageBoxButtons.OK, MessageBoxIcon.Information );
-                    }
-                }
-
-
-
-
-
-
-
-
-            }
-
-
-
-        }
-
-
-        //Search GuestID
-        public DataTable SearchID(int gIDNum)
-        {
-            DataTable dataTable = new DataTable();
-            string SearchQuery = "Select * FROM dbo.Guests WHERE GuestID = @guestID";
-
-            using (SqlConnection conn = new SqlConnection(connectionString))
-            using (SqlCommand command = new SqlCommand(SearchQuery, conn))
-            {
-                command.Parameters.AddWithValue("@guestID",gIDNum);
-                SqlDataAdapter adapter = new SqlDataAdapter(command);
-                adapter.Fill(dataTable);
-
-            }
-            return dataTable;
-        }
-
         #endregion
 
 
-    }
-}
 
+    }
+
+
+}
 
 

@@ -28,16 +28,16 @@ namespace Phumla_Kamnandi.Business_Layer
 
         // Get all guests 
 
-        public DataTable SeeAllGuests()
+        public DataTable GetAllGuests()
         {
 
-            return guestDB.SeeGuests();
+            return guestDB.GetAllGuests();
         }
-        public DataTable SearchGid(string gid)
-        {
-            return guestDB.SearchGid(gid); 
+        //public DataTable SearchGid(string gid)
+        //{
+        //    return guestDB.SearchGid(gid); 
 
-        }
+        //}
 
         public void DeleteGuest(string guestId)
         {
@@ -48,8 +48,8 @@ namespace Phumla_Kamnandi.Business_Layer
 
         public void UpdateGuest(string gID, string guestName, string gLastName, string gPhone, string gEmail, string pID, string gPassNum, string gAddress)
         { 
-            guestDB.UpdateGuest(gID , guestName , gLastName , gPhone , gEmail , pID , gPassNum , gAddress );
-                }
+           guestDB.UpdateGuest(gID , guestName , gLastName , gPhone , gEmail , pID , gPassNum , gAddress );
+               }
         #endregion
     }
 }
