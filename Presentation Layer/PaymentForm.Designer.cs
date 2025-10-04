@@ -47,7 +47,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.label1 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlCard = new System.Windows.Forms.Panel();
-            this.guna2TextBox3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtPayableAmt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -294,7 +294,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             // pnlCard
             // 
             this.pnlCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCard.Controls.Add(this.guna2TextBox3);
+            this.pnlCard.Controls.Add(this.txtPayableAmt);
             this.pnlCard.Controls.Add(this.label5);
             this.pnlCard.Controls.Add(this.label3);
             this.pnlCard.Controls.Add(this.label6);
@@ -306,25 +306,25 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.pnlCard.Size = new System.Drawing.Size(685, 151);
             this.pnlCard.TabIndex = 17;
             // 
-            // guna2TextBox3
+            // txtPayableAmt
             // 
-            this.guna2TextBox3.AutoRoundedCorners = true;
-            this.guna2TextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox3.DefaultText = "";
-            this.guna2TextBox3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2TextBox3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox3.Location = new System.Drawing.Point(181, 8);
-            this.guna2TextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox3.Name = "guna2TextBox3";
-            this.guna2TextBox3.PlaceholderText = "";
-            this.guna2TextBox3.SelectedText = "";
-            this.guna2TextBox3.Size = new System.Drawing.Size(210, 40);
-            this.guna2TextBox3.TabIndex = 15;
+            this.txtPayableAmt.AutoRoundedCorners = true;
+            this.txtPayableAmt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPayableAmt.DefaultText = "";
+            this.txtPayableAmt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPayableAmt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPayableAmt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPayableAmt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPayableAmt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPayableAmt.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPayableAmt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPayableAmt.Location = new System.Drawing.Point(181, 8);
+            this.txtPayableAmt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPayableAmt.Name = "txtPayableAmt";
+            this.txtPayableAmt.PlaceholderText = "";
+            this.txtPayableAmt.SelectedText = "";
+            this.txtPayableAmt.Size = new System.Drawing.Size(210, 40);
+            this.txtPayableAmt.TabIndex = 15;
             // 
             // label5
             // 
@@ -464,7 +464,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2ImageButton btnExit;
         private Guna.UI2.WinForms.Guna2Button btnPaymentNow;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox3;
+        private Guna.UI2.WinForms.Guna2TextBox txtPayableAmt;
         private Label label3;
     }
 }

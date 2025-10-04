@@ -32,8 +32,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            //_6 form6 = new _6();   // create an instance of Form _8
-            //form6.Show();          // show Form _8
+            
             this.Hide();
         }
 
@@ -64,6 +63,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             // Display details in RichTextBox
             _paymentController.DisplayPaymentDetails(rtbSummary, payment, _reservation);
+            txtPayableAmt.Text = $"R{deposit:F2}";
 
         }
 
@@ -97,9 +97,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             // Optionally display confirmation
             MessageBox.Show("Payment successful");
-
-            // Close or hide the form
-           // this.Hide();
         }
 
         private void btnPaymentLater_Click(object sender, EventArgs e)
@@ -135,15 +132,14 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             btnPaymentNow.Hide();
 
-            // Close or hide the form
-           // this.Hide();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             pnlCard.Show();
             btnPaymentNow.Hide();
-            btnPaymentLater.Hide();
+            
+
 
         }
     }
