@@ -17,9 +17,9 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private ReportOccupancyController _reportController;
         //FOR BUTTON UI - Fixed type declaration
         private Guna.UI2.WinForms.Guna2Button currentButton;
-        private readonly Color BeigeColor = Color.FromArgb(195, 189, 171); // #C3BDAB
-        private readonly Color GoldColor = Color.FromArgb(200, 157, 67);   // #C89343
-        private readonly Color NearBlackColor = Color.FromArgb(8, 8, 7);   // #080807
+        private readonly Color BeigeColor = Color.FromArgb(195, 189, 171); 
+        private readonly Color GoldColor = Color.FromArgb(120, 93, 71);   
+        private readonly Color NearBlackColor = Color.FromArgb(8, 8, 7);  
         #endregion
         public OccupancyReport()
         {
@@ -109,7 +109,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 UpdateDailyOccupancyChart(dtOccupancy);
                 UpdateRoomUtilizationChart(dtOccupancy);
                 UpdateGuestTrendsChart(startDate, endDate);
-                UpdateSeasonalRevenueChart(startDate, endDate);
+                
                 UpdateDepositStatusChart(startDate, endDate);
                 UpdateRoomTimelineChart(startDate, endDate);
             }
@@ -281,38 +281,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         }
         #endregion
 
-        #region Seasonal Revenue Chart
-        private void UpdateSeasonalRevenueChart(DateTime startDate, DateTime endDate)
-        {
-            var seriesRevenue = chartSeasonalRevenue.Series["SeasonalRevenue"];
-            seriesRevenue.Points.Clear();
-
-            try
-            {
-                DataTable dtSeasonalRevenue = _reportController.GetSeasonalRevenue(startDate, endDate);
-
-                if (dtSeasonalRevenue.Rows.Count == 0)
-                {
-                    seriesRevenue.Points.AddXY("No Data", 1);
-                }
-                else
-                {
-                    foreach (DataRow row in dtSeasonalRevenue.Rows)
-                    {
-                        string season = row["Season"].ToString();
-                        decimal totalRevenue = Convert.ToDecimal(row["TotalRevenue"]);
-                        seriesRevenue.Points.AddXY(season, (double)totalRevenue);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                seriesRevenue.Points.AddXY("Error", 1);
-            }
-
-            chartSeasonalRevenue.Invalidate();
-        }
-        #endregion
+        
 
         #region Room Timeline Chart
         private void UpdateRoomTimelineChart(DateTime startDate, DateTime endDate)
@@ -569,5 +538,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
             currentButton = btn;
         }
         #endregion
+
+        private void chartRoomTimeline_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
