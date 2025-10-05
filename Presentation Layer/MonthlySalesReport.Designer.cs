@@ -29,6 +29,26 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MonthlySalesReport));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.picBoxLogo = new System.Windows.Forms.PictureBox();
@@ -41,8 +61,18 @@
             this.btnThisMonth = new Guna.UI2.WinForms.Guna2Button();
             this.btnLastSevenDays = new Guna.UI2.WinForms.Guna2Button();
             this.btnToday = new Guna.UI2.WinForms.Guna2Button();
+            this.chartSalesTrend = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartSeasonalRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartDailyRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartPaymentsByDate = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartGuestDistribution = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSalesTrend)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSeasonalRevenue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDailyRevenue)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPaymentsByDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGuestDistribution)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -250,12 +280,116 @@
             this.btnToday.TabIndex = 23;
             this.btnToday.Text = "Today";
             // 
+            // chartSalesTrend
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartSalesTrend.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartSalesTrend.Legends.Add(legend1);
+            this.chartSalesTrend.Location = new System.Drawing.Point(280, 122);
+            this.chartSalesTrend.Name = "chartSalesTrend";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series1.Legend = "Legend1";
+            series1.Name = "SalesTrend";
+            this.chartSalesTrend.Series.Add(series1);
+            this.chartSalesTrend.Size = new System.Drawing.Size(860, 207);
+            this.chartSalesTrend.TabIndex = 27;
+            this.chartSalesTrend.Text = "chart1";
+            title1.Name = "Sales Trend Over Time";
+            title1.Text = "Sales Trend Over Time";
+            this.chartSalesTrend.Titles.Add(title1);
+            // 
+            // chartSeasonalRevenue
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.chartSeasonalRevenue.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartSeasonalRevenue.Legends.Add(legend2);
+            this.chartSeasonalRevenue.Location = new System.Drawing.Point(1159, 122);
+            this.chartSeasonalRevenue.Name = "chartSeasonalRevenue";
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series2.Legend = "Legend1";
+            series2.Name = "SeasonalRevenue";
+            this.chartSeasonalRevenue.Series.Add(series2);
+            this.chartSeasonalRevenue.Size = new System.Drawing.Size(353, 464);
+            this.chartSeasonalRevenue.TabIndex = 28;
+            this.chartSeasonalRevenue.Text = "chart1";
+            title2.Name = "Revenue by Season Period";
+            title2.Text = "Revenue by Season Period";
+            this.chartSeasonalRevenue.Titles.Add(title2);
+            // 
+            // chartDailyRevenue
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chartDailyRevenue.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chartDailyRevenue.Legends.Add(legend3);
+            this.chartDailyRevenue.Location = new System.Drawing.Point(695, 342);
+            this.chartDailyRevenue.Name = "chartDailyRevenue";
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "DailyRevenue";
+            this.chartDailyRevenue.Series.Add(series3);
+            this.chartDailyRevenue.Size = new System.Drawing.Size(445, 244);
+            this.chartDailyRevenue.TabIndex = 29;
+            this.chartDailyRevenue.Text = "chart1";
+            title3.Name = "Daily Revenue";
+            title3.Text = "Daily Revenue";
+            this.chartDailyRevenue.Titles.Add(title3);
+            // 
+            // chartPaymentsByDate
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chartPaymentsByDate.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.chartPaymentsByDate.Legends.Add(legend4);
+            this.chartPaymentsByDate.Location = new System.Drawing.Point(280, 342);
+            this.chartPaymentsByDate.Name = "chartPaymentsByDate";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series4.Legend = "Legend1";
+            series4.Name = "BookingsCount";
+            this.chartPaymentsByDate.Series.Add(series4);
+            this.chartPaymentsByDate.Size = new System.Drawing.Size(407, 244);
+            this.chartPaymentsByDate.TabIndex = 30;
+            this.chartPaymentsByDate.Text = "chart1";
+            title4.Name = "Payments by Date";
+            title4.Text = "Payments by Date";
+            this.chartPaymentsByDate.Titles.Add(title4);
+            // 
+            // chartGuestDistribution
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.chartGuestDistribution.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.chartGuestDistribution.Legends.Add(legend5);
+            this.chartGuestDistribution.Location = new System.Drawing.Point(280, 600);
+            this.chartGuestDistribution.Name = "chartGuestDistribution";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series5.Legend = "Legend1";
+            series5.Name = "PaymentsCount";
+            this.chartGuestDistribution.Series.Add(series5);
+            this.chartGuestDistribution.Size = new System.Drawing.Size(1232, 279);
+            this.chartGuestDistribution.TabIndex = 31;
+            this.chartGuestDistribution.Text = "chart1";
+            title5.Name = "Guest Count Distribution";
+            title5.Text = "Guest Count Distribution";
+            this.chartGuestDistribution.Titles.Add(title5);
+            // 
             // MonthlySalesReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(177)))), ((int)(((byte)(159)))));
-            this.ClientSize = new System.Drawing.Size(1540, 845);
+            this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.Controls.Add(this.chartGuestDistribution);
+            this.Controls.Add(this.chartPaymentsByDate);
+            this.Controls.Add(this.chartDailyRevenue);
+            this.Controls.Add(this.chartSeasonalRevenue);
+            this.Controls.Add(this.chartSalesTrend);
             this.Controls.Add(this.btnDecember);
             this.Controls.Add(this.btnThisMonth);
             this.Controls.Add(this.btnLastSevenDays);
@@ -269,9 +403,15 @@
             this.Name = "MonthlySalesReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MonthlySalesReport_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSalesTrend)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartSeasonalRevenue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartDailyRevenue)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartPaymentsByDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartGuestDistribution)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,5 +430,10 @@
         private Guna.UI2.WinForms.Guna2Button btnThisMonth;
         private Guna.UI2.WinForms.Guna2Button btnLastSevenDays;
         private Guna.UI2.WinForms.Guna2Button btnToday;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartSalesTrend;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartSeasonalRevenue;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartDailyRevenue;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartPaymentsByDate;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartGuestDistribution;
     }
 }
