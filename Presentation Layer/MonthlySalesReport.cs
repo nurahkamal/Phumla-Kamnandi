@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Windows.Forms.DataVisualization.Charting;
@@ -14,40 +15,28 @@ namespace Phumla_Kamnandi.Presentation_Layer
     {
         private SalesReportController _salesController;
         private Guna.UI2.WinForms.Guna2Button currentButton;
+        private PrintDocument printDocument;
+        private PrintPreviewDialog printPreviewDialog;
 
         public MonthlySalesReport()
         {
             InitializeComponent();
             _salesController = new SalesReportController();
+            InitializePrinting();
             WireUpEvents();
-            InitializeButtonStyles();
             SetDefaultDates();
             LoadCharts();
         }
 
-        #region Button Styling
-        private void InitializeButtonStyles()
+        #region Printing Setup
+        private void InitializePrinting()
         {
-            btnToday.BorderRadius = 8;
-            btnLastSevenDays.BorderRadius = 8;
-            btnThisMonth.BorderRadius = 8;
-            btnDecember.BorderRadius = 8;
-            btnOkay.BorderRadius = 8;
-            btnPrint.BorderRadius = 8;
+            printDocument = new PrintDocument();
+            printDocument.PrintPage += new PrintPageEventHandler(PrintDocument_PrintPage);
 
-            currentButton = btnThisMonth;
-        }
-
-        private void SetDateMenuButtonsUI(object button)
-        {
-            var btn = button as Guna.UI2.WinForms.Guna2Button;
-            if (btn == null) return;
-
-            if (currentButton != null && currentButton != btn)
-            {
-            }
-
-            currentButton = btn;
+            printPreviewDialog = new PrintPreviewDialog();
+            printPreviewDialog.Document = printDocument;
+            printPreviewDialog.WindowState = FormWindowState.Maximized;
         }
         #endregion
 
@@ -61,14 +50,21 @@ namespace Phumla_Kamnandi.Presentation_Layer
             btnThisMonth.Click += btnThisMonth_Click;
             btnDecember.Click += btnDecember_Click;
             btnPrint.Click += btnPrint_Click;
+            btnPrintSummary.Click += btnPrintSummary_Click;
         }
         #endregion
 
         #region Date config
+        private DateTime GetDecemberDate()
+        {
+            return new DateTime(2025, 12, 12); // System thinks today is Dec 12, 2025
+        }
+
         private void SetDefaultDates()
         {
-            dtpStartDate.Value = new DateTime(2025, 12, 1);
-            dtpEndDate.Value = new DateTime(2025, 12, 31);
+            DateTime fakeToday = GetDecemberDate();
+            dtpStartDate.Value = fakeToday.AddDays(-30);
+            dtpEndDate.Value = fakeToday;
         }
         #endregion
 
@@ -111,13 +107,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             {
                 DataTable revenueData = _salesController.GetExpectedRevenueTrend(startDate, endDate);
 
-                series.ChartType = SeriesChartType.Line;
-                series.BorderWidth = 3;
-                series.Color = Color.SteelBlue;
-                series.MarkerStyle = MarkerStyle.Circle;
-                series.MarkerSize = 8;
-                series.MarkerColor = Color.DarkBlue;
-
                 if (revenueData.Rows.Count == 0)
                 {
                     series.Points.AddXY("No Bookings", 0);
@@ -147,22 +136,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             catch (Exception ex)
             {
                 MessageBox.Show($"Chart 1 Error: {ex.Message}", "Error");
-
-                series.BorderWidth = 3;
-                series.Color = Color.SteelBlue;
-
-                series.Points.AddXY("Dec 03", 550);
-                series.Points.AddXY("Dec 05", 550);
-                series.Points.AddXY("Dec 10", 750);
-                series.Points.AddXY("Dec 11", 750);
-                series.Points.AddXY("Dec 13", 750);
-                series.Points.AddXY("Dec 14", 750);
-                series.Points.AddXY("Dec 24", 1990);
-                series.Points.AddXY("Dec 25", 3980);
-                series.Points.AddXY("Dec 26", 3980);
-                series.Points.AddXY("Dec 27", 3980);
-                series.Points.AddXY("Dec 28", 3980);
-                series.Points.AddXY("Dec 29", 1990);
             }
 
             chartSalesTrend.Invalidate();
@@ -179,17 +152,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             {
                 DataTable seasonalData = _salesController.GetSeasonalRevenueData(startDate, endDate);
 
-                series.ChartType = SeriesChartType.Pie;
-                series.IsValueShownAsLabel = true;
-                series.LabelFormat = "R#,##0";
-
-                Color[] seasonColors = {
-                    Color.LightBlue,
-                    Color.Gold,
-                    Color.OrangeRed
-                };
-
-                int colorIndex = 0;
                 foreach (DataRow row in seasonalData.Rows)
                 {
                     string season = row["SeasonPeriod"].ToString();
@@ -197,28 +159,16 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
                     DataPoint point = new DataPoint();
                     point.SetValueXY(season, (double)revenue);
-                    point.Color = seasonColors[colorIndex];
                     point.Label = $"{season}\nR{revenue:#,##0}";
-                    point.Font = new Font("Segoe UI", 9, FontStyle.Bold);
-                    point.LabelForeColor = Color.White;
 
                     series.Points.Add(point);
-                    colorIndex++;
                 }
 
-                chartSeasonalRevenue.Titles[0].Text = $"Revenue by Season\nDecember 2025";
+                chartSeasonalRevenue.Titles[0].Text = $"Revenue by Season: {startDate:MMM dd} - {endDate:MMM dd}";
             }
             catch (Exception ex)
             {
                 MessageBox.Show($"Seasonal Revenue Chart Error: {ex.Message}", "Error");
-
-                series.ChartType = SeriesChartType.Pie;
-                series.IsValueShownAsLabel = true;
-                series.LabelFormat = "R#,##0";
-
-                series.Points.AddXY("Low Season", 3850);
-                series.Points.AddXY("Mid Season", 6000);
-                series.Points.AddXY("High Season", 15920);
             }
 
             chartSeasonalRevenue.Invalidate();
@@ -234,11 +184,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             try
             {
                 DataTable dailyRevenueData = _salesController.GetDailyRevenueData(startDate, endDate);
-
-                series.ChartType = SeriesChartType.Column;
-                series.Color = Color.SteelBlue;
-                series.IsValueShownAsLabel = true;
-                series.LabelFormat = "R#,##0";
 
                 if (dailyRevenueData.Rows.Count == 0)
                 {
@@ -261,17 +206,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             catch (Exception ex)
             {
                 MessageBox.Show($"Daily Revenue Chart Error: {ex.Message}", "Error");
-
-                series.ChartType = SeriesChartType.Column;
-                series.Color = Color.SteelBlue;
-                series.IsValueShownAsLabel = true;
-
-                series.Points.AddXY("Dec 03", 550);
-                series.Points.AddXY("Dec 05", 550);
-                series.Points.AddXY("Dec 10", 750);
-                series.Points.AddXY("Dec 11", 750);
-                series.Points.AddXY("Dec 13", 750);
-                series.Points.AddXY("Dec 14", 750);
             }
 
             chartDailyRevenue.Invalidate();
@@ -287,13 +221,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             try
             {
                 DataTable bookingsData = _salesController.GetBookingsByDateData(startDate, endDate);
-
-                series.ChartType = SeriesChartType.Area;
-                series.Color = Color.FromArgb(128, 76, 158, 181);
-                series.BorderWidth = 2;
-                series.BorderColor = Color.SteelBlue;
-                series.IsValueShownAsLabel = true;
-                series.LabelFormat = "#,##0";
 
                 if (bookingsData.Rows.Count == 0)
                 {
@@ -312,8 +239,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
                         point.SetValueXY(dateLabel, bookingsCount);
                         point.ToolTip = $"{date:MMM dd}: {bookingsCount} bookings\nR{totalRevenue:#,##0}";
                         point.Label = bookingsCount > 0 ? bookingsCount.ToString() : "";
-                        point.LabelForeColor = Color.DarkBlue;
-                        point.Font = new Font("Segoe UI", 8, FontStyle.Bold);
 
                         series.Points.Add(point);
                     }
@@ -326,23 +251,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             catch (Exception ex)
             {
                 MessageBox.Show($"Bookings by Date Chart Error: {ex.Message}", "Error");
-
-                series.ChartType = SeriesChartType.Area;
-                series.Color = Color.FromArgb(128, 76, 158, 181);
-                series.BorderWidth = 2;
-                series.BorderColor = Color.SteelBlue;
-                series.IsValueShownAsLabel = true;
-                series.LabelFormat = "#,##0";
-
-                series.Points.AddXY("Dec 03", 1);
-                series.Points.AddXY("Dec 05", 1);
-                series.Points.AddXY("Dec 10", 1);
-                series.Points.AddXY("Dec 11", 1);
-                series.Points.AddXY("Dec 13", 1);
-                series.Points.AddXY("Dec 14", 1);
-                series.Points.AddXY("Dec 24", 2);
-                series.Points.AddXY("Dec 25", 4);
-                series.Points.AddXY("Dec 26", 4);
             }
 
             chartPaymentsByDate.Invalidate();
@@ -358,11 +266,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             try
             {
                 DataTable guestData = _salesController.GetGuestDistributionData(startDate, endDate);
-
-                series.ChartType = SeriesChartType.Bar;
-                series.Color = Color.SteelBlue;
-                series.IsValueShownAsLabel = true;
-                series.LabelFormat = "#,##0";
 
                 if (guestData.Rows.Count == 0)
                 {
@@ -386,9 +289,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
                         point.SetValueXY(displayName, (double)totalSpent);
                         point.ToolTip = $"{guestName}\nBookings: {bookingCount}\nTotal: R{totalSpent:#,##0}";
                         point.Label = $"R{totalSpent:#,##0}";
-                        point.LabelForeColor = Color.DarkBlue;
-                        point.Font = new Font("Segoe UI", 8, FontStyle.Bold);
-                        point.Color = GetColorBySpending(totalSpent);
 
                         series.Points.Add(point);
                     }
@@ -402,32 +302,195 @@ namespace Phumla_Kamnandi.Presentation_Layer
             catch (Exception ex)
             {
                 MessageBox.Show($"Guest Distribution Chart Error: {ex.Message}", "Error");
-
-                series.ChartType = SeriesChartType.Bar;
-                series.Color = Color.SteelBlue;
-                series.IsValueShownAsLabel = true;
-                series.LabelFormat = "R#,##0";
-
-                series.Points.AddXY("John Smith", 4500);
-                series.Points.AddXY("Sarah Johnson", 3800);
-                series.Points.AddXY("Mike Wilson", 3200);
-                series.Points.AddXY("Emily Brown", 2800);
-                series.Points.AddXY("David Lee", 2200);
-                series.Points.AddXY("Lisa Davis", 1800);
-                series.Points.AddXY("Robert Miller", 1500);
-                series.Points.AddXY("Maria Garcia", 1200);
             }
 
             chartGuestDistribution.Invalidate();
         }
+        #endregion
 
-        private Color GetColorBySpending(decimal totalSpent)
+        #region Print and Export Functions
+        private void PrintScreenshot()
         {
-            if (totalSpent >= 4000) return Color.DarkGreen;
-            if (totalSpent >= 3000) return Color.Green;
-            if (totalSpent >= 2000) return Color.LightGreen;
-            if (totalSpent >= 1000) return Color.YellowGreen;
-            return Color.SteelBlue;
+            try
+            {
+                using (Bitmap bitmap = new Bitmap(this.Width, this.Height))
+                {
+                    this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
+
+                    PrintDocument printDocument = new PrintDocument();
+                    printDocument.PrintPage += (s, e) =>
+                    {
+                        e.Graphics.DrawImage(bitmap, e.MarginBounds);
+                    };
+
+                    PrintDialog printDialog = new PrintDialog();
+                    printDialog.Document = printDocument;
+
+                    if (printDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        printDocument.Print();
+                        MessageBox.Show("Report sent to printer successfully!", "Print Complete",
+                                      MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Print error: {ex.Message}", "Print Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SaveAsImage()
+        {
+            try
+            {
+                using (SaveFileDialog saveDialog = new SaveFileDialog())
+                {
+                    saveDialog.Filter = "PNG Image|*.png|JPEG Image|*.jpg|Bitmap Image|*.bmp";
+                    saveDialog.Title = "Save Report as Image";
+                    saveDialog.FileName = $"SalesReport_{DateTime.Now:yyyyMMdd_HHmmss}";
+
+                    if (saveDialog.ShowDialog() == DialogResult.OK)
+                    {
+                        using (Bitmap bitmap = new Bitmap(this.Width, this.Height))
+                        {
+                            this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
+
+                            switch (saveDialog.FilterIndex)
+                            {
+                                case 1:
+                                    bitmap.Save(saveDialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
+                                    break;
+                                case 2:
+                                    bitmap.Save(saveDialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
+                                    break;
+                                case 3:
+                                    bitmap.Save(saveDialog.FileName, System.Drawing.Imaging.ImageFormat.Bmp);
+                                    break;
+                            }
+
+                            MessageBox.Show($"Report saved as image successfully!\n{saveDialog.FileName}",
+                                          "Save Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Save error: {ex.Message}", "Save Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void ShowPrintPreview()
+        {
+            try
+            {
+                printPreviewDialog.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Print preview error: {ex.Message}", "Print Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
+        {
+            Graphics graphics = e.Graphics;
+            Font titleFont = new Font("Segoe UI", 18, FontStyle.Bold);
+            Font headerFont = new Font("Segoe UI", 12, FontStyle.Bold);
+            Font normalFont = new Font("Segoe UI", 10);
+            Font smallFont = new Font("Segoe UI", 8);
+
+            float yPos = 50;
+            float leftMargin = 50;
+
+            string title = "Phumla Kamnandi Hotels - Sales Report";
+            graphics.DrawString(title, titleFont, Brushes.Black, leftMargin, yPos);
+            yPos += 40;
+
+            string dateRange = $"Date Range: {dtpStartDate.Value:dd MMM yyyy} to {dtpEndDate.Value:dd MMM yyyy}";
+            graphics.DrawString(dateRange, headerFont, Brushes.Black, leftMargin, yPos);
+            yPos += 30;
+
+            string printDate = $"Printed: {GetDecemberDate():dd MMM yyyy HH:mm}";
+            graphics.DrawString(printDate, smallFont, Brushes.Black, leftMargin, yPos);
+            yPos += 40;
+
+            graphics.DrawString("Chart Summaries:", headerFont, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+
+            string[] summaries = {
+                "• Expected Revenue Trend: Shows daily revenue from confirmed bookings",
+                "• Seasonal Revenue: Displays revenue distribution across seasons",
+                "• Daily Revenue: Column chart of daily revenue amounts",
+                "• Bookings by Date: Area chart showing booking frequency",
+                "• Guest Distribution: Top guests by total spending"
+            };
+
+            foreach (string summary in summaries)
+            {
+                graphics.DrawString(summary, normalFont, Brushes.Black, leftMargin + 20, yPos);
+                yPos += 20;
+            }
+
+            yPos += 30;
+
+            try
+            {
+                DataTable seasonalData = _salesController.GetSeasonalRevenueData(dtpStartDate.Value, dtpEndDate.Value);
+                if (seasonalData.Rows.Count > 0)
+                {
+                    graphics.DrawString("Seasonal Revenue Summary:", headerFont, Brushes.Black, leftMargin, yPos);
+                    yPos += 25;
+
+                    foreach (DataRow row in seasonalData.Rows)
+                    {
+                        string season = row["SeasonPeriod"].ToString();
+                        decimal revenue = Convert.ToDecimal(row["Revenue"]);
+                        string seasonSummary = $"{season}: R{revenue:#,##0}";
+                        graphics.DrawString(seasonSummary, normalFont, Brushes.Black, leftMargin + 20, yPos);
+                        yPos += 20;
+                    }
+                }
+            }
+            catch
+            {
+            }
+
+            yPos += 30;
+
+            try
+            {
+                DataTable guestData = _salesController.GetGuestDistributionData(dtpStartDate.Value, dtpEndDate.Value);
+                if (guestData.Rows.Count > 0)
+                {
+                    graphics.DrawString("Top 5 Guests by Spending:", headerFont, Brushes.Black, leftMargin, yPos);
+                    yPos += 25;
+
+                    int count = 0;
+                    foreach (DataRow row in guestData.Rows)
+                    {
+                        if (count >= 5) break;
+
+                        string guestName = row["GuestName"].ToString();
+                        decimal totalSpent = Convert.ToDecimal(row["TotalSpent"]);
+                        string guestSummary = $"{guestName}: R{totalSpent:#,##0}";
+                        graphics.DrawString(guestSummary, normalFont, Brushes.Black, leftMargin + 20, yPos);
+                        yPos += 20;
+                        count++;
+                    }
+                }
+            }
+            catch
+            {
+            }
+
+            yPos = e.PageBounds.Height - 50;
+            string footer = "Confidential - Phumla Kamnandi Hotels Internal Use Only";
+            graphics.DrawString(footer, smallFont, Brushes.Gray, leftMargin, yPos);
         }
         #endregion
 
@@ -444,46 +507,45 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnPrint_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Print functionality to be implemented", "Print",
-                          MessageBoxButtons.OK, MessageBoxIcon.Information);
+            PrintScreenshot();
+        }
+
+        private void btnPrintSummary_Click(object sender, EventArgs e)
+        {
+            ShowPrintPreview();
         }
 
         private void btnToday_Click(object sender, EventArgs e)
         {
-            dtpStartDate.Value = new DateTime(2025, 12, 12);
-            dtpEndDate.Value = new DateTime(2025, 12, 12);
+            DateTime fakeToday = GetDecemberDate();
+            dtpStartDate.Value = fakeToday;
+            dtpEndDate.Value = fakeToday;
             LoadCharts();
-            SetDateMenuButtonsUI(sender);
         }
 
         private void btnLastSevenDays_Click(object sender, EventArgs e)
         {
-            dtpStartDate.Value = new DateTime(2025, 12, 5);
-            dtpEndDate.Value = new DateTime(2025, 12, 11);
+            DateTime fakeToday = GetDecemberDate();
+            dtpStartDate.Value = fakeToday.AddDays(-6);
+            dtpEndDate.Value = fakeToday;
             LoadCharts();
-            SetDateMenuButtonsUI(sender);
         }
 
         private void btnThisMonth_Click(object sender, EventArgs e)
         {
-            dtpStartDate.Value = new DateTime(2025, 12, 1);
-            dtpEndDate.Value = new DateTime(2025, 12, 31);
+            DateTime fakeToday = GetDecemberDate();
+            dtpStartDate.Value = new DateTime(fakeToday.Year, fakeToday.Month, 1);
+            dtpEndDate.Value = fakeToday;
             LoadCharts();
-            SetDateMenuButtonsUI(sender);
         }
 
         private void btnDecember_Click(object sender, EventArgs e)
         {
-            dtpStartDate.Value = new DateTime(2025, 12, 1);
-            dtpEndDate.Value = new DateTime(2025, 12, 31);
+            DateTime fakeToday = GetDecemberDate();
+            dtpStartDate.Value = new DateTime(fakeToday.Year, 12, 1);
+            dtpEndDate.Value = new DateTime(fakeToday.Year, 12, 31);
             LoadCharts();
-            SetDateMenuButtonsUI(sender);
         }
         #endregion
-
-        private void MonthlySalesReport_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

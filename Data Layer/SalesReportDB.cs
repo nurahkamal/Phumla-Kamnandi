@@ -40,44 +40,62 @@ namespace Phumla_Kamnandi.Data_Layer
         }
         #endregion
 
-        #region Chart 2: Seasonal Revenue from Reservations
+        #region Chart 2: Seasonal Revenue from Reservations - DYNAMIC
         public DataTable GetSeasonalRevenueData(DateTime startDate, DateTime endDate)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
+                // Calculate season boundaries based on the selected date range
+                int totalDays = (endDate - startDate).Days + 1;
+                DateTime lowSeasonEnd = startDate.AddDays(totalDays * 1 / 3 - 1);
+                DateTime midSeasonEnd = startDate.AddDays(totalDays * 2 / 3 - 1);
+
                 string query = @"
-                    SELECT 'Low Season' as SeasonPeriod,
-                           ISNULL(SUM(rr.RateApplied), 0) as Revenue
-                    FROM RoomAllocation ra
-                    JOIN ReservationRooms rr ON ra.ReservationID = rr.ReservationID AND ra.RoomID = rr.RoomID
-                    JOIN Reservations res ON ra.ReservationID = res.ReservationID
-                    WHERE ra.DateAllocated BETWEEN '2025-12-01' AND '2025-12-07'
-                    AND res.BookingStatus = 'Confirmed'
-                    
-                    UNION ALL
-                    
-                    SELECT 'Mid Season' as SeasonPeriod,
-                           ISNULL(SUM(rr.RateApplied), 0) as Revenue
-                    FROM RoomAllocation ra
-                    JOIN ReservationRooms rr ON ra.ReservationID = rr.ReservationID AND ra.RoomID = rr.RoomID
-                    JOIN Reservations res ON ra.ReservationID = res.ReservationID
-                    WHERE ra.DateAllocated BETWEEN '2025-12-08' AND '2025-12-15'
-                    AND res.BookingStatus = 'Confirmed'
-                    
-                    UNION ALL
-                    
-                    SELECT 'High Season' as SeasonPeriod,
-                           ISNULL(SUM(rr.RateApplied), 0) as Revenue
-                    FROM RoomAllocation ra
-                    JOIN ReservationRooms rr ON ra.ReservationID = rr.ReservationID AND ra.RoomID = rr.RoomID
-                    JOIN Reservations res ON ra.ReservationID = res.ReservationID
-                    WHERE ra.DateAllocated BETWEEN '2025-12-16' AND '2025-12-31'
-                    AND res.BookingStatus = 'Confirmed'";
+            SELECT 
+                CASE 
+                    WHEN ra.DateAllocated BETWEEN @StartDate AND @LowSeasonEnd THEN 'Low Season'
+                    WHEN ra.DateAllocated BETWEEN DATEADD(DAY, 1, @LowSeasonEnd) AND @MidSeasonEnd THEN 'Mid Season'
+                    ELSE 'High Season'
+                END as SeasonPeriod,
+                SUM(rr.RateApplied) as Revenue
+            FROM RoomAllocation ra
+            JOIN ReservationRooms rr ON ra.ReservationID = rr.ReservationID AND ra.RoomID = rr.RoomID
+            JOIN Reservations res ON ra.ReservationID = res.ReservationID
+            WHERE ra.DateAllocated BETWEEN @StartDate AND @EndDate
+            AND res.BookingStatus = 'Confirmed'
+            GROUP BY 
+                CASE 
+                    WHEN ra.DateAllocated BETWEEN @StartDate AND @LowSeasonEnd THEN 'Low Season'
+                    WHEN ra.DateAllocated BETWEEN DATEADD(DAY, 1, @LowSeasonEnd) AND @MidSeasonEnd THEN 'Mid Season'
+                    ELSE 'High Season'
+                END";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@StartDate", startDate);
+                cmd.Parameters.AddWithValue("@EndDate", endDate);
+                cmd.Parameters.AddWithValue("@LowSeasonEnd", lowSeasonEnd);
+                cmd.Parameters.AddWithValue("@MidSeasonEnd", midSeasonEnd);
+
                 DataTable dt = new DataTable();
                 new SqlDataAdapter(cmd).Fill(dt);
+
+                // Ensure all seasons are represented
+                EnsureAllSeasons(dt);
+
                 return dt;
+            }
+        }
+
+        private void EnsureAllSeasons(DataTable dt)
+        {
+            var seasons = new[] { "Low Season", "Mid Season", "High Season" };
+
+            foreach (string season in seasons)
+            {
+                if (!dt.AsEnumerable().Any(row => row["SeasonPeriod"].ToString() == season))
+                {
+                    dt.Rows.Add(season, 0);
+                }
             }
         }
         #endregion

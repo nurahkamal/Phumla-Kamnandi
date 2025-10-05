@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MonthlySalesReport));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title11 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title12 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title13 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title14 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title15 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPrintSummary = new Guna.UI2.WinForms.Guna2Button();
             this.picBoxLogo = new System.Windows.Forms.PictureBox();
             this.lblWelcome = new System.Windows.Forms.Label();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -66,6 +66,7 @@
             this.chartDailyRevenue = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartPaymentsByDate = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartGuestDistribution = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartSalesTrend)).BeginInit();
@@ -79,6 +80,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
             this.panel1.Controls.Add(this.btnPrint);
+            this.panel1.Controls.Add(this.btnPrintSummary);
             this.panel1.Controls.Add(this.picBoxLogo);
             this.panel1.Controls.Add(this.lblWelcome);
             this.panel1.Location = new System.Drawing.Point(2, 0);
@@ -87,21 +89,21 @@
             this.panel1.Size = new System.Drawing.Size(264, 975);
             this.panel1.TabIndex = 2;
             // 
-            // btnPrint
+            // btnPrintSummary
             // 
-            this.btnPrint.AutoRoundedCorners = true;
-            this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(65, 268);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(135, 29);
-            this.btnPrint.TabIndex = 21;
-            this.btnPrint.Text = "Print";
+            this.btnPrintSummary.AutoRoundedCorners = true;
+            this.btnPrintSummary.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintSummary.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrintSummary.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrintSummary.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrintSummary.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPrintSummary.ForeColor = System.Drawing.Color.White;
+            this.btnPrintSummary.Location = new System.Drawing.Point(65, 268);
+            this.btnPrintSummary.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrintSummary.Name = "btnPrintSummary";
+            this.btnPrintSummary.Size = new System.Drawing.Size(135, 29);
+            this.btnPrintSummary.TabIndex = 21;
+            this.btnPrintSummary.Text = "Print Summary";
             // 
             // picBoxLogo
             // 
@@ -282,102 +284,118 @@
             // 
             // chartSalesTrend
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartSalesTrend.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartSalesTrend.Legends.Add(legend1);
+            chartArea11.Name = "ChartArea1";
+            this.chartSalesTrend.ChartAreas.Add(chartArea11);
+            legend11.Name = "Legend1";
+            this.chartSalesTrend.Legends.Add(legend11);
             this.chartSalesTrend.Location = new System.Drawing.Point(280, 122);
             this.chartSalesTrend.Name = "chartSalesTrend";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "SalesTrend";
-            this.chartSalesTrend.Series.Add(series1);
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series11.Legend = "Legend1";
+            series11.Name = "SalesTrend";
+            this.chartSalesTrend.Series.Add(series11);
             this.chartSalesTrend.Size = new System.Drawing.Size(860, 207);
             this.chartSalesTrend.TabIndex = 27;
             this.chartSalesTrend.Text = "chart1";
-            title1.Name = "Sales Trend Over Time";
-            title1.Text = "Sales Trend Over Time";
-            this.chartSalesTrend.Titles.Add(title1);
+            title11.Name = "Sales Trend Over Time";
+            title11.Text = "Sales Trend Over Time";
+            this.chartSalesTrend.Titles.Add(title11);
             // 
             // chartSeasonalRevenue
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chartSeasonalRevenue.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chartSeasonalRevenue.Legends.Add(legend2);
+            chartArea12.Name = "ChartArea1";
+            this.chartSeasonalRevenue.ChartAreas.Add(chartArea12);
+            legend12.Name = "Legend1";
+            this.chartSeasonalRevenue.Legends.Add(legend12);
             this.chartSeasonalRevenue.Location = new System.Drawing.Point(1159, 122);
             this.chartSeasonalRevenue.Name = "chartSeasonalRevenue";
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "SeasonalRevenue";
-            this.chartSeasonalRevenue.Series.Add(series2);
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series12.Legend = "Legend1";
+            series12.Name = "SeasonalRevenue";
+            this.chartSeasonalRevenue.Series.Add(series12);
             this.chartSeasonalRevenue.Size = new System.Drawing.Size(353, 464);
             this.chartSeasonalRevenue.TabIndex = 28;
             this.chartSeasonalRevenue.Text = "chart1";
-            title2.Name = "Revenue by Season Period";
-            title2.Text = "Revenue by Season Period";
-            this.chartSeasonalRevenue.Titles.Add(title2);
+            title12.Name = "Revenue by Season Period";
+            title12.Text = "Revenue by Season Period";
+            this.chartSeasonalRevenue.Titles.Add(title12);
             // 
             // chartDailyRevenue
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chartDailyRevenue.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            this.chartDailyRevenue.Legends.Add(legend3);
+            chartArea13.Name = "ChartArea1";
+            this.chartDailyRevenue.ChartAreas.Add(chartArea13);
+            legend13.Name = "Legend1";
+            this.chartDailyRevenue.Legends.Add(legend13);
             this.chartDailyRevenue.Location = new System.Drawing.Point(695, 342);
             this.chartDailyRevenue.Name = "chartDailyRevenue";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "DailyRevenue";
-            this.chartDailyRevenue.Series.Add(series3);
+            series13.ChartArea = "ChartArea1";
+            series13.Legend = "Legend1";
+            series13.Name = "DailyRevenue";
+            this.chartDailyRevenue.Series.Add(series13);
             this.chartDailyRevenue.Size = new System.Drawing.Size(445, 244);
             this.chartDailyRevenue.TabIndex = 29;
             this.chartDailyRevenue.Text = "chart1";
-            title3.Name = "Daily Revenue";
-            title3.Text = "Daily Revenue";
-            this.chartDailyRevenue.Titles.Add(title3);
+            title13.Name = "Daily Revenue";
+            title13.Text = "Daily Revenue";
+            this.chartDailyRevenue.Titles.Add(title13);
             // 
             // chartPaymentsByDate
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chartPaymentsByDate.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            this.chartPaymentsByDate.Legends.Add(legend4);
+            chartArea14.Name = "ChartArea1";
+            this.chartPaymentsByDate.ChartAreas.Add(chartArea14);
+            legend14.Name = "Legend1";
+            this.chartPaymentsByDate.Legends.Add(legend14);
             this.chartPaymentsByDate.Location = new System.Drawing.Point(280, 342);
             this.chartPaymentsByDate.Name = "chartPaymentsByDate";
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series4.Legend = "Legend1";
-            series4.Name = "BookingsCount";
-            this.chartPaymentsByDate.Series.Add(series4);
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series14.Legend = "Legend1";
+            series14.Name = "BookingsCount";
+            this.chartPaymentsByDate.Series.Add(series14);
             this.chartPaymentsByDate.Size = new System.Drawing.Size(407, 244);
             this.chartPaymentsByDate.TabIndex = 30;
             this.chartPaymentsByDate.Text = "chart1";
-            title4.Name = "Payments by Date";
-            title4.Text = "Payments by Date";
-            this.chartPaymentsByDate.Titles.Add(title4);
+            title14.Name = "Payments by Date";
+            title14.Text = "Payments by Date";
+            this.chartPaymentsByDate.Titles.Add(title14);
             // 
             // chartGuestDistribution
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartGuestDistribution.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.chartGuestDistribution.Legends.Add(legend5);
+            chartArea15.Name = "ChartArea1";
+            this.chartGuestDistribution.ChartAreas.Add(chartArea15);
+            legend15.Name = "Legend1";
+            this.chartGuestDistribution.Legends.Add(legend15);
             this.chartGuestDistribution.Location = new System.Drawing.Point(280, 600);
             this.chartGuestDistribution.Name = "chartGuestDistribution";
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series5.Legend = "Legend1";
-            series5.Name = "PaymentsCount";
-            this.chartGuestDistribution.Series.Add(series5);
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series15.Legend = "Legend1";
+            series15.Name = "PaymentsCount";
+            this.chartGuestDistribution.Series.Add(series15);
             this.chartGuestDistribution.Size = new System.Drawing.Size(1232, 279);
             this.chartGuestDistribution.TabIndex = 31;
             this.chartGuestDistribution.Text = "chart1";
-            title5.Name = "Guest Count Distribution";
-            title5.Text = "Guest Count Distribution";
-            this.chartGuestDistribution.Titles.Add(title5);
+            title15.Name = "Guest Count Distribution";
+            title15.Text = "Guest Count Distribution";
+            this.chartGuestDistribution.Titles.Add(title15);
+            // 
+            // btnPrint
+            // 
+            this.btnPrint.AutoRoundedCorners = true;
+            this.btnPrint.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnPrint.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnPrint.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnPrint.ForeColor = System.Drawing.Color.White;
+            this.btnPrint.Location = new System.Drawing.Point(65, 313);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(135, 29);
+            this.btnPrint.TabIndex = 22;
+            this.btnPrint.Text = "Print Report";
             // 
             // MonthlySalesReport
             // 
@@ -403,7 +421,6 @@
             this.Name = "MonthlySalesReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.MonthlySalesReport_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
@@ -419,7 +436,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2Button btnPrint;
+        private Guna.UI2.WinForms.Guna2Button btnPrintSummary;
         private System.Windows.Forms.PictureBox picBoxLogo;
         private System.Windows.Forms.Label lblWelcome;
         private Guna.UI2.WinForms.Guna2ImageButton btnExit;
@@ -435,5 +452,6 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chartDailyRevenue;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPaymentsByDate;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartGuestDistribution;
+        private Guna.UI2.WinForms.Guna2Button btnPrint;
     }
 }
