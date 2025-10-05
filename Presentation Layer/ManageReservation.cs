@@ -128,5 +128,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
             login.Show();
             this.Hide();
         }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            DataTable RList = rController.GetAllReservations();
+        }
     }
 }

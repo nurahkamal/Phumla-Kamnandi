@@ -30,7 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageReservation));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnReportIssue = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
@@ -47,6 +50,7 @@
             this.NumberOfGuests = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.cmboPStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.cmboBStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtpRDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -66,10 +70,6 @@
             this.txtSearchRid = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnUser = new Guna.UI2.WinForms.Guna2Button();
-            this.btnReportIssue = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReservationData)).BeginInit();
@@ -98,6 +98,41 @@
             this.panel2.Size = new System.Drawing.Size(264, 884);
             this.panel2.TabIndex = 6;
             // 
+            // btnReportIssue
+            // 
+            this.btnReportIssue.AutoRoundedCorners = true;
+            this.btnReportIssue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportIssue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportIssue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReportIssue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReportIssue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(178)))));
+            this.btnReportIssue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportIssue.ForeColor = System.Drawing.Color.White;
+            this.btnReportIssue.Location = new System.Drawing.Point(12, 794);
+            this.btnReportIssue.Name = "btnReportIssue";
+            this.btnReportIssue.Size = new System.Drawing.Size(117, 39);
+            this.btnReportIssue.TabIndex = 31;
+            this.btnReportIssue.Text = "Report Issue";
+            this.btnReportIssue.Click += new System.EventHandler(this.btnReportIssue_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.AutoRoundedCorners = true;
+            this.btnUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnUser.BorderThickness = 2;
+            this.btnUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUser.FillColor = System.Drawing.Color.White;
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnUser.Location = new System.Drawing.Point(16, 712);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(229, 43);
+            this.btnUser.TabIndex = 29;
+            this.btnUser.Text = "User Information";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -105,9 +140,26 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
             this.label7.Location = new System.Drawing.Point(9, 188);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(245, 25);
+            this.label7.Size = new System.Drawing.Size(361, 38);
             this.label7.TabIndex = 28;
             this.label7.Text = "Phumlani Kamnandi Hotels";
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.AutoRoundedCorners = true;
+            this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.Location = new System.Drawing.Point(137, 794);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(117, 39);
+            this.btnSignOut.TabIndex = 30;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // guna2Button8
             // 
@@ -256,6 +308,7 @@
             this.btnRefresh.Size = new System.Drawing.Size(159, 40);
             this.btnRefresh.TabIndex = 22;
             this.btnRefresh.Text = "Refresh ";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // ReservationData
             // 
@@ -312,7 +365,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label4.Location = new System.Drawing.Point(603, 223);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 25);
+            this.label4.Size = new System.Drawing.Size(215, 37);
             this.label4.TabIndex = 44;
             this.label4.Text = "Check Out Date:";
             // 
@@ -323,7 +376,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(603, 156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(129, 25);
+            this.label3.Size = new System.Drawing.Size(193, 37);
             this.label3.TabIndex = 43;
             this.label3.Text = "Check In Date:";
             // 
@@ -412,10 +465,21 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(22, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(144, 25);
+            this.label2.Size = new System.Drawing.Size(214, 37);
             this.label2.TabIndex = 39;
             this.label2.Text = "Payment Status:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(438, -400);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(520, 62);
+            this.guna2HtmlLabel2.TabIndex = 0;
+            this.guna2HtmlLabel2.Text = "Edit Reservation Details";
             // 
             // cmboBStatus
             // 
@@ -551,7 +615,7 @@
             this.lblPassNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblPassNum.Location = new System.Drawing.Point(22, 156);
             this.lblPassNum.Name = "lblPassNum";
-            this.lblPassNum.Size = new System.Drawing.Size(141, 25);
+            this.lblPassNum.Size = new System.Drawing.Size(208, 37);
             this.lblPassNum.TabIndex = 26;
             this.lblPassNum.Text = "Booking Status:";
             this.lblPassNum.Click += new System.EventHandler(this.lblPassNum_Click);
@@ -584,7 +648,7 @@
             this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblID.Location = new System.Drawing.Point(22, 22);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(138, 25);
+            this.lblID.Size = new System.Drawing.Size(202, 37);
             this.lblID.TabIndex = 24;
             this.lblID.Text = "Reservation ID:";
             this.lblID.Click += new System.EventHandler(this.lblID_Click);
@@ -596,7 +660,7 @@
             this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblPhone.Location = new System.Drawing.Point(22, 290);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(159, 25);
+            this.lblPhone.Size = new System.Drawing.Size(232, 37);
             this.lblPhone.TabIndex = 22;
             this.lblPhone.Text = "Reservation Date:";
             this.lblPhone.Click += new System.EventHandler(this.lblPhone_Click);
@@ -608,7 +672,7 @@
             this.lblSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSurname.Location = new System.Drawing.Point(603, 22);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(165, 25);
+            this.lblSurname.Size = new System.Drawing.Size(240, 37);
             this.lblSurname.TabIndex = 20;
             this.lblSurname.Text = "Number of Guests";
             // 
@@ -619,7 +683,7 @@
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblName.Location = new System.Drawing.Point(603, 87);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(169, 25);
+            this.lblName.Size = new System.Drawing.Size(248, 37);
             this.lblName.TabIndex = 18;
             this.lblName.Text = "Number of Rooms:";
             // 
@@ -651,7 +715,7 @@
             this.lblGuestID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblGuestID.Location = new System.Drawing.Point(22, 89);
             this.lblGuestID.Name = "lblGuestID";
-            this.lblGuestID.Size = new System.Drawing.Size(88, 25);
+            this.lblGuestID.Size = new System.Drawing.Size(129, 37);
             this.lblGuestID.TabIndex = 17;
             this.lblGuestID.Text = "Guest ID:";
             this.lblGuestID.Click += new System.EventHandler(this.lblGuestID_Click);
@@ -719,72 +783,9 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(496, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(342, 42);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(520, 62);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Edit Reservation Details";
-            // 
-            // btnUser
-            // 
-            this.btnUser.AutoRoundedCorners = true;
-            this.btnUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnUser.BorderThickness = 2;
-            this.btnUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnUser.FillColor = System.Drawing.Color.White;
-            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnUser.Location = new System.Drawing.Point(16, 712);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(229, 43);
-            this.btnUser.TabIndex = 29;
-            this.btnUser.Text = "User Information";
-            // 
-            // btnReportIssue
-            // 
-            this.btnReportIssue.AutoRoundedCorners = true;
-            this.btnReportIssue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReportIssue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReportIssue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReportIssue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReportIssue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(178)))));
-            this.btnReportIssue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportIssue.ForeColor = System.Drawing.Color.White;
-            this.btnReportIssue.Location = new System.Drawing.Point(12, 794);
-            this.btnReportIssue.Name = "btnReportIssue";
-            this.btnReportIssue.Size = new System.Drawing.Size(117, 39);
-            this.btnReportIssue.TabIndex = 31;
-            this.btnReportIssue.Text = "Report Issue";
-            this.btnReportIssue.Click += new System.EventHandler(this.btnReportIssue_Click);
-            // 
-            // btnSignOut
-            // 
-            this.btnSignOut.AutoRoundedCorners = true;
-            this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignOut.ForeColor = System.Drawing.Color.White;
-            this.btnSignOut.Location = new System.Drawing.Point(137, 794);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(117, 39);
-            this.btnSignOut.TabIndex = 30;
-            this.btnSignOut.Text = "Sign Out";
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(438, -400);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(342, 42);
-            this.guna2HtmlLabel2.TabIndex = 0;
-            this.guna2HtmlLabel2.Text = "Edit Reservation Details";
             // 
             // ManageReservation
             // 
