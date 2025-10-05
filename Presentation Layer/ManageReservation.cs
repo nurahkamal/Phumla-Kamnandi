@@ -26,23 +26,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void ReservationData_SelectionChanged(object sender, EventArgs e)
         {
-            if (ReservationData.CurrentRow != null)
-            {
-                DataGridViewRow SelectedR = ReservationData.CurrentRow;
-
-                txtRID.Text = SelectedR.Cells["ReservationID"].Value.ToString();
-                txtGid.Text = SelectedR.Cells["GuestID"].Value.ToString();
-                dtpRDate.Value = Convert.ToDateTime(SelectedR.Cells["ReservationDate"].Value);
-                dtpCheckIn.Value = Convert.ToDateTime(SelectedR.Cells["CheckInDate"].Value);
-                dtpCheckOut.Value = Convert.ToDateTime(SelectedR.Cells["CheckOutDate"].Value);
-                NumberOfGuests.Value = Convert.ToDecimal(SelectedR.Cells["NumberOfGuests"].Value);
-
-                string Bstatus = SelectedR.Cells["BookingStatus"].Value.ToString();
-                cmboBStatus.SelectedItem = cmboBStatus.Items.Contains(Bstatus) ? Bstatus : null;
-
-                string Pstatus = SelectedR.Cells["PaymentStatus"].Value.ToString();
-                cmboPStatus.SelectedItem = cmboPStatus.Items.Contains(Pstatus) ? Pstatus : null;
-            }
+            
         }
 
         private void btnSEdits_Click(object sender, EventArgs e)
@@ -105,7 +89,12 @@ namespace Phumla_Kamnandi.Presentation_Layer
             // Optional custom paint logic
         }
 
-        private void ReservationData_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+        private void ReservationData_CellContentClick(object sender, DataGridViewCellEventArgs e) 
+        {
+            
+
+
+        }
 
         private void panel3_Paint(object sender, PaintEventArgs e) { }
 
@@ -132,6 +121,27 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             DataTable RList = rController.GetAllReservations();
+        }
+
+        private void ReservationData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (ReservationData.CurrentRow != null)
+            {
+                DataGridViewRow SelectedR = ReservationData.CurrentRow;
+
+                txtRID.Text = SelectedR.Cells["ReservationID"].Value.ToString();
+                txtGid.Text = SelectedR.Cells["GuestID"].Value.ToString();
+                dtpRDate.Value = Convert.ToDateTime(SelectedR.Cells["ReservationDate"].Value);
+                dtpCheckIn.Value = Convert.ToDateTime(SelectedR.Cells["CheckInDate"].Value);
+                dtpCheckOut.Value = Convert.ToDateTime(SelectedR.Cells["CheckOutDate"].Value);
+                NumberOfGuests.Value = Convert.ToDecimal(SelectedR.Cells["NumberOfGuests"].Value);
+
+                string Bstatus = SelectedR.Cells["BookingStatus"].Value.ToString();
+                cmboBStatus.SelectedItem = cmboBStatus.Items.Contains(Bstatus) ? Bstatus : null;
+
+                string Pstatus = SelectedR.Cells["PaymentStatus"].Value.ToString();
+                cmboPStatus.SelectedItem = cmboPStatus.Items.Contains(Pstatus) ? Pstatus : null;
+            }
         }
     }
 }

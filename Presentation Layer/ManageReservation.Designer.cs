@@ -140,7 +140,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
             this.label7.Location = new System.Drawing.Point(9, 188);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(361, 38);
+            this.label7.Size = new System.Drawing.Size(310, 32);
             this.label7.TabIndex = 28;
             this.label7.Text = "Phumlani Kamnandi Hotels";
             // 
@@ -323,6 +323,7 @@
             this.ReservationData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ReservationData.Size = new System.Drawing.Size(1188, 227);
             this.ReservationData.TabIndex = 28;
+            this.ReservationData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReservationData_CellClick);
             this.ReservationData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReservationData_CellContentClick);
             this.ReservationData.SelectionChanged += new System.EventHandler(this.ReservationData_SelectionChanged);
             // 
@@ -365,7 +366,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label4.Location = new System.Drawing.Point(603, 223);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 37);
+            this.label4.Size = new System.Drawing.Size(176, 30);
             this.label4.TabIndex = 44;
             this.label4.Text = "Check Out Date:";
             // 
@@ -376,7 +377,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label3.Location = new System.Drawing.Point(603, 156);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 37);
+            this.label3.Size = new System.Drawing.Size(157, 30);
             this.label3.TabIndex = 43;
             this.label3.Text = "Check In Date:";
             // 
@@ -465,7 +466,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.label2.Location = new System.Drawing.Point(22, 223);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(214, 37);
+            this.label2.Size = new System.Drawing.Size(170, 30);
             this.label2.TabIndex = 39;
             this.label2.Text = "Payment Status:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -477,7 +478,7 @@
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(438, -400);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(520, 62);
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(424, 50);
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Edit Reservation Details";
             // 
@@ -615,7 +616,7 @@
             this.lblPassNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblPassNum.Location = new System.Drawing.Point(22, 156);
             this.lblPassNum.Name = "lblPassNum";
-            this.lblPassNum.Size = new System.Drawing.Size(208, 37);
+            this.lblPassNum.Size = new System.Drawing.Size(167, 30);
             this.lblPassNum.TabIndex = 26;
             this.lblPassNum.Text = "Booking Status:";
             this.lblPassNum.Click += new System.EventHandler(this.lblPassNum_Click);
@@ -648,7 +649,7 @@
             this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblID.Location = new System.Drawing.Point(22, 22);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(202, 37);
+            this.lblID.Size = new System.Drawing.Size(163, 30);
             this.lblID.TabIndex = 24;
             this.lblID.Text = "Reservation ID:";
             this.lblID.Click += new System.EventHandler(this.lblID_Click);
@@ -660,7 +661,7 @@
             this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblPhone.Location = new System.Drawing.Point(22, 290);
             this.lblPhone.Name = "lblPhone";
-            this.lblPhone.Size = new System.Drawing.Size(232, 37);
+            this.lblPhone.Size = new System.Drawing.Size(188, 30);
             this.lblPhone.TabIndex = 22;
             this.lblPhone.Text = "Reservation Date:";
             this.lblPhone.Click += new System.EventHandler(this.lblPhone_Click);
@@ -672,7 +673,7 @@
             this.lblSurname.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblSurname.Location = new System.Drawing.Point(603, 22);
             this.lblSurname.Name = "lblSurname";
-            this.lblSurname.Size = new System.Drawing.Size(240, 37);
+            this.lblSurname.Size = new System.Drawing.Size(194, 30);
             this.lblSurname.TabIndex = 20;
             this.lblSurname.Text = "Number of Guests";
             // 
@@ -683,7 +684,7 @@
             this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblName.Location = new System.Drawing.Point(603, 87);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(248, 37);
+            this.lblName.Size = new System.Drawing.Size(200, 30);
             this.lblName.TabIndex = 18;
             this.lblName.Text = "Number of Rooms:";
             // 
@@ -715,7 +716,7 @@
             this.lblGuestID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblGuestID.Location = new System.Drawing.Point(22, 89);
             this.lblGuestID.Name = "lblGuestID";
-            this.lblGuestID.Size = new System.Drawing.Size(129, 37);
+            this.lblGuestID.Size = new System.Drawing.Size(103, 30);
             this.lblGuestID.TabIndex = 17;
             this.lblGuestID.Text = "Guest ID:";
             this.lblGuestID.Click += new System.EventHandler(this.lblGuestID_Click);
@@ -783,7 +784,7 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(496, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(520, 62);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(424, 50);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Edit Reservation Details";
             // 
