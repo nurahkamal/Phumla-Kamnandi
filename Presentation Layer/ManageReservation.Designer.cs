@@ -39,9 +39,19 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtSearchGid = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtSearchRid = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.NumberOfRooms = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.NumberOfGuests = new Guna.UI2.WinForms.Guna2NumericUpDown();
+            this.cmboPStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cmboBStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.dtpRDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.dtpCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnSEdits = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
@@ -57,23 +67,13 @@
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.dtpCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtpCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.dtpRDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.cmboBStatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cmboPStatus = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.NumberOfGuests = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.NumberOfRooms = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ReservationData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumberOfGuests)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumberOfGuests)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReservationData)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -235,7 +235,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.txtSearchGid);
+            this.panel1.Controls.Add(this.txtSearchRid);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.ReservationData);
@@ -247,25 +247,25 @@
             this.panel1.Size = new System.Drawing.Size(1012, 628);
             this.panel1.TabIndex = 7;
             // 
-            // txtSearchGid
+            // txtSearchRid
             // 
-            this.txtSearchGid.AutoRoundedCorners = true;
-            this.txtSearchGid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearchGid.DefaultText = "";
-            this.txtSearchGid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearchGid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearchGid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchGid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearchGid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchGid.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchGid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearchGid.Location = new System.Drawing.Point(57, 14);
-            this.txtSearchGid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSearchGid.Name = "txtSearchGid";
-            this.txtSearchGid.PlaceholderText = "";
-            this.txtSearchGid.SelectedText = "";
-            this.txtSearchGid.Size = new System.Drawing.Size(210, 40);
-            this.txtSearchGid.TabIndex = 35;
+            this.txtSearchRid.AutoRoundedCorners = true;
+            this.txtSearchRid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchRid.DefaultText = "";
+            this.txtSearchRid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchRid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchRid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchRid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchRid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchRid.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearchRid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchRid.Location = new System.Drawing.Point(57, 14);
+            this.txtSearchRid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearchRid.Name = "txtSearchRid";
+            this.txtSearchRid.PlaceholderText = "";
+            this.txtSearchRid.SelectedText = "";
+            this.txtSearchRid.Size = new System.Drawing.Size(210, 40);
+            this.txtSearchRid.TabIndex = 35;
             // 
             // btnSearch
             // 
@@ -283,7 +283,8 @@
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(178, 33);
             this.btnSearch.TabIndex = 31;
-            this.btnSearch.Text = "Search Guest ID";
+            this.btnSearch.Text = "Search Reservation  ID";
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // panel3
             // 
@@ -314,6 +315,186 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(951, 326);
             this.panel3.TabIndex = 30;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label4.Location = new System.Drawing.Point(498, 186);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(215, 37);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "Check Out Date:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label3.Location = new System.Drawing.Point(511, 122);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(193, 37);
+            this.label3.TabIndex = 43;
+            this.label3.Text = "Check In Date:";
+            // 
+            // NumberOfRooms
+            // 
+            this.NumberOfRooms.AutoRoundedCorners = true;
+            this.NumberOfRooms.BackColor = System.Drawing.Color.Transparent;
+            this.NumberOfRooms.BorderRadius = 18;
+            this.NumberOfRooms.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NumberOfRooms.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.NumberOfRooms.Location = new System.Drawing.Point(710, 75);
+            this.NumberOfRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NumberOfRooms.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NumberOfRooms.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumberOfRooms.Name = "NumberOfRooms";
+            this.NumberOfRooms.Size = new System.Drawing.Size(210, 38);
+            this.NumberOfRooms.TabIndex = 42;
+            this.NumberOfRooms.UpDownButtonFillColor = System.Drawing.Color.Tan;
+            this.NumberOfRooms.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // NumberOfGuests
+            // 
+            this.NumberOfGuests.AutoRoundedCorners = true;
+            this.NumberOfGuests.BackColor = System.Drawing.Color.Transparent;
+            this.NumberOfGuests.BorderRadius = 18;
+            this.NumberOfGuests.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NumberOfGuests.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.NumberOfGuests.Location = new System.Drawing.Point(719, 7);
+            this.NumberOfGuests.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NumberOfGuests.Maximum = new decimal(new int[] {
+            20,
+            0,
+            0,
+            0});
+            this.NumberOfGuests.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumberOfGuests.Name = "NumberOfGuests";
+            this.NumberOfGuests.Size = new System.Drawing.Size(210, 38);
+            this.NumberOfGuests.TabIndex = 41;
+            this.NumberOfGuests.UpDownButtonFillColor = System.Drawing.Color.Tan;
+            this.NumberOfGuests.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // cmboPStatus
+            // 
+            this.cmboPStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmboPStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmboPStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmboPStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmboPStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmboPStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmboPStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmboPStatus.ItemHeight = 30;
+            this.cmboPStatus.Items.AddRange(new object[] {
+            "Outstanding",
+            "Deposit",
+            "Paid"});
+            this.cmboPStatus.Location = new System.Drawing.Point(233, 190);
+            this.cmboPStatus.Name = "cmboPStatus";
+            this.cmboPStatus.Size = new System.Drawing.Size(140, 36);
+            this.cmboPStatus.TabIndex = 40;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.label2.Location = new System.Drawing.Point(13, 190);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(214, 37);
+            this.label2.TabIndex = 39;
+            this.label2.Text = "Payment Status:";
+            // 
+            // cmboBStatus
+            // 
+            this.cmboBStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmboBStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmboBStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmboBStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmboBStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmboBStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmboBStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmboBStatus.ItemHeight = 30;
+            this.cmboBStatus.Items.AddRange(new object[] {
+            "Confirmed",
+            "Cancelled",
+            "Pedning"});
+            this.cmboBStatus.Location = new System.Drawing.Point(227, 129);
+            this.cmboBStatus.Name = "cmboBStatus";
+            this.cmboBStatus.Size = new System.Drawing.Size(140, 36);
+            this.cmboBStatus.TabIndex = 38;
+            // 
+            // dtpRDate
+            // 
+            this.dtpRDate.AutoRoundedCorners = true;
+            this.dtpRDate.BackColor = System.Drawing.Color.Transparent;
+            this.dtpRDate.Checked = true;
+            this.dtpRDate.FillColor = System.Drawing.Color.Wheat;
+            this.dtpRDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpRDate.ForeColor = System.Drawing.Color.Black;
+            this.dtpRDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpRDate.Location = new System.Drawing.Point(236, 240);
+            this.dtpRDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpRDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpRDate.Name = "dtpRDate";
+            this.dtpRDate.Size = new System.Drawing.Size(278, 36);
+            this.dtpRDate.TabIndex = 37;
+            this.dtpRDate.Value = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
+            // 
+            // dtpCheckOut
+            // 
+            this.dtpCheckOut.AutoRoundedCorners = true;
+            this.dtpCheckOut.BackColor = System.Drawing.Color.Transparent;
+            this.dtpCheckOut.Checked = true;
+            this.dtpCheckOut.FillColor = System.Drawing.Color.Wheat;
+            this.dtpCheckOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpCheckOut.Location = new System.Drawing.Point(719, 187);
+            this.dtpCheckOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpCheckOut.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpCheckOut.Name = "dtpCheckOut";
+            this.dtpCheckOut.Size = new System.Drawing.Size(227, 36);
+            this.dtpCheckOut.TabIndex = 36;
+            this.dtpCheckOut.UseTransparentBackground = true;
+            this.dtpCheckOut.Value = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
+            // 
+            // dtpCheckIn
+            // 
+            this.dtpCheckIn.AutoRoundedCorners = true;
+            this.dtpCheckIn.BackColor = System.Drawing.Color.Transparent;
+            this.dtpCheckIn.Checked = true;
+            this.dtpCheckIn.FillColor = System.Drawing.Color.Wheat;
+            this.dtpCheckIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpCheckIn.ForeColor = System.Drawing.Color.Black;
+            this.dtpCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dtpCheckIn.Location = new System.Drawing.Point(719, 133);
+            this.dtpCheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
+            this.dtpCheckIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.dtpCheckIn.Name = "dtpCheckIn";
+            this.dtpCheckIn.Size = new System.Drawing.Size(227, 36);
+            this.dtpCheckIn.TabIndex = 35;
+            this.dtpCheckIn.Value = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
             // 
             // btnSEdits
             // 
@@ -539,186 +720,6 @@
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Edit Reservation Details";
             // 
-            // dtpCheckOut
-            // 
-            this.dtpCheckOut.AutoRoundedCorners = true;
-            this.dtpCheckOut.BackColor = System.Drawing.Color.Transparent;
-            this.dtpCheckOut.Checked = true;
-            this.dtpCheckOut.FillColor = System.Drawing.Color.Wheat;
-            this.dtpCheckOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpCheckOut.Location = new System.Drawing.Point(719, 187);
-            this.dtpCheckOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpCheckOut.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpCheckOut.Name = "dtpCheckOut";
-            this.dtpCheckOut.Size = new System.Drawing.Size(227, 36);
-            this.dtpCheckOut.TabIndex = 36;
-            this.dtpCheckOut.UseTransparentBackground = true;
-            this.dtpCheckOut.Value = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
-            // 
-            // dtpCheckIn
-            // 
-            this.dtpCheckIn.AutoRoundedCorners = true;
-            this.dtpCheckIn.BackColor = System.Drawing.Color.Transparent;
-            this.dtpCheckIn.Checked = true;
-            this.dtpCheckIn.FillColor = System.Drawing.Color.Wheat;
-            this.dtpCheckIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpCheckIn.ForeColor = System.Drawing.Color.Black;
-            this.dtpCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpCheckIn.Location = new System.Drawing.Point(719, 133);
-            this.dtpCheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpCheckIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpCheckIn.Name = "dtpCheckIn";
-            this.dtpCheckIn.Size = new System.Drawing.Size(227, 36);
-            this.dtpCheckIn.TabIndex = 35;
-            this.dtpCheckIn.Value = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
-            // 
-            // dtpRDate
-            // 
-            this.dtpRDate.AutoRoundedCorners = true;
-            this.dtpRDate.BackColor = System.Drawing.Color.Transparent;
-            this.dtpRDate.Checked = true;
-            this.dtpRDate.FillColor = System.Drawing.Color.Wheat;
-            this.dtpRDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpRDate.ForeColor = System.Drawing.Color.Black;
-            this.dtpRDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpRDate.Location = new System.Drawing.Point(236, 240);
-            this.dtpRDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.dtpRDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.dtpRDate.Name = "dtpRDate";
-            this.dtpRDate.Size = new System.Drawing.Size(278, 36);
-            this.dtpRDate.TabIndex = 37;
-            this.dtpRDate.Value = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
-            // 
-            // cmboBStatus
-            // 
-            this.cmboBStatus.BackColor = System.Drawing.Color.Transparent;
-            this.cmboBStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmboBStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmboBStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmboBStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmboBStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmboBStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmboBStatus.ItemHeight = 30;
-            this.cmboBStatus.Items.AddRange(new object[] {
-            "Confirmed",
-            "Cancelled",
-            "Pedning"});
-            this.cmboBStatus.Location = new System.Drawing.Point(227, 129);
-            this.cmboBStatus.Name = "cmboBStatus";
-            this.cmboBStatus.Size = new System.Drawing.Size(140, 36);
-            this.cmboBStatus.TabIndex = 38;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label2.Location = new System.Drawing.Point(13, 190);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(214, 37);
-            this.label2.TabIndex = 39;
-            this.label2.Text = "Payment Status:";
-            // 
-            // cmboPStatus
-            // 
-            this.cmboPStatus.BackColor = System.Drawing.Color.Transparent;
-            this.cmboPStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmboPStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmboPStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmboPStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmboPStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmboPStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmboPStatus.ItemHeight = 30;
-            this.cmboPStatus.Items.AddRange(new object[] {
-            "Outstanding",
-            "Deposit",
-            "Paid"});
-            this.cmboPStatus.Location = new System.Drawing.Point(233, 190);
-            this.cmboPStatus.Name = "cmboPStatus";
-            this.cmboPStatus.Size = new System.Drawing.Size(140, 36);
-            this.cmboPStatus.TabIndex = 40;
-            // 
-            // NumberOfGuests
-            // 
-            this.NumberOfGuests.AutoRoundedCorners = true;
-            this.NumberOfGuests.BackColor = System.Drawing.Color.Transparent;
-            this.NumberOfGuests.BorderRadius = 18;
-            this.NumberOfGuests.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.NumberOfGuests.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NumberOfGuests.Location = new System.Drawing.Point(719, 7);
-            this.NumberOfGuests.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.NumberOfGuests.Maximum = new decimal(new int[] {
-            20,
-            0,
-            0,
-            0});
-            this.NumberOfGuests.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumberOfGuests.Name = "NumberOfGuests";
-            this.NumberOfGuests.Size = new System.Drawing.Size(210, 38);
-            this.NumberOfGuests.TabIndex = 41;
-            this.NumberOfGuests.UpDownButtonFillColor = System.Drawing.Color.Tan;
-            this.NumberOfGuests.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // NumberOfRooms
-            // 
-            this.NumberOfRooms.AutoRoundedCorners = true;
-            this.NumberOfRooms.BackColor = System.Drawing.Color.Transparent;
-            this.NumberOfRooms.BorderRadius = 18;
-            this.NumberOfRooms.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.NumberOfRooms.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NumberOfRooms.Location = new System.Drawing.Point(710, 75);
-            this.NumberOfRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.NumberOfRooms.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.NumberOfRooms.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumberOfRooms.Name = "NumberOfRooms";
-            this.NumberOfRooms.Size = new System.Drawing.Size(210, 38);
-            this.NumberOfRooms.TabIndex = 42;
-            this.NumberOfRooms.UpDownButtonFillColor = System.Drawing.Color.Tan;
-            this.NumberOfRooms.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label3.Location = new System.Drawing.Point(511, 122);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(193, 37);
-            this.label3.TabIndex = 43;
-            this.label3.Text = "Check In Date:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label4.Location = new System.Drawing.Point(498, 186);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(215, 37);
-            this.label4.TabIndex = 44;
-            this.label4.Text = "Check Out Date:";
-            // 
             // ManageReservation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -739,9 +740,9 @@
             this.panel1.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ReservationData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumberOfGuests)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumberOfGuests)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReservationData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -758,7 +759,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearchGid;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchRid;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
         private System.Windows.Forms.Panel panel3;
         private Guna.UI2.WinForms.Guna2Button btnSEdits;

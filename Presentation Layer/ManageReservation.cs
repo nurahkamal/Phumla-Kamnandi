@@ -80,5 +80,32 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             }
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+
+            string searchRID = txtSearchRid.Text;
+
+            foreach (DataGridViewRow gRow in ReservationData.Rows)
+            {
+
+
+                if (gRow.Cells["ReservationID"].Value != null && gRow.Cells["ReservationID"].Value.ToString() == searchRID)
+                {
+                    // Scroll the DataGridView so this row is visible
+                    ReservationData.FirstDisplayedScrollingRowIndex = gRow.Index;
+
+
+
+
+                }
+
+
+            }
+        }
+
+
+
+
     }
 }
