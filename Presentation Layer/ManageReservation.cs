@@ -1,40 +1,31 @@
 ﻿using Guna.UI2.AnimatorNS;
 using Phumla_Kamnandi.Business_Layer;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
     public partial class ManageReservation : Form
     {
         private ReservationController rController;
+
         public ManageReservation()
         {
             InitializeComponent();
             rController = new ReservationController();
-
         }
 
         private void ManageReservation_Load(object sender, EventArgs e)
         {
-            //Allows guest list to be displayed 
+            // Allows guest list to be displayed
             DataTable RList = rController.GetAllReservations();
-            //Displays on DataGrid
+            // Displays on DataGrid
             ReservationData.DataSource = RList;
-
         }
 
         private void ReservationData_SelectionChanged(object sender, EventArgs e)
         {
-            //If at least One cell is selcted populate the tables
             if (ReservationData.CurrentRow != null)
             {
                 DataGridViewRow SelectedR = ReservationData.CurrentRow;
@@ -45,29 +36,13 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 dtpCheckIn.Value = Convert.ToDateTime(SelectedR.Cells["CheckInDate"].Value);
                 dtpCheckOut.Value = Convert.ToDateTime(SelectedR.Cells["CheckOutDate"].Value);
                 NumberOfGuests.Value = Convert.ToDecimal(SelectedR.Cells["NumberOfGuests"].Value);
-                // Mustn this be added in the table
-                // NumberOfRooms.Value = Convert.ToDecimal(SelectedR.Cells["NumberOfRooms"].Value);
 
                 string Bstatus = SelectedR.Cells["BookingStatus"].Value.ToString();
-                if (cmboBStatus.Items.Contains(Bstatus))
-                    cmboBStatus.SelectedItem = Bstatus;
-                else
-                    cmboBStatus.SelectedIndex = -1;
+                cmboBStatus.SelectedItem = cmboBStatus.Items.Contains(Bstatus) ? Bstatus : null;
 
                 string Pstatus = SelectedR.Cells["PaymentStatus"].Value.ToString();
-                if (cmboPStatus.Items.Contains(Pstatus))
-                    cmboPStatus.SelectedItem = Pstatus;
-                else
-                    cmboBStatus.SelectedIndex = -1;
-
-
+                cmboPStatus.SelectedItem = cmboPStatus.Items.Contains(Pstatus) ? Pstatus : null;
             }
-
-
-
-
-
-
         }
 
         private void btnSEdits_Click(object sender, EventArgs e)
@@ -75,66 +50,51 @@ namespace Phumla_Kamnandi.Presentation_Layer
             if (ReservationData.CurrentRow != null)
             {
                 string gid = ReservationData.CurrentRow.Cells["ReservationID"].Value.ToString();
-                // rController.UpdateReservation(txttxtGid.Text, txtName.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtID.Text, txtPassNum.Text, txtAddress.Text);
-
-
+                // rController.UpdateReservation(...) // implement update logic here
             }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-
             string searchRID = txtSearchRid.Text;
 
             foreach (DataGridViewRow gRow in ReservationData.Rows)
             {
-
-
                 if (gRow.Cells["ReservationID"].Value != null && gRow.Cells["ReservationID"].Value.ToString() == searchRID)
                 {
-                    // Scroll the DataGridView so this row is visible
                     ReservationData.FirstDisplayedScrollingRowIndex = gRow.Index;
-
-
-
-
+                    gRow.Selected = true;
+                    break;
                 }
-
-
             }
         }
 
-<<<<<<< HEAD
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (ReservationData.CurrentRow != null)
             {
                 DataGridViewRow selectedRow = ReservationData.CurrentRow;
-                int SelecterID = Convert.ToInt32(ReservationData.CurrentRow.Cells["ReservationID"].Value);
 
                 string rID = selectedRow.Cells["ReservationID"].Value.ToString();
                 string gid = selectedRow.Cells["GuestID"].Value.ToString();
-                
 
-                //MessageBox to confirm Deletion 
-
-                DialogResult msgDelete = MessageBox.Show("Are you sure you want to delte this guest ?\n\n"
-                     + "ReservationID: " + rID + "\n"
-                    + "GuestID: " + gid + "\n" ,
-                    "Confirm Deleted Guest ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning
-                     );
+                DialogResult msgDelete = MessageBox.Show(
+                    "Are you sure you want to delete this guest?\n\n" +
+                    "ReservationID: " + rID + "\n" +
+                    "GuestID: " + gid + "\n",
+                    "Confirm Delete Guest",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning
+                );
 
                 if (msgDelete == DialogResult.Yes)
                 {
-                    //Get Guest ID to delte from tables
                     rController.DeleteReservation(rID);
-
-                    MessageBox.Show("Guest Deleted Successfully ", "Deleted Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    MessageBox.Show("Guest Deleted Successfully", "Delete Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
+        }
 
-=======
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -142,53 +102,22 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
->>>>>>> 80ef51f2952730c003b09723ae1141182d76e692
+            // Optional custom paint logic
         }
 
-        private void btnExit_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void ReservationData_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
-        private void ReservationData_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void panel3_Paint(object sender, PaintEventArgs e) { }
 
-        }
-
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblGuestID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPassNum_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPhone_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        private void lblGuestID_Click(object sender, EventArgs e) { }
+        private void lblPassNum_Click(object sender, EventArgs e) { }
+        private void lblID_Click(object sender, EventArgs e) { }
+        private void lblPhone_Click(object sender, EventArgs e) { }
+        private void label2_Click(object sender, EventArgs e) { }
 
         private void btnReportIssue_Click(object sender, EventArgs e)
         {
-            ReportIssue report = new ReportIssue(this); // pass "this" form
+            ReportIssue report = new ReportIssue(this);
             report.Show();
             this.Hide();
         }
@@ -200,5 +129,4 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.Hide();
         }
     }
-    }
-
+}

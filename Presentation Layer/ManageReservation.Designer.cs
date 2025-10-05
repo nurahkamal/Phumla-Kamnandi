@@ -236,7 +236,7 @@
             this.btnExit.Size = new System.Drawing.Size(76, 64);
             this.btnExit.TabIndex = 26;
             this.btnExit.UseTransparentBackground = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnRefresh
             // 
