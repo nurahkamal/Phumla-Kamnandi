@@ -13,57 +13,30 @@ namespace Phumla_Kamnandi.Presentation_Layer
 {
     public partial class OccupancyReport : Form
     {
-        #region ui for buttons ( colour setting (global))
         private ReportOccupancyController _reportController;
-        //FOR BUTTON UI Fixed type declaration
-        private Guna.UI2.WinForms.Guna2Button currentButton;
-        private readonly Color BeigeColor = Color.FromArgb(195, 189, 171); 
-        private readonly Color GoldColor = Color.FromArgb(120, 93, 71);   
-        private readonly Color NearBlackColor = Color.FromArgb(8, 8, 7);  
-        #endregion
+        private PrintDocument printDocument;
+        private PrintPreviewDialog printPreviewDialog;
+
         public OccupancyReport()
         {
             InitializeComponent();
             _reportController = new ReportOccupancyController();
+            InitializePrinting();
             WireUpEvents();
-            InitializeButtonStyles();
             SetDefaultDates();
             LoadCharts();
         }
 
-        #region this is for the ui of the buttons 
-        private void InitializeButtonStyles()
+        #region Printing Setup
+        private void InitializePrinting()
         {
-           
-            btnToday.FillColor = BeigeColor;
-            btnToday.ForeColor = NearBlackColor;
-            btnToday.BorderRadius = 8;
+            printDocument = new PrintDocument();
+            printDocument.PrintPage += new PrintPageEventHandler(PrintDocument_PrintPage);
 
-            btnLastSevenDays.FillColor = BeigeColor;
-            btnLastSevenDays.ForeColor = NearBlackColor;
-            btnLastSevenDays.BorderRadius = 8;
-
-            btnThisMonth.FillColor = BeigeColor;
-            btnThisMonth.ForeColor = NearBlackColor;
-            btnThisMonth.BorderRadius = 8;
-
-            btnDecember.FillColor = BeigeColor;
-            btnDecember.ForeColor = NearBlackColor;
-            btnDecember.BorderRadius = 8;
-
-            
-            btnOkay.FillColor = GoldColor;
-            btnOkay.ForeColor = NearBlackColor;
-            btnOkay.BorderRadius = 8;
-
-            btnPrint.FillColor = GoldColor;
-            btnPrint.ForeColor = NearBlackColor;
-            btnPrint.BorderRadius = 8;
-
-            
-            currentButton = btnThisMonth;
-            currentButton.FillColor = GoldColor;
-            currentButton.ForeColor = Color.White;
+            printPreviewDialog = new PrintPreviewDialog();
+            printPreviewDialog.Document = printDocument;
+            printPreviewDialog.WindowState = FormWindowState.Maximized;
+            printPreviewDialog.Text = "Occupancy Report Summary - Print Preview";
         }
         #endregion
 
@@ -77,14 +50,21 @@ namespace Phumla_Kamnandi.Presentation_Layer
             btnThisMonth.Click += btnThisMonth_Click;
             btnDecember.Click += btnDecember_Click;
             btnPrint.Click += btnPrint_Click;
+            btnPrintSummary.Click += btnPrintSummary_Click; // Add this line for the new button
         }
         #endregion
 
         #region Date config
+        private DateTime GetDecemberDate()
+        {
+            return new DateTime(2025, 12, 12); // System thinks today is Dec 12, 2025
+        }
+
         private void SetDefaultDates()
         {
-            dtpStartDate.Value = new DateTime(2025, 12, 1);
-            dtpEndDate.Value = new DateTime(2025, 12, 31);
+            DateTime fakeToday = GetDecemberDate();
+            dtpStartDate.Value = fakeToday.AddDays(-30);
+            dtpEndDate.Value = fakeToday;
         }
         #endregion
 
@@ -109,7 +89,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 UpdateDailyOccupancyChart(dtOccupancy);
                 UpdateRoomUtilizationChart(dtOccupancy);
                 UpdateGuestTrendsChart(startDate, endDate);
-                
                 UpdateDepositStatusChart(startDate, endDate);
                 UpdateRoomTimelineChart(startDate, endDate);
             }
@@ -281,8 +260,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
         }
         #endregion
 
-        
-
         #region Room Timeline Chart
         private void UpdateRoomTimelineChart(DateTime startDate, DateTime endDate)
         {
@@ -349,40 +326,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 {
                     seriesDeposit.Points.AddXY("No Data", 1);
                 }
-                else if (dtDepositStatus.Rows.Count == 1)
-                {
-                    string status = dtDepositStatus.Rows[0]["Status"].ToString();
-                    int count = Convert.ToInt32(dtDepositStatus.Rows[0]["Count"]);
-
-                    if (status == "Paid")
-                    {
-                        DataPoint paidPoint = new DataPoint();
-                        paidPoint.AxisLabel = "Paid: " + count;
-                        paidPoint.YValues = new double[] { count };
-                        paidPoint.Color = Color.Green;
-                        seriesDeposit.Points.Add(paidPoint);
-
-                        DataPoint duePoint = new DataPoint();
-                        duePoint.AxisLabel = "Due: 0";
-                        duePoint.YValues = new double[] { 1 };
-                        duePoint.Color = Color.Red;
-                        seriesDeposit.Points.Add(duePoint);
-                    }
-                    else if (status == "Due")
-                    {
-                        DataPoint paidPoint = new DataPoint();
-                        paidPoint.AxisLabel = "Paid: 0";
-                        paidPoint.YValues = new double[] { 1 };
-                        paidPoint.Color = Color.Green;
-                        seriesDeposit.Points.Add(paidPoint);
-
-                        DataPoint duePoint = new DataPoint();
-                        duePoint.AxisLabel = "Due: " + count;
-                        duePoint.YValues = new double[] { count };
-                        duePoint.Color = Color.Red;
-                        seriesDeposit.Points.Add(duePoint);
-                    }
-                }
                 else
                 {
                     foreach (DataRow row in dtDepositStatus.Rows)
@@ -393,12 +336,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
                         DataPoint point = new DataPoint();
                         point.AxisLabel = $"{status}: {count}";
                         point.YValues = new double[] { count };
-
-                        if (status == "Paid")
-                            point.Color = Color.Green;
-                        else if (status == "Due")
-                            point.Color = Color.Red;
-
                         seriesDeposit.Points.Add(point);
                     }
                 }
@@ -438,7 +375,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                     if (printDialog.ShowDialog() == DialogResult.OK)
                     {
                         printDocument.Print();
-                        MessageBox.Show("Report sent to printer successfully!", "Print Complete",
+                        MessageBox.Show("Screenshot report sent to printer successfully!", "Print Complete",
                                       MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
@@ -450,7 +387,42 @@ namespace Phumla_Kamnandi.Presentation_Layer
             }
         }
 
-        #region to save the screenshot as an image
+        private void PrintSummaryReport()
+        {
+            try
+            {
+               
+                printPreviewDialog.Document = printDocument;
+                printPreviewDialog.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Print error: {ex.Message}", "Print Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void PrintSummaryDirect()
+        {
+            try
+            {
+                PrintDialog printDialog = new PrintDialog();
+                printDialog.Document = printDocument;
+
+                if (printDialog.ShowDialog() == DialogResult.OK)
+                {
+                    printDocument.Print();
+                    MessageBox.Show("Summary report sent to printer successfully!", "Print Complete",
+                                  MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Print error: {ex.Message}", "Print Error",
+                              MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         private void SaveAsImage()
         {
             try
@@ -477,76 +449,147 @@ namespace Phumla_Kamnandi.Presentation_Layer
             }
         }
         #endregion
-        #endregion
 
         #region Event Handlers
         private void btnOkay_Click(object sender, EventArgs e) => LoadCharts();
         private void btnExit_Click(object sender, EventArgs e) => this.Close();
+
+        // Screenshot printing
         private void btnPrint_Click(object sender, EventArgs e) => PrintScreenshot();
 
-        #region this os for the buttons on top of the page
+        // Summary report printing
+        private void btnPrintSummary_Click(object sender, EventArgs e)
+        {
+            
+            var result = MessageBox.Show("Would you like to preview the summary before printing?",
+                                       "Print Summary Report",
+                                       MessageBoxButtons.YesNoCancel,
+                                       MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                PrintSummaryReport();
+            }
+            else if (result == DialogResult.No)
+            {
+                PrintSummaryDirect(); 
+            }
+            
+        }
+
         private void btnToday_Click(object sender, EventArgs e)
         {
-            dtpStartDate.Value = new DateTime(2025, 12, 12);
-            dtpEndDate.Value = new DateTime(2025, 12, 12);
+            DateTime fakeToday = GetDecemberDate();
+            dtpStartDate.Value = fakeToday;
+            dtpEndDate.Value = fakeToday;
             LoadCharts();
-            SetDateMenuButtonsUI(sender);
         }
 
         private void btnLastSevenDays_Click(object sender, EventArgs e)
         {
-            dtpStartDate.Value = new DateTime(2025, 12, 5);
-            dtpEndDate.Value = new DateTime(2025, 12, 11);
+            DateTime fakeToday = GetDecemberDate();
+            dtpStartDate.Value = fakeToday.AddDays(-6);
+            dtpEndDate.Value = fakeToday;
             LoadCharts();
-            SetDateMenuButtonsUI(sender);
         }
 
         private void btnThisMonth_Click(object sender, EventArgs e)
         {
-            dtpStartDate.Value = new DateTime(2025, 12, 1);
-            dtpEndDate.Value = new DateTime(2025, 12, 31);
+            DateTime fakeToday = GetDecemberDate();
+            dtpStartDate.Value = new DateTime(fakeToday.Year, fakeToday.Month, 1);
+            dtpEndDate.Value = fakeToday;
             LoadCharts();
-            SetDateMenuButtonsUI(sender);
         }
 
         private void btnDecember_Click(object sender, EventArgs e)
         {
-            dtpStartDate.Value = new DateTime(2025, 12, 1);
-            dtpEndDate.Value = new DateTime(2025, 12, 31);
+            DateTime fakeToday = GetDecemberDate();
+            dtpStartDate.Value = new DateTime(fakeToday.Year, 12, 1);
+            dtpEndDate.Value = new DateTime(fakeToday.Year, 12, 31);
             LoadCharts();
-            SetDateMenuButtonsUI(sender);
         }
         #endregion
-        #endregion
 
-        #region Button UI Method
-        private void SetDateMenuButtonsUI(object button)
+        #region Printing Document
+        private void PrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-            var btn = button as Guna.UI2.WinForms.Guna2Button;
-            if (btn == null) return;
+            Graphics graphics = e.Graphics;
+            Font titleFont = new Font("Segoe UI", 18, FontStyle.Bold);
+            Font headerFont = new Font("Segoe UI", 12, FontStyle.Bold);
+            Font normalFont = new Font("Segoe UI", 10);
+            Font smallFont = new Font("Segoe UI", 8);
 
-            // Highlight the selected button
-            btn.FillColor = GoldColor;
-            btn.ForeColor = Color.White;
+            float yPos = 50;
+            float leftMargin = 50;
 
-            // Unhighlight previous button
-            if (currentButton != null && currentButton != btn)
+            string title = "Phumla Kamnandi Hotels - Occupancy Report";
+            graphics.DrawString(title, titleFont, Brushes.Black, leftMargin, yPos);
+            yPos += 40;
+
+            string dateRange = $"Date Range: {dtpStartDate.Value:dd MMM yyyy} to {dtpEndDate.Value:dd MMM yyyy}";
+            graphics.DrawString(dateRange, headerFont, Brushes.Black, leftMargin, yPos);
+            yPos += 30;
+
+            string printDate = $"Printed: {GetDecemberDate():dd MMM yyyy HH:mm}";
+            graphics.DrawString(printDate, smallFont, Brushes.Black, leftMargin, yPos);
+            yPos += 40;
+
+            graphics.DrawString("Chart Summaries:", headerFont, Brushes.Black, leftMargin, yPos);
+            yPos += 25;
+
+            string[] summaries = {
+                "• Daily Occupancy: Shows occupancy rates and rooms occupied per day",
+                "• Room Utilization: Displays occupied vs available rooms",
+                "• Guest Trends: Tracks daily guest counts",
+                "• Deposit Status: Shows paid vs due deposit breakdown",
+                "• Room Timeline: Visualizes room bookings over time"
+            };
+
+            foreach (string summary in summaries)
             {
-                currentButton.FillColor = BeigeColor;
-                currentButton.ForeColor = NearBlackColor;
+                graphics.DrawString(summary, normalFont, Brushes.Black, leftMargin + 20, yPos);
+                yPos += 20;
             }
-            currentButton = btn;
+
+            yPos += 30;
+
+            try
+            {
+                DataTable dtOccupancy = _reportController.GetDailyOccupancy(dtpStartDate.Value, dtpEndDate.Value);
+                if (dtOccupancy.Rows.Count > 0)
+                {
+                    graphics.DrawString("Occupancy Summary:", headerFont, Brushes.Black, leftMargin, yPos);
+                    yPos += 25;
+
+                    int totalDays = dtOccupancy.Rows.Count;
+                    double avgOccupancyRate = dtOccupancy.AsEnumerable().Average(row => Convert.ToDouble(row["OccupancyRate"]));
+                    int maxOccupiedRooms = dtOccupancy.AsEnumerable().Max(row => Convert.ToInt32(row["OccupiedRooms"]));
+
+                    graphics.DrawString($"Average Occupancy Rate: {avgOccupancyRate:F1}%", normalFont, Brushes.Black, leftMargin + 20, yPos);
+                    yPos += 20;
+                    graphics.DrawString($"Peak Occupancy: {maxOccupiedRooms} rooms", normalFont, Brushes.Black, leftMargin + 20, yPos);
+                    yPos += 20;
+                    graphics.DrawString($"Reporting Period: {totalDays} days", normalFont, Brushes.Black, leftMargin + 20, yPos);
+                    yPos += 20;
+                }
+            }
+            catch
+            {
+                // Ignore errors in printing
+            }
+
+            yPos = e.PageBounds.Height - 50;
+            string footer = "Confidential - Phumla Kamnandi Hotels Internal Use Only";
+            graphics.DrawString(footer, smallFont, Brushes.Gray, leftMargin, yPos);
         }
         #endregion
 
         private void chartRoomTimeline_Click(object sender, EventArgs e)
         {
-
         }
 
         private void OccupancyReport_Load(object sender, EventArgs e)
         {
-
         }
     }
 }
