@@ -15,7 +15,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
     {
         #region ui for buttons ( colour setting (global))
         private ReportOccupancyController _reportController;
-        //FOR BUTTON UI - Fixed type declaration
+        //FOR BUTTON UI Fixed type declaration
         private Guna.UI2.WinForms.Guna2Button currentButton;
         private readonly Color BeigeColor = Color.FromArgb(195, 189, 171); 
         private readonly Color GoldColor = Color.FromArgb(120, 93, 71);   
@@ -540,6 +540,11 @@ namespace Phumla_Kamnandi.Presentation_Layer
         #endregion
 
         private void chartRoomTimeline_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OccupancyReport_Load(object sender, EventArgs e)
         {
 
         }

@@ -179,12 +179,12 @@ namespace Phumla_Kamnandi.Data_Layer
         }
         #endregion
 
-        #region Deposit Status - FIXED WITH CORRECT COLUMNS
+        #region Deposit Status 
         public DataTable GetDepositStatus(DateTime startDate, DateTime endDate)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                // FIXED QUERY - Using your actual column names and data
+               
                 string query = @"
             SELECT 
                 'Paid' as Status,

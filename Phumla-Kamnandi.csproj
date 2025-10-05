@@ -99,12 +99,14 @@
     <Compile Include="Business Layer\ReservationController.cs" />
     <Compile Include="Business Layer\Room.cs" />
     <Compile Include="Business Layer\RoomController.cs" />
+    <Compile Include="Business Layer\SalesReportController.cs" />
     <Compile Include="Data Layer\GuestDB.cs" />
     <Compile Include="Data Layer\PaymentDB.cs" />
     <Compile Include="Data Layer\ReportOccupancyDB.cs" />
     <Compile Include="Data Layer\ReservationDB.cs" />
     <Compile Include="Data Layer\DB.cs" />
     <Compile Include="Data Layer\RoomDB.cs" />
+    <Compile Include="Data Layer\SalesReportDB.cs" />
     <!-- Presentation Layer Forms -->
     <Compile Include="Presentation Layer\1. Login Form.cs">
       <SubType>Form</SubType>
@@ -159,6 +161,12 @@
     </Compile>
     <Compile Include="Presentation Layer\ManageReservation.Designer.cs">
       <DependentUpon>ManageReservation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentation Layer\MonthlySalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\MonthlySalesReport.Designer.cs">
+      <DependentUpon>MonthlySalesReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Presentation Layer\OccupancyReport.cs">
       <SubType>Form</SubType>
@@ -216,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\ManageReservation.resx">
       <DependentUpon>ManageReservation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\MonthlySalesReport.resx">
+      <DependentUpon>MonthlySalesReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\OccupancyReport.resx">
       <DependentUpon>OccupancyReport.cs</DependentUpon>
