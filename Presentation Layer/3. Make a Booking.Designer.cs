@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_3));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.NumberOfRooms = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.lblRP2 = new System.Windows.Forms.Label();
             this.NumberOfGuests = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
@@ -48,6 +49,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnReportIssue = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
@@ -55,12 +59,11 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.NumberOfRooms = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfGuests)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -85,11 +88,41 @@
             this.panel1.Controls.Add(this.dtpCheckIn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.panel1.Location = new System.Drawing.Point(225, 159);
+            this.panel1.Location = new System.Drawing.Point(227, 122);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(994, 603);
+            this.panel1.Size = new System.Drawing.Size(994, 707);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // NumberOfRooms
+            // 
+            this.NumberOfRooms.AutoRoundedCorners = true;
+            this.NumberOfRooms.BackColor = System.Drawing.Color.Transparent;
+            this.NumberOfRooms.BorderRadius = 18;
+            this.NumberOfRooms.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NumberOfRooms.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.NumberOfRooms.Location = new System.Drawing.Point(588, 273);
+            this.NumberOfRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NumberOfRooms.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.NumberOfRooms.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumberOfRooms.Name = "NumberOfRooms";
+            this.NumberOfRooms.Size = new System.Drawing.Size(312, 38);
+            this.NumberOfRooms.TabIndex = 20;
+            this.NumberOfRooms.UpDownButtonFillColor = System.Drawing.Color.Tan;
+            this.NumberOfRooms.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.NumberOfRooms.ValueChanged += new System.EventHandler(this.NumberOfRooms_ValueChanged);
             // 
             // lblRP2
             // 
@@ -98,7 +131,7 @@
             this.lblRP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.lblRP2.Location = new System.Drawing.Point(332, 476);
             this.lblRP2.Name = "lblRP2";
-            this.lblRP2.Size = new System.Drawing.Size(171, 23);
+            this.lblRP2.Size = new System.Drawing.Size(140, 19);
             this.lblRP2.TabIndex = 19;
             this.lblRP2.Text = "(per night, per room)";
             // 
@@ -109,7 +142,7 @@
             this.NumberOfGuests.BorderRadius = 18;
             this.NumberOfGuests.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.NumberOfGuests.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NumberOfGuests.Location = new System.Drawing.Point(588, 215);
+            this.NumberOfGuests.Location = new System.Drawing.Point(588, 217);
             this.NumberOfGuests.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NumberOfGuests.Maximum = new decimal(new int[] {
             20,
@@ -122,7 +155,7 @@
             0,
             0});
             this.NumberOfGuests.Name = "NumberOfGuests";
-            this.NumberOfGuests.Size = new System.Drawing.Size(210, 38);
+            this.NumberOfGuests.Size = new System.Drawing.Size(312, 38);
             this.NumberOfGuests.TabIndex = 18;
             this.NumberOfGuests.UpDownButtonFillColor = System.Drawing.Color.Tan;
             this.NumberOfGuests.Value = new decimal(new int[] {
@@ -139,7 +172,7 @@
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label8.Location = new System.Drawing.Point(332, 275);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(206, 30);
+            this.label8.Size = new System.Drawing.Size(174, 25);
             this.label8.TabIndex = 16;
             this.label8.Text = "Number of Rooms: ";
             // 
@@ -153,7 +186,7 @@
             this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnExit.ImageRotate = 0F;
             this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Location = new System.Drawing.Point(917, -1);
+            this.btnExit.Location = new System.Drawing.Point(913, 3);
             this.btnExit.Name = "btnExit";
             this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
@@ -179,7 +212,7 @@
             this.txtRoomPrice.Name = "txtRoomPrice";
             this.txtRoomPrice.PlaceholderText = "";
             this.txtRoomPrice.SelectedText = "";
-            this.txtRoomPrice.Size = new System.Drawing.Size(215, 40);
+            this.txtRoomPrice.Size = new System.Drawing.Size(312, 40);
             this.txtRoomPrice.TabIndex = 14;
             // 
             // lblRoomPrice
@@ -189,7 +222,7 @@
             this.lblRoomPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.lblRoomPrice.Location = new System.Drawing.Point(332, 446);
             this.lblRoomPrice.Name = "lblRoomPrice";
-            this.lblRoomPrice.Size = new System.Drawing.Size(131, 30);
+            this.lblRoomPrice.Size = new System.Drawing.Size(111, 25);
             this.lblRoomPrice.TabIndex = 13;
             this.lblRoomPrice.Text = "Room Price:";
             // 
@@ -203,7 +236,7 @@
             this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.btnConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(716, 534);
+            this.btnConfirm.Location = new System.Drawing.Point(655, 534);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(245, 45);
             this.btnConfirm.TabIndex = 12;
@@ -220,9 +253,9 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(327, 534);
+            this.guna2Button1.Location = new System.Drawing.Point(337, 534);
             this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(192, 45);
+            this.guna2Button1.Size = new System.Drawing.Size(245, 45);
             this.guna2Button1.TabIndex = 11;
             this.guna2Button1.Text = "Check Availability";
             this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
@@ -234,7 +267,7 @@
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label5.Location = new System.Drawing.Point(332, 161);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 30);
+            this.label5.Size = new System.Drawing.Size(88, 25);
             this.label5.TabIndex = 10;
             this.label5.Text = "Guest ID:";
             // 
@@ -250,12 +283,12 @@
             this.txtGuestID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGuestID.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGuestID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGuestID.Location = new System.Drawing.Point(588, 156);
+            this.txtGuestID.Location = new System.Drawing.Point(588, 161);
             this.txtGuestID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGuestID.Name = "txtGuestID";
             this.txtGuestID.PlaceholderText = "";
             this.txtGuestID.SelectedText = "";
-            this.txtGuestID.Size = new System.Drawing.Size(210, 38);
+            this.txtGuestID.Size = new System.Drawing.Size(312, 38);
             this.txtGuestID.TabIndex = 2;
             // 
             // label4
@@ -265,7 +298,7 @@
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label4.Location = new System.Drawing.Point(332, 218);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(205, 30);
+            this.label4.Size = new System.Drawing.Size(174, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "Number of Guests: ";
             // 
@@ -276,7 +309,7 @@
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label3.Location = new System.Drawing.Point(332, 389);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(178, 30);
+            this.label3.Size = new System.Drawing.Size(146, 25);
             this.label3.TabIndex = 8;
             this.label3.Text = "Check-Out Date:";
             // 
@@ -288,7 +321,7 @@
             this.dtpCheckOut.FillColor = System.Drawing.Color.Wheat;
             this.dtpCheckOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpCheckOut.Location = new System.Drawing.Point(588, 386);
+            this.dtpCheckOut.Location = new System.Drawing.Point(588, 383);
             this.dtpCheckOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpCheckOut.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpCheckOut.Name = "dtpCheckOut";
@@ -304,7 +337,7 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.label2.Location = new System.Drawing.Point(332, 332);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 30);
+            this.label2.Size = new System.Drawing.Size(130, 25);
             this.label2.TabIndex = 6;
             this.label2.Text = "Check-In Date:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -318,7 +351,7 @@
             this.dtpCheckIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCheckIn.ForeColor = System.Drawing.Color.Black;
             this.dtpCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpCheckIn.Location = new System.Drawing.Point(588, 331);
+            this.dtpCheckIn.Location = new System.Drawing.Point(588, 329);
             this.dtpCheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpCheckIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpCheckIn.Name = "dtpCheckIn";
@@ -332,9 +365,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label1.Location = new System.Drawing.Point(550, 73);
+            this.label1.Location = new System.Drawing.Point(562, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 31);
+            this.label1.Size = new System.Drawing.Size(177, 25);
             this.label1.TabIndex = 1;
             this.label1.Text = "Reservation Details";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -342,11 +375,11 @@
             // guna2HtmlLabel1
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(506, 23);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(490, 13);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(351, 47);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(321, 42);
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Make a Guest Booking";
             this.guna2HtmlLabel1.Click += new System.EventHandler(this.guna2HtmlLabel1_Click);
@@ -355,6 +388,9 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnReportIssue);
+            this.panel2.Controls.Add(this.btnSignOut);
+            this.panel2.Controls.Add(this.btnUser);
             this.panel2.Controls.Add(this.guna2Button8);
             this.panel2.Controls.Add(this.guna2Button7);
             this.panel2.Controls.Add(this.guna2Button6);
@@ -362,10 +398,62 @@
             this.panel2.Controls.Add(this.guna2Button3);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(225, 159);
+            this.panel2.Location = new System.Drawing.Point(227, 122);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(301, 603);
+            this.panel2.Size = new System.Drawing.Size(301, 707);
             this.panel2.TabIndex = 1;
+            // 
+            // btnReportIssue
+            // 
+            this.btnReportIssue.AutoRoundedCorners = true;
+            this.btnReportIssue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportIssue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportIssue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReportIssue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReportIssue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(178)))));
+            this.btnReportIssue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportIssue.ForeColor = System.Drawing.Color.White;
+            this.btnReportIssue.Location = new System.Drawing.Point(25, 643);
+            this.btnReportIssue.Name = "btnReportIssue";
+            this.btnReportIssue.Size = new System.Drawing.Size(117, 44);
+            this.btnReportIssue.TabIndex = 23;
+            this.btnReportIssue.Text = "Report Issue";
+            this.btnReportIssue.Click += new System.EventHandler(this.btnReportIssue_Click);
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.AutoRoundedCorners = true;
+            this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.Location = new System.Drawing.Point(160, 643);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(117, 44);
+            this.btnSignOut.TabIndex = 22;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.Click += new System.EventHandler(this.guna2Button2_Click_1);
+            // 
+            // btnUser
+            // 
+            this.btnUser.AutoRoundedCorners = true;
+            this.btnUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnUser.BorderThickness = 2;
+            this.btnUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUser.FillColor = System.Drawing.Color.White;
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnUser.Location = new System.Drawing.Point(25, 581);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(252, 47);
+            this.btnUser.TabIndex = 21;
+            this.btnUser.Text = "User Inforamtion";
             // 
             // guna2Button8
             // 
@@ -462,9 +550,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.label7.Location = new System.Drawing.Point(43, 176);
+            this.label7.Location = new System.Drawing.Point(69, 176);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(216, 38);
+            this.label7.Size = new System.Drawing.Size(167, 30);
             this.label7.TabIndex = 15;
             this.label7.Text = "User\'s Name/ID";
             // 
@@ -478,36 +566,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // NumberOfRooms
-            // 
-            this.NumberOfRooms.AutoRoundedCorners = true;
-            this.NumberOfRooms.BackColor = System.Drawing.Color.Transparent;
-            this.NumberOfRooms.BorderRadius = 18;
-            this.NumberOfRooms.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.NumberOfRooms.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NumberOfRooms.Location = new System.Drawing.Point(588, 270);
-            this.NumberOfRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.NumberOfRooms.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.NumberOfRooms.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumberOfRooms.Name = "NumberOfRooms";
-            this.NumberOfRooms.Size = new System.Drawing.Size(210, 38);
-            this.NumberOfRooms.TabIndex = 20;
-            this.NumberOfRooms.UpDownButtonFillColor = System.Drawing.Color.Tan;
-            this.NumberOfRooms.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.NumberOfRooms.ValueChanged += new System.EventHandler(this.NumberOfRooms_ValueChanged);
             // 
             // _3
             // 
@@ -525,11 +583,11 @@
             this.Load += new System.EventHandler(this._3_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfGuests)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -563,5 +621,8 @@
         private Guna.UI2.WinForms.Guna2NumericUpDown NumberOfGuests;
         private System.Windows.Forms.Label lblRP2;
         private Guna.UI2.WinForms.Guna2NumericUpDown NumberOfRooms;
+        private Guna.UI2.WinForms.Guna2Button btnUser;
+        private Guna.UI2.WinForms.Guna2Button btnSignOut;
+        private Guna.UI2.WinForms.Guna2Button btnReportIssue;
     }
 }

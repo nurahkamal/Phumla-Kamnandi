@@ -181,6 +181,12 @@
     <Compile Include="Presentation Layer\ManageEdits.Designer.cs">
       <DependentUpon>ManageEdits.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\ReportIssue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\ReportIssue.Designer.cs">
+      <DependentUpon>ReportIssue.cs</DependentUpon>
+    </Compile>
     <!-- Program and properties -->
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\ManageEdits.resx">
       <DependentUpon>ManageEdits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ReportIssue.resx">
+      <DependentUpon>ReportIssue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

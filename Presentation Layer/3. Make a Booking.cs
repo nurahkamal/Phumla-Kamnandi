@@ -21,12 +21,12 @@ namespace Phumla_Kamnandi.Presentation_Layer
             InitializeComponent();
         }
 
-       
+
 
         private void _3_Load(object sender, EventArgs e)
         {
             this.ActiveControl = null;
-            btnConfirm.Hide();  
+            btnConfirm.Hide();
             lblRoomPrice.Hide();
             txtRoomPrice.Hide();
             lblRP2.Hide();
@@ -68,7 +68,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             DateTime checkInDate = dtpCheckIn.Value.Date;
             DateTime checkOutDate = dtpCheckOut.Value.Date;
             // Minimum rooms required (4 guests per room)
-            int requiredRooms = (int)Math.Ceiling(numberOfGuests / 4.0);            
+            int requiredRooms = (int)Math.Ceiling(numberOfGuests / 4.0);
 
             decimal roomRate = RoomController.GetRoomRate(checkInDate);
 
@@ -83,9 +83,9 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             MessageBox.Show("Reservation successfully added to the database!");
 
-            PaymentForm paymentForm = new PaymentForm(reservation); 
+            PaymentForm paymentForm = new PaymentForm(reservation);
             paymentForm.Show();
-            this.Hide();           
+            this.Hide();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -133,7 +133,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             else
             {
                 MessageBox.Show("Accommadation is available!");
-                
+
                 lblRoomPrice.Show();
                 txtRoomPrice.Show();
                 lblRP2.Show();
@@ -144,7 +144,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             }
         }
 
-           
+
         private void NumberOfGuests_ValueChanged(object sender, EventArgs e)
         {
 
@@ -161,6 +161,22 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             NumberOfRooms.Minimum = 1;
             NumberOfRooms.Maximum = 5;
+        }
+
+        private void guna2Button2_Click_1(object sender, EventArgs e)
+        {
+
+            Login_Form login = new Login_Form();
+            login.Show();
+            this.Hide();
+
+        }
+
+        private void btnReportIssue_Click(object sender, EventArgs e)
+        {
+            ReportIssue report = new ReportIssue(this); // pass "this" form
+            report.Show();
+            this.Hide();
         }
     }
 }
