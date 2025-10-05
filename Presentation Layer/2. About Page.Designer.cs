@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About_Page));
             System.Windows.Forms.Timer timer1;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About_Page));
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2ImageButton10 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2ImageButton9 = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -52,6 +52,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            timer1.Enabled = true;
+            timer1.Interval = 1000;
+            timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // panel1
             // 
@@ -151,6 +157,7 @@
             this.guna2Button12.Size = new System.Drawing.Size(260, 43);
             this.guna2Button12.TabIndex = 27;
             this.guna2Button12.Text = "  View Reports";
+            this.guna2Button12.Click += new System.EventHandler(this.guna2Button12_Click);
             // 
             // guna2Button11
             // 
@@ -202,6 +209,7 @@
             this.guna2Button7.Size = new System.Drawing.Size(264, 43);
             this.guna2Button7.TabIndex = 24;
             this.guna2Button7.Text = "      Make a Booking";
+            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
             // 
             // guna2Button6
             // 
@@ -219,6 +227,7 @@
             this.guna2Button6.Size = new System.Drawing.Size(264, 43);
             this.guna2Button6.TabIndex = 23;
             this.guna2Button6.Text = "Guest Details";
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // btnSignout
             // 
@@ -236,6 +245,7 @@
             this.btnSignout.Size = new System.Drawing.Size(171, 36);
             this.btnSignout.TabIndex = 17;
             this.btnSignout.Text = "Sign out";
+            this.btnSignout.Click += new System.EventHandler(this.btnSignout_Click);
             // 
             // label1
             // 
@@ -296,12 +306,6 @@
             this.imageList1.Images.SetKeyName(9, "pool.jpg");
             this.imageList1.Images.SetKeyName(10, "gym.jpg");
             this.imageList1.Images.SetKeyName(11, "tennis.jpg");
-            // 
-            // timer1
-            // 
-            timer1.Enabled = true;
-            timer1.Interval = 1000;
-            timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // About_Page
             // 
