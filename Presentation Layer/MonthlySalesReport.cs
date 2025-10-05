@@ -14,7 +14,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
     public partial class MonthlySalesReport : Form
     {
         private SalesReportController _salesController;
-        private Guna.UI2.WinForms.Guna2Button currentButton;
         private PrintDocument printDocument;
         private PrintPreviewDialog printPreviewDialog;
 
@@ -26,6 +25,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             WireUpEvents();
             SetDefaultDates();
             LoadCharts();
+            SetActiveDateButton(btnThisMonth);
         }
 
         #region Printing Setup
@@ -54,10 +54,32 @@ namespace Phumla_Kamnandi.Presentation_Layer
         }
         #endregion
 
+        #region Button Group Management
+        private void SetActiveDateButton(Guna.UI2.WinForms.Guna2Button activeButton)
+        {
+            var dateButtons = new List<Guna.UI2.WinForms.Guna2Button>
+            {
+                btnToday, btnLastSevenDays, btnThisMonth, btnDecember
+            };
+
+            foreach (var button in dateButtons)
+            {
+                if (button == activeButton)
+                {
+                    button.Checked = true;
+                }
+                else
+                {
+                    button.Checked = false;
+                }
+            }
+        }
+        #endregion
+
         #region Date config
         private DateTime GetDecemberDate()
         {
-            return new DateTime(2025, 12, 12); // System thinks today is Dec 12, 2025
+            return new DateTime(2025, 12, 12);
         }
 
         private void SetDefaultDates()
@@ -341,48 +363,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             }
         }
 
-        private void SaveAsImage()
-        {
-            try
-            {
-                using (SaveFileDialog saveDialog = new SaveFileDialog())
-                {
-                    saveDialog.Filter = "PNG Image|*.png|JPEG Image|*.jpg|Bitmap Image|*.bmp";
-                    saveDialog.Title = "Save Report as Image";
-                    saveDialog.FileName = $"SalesReport_{DateTime.Now:yyyyMMdd_HHmmss}";
-
-                    if (saveDialog.ShowDialog() == DialogResult.OK)
-                    {
-                        using (Bitmap bitmap = new Bitmap(this.Width, this.Height))
-                        {
-                            this.DrawToBitmap(bitmap, new Rectangle(0, 0, this.Width, this.Height));
-
-                            switch (saveDialog.FilterIndex)
-                            {
-                                case 1:
-                                    bitmap.Save(saveDialog.FileName, System.Drawing.Imaging.ImageFormat.Png);
-                                    break;
-                                case 2:
-                                    bitmap.Save(saveDialog.FileName, System.Drawing.Imaging.ImageFormat.Jpeg);
-                                    break;
-                                case 3:
-                                    bitmap.Save(saveDialog.FileName, System.Drawing.Imaging.ImageFormat.Bmp);
-                                    break;
-                            }
-
-                            MessageBox.Show($"Report saved as image successfully!\n{saveDialog.FileName}",
-                                          "Save Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Save error: {ex.Message}", "Save Error",
-                              MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
         private void ShowPrintPreview()
         {
             try
@@ -517,6 +497,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnToday_Click(object sender, EventArgs e)
         {
+            SetActiveDateButton(btnToday);
             DateTime fakeToday = GetDecemberDate();
             dtpStartDate.Value = fakeToday;
             dtpEndDate.Value = fakeToday;
@@ -525,6 +506,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnLastSevenDays_Click(object sender, EventArgs e)
         {
+            SetActiveDateButton(btnLastSevenDays);
             DateTime fakeToday = GetDecemberDate();
             dtpStartDate.Value = fakeToday.AddDays(-6);
             dtpEndDate.Value = fakeToday;
@@ -533,6 +515,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnThisMonth_Click(object sender, EventArgs e)
         {
+            SetActiveDateButton(btnThisMonth);
             DateTime fakeToday = GetDecemberDate();
             dtpStartDate.Value = new DateTime(fakeToday.Year, fakeToday.Month, 1);
             dtpEndDate.Value = fakeToday;
@@ -541,6 +524,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnDecember_Click(object sender, EventArgs e)
         {
+            SetActiveDateButton(btnDecember);
             DateTime fakeToday = GetDecemberDate();
             dtpStartDate.Value = new DateTime(fakeToday.Year, 12, 1);
             dtpEndDate.Value = new DateTime(fakeToday.Year, 12, 31);
