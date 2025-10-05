@@ -67,7 +67,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
 
 
-            
+
         }
 
         private void btnSEdits_Click(object sender, EventArgs e)
@@ -75,7 +75,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             if (ReservationData.CurrentRow != null)
             {
                 string gid = ReservationData.CurrentRow.Cells["ReservationID"].Value.ToString();
-               // rController.UpdateReservation(txttxtGid.Text, txtName.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtID.Text, txtPassNum.Text, txtAddress.Text);
+                // rController.UpdateReservation(txttxtGid.Text, txtName.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtID.Text, txtPassNum.Text, txtAddress.Text);
 
 
             }
@@ -104,8 +104,37 @@ namespace Phumla_Kamnandi.Presentation_Layer
             }
         }
 
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (ReservationData.CurrentRow != null)
+            {
+                DataGridViewRow selectedRow = ReservationData.CurrentRow;
+                int SelecterID = Convert.ToInt32(ReservationData.CurrentRow.Cells["ReservationID"].Value);
 
+                string rID = selectedRow.Cells["ReservationID"].Value.ToString();
+                string gid = selectedRow.Cells["GuestID"].Value.ToString();
+                
 
+                //MessageBox to confirm Deletion 
+
+                DialogResult msgDelete = MessageBox.Show("Are you sure you want to delte this guest ?\n\n"
+                     + "ReservationID: " + rID + "\n"
+                    + "GuestID: " + gid + "\n" ,
+                    "Confirm Deleted Guest ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning
+                     );
+
+                if (msgDelete == DialogResult.Yes)
+                {
+                    //Get Guest ID to delte from tables
+                    rController.DeleteReservation(rID);
+
+                    MessageBox.Show("Guest Deleted Successfully ", "Deleted Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }
+
+        }
 
     }
-}
+    }
+

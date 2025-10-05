@@ -60,6 +60,79 @@ namespace Phumla_Kamnandi.Data_Layer
         }
 
 
+        //Deletes ReservationID
+        public bool DeleteReservation(string reservationID)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+                SqlTransaction transaction = connection.BeginTransaction();
+
+                try
+                {
+                    // Step 1: Delete payments linked via accounts
+                    string deletePaymentsQuery = @"
+                DELETE FROM Payments
+                WHERE AccountID IN (
+                    SELECT AccountID FROM Accounts WHERE ReservationID = @ResID
+                )";
+                    using (SqlCommand cmdPayments = new SqlCommand(deletePaymentsQuery, connection, transaction))
+                    {
+                        cmdPayments.Parameters.AddWithValue("@ResID", reservationID);
+                        cmdPayments.ExecuteNonQuery();
+                    }
+
+                    // Step 2: Delete accounts linked to this reservation
+                    string deleteAccountsQuery = @"DELETE FROM Accounts WHERE ReservationID = @ResID";
+                    using (SqlCommand cmdAccounts = new SqlCommand(deleteAccountsQuery, connection, transaction))
+                    {
+                        cmdAccounts.Parameters.AddWithValue("@ResID", reservationID);
+                        cmdAccounts.ExecuteNonQuery();
+                    }
+
+                    // Step 3: Delete room allocations
+                    string deleteAllocQuery = @"DELETE FROM RoomAllocation WHERE ReservationID = @ResID";
+                    using (SqlCommand cmdAlloc = new SqlCommand(deleteAllocQuery, connection, transaction))
+                    {
+                        cmdAlloc.Parameters.AddWithValue("@ResID", reservationID);
+                        cmdAlloc.ExecuteNonQuery();
+                    }
+
+                    // Step 4: Delete room entries
+                    string deleteRoomsQuery = @"DELETE FROM ReservationRooms WHERE ReservationID = @ResID";
+                    using (SqlCommand cmdRooms = new SqlCommand(deleteRoomsQuery, connection, transaction))
+                    {
+                        cmdRooms.Parameters.AddWithValue("@ResID", reservationID);
+                        cmdRooms.ExecuteNonQuery();
+                    }
+
+                    // Step 5: Delete the main reservation
+                    string deleteResQuery = @"DELETE FROM Reservations WHERE ReservationID = @ResID";
+                    using (SqlCommand cmdRes = new SqlCommand(deleteResQuery, connection, transaction))
+                    {
+                        cmdRes.Parameters.AddWithValue("@ResID", reservationID);
+                        int affectedRows = cmdRes.ExecuteNonQuery();
+
+                        if (affectedRows == 0)
+                        {
+                            transaction.Rollback();
+                            return false; // No reservation found
+                        }
+                    }
+
+                    transaction.Commit();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    MessageBox.Show("Error deleting reservation: " + ex.Message);
+                    return false;
+                }
+            }
+        }
+
+
 
 
         // Inserts a new reservation into the database and returns the generated ReservationID
