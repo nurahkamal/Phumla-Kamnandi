@@ -41,5 +41,12 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
 
         }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            _3 booking = new _3();
+            booking.Show();
+            this.Hide();
+        }
     }
 }
