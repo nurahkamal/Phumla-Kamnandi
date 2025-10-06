@@ -88,7 +88,7 @@
             this.panel1.Controls.Add(this.dtpCheckIn);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.panel1.Location = new System.Drawing.Point(227, 122);
+            this.panel1.Location = new System.Drawing.Point(268, 98);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(994, 707);
             this.panel1.TabIndex = 0;
@@ -398,7 +398,7 @@
             this.panel2.Controls.Add(this.guna2Button3);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Location = new System.Drawing.Point(227, 122);
+            this.panel2.Location = new System.Drawing.Point(268, 98);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(301, 707);
             this.panel2.TabIndex = 1;
@@ -558,7 +558,6 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(67, 13);
             this.pictureBox1.Name = "pictureBox1";

@@ -33,18 +33,18 @@
             this.btnForgotPassword = new Guna.UI2.WinForms.Guna2Button();
             this.lblTermsandConditions = new System.Windows.Forms.Label();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblWelcome = new System.Windows.Forms.Label();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblPassword = new System.Windows.Forms.Label();
             this.lblUsername = new System.Windows.Forms.Label();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtUsername = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblPlease = new System.Windows.Forms.Label();
-            this.lblWelcome = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.loginPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // loginPanel
@@ -60,9 +60,10 @@
             this.loginPanel.Controls.Add(this.txtPassword);
             this.loginPanel.Controls.Add(this.txtUsername);
             this.loginPanel.Controls.Add(this.lblPlease);
-            this.loginPanel.Location = new System.Drawing.Point(476, 274);
+            this.loginPanel.Location = new System.Drawing.Point(357, 223);
+            this.loginPanel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.loginPanel.Name = "loginPanel";
-            this.loginPanel.Size = new System.Drawing.Size(1052, 602);
+            this.loginPanel.Size = new System.Drawing.Size(789, 489);
             this.loginPanel.TabIndex = 2;
             // 
             // btnForgotPassword
@@ -78,9 +79,10 @@
             this.btnForgotPassword.FillColor = System.Drawing.Color.Transparent;
             this.btnForgotPassword.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnForgotPassword.ForeColor = System.Drawing.Color.White;
-            this.btnForgotPassword.Location = new System.Drawing.Point(761, 332);
+            this.btnForgotPassword.Location = new System.Drawing.Point(571, 270);
+            this.btnForgotPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnForgotPassword.Name = "btnForgotPassword";
-            this.btnForgotPassword.Size = new System.Drawing.Size(219, 41);
+            this.btnForgotPassword.Size = new System.Drawing.Size(164, 33);
             this.btnForgotPassword.TabIndex = 8;
             this.btnForgotPassword.Text = "Forgot Password?";
             this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
@@ -89,9 +91,10 @@
             // 
             this.lblTermsandConditions.AutoSize = true;
             this.lblTermsandConditions.Font = new System.Drawing.Font("Segoe UI Semibold", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTermsandConditions.Location = new System.Drawing.Point(374, 406);
+            this.lblTermsandConditions.Location = new System.Drawing.Point(280, 330);
+            this.lblTermsandConditions.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTermsandConditions.Name = "lblTermsandConditions";
-            this.lblTermsandConditions.Size = new System.Drawing.Size(546, 34);
+            this.lblTermsandConditions.Size = new System.Drawing.Size(448, 26);
             this.lblTermsandConditions.TabIndex = 7;
             this.lblTermsandConditions.Text = "*By logging in with valid credentials, you agree to the Terms and Conditions of t" +
     "his Hotel \r\nand the Phumla Kamnandi Hotel Group.\r\n";
@@ -107,12 +110,48 @@
             this.btnLogin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.btnLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold);
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(388, 332);
+            this.btnLogin.Location = new System.Drawing.Point(291, 270);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(219, 41);
+            this.btnLogin.Size = new System.Drawing.Size(164, 33);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.lblWelcome);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(269, 547);
+            this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(76, 33);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(113, 116);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblWelcome
+            // 
+            this.lblWelcome.AutoSize = true;
+            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.lblWelcome.Location = new System.Drawing.Point(23, 167);
+            this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWelcome.Name = "lblWelcome";
+            this.lblWelcome.Size = new System.Drawing.Size(239, 100);
+            this.lblWelcome.TabIndex = 0;
+            this.lblWelcome.Text = "Welcome to the \r\nPhumla Kamnandi \r\nHotel Reservation System\r\n\r\n";
+            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExit
             // 
@@ -124,11 +163,12 @@
             this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnExit.ImageRotate = 0F;
             this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Location = new System.Drawing.Point(969, 0);
+            this.btnExit.Location = new System.Drawing.Point(727, 0);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Size = new System.Drawing.Size(76, 64);
+            this.btnExit.Size = new System.Drawing.Size(57, 52);
             this.btnExit.TabIndex = 5;
             this.btnExit.UseTransparentBackground = true;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
@@ -138,9 +178,10 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.lblPassword.Location = new System.Drawing.Point(383, 206);
+            this.lblPassword.Location = new System.Drawing.Point(287, 167);
+            this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(100, 23);
+            this.lblPassword.Size = new System.Drawing.Size(85, 19);
             this.lblPassword.TabIndex = 4;
             this.lblPassword.Text = "Password : ";
             // 
@@ -149,9 +190,10 @@
             this.lblUsername.AutoSize = true;
             this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.lblUsername.Location = new System.Drawing.Point(384, 109);
+            this.lblUsername.Location = new System.Drawing.Point(288, 89);
+            this.lblUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(94, 23);
+            this.lblUsername.Size = new System.Drawing.Size(80, 19);
             this.lblUsername.TabIndex = 3;
             this.lblUsername.Text = "Username:";
             // 
@@ -170,12 +212,12 @@
             this.txtPassword.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtPassword.IconLeft")));
             this.txtPassword.IconLeftOffset = new System.Drawing.Point(5, 0);
             this.txtPassword.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.txtPassword.Location = new System.Drawing.Point(378, 233);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPassword.Location = new System.Drawing.Point(284, 189);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PlaceholderText = "Please Enter Your Password Here";
             this.txtPassword.SelectedText = "";
-            this.txtPassword.Size = new System.Drawing.Size(602, 48);
+            this.txtPassword.Size = new System.Drawing.Size(452, 39);
             this.txtPassword.TabIndex = 2;
             // 
             // txtUsername
@@ -193,12 +235,12 @@
             this.txtUsername.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtUsername.IconLeft")));
             this.txtUsername.IconLeftOffset = new System.Drawing.Point(5, 0);
             this.txtUsername.IconLeftSize = new System.Drawing.Size(30, 30);
-            this.txtUsername.Location = new System.Drawing.Point(378, 136);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtUsername.Location = new System.Drawing.Point(284, 110);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PlaceholderText = "Please Enter Your Username Here";
             this.txtUsername.SelectedText = "";
-            this.txtUsername.Size = new System.Drawing.Size(602, 48);
+            this.txtUsername.Size = new System.Drawing.Size(452, 39);
             this.txtUsername.TabIndex = 1;
             // 
             // lblPlease
@@ -206,52 +248,23 @@
             this.lblPlease.AutoSize = true;
             this.lblPlease.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPlease.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.lblPlease.Location = new System.Drawing.Point(480, 26);
+            this.lblPlease.Location = new System.Drawing.Point(360, 21);
+            this.lblPlease.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPlease.Name = "lblPlease";
-            this.lblPlease.Size = new System.Drawing.Size(441, 38);
+            this.lblPlease.Size = new System.Drawing.Size(345, 30);
             this.lblPlease.TabIndex = 0;
             this.lblPlease.Text = "Please Login With Your Details : ";
             // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.lblWelcome.Location = new System.Drawing.Point(31, 206);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(288, 124);
-            this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome to the \r\nPhumla Kamnandi \r\nHotel Reservation System\r\n\r\n";
-            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(101, 41);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(151, 143);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.lblWelcome);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(359, 673);
-            this.panel1.TabIndex = 0;
-            // 
             // Login_Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AccessibleName = "Login_Form";
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1432, 772);
+            this.ClientSize = new System.Drawing.Size(1074, 627);
             this.Controls.Add(this.loginPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Login_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login_Form";
@@ -259,9 +272,9 @@
             this.Load += new System.EventHandler(this.Login_Form_Load);
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
