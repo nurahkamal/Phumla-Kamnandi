@@ -137,7 +137,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string searchID = txtSearchGid.Text;
+            string searchID = txtSearch.Text;
 
             foreach (DataGridViewRow gRow in GuestData.Rows)
             {
