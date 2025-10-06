@@ -187,5 +187,18 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             Close();
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Login_Form login = new Login_Form();
+            login.Show();
+        }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+            ManageEdits manageEdits = new ManageEdits();
+            manageEdits.Show();
+            this.Hide();
+        }
     }
 }

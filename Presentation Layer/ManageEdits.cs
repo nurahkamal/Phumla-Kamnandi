@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Phumla_Kamnandi.Business_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,6 +26,30 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void guna2ImageButton6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnReservations_Click(object sender, EventArgs e)
+        {
+            ManageReservation rForm = new ManageReservation();
+            rForm.Show();
+            this.Hide();
+        }
+
+        private void ManageEdits_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnGuests_Click(object sender, EventArgs e)
+        {
+            ManageGuest gForm = new ManageGuest();
+            gForm.Show();
+            this.Hide();
         }
     }
 }
