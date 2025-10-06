@@ -32,7 +32,7 @@ namespace Phumla_Kamnandi.Data_Layer
             return dsMain.Tables[gtableName];
         }
 
-        public bool UpdateGuest(string gID, string guestName, string gLastName, string gPhone, string gEmail, string pID, string gPassNum, string gAddress)
+        public bool UpdateGuest(string gID, string guestName, string gLastName, string gPhone, string gEmail, string pID, string gPassNum, string gAddress, int lPoints)
         {
             try
             {
@@ -54,6 +54,8 @@ namespace Phumla_Kamnandi.Data_Layer
                 row["IDNumber"] = pID;
                 row["PassportNo"] = gPassNum;
                 row["Address"] = gAddress;
+                row["LoyaltyPoints"] = lPoints; 
+
 
                 return UpdateDataSource("SELECT * FROM dbo.Guests", gtableName);
             }
@@ -67,7 +69,7 @@ namespace Phumla_Kamnandi.Data_Layer
 
         }
 
-        //Delete a guest 
+        
 
         // Delete a guest and all related records
         public void DeleteGuest(string guestId)
@@ -82,46 +84,62 @@ namespace Phumla_Kamnandi.Data_Layer
                     {
                         int affectedRows = 0;
 
-                        // Queries in the correct delete order (Payments → Accounts → Reservation_Room → Reservations → Guest)
+                        // Delete order:
                         var deleteQueries = new List<string>
                 {
+                    // 1. Delete Payments linked via Accounts and  Reservations and Guest
+                    "DELETE FROM dbo.Payments WHERE AccountID IN " +
+                    "(SELECT AccountID FROM dbo.Accounts WHERE ReservationID IN " +
+                    "(SELECT ReservationID FROM dbo.Reservations WHERE GuestID = @GuestId))",
 
-                    // Step 1: Delete payments linked via accounts
-                    "DELETE FROM dbo.Payments WHERE AccountID IN (SELECT AccountID FROM dbo.Accounts WHERE ReservationID IN (SELECT ReservationID FROM dbo.Reservations WHERE GuestID = @GuestId))",
+                    // 2. Delete Room Allocations linked to Reservations
+                    "DELETE FROM dbo.RoomAllocation WHERE ReservationID IN " +
+                    "(SELECT ReservationID FROM dbo.Reservations WHERE GuestID = @GuestId)",
 
-                    "DELETE FROM dbo.RoomAllocation WHERE ReservationID  IN (SELECT AccountID FROM dbo.Accounts WHERE ReservationID IN (SELECT ReservationID FROM dbo.Reservations WHERE GuestID = @GuestId))",
+                    // 3. Delete Accounts linked to Reservations
+                    "DELETE FROM dbo.Accounts WHERE ReservationID IN " +
+                    "(SELECT ReservationID FROM dbo.Reservations WHERE GuestID = @GuestId)",
 
-                    // Step 2: Delete accounts linked to reservations
-                    "DELETE FROM dbo.Accounts WHERE ReservationID IN (SELECT ReservationID FROM dbo.Reservations WHERE GuestID = @GuestId)",
+                    // 4. Delete ReservationRooms links
+                    "DELETE FROM dbo.ReservationRooms WHERE ReservationID IN " +
+                    "(SELECT ReservationID FROM dbo.Reservations WHERE GuestID = @GuestId)",
 
-                    // Step 3: Delete reservation-room links
-                    "DELETE FROM dbo.ReservationRooms WHERE ReservationID IN (SELECT ReservationID FROM dbo.Reservations WHERE GuestID = @GuestId)",
-
-                    // Step 4: Delete reservations
+                    // 5. Delete Reservations
                     "DELETE FROM dbo.Reservations WHERE GuestID = @GuestId",
 
-                    // Step 5: Delete guest
+                    // 6. Delete the Guest
                     "DELETE FROM dbo.Guests WHERE GuestID = @GuestId"
                 };
 
-                        // Execute each query
+                        // Execute all delete statements inside the transaction
                         foreach (var query in deleteQueries)
                         {
-                            using (SqlCommand command = new SqlCommand(query, connection, transaction))
+                            using (SqlCommand cmd = new SqlCommand(query, connection, transaction))
                             {
-                                command.Parameters.AddWithValue("@GuestId", guestId);
-                                affectedRows += command.ExecuteNonQuery();
+                                cmd.Parameters.AddWithValue("@GuestId", guestId);
+                                int rows = cmd.ExecuteNonQuery();
+                                affectedRows += rows;
                             }
                         }
 
-                        // Commit transaction if successful
-                        transaction.Commit();
-
-
+                        if (affectedRows == 0)
+                        {
+                            // No related rows were found — rollback
+                            transaction.Rollback();
+                            MessageBox.Show("No related records were deleted. Operation cancelled.",
+                                            "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            // Everything successful — commit
+                            transaction.Commit();
+                            
+                            MessageBox.Show("Guest Deleted Successfully ", "Deleted Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                     catch (Exception ex)
                     {
-                        // Roll back if something fails
+                        // Full rollback on any error
                         transaction.Rollback();
                         MessageBox.Show("An error occurred while deleting the guest: " + ex.Message,
                                         "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -129,7 +147,7 @@ namespace Phumla_Kamnandi.Data_Layer
                 }
             }
         }
-       
+
         #endregion
 
 

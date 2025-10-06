@@ -220,7 +220,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(603, 38);
+            this.label1.Location = new System.Drawing.Point(603, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(71, 30);
             this.label1.TabIndex = 31;
@@ -239,7 +239,7 @@
             this.txtEmail.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtEmail.Location = new System.Drawing.Point(695, 38);
+            this.txtEmail.Location = new System.Drawing.Point(695, 12);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PlaceholderText = "";
@@ -265,7 +265,7 @@
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderText = "";
             this.txtAddress.SelectedText = "";
-            this.txtAddress.Size = new System.Drawing.Size(278, 36);
+            this.txtAddress.Size = new System.Drawing.Size(295, 36);
             this.txtAddress.TabIndex = 29;
             // 
             // lblAddress
@@ -305,7 +305,7 @@
             this.lblPassNum.AutoSize = true;
             this.lblPassNum.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPassNum.Location = new System.Drawing.Point(483, 143);
+            this.lblPassNum.Location = new System.Drawing.Point(483, 149);
             this.lblPassNum.Name = "lblPassNum";
             this.lblPassNum.Size = new System.Drawing.Size(191, 30);
             this.lblPassNum.TabIndex = 26;
@@ -324,7 +324,7 @@
             this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtID.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtID.Location = new System.Drawing.Point(695, 86);
+            this.txtID.Location = new System.Drawing.Point(695, 70);
             this.txtID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtID.Name = "txtID";
             this.txtID.PlaceholderText = "";
@@ -337,7 +337,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblID.Location = new System.Drawing.Point(634, 92);
+            this.lblID.Location = new System.Drawing.Point(634, 70);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(40, 30);
             this.lblID.TabIndex = 24;

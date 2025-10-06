@@ -46,9 +46,9 @@ namespace Phumla_Kamnandi.Business_Layer
         }
 
 
-        public void UpdateGuest(string gID, string guestName, string gLastName, string gPhone, string gEmail, string pID, string gPassNum, string gAddress)
+        public void UpdateGuest(string gID, string guestName, string gLastName, string gPhone, string gEmail, string pID, string gPassNum, string gAddress ,int lpoints)
         { 
-           guestDB.UpdateGuest(gID , guestName , gLastName , gPhone , gEmail , pID , gPassNum , gAddress );
+           guestDB.UpdateGuest(gID , guestName , gLastName , gPhone , gEmail , pID , gPassNum , gAddress , lpoints);
                }
         #endregion
     }

@@ -58,7 +58,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                     //Get Guest ID to delte from tables
                     gController.DeleteGuest(gID);
 
-                    MessageBox.Show("Guest Deleted Successfully ", "Deleted Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                   
 
                 }
             }
@@ -129,7 +129,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             if (GuestData.CurrentRow != null)
             {
                 string gid = GuestData.CurrentRow.Cells["GuestID"].Value.ToString();
-               gController.UpdateGuest(txtGid.Text,txtName.Text ,txtSurname.Text,txtPhone.Text,txtEmail.Text,txtID.Text,txtPassNum.Text,txtAddress.Text); 
+               gController.UpdateGuest(txtGid.Text,txtName.Text ,txtSurname.Text,txtPhone.Text,txtEmail.Text,txtID.Text,txtPassNum.Text,txtAddress.Text , Convert.ToInt32(strLpoints.Value) ); 
                 
             
             }

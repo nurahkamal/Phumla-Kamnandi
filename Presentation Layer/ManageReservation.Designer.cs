@@ -634,7 +634,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(162, 39);
             this.btnEdit.TabIndex = 21;
-            this.btnEdit.Text = "Edit";
+            this.btnEdit.Text = " ";
             // 
             // lblPassNum
             // 
