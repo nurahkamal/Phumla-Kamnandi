@@ -39,7 +39,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.rtbSummary = new System.Windows.Forms.RichTextBox();
             this.btnPaymentLater = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlCard = new System.Windows.Forms.Panel();
             this.txtPayableAmt = new Guna.UI2.WinForms.Guna2TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,6 +56,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnlCard.SuspendLayout();
@@ -84,13 +84,13 @@ namespace Phumla_Kamnandi.Presentation_Layer
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.guna2HtmlLabel1);
             this.panel1.Controls.Add(this.btnPaymentNow);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.rtbSummary);
             this.panel1.Controls.Add(this.btnPaymentLater);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.guna2HtmlLabel1);
             this.panel1.Controls.Add(this.pnlCard);
             this.panel1.Location = new System.Drawing.Point(221, 146);
             this.panel1.Name = "panel1";
@@ -182,17 +182,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.label1.Size = new System.Drawing.Size(180, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Payment Details";
-            // 
-            // guna2HtmlLabel1
-            // 
-            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(491, 13);
-            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(351, 47);
-            this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = "Make a Guest Booking";
             // 
             // pnlCard
             // 
@@ -470,6 +459,17 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.label4.TabIndex = 34;
             this.label4.Text = "Make Payment: ";
             // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(475, 13);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(400, 50);
+            this.guna2HtmlLabel1.TabIndex = 28;
+            this.guna2HtmlLabel1.Text = "Make a Guest Booking";
+            // 
             // PaymentForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -505,7 +505,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2TextBox txtCardNumber;
         private System.Windows.Forms.Label label1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox rtbSummary;
         private System.Windows.Forms.Panel pnlCard;
@@ -522,5 +521,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private PictureBox pictureBox1;
         private Label label4;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
     }
 }

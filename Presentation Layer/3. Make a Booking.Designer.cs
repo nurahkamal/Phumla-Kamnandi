@@ -99,7 +99,7 @@
             this.NumberOfRooms.BorderRadius = 18;
             this.NumberOfRooms.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.NumberOfRooms.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NumberOfRooms.Location = new System.Drawing.Point(588, 273);
+            this.NumberOfRooms.Location = new System.Drawing.Point(588, 271);
             this.NumberOfRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NumberOfRooms.Maximum = new decimal(new int[] {
             5,
@@ -127,7 +127,7 @@
             this.lblRP2.AutoSize = true;
             this.lblRP2.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRP2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.lblRP2.Location = new System.Drawing.Point(332, 476);
+            this.lblRP2.Location = new System.Drawing.Point(333, 498);
             this.lblRP2.Name = "lblRP2";
             this.lblRP2.Size = new System.Drawing.Size(171, 23);
             this.lblRP2.TabIndex = 19;
@@ -140,7 +140,7 @@
             this.NumberOfGuests.BorderRadius = 18;
             this.NumberOfGuests.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.NumberOfGuests.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.NumberOfGuests.Location = new System.Drawing.Point(588, 217);
+            this.NumberOfGuests.Location = new System.Drawing.Point(588, 205);
             this.NumberOfGuests.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NumberOfGuests.Maximum = new decimal(new int[] {
             20,
@@ -168,7 +168,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label8.Location = new System.Drawing.Point(332, 275);
+            this.label8.Location = new System.Drawing.Point(332, 273);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(206, 30);
             this.label8.TabIndex = 16;
@@ -205,7 +205,7 @@
             this.txtRoomPrice.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtRoomPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoomPrice.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtRoomPrice.Location = new System.Drawing.Point(588, 441);
+            this.txtRoomPrice.Location = new System.Drawing.Point(588, 465);
             this.txtRoomPrice.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtRoomPrice.Name = "txtRoomPrice";
             this.txtRoomPrice.PlaceholderText = "";
@@ -218,7 +218,7 @@
             this.lblRoomPrice.AutoSize = true;
             this.lblRoomPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblRoomPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.lblRoomPrice.Location = new System.Drawing.Point(332, 446);
+            this.lblRoomPrice.Location = new System.Drawing.Point(332, 468);
             this.lblRoomPrice.Name = "lblRoomPrice";
             this.lblRoomPrice.Size = new System.Drawing.Size(131, 30);
             this.lblRoomPrice.TabIndex = 13;
@@ -263,7 +263,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label5.Location = new System.Drawing.Point(332, 161);
+            this.label5.Location = new System.Drawing.Point(332, 143);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(103, 30);
             this.label5.TabIndex = 10;
@@ -281,7 +281,7 @@
             this.txtGuestID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGuestID.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGuestID.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGuestID.Location = new System.Drawing.Point(588, 161);
+            this.txtGuestID.Location = new System.Drawing.Point(588, 139);
             this.txtGuestID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGuestID.Name = "txtGuestID";
             this.txtGuestID.PlaceholderText = "";
@@ -294,7 +294,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label4.Location = new System.Drawing.Point(332, 218);
+            this.label4.Location = new System.Drawing.Point(332, 208);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(205, 30);
             this.label4.TabIndex = 9;
@@ -305,7 +305,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label3.Location = new System.Drawing.Point(332, 389);
+            this.label3.Location = new System.Drawing.Point(332, 403);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 30);
             this.label3.TabIndex = 8;
@@ -319,7 +319,7 @@
             this.dtpCheckOut.FillColor = System.Drawing.Color.Wheat;
             this.dtpCheckOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpCheckOut.Location = new System.Drawing.Point(588, 383);
+            this.dtpCheckOut.Location = new System.Drawing.Point(588, 401);
             this.dtpCheckOut.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpCheckOut.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpCheckOut.Name = "dtpCheckOut";
@@ -333,7 +333,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label2.Location = new System.Drawing.Point(332, 332);
+            this.label2.Location = new System.Drawing.Point(332, 338);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(159, 30);
             this.label2.TabIndex = 6;
@@ -349,7 +349,7 @@
             this.dtpCheckIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCheckIn.ForeColor = System.Drawing.Color.Black;
             this.dtpCheckIn.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpCheckIn.Location = new System.Drawing.Point(588, 329);
+            this.dtpCheckIn.Location = new System.Drawing.Point(588, 337);
             this.dtpCheckIn.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpCheckIn.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpCheckIn.Name = "dtpCheckIn";
