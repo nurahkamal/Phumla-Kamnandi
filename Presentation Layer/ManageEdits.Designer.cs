@@ -186,6 +186,7 @@
             this.btnReportIssue.Size = new System.Drawing.Size(117, 44);
             this.btnReportIssue.TabIndex = 23;
             this.btnReportIssue.Text = "Report Issue";
+            this.btnReportIssue.Click += new System.EventHandler(this.btnReportIssue_Click);
             // 
             // btnSignOut
             // 
@@ -202,6 +203,7 @@
             this.btnSignOut.Size = new System.Drawing.Size(117, 44);
             this.btnSignOut.TabIndex = 22;
             this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // btnUser
             // 
@@ -238,6 +240,7 @@
             this.guna2Button8.Size = new System.Drawing.Size(252, 47);
             this.guna2Button8.TabIndex = 20;
             this.guna2Button8.Text = "About Us";
+            this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
             // 
             // guna2Button7
             // 
@@ -256,6 +259,7 @@
             this.guna2Button7.Size = new System.Drawing.Size(252, 47);
             this.guna2Button7.TabIndex = 19;
             this.guna2Button7.Text = "View Reports";
+            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
             // 
             // guna2Button6
             // 

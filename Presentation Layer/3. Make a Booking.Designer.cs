@@ -450,6 +450,7 @@
             this.btnUser.Size = new System.Drawing.Size(252, 47);
             this.btnUser.TabIndex = 21;
             this.btnUser.Text = "User Information";
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // guna2Button8
             // 

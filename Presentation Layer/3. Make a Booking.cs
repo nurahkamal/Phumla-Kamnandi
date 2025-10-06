@@ -199,5 +199,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
             report.Show();
             this.Hide();
         }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
