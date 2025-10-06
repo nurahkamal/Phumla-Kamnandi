@@ -128,8 +128,30 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
             if (GuestData.CurrentRow != null)
             {
+                DataGridViewRow selectedRow = GuestData.CurrentRow;
+                int SelectedGuestID = Convert.ToInt32(GuestData.CurrentRow.Cells["GuestID"].Value);
+
+                string gID = selectedRow.Cells["GuestID"].Value.ToString();
+                string FName = selectedRow.Cells["FirstName"].Value.ToString();
+                string LName = selectedRow.Cells["LastName"].Value.ToString();
                 string gid = GuestData.CurrentRow.Cells["GuestID"].Value.ToString();
-               gController.UpdateGuest(txtGid.Text,txtName.Text ,txtSurname.Text,txtPhone.Text,txtEmail.Text,txtID.Text,txtPassNum.Text,txtAddress.Text , Convert.ToInt32(strLpoints.Value) ); 
+
+                DialogResult msgDelete = MessageBox.Show("Are you sure you want to edit this guest ?\n\n"
+                    + "GuestID: " + gID + "\n"
+                   + "Name " + FName + " " + LName + "\n",
+                   "Confirm Edited Guest ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning
+                    );
+
+                if (msgDelete == DialogResult.Yes)
+                {
+                    //Get Guest ID to delte from tables
+                    gController.UpdateGuest(txtGid.Text, txtName.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtID.Text, txtPassNum.Text, txtAddress.Text, Convert.ToInt32(strLpoints.Value));
+
+
+
+                }
+
+                 
                 
             
             }
