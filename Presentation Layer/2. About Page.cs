@@ -58,5 +58,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
            
         }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

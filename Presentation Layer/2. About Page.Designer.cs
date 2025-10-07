@@ -192,6 +192,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(260, 43);
             this.btnUpdate.TabIndex = 25;
             this.btnUpdate.Text = "       Update booking";
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnReservation
             // 
