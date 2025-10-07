@@ -24,13 +24,7 @@ namespace Phumla_Kamnandi.Data_Layer
 
         //Update a reservation 
 
-        public bool UpdateReservation(
-    int reservationID,
-    int newNumberOfGuests,
-    DateTime newCheckIn,
-    DateTime newCheckOut,
-    List<int> newRoomIDs,
-    decimal newRoomRate)
+        public bool UpdateReservation(int reservationID,int newNumberOfGuests,DateTime newCheckIn,DateTime newCheckOut,List<int> newRoomIDs,decimal newRoomRate)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -39,7 +33,7 @@ namespace Phumla_Kamnandi.Data_Layer
 
                 try
                 {
-                    // 1️⃣ Update main reservation details
+                    //  Update main reservation details
                     string updateResQuery = @"
                 UPDATE Reservations
                 SET NumberOfGuests = @NumGuests,
@@ -56,7 +50,7 @@ namespace Phumla_Kamnandi.Data_Layer
                     cmdUpdateRes.Parameters.AddWithValue("@ResID", reservationID);
                     cmdUpdateRes.ExecuteNonQuery();
 
-                    // 2️⃣ Delete old room allocations
+                    //  Delete old room allocations
                     string deleteRoomsQuery = "DELETE FROM ReservationRooms WHERE ReservationID = @ResID";
                     SqlCommand cmdDelRooms = new SqlCommand(deleteRoomsQuery, connection, transaction);
                     cmdDelRooms.Parameters.AddWithValue("@ResID", reservationID);
@@ -67,7 +61,7 @@ namespace Phumla_Kamnandi.Data_Layer
                     cmdDelAlloc.Parameters.AddWithValue("@ResID", reservationID);
                     cmdDelAlloc.ExecuteNonQuery();
 
-                    // 3️⃣ Reinsert new rooms and allocations
+                    //  Reinsert new rooms and allocations
                     int remainingGuests = newNumberOfGuests;
                     for (int i = 0; i < newRoomIDs.Count; i++)
                     {
@@ -102,11 +96,11 @@ namespace Phumla_Kamnandi.Data_Layer
                         remainingGuests -= guestsInRoom;
                     }
 
-                    // 4️⃣ Recalculate total payment based on rooms and nights
+                    //  Recalculate total payment based on rooms and nights
                     decimal totalNights = (decimal)(newCheckOut - newCheckIn).TotalDays;
                     decimal totalPrice = totalNights * newRoomRate * newRoomIDs.Count;
 
-                    // 5️⃣ Update Accounts table to reflect new TotalAmount and correct Balance
+                    //  Update Accounts table to reflect new TotalAmount and correct Balance
                     string updateAccountQuery = @"
                 UPDATE Accounts
                 SET TotalAmount = @NewTotal,
@@ -132,6 +126,11 @@ namespace Phumla_Kamnandi.Data_Layer
                 }
             }
         }
+
+
+
+
+
         //Deletes ReservationID
         public bool DeleteReservation(string reservationID)
         {
@@ -276,6 +275,10 @@ namespace Phumla_Kamnandi.Data_Layer
                 return reservationID;
             }
         }
+
+        
+
+        
     }
 
 }

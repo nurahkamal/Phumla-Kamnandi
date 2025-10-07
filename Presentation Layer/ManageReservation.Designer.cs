@@ -50,17 +50,14 @@
             this.label3 = new System.Windows.Forms.Label();
             this.NumberOfRooms = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.NumberOfGuests = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.cmboPStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cmboBStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtpRDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnSEdits = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.lblPassNum = new System.Windows.Forms.Label();
             this.txtRID = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
@@ -72,6 +69,7 @@
             this.txtSearchRid = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.txtPStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReservationData)).BeginInit();
@@ -333,23 +331,21 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.txtPStatus);
             this.panel3.Controls.Add(this.label5);
             this.panel3.Controls.Add(this.lblPrice);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.NumberOfRooms);
             this.panel3.Controls.Add(this.NumberOfGuests);
-            this.panel3.Controls.Add(this.cmboPStatus);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.guna2HtmlLabel2);
-            this.panel3.Controls.Add(this.cmboBStatus);
             this.panel3.Controls.Add(this.dtpRDate);
             this.panel3.Controls.Add(this.dtpCheckOut);
             this.panel3.Controls.Add(this.dtpCheckIn);
             this.panel3.Controls.Add(this.btnSEdits);
             this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Controls.Add(this.btnEdit);
-            this.panel3.Controls.Add(this.lblPassNum);
             this.panel3.Controls.Add(this.txtRID);
             this.panel3.Controls.Add(this.lblID);
             this.panel3.Controls.Add(this.lblPhone);
@@ -466,32 +462,12 @@
             0,
             0});
             // 
-            // cmboPStatus
-            // 
-            this.cmboPStatus.AutoRoundedCorners = true;
-            this.cmboPStatus.BackColor = System.Drawing.Color.Transparent;
-            this.cmboPStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmboPStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmboPStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmboPStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmboPStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmboPStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmboPStatus.ItemHeight = 30;
-            this.cmboPStatus.Items.AddRange(new object[] {
-            "Outstanding",
-            "Deposit",
-            "Paid"});
-            this.cmboPStatus.Location = new System.Drawing.Point(199, 212);
-            this.cmboPStatus.Name = "cmboPStatus";
-            this.cmboPStatus.Size = new System.Drawing.Size(278, 36);
-            this.cmboPStatus.TabIndex = 40;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(22, 223);
+            this.label2.Location = new System.Drawing.Point(15, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(170, 30);
             this.label2.TabIndex = 39;
@@ -509,26 +485,6 @@
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Edit Reservation Details";
             // 
-            // cmboBStatus
-            // 
-            this.cmboBStatus.AutoRoundedCorners = true;
-            this.cmboBStatus.BackColor = System.Drawing.Color.Transparent;
-            this.cmboBStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmboBStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmboBStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmboBStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmboBStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmboBStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmboBStatus.ItemHeight = 30;
-            this.cmboBStatus.Items.AddRange(new object[] {
-            "Confirmed",
-            "Cancelled",
-            "Pedning"});
-            this.cmboBStatus.Location = new System.Drawing.Point(199, 145);
-            this.cmboBStatus.Name = "cmboBStatus";
-            this.cmboBStatus.Size = new System.Drawing.Size(278, 36);
-            this.cmboBStatus.TabIndex = 38;
-            // 
             // dtpRDate
             // 
             this.dtpRDate.AutoRoundedCorners = true;
@@ -538,7 +494,7 @@
             this.dtpRDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpRDate.ForeColor = System.Drawing.Color.Black;
             this.dtpRDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpRDate.Location = new System.Drawing.Point(199, 284);
+            this.dtpRDate.Location = new System.Drawing.Point(209, 269);
             this.dtpRDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpRDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpRDate.Name = "dtpRDate";
@@ -634,19 +590,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(162, 39);
             this.btnEdit.TabIndex = 21;
-            this.btnEdit.Text = " ";
-            // 
-            // lblPassNum
-            // 
-            this.lblPassNum.AutoSize = true;
-            this.lblPassNum.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPassNum.Location = new System.Drawing.Point(22, 156);
-            this.lblPassNum.Name = "lblPassNum";
-            this.lblPassNum.Size = new System.Drawing.Size(167, 30);
-            this.lblPassNum.TabIndex = 26;
-            this.lblPassNum.Text = "Booking Status:";
-            this.lblPassNum.Click += new System.EventHandler(this.lblPassNum_Click);
+            this.btnEdit.Text = " Edit";
             // 
             // txtRID
             // 
@@ -686,7 +630,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPhone.Location = new System.Drawing.Point(22, 290);
+            this.lblPhone.Location = new System.Drawing.Point(15, 269);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(188, 30);
             this.lblPhone.TabIndex = 22;
@@ -728,7 +672,7 @@
             this.txtGid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGid.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGid.Location = new System.Drawing.Point(199, 78);
+            this.txtGid.Location = new System.Drawing.Point(199, 87);
             this.txtGid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGid.Name = "txtGid";
             this.txtGid.PlaceholderText = "";
@@ -741,7 +685,7 @@
             this.lblGuestID.AutoSize = true;
             this.lblGuestID.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGuestID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblGuestID.Location = new System.Drawing.Point(22, 89);
+            this.lblGuestID.Location = new System.Drawing.Point(33, 87);
             this.lblGuestID.Name = "lblGuestID";
             this.lblGuestID.Size = new System.Drawing.Size(103, 30);
             this.lblGuestID.TabIndex = 17;
@@ -815,6 +759,27 @@
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Edit Reservation Details";
             // 
+            // txtPStatus
+            // 
+            this.txtPStatus.AutoRoundedCorners = true;
+            this.txtPStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPStatus.DefaultText = "";
+            this.txtPStatus.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPStatus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPStatus.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPStatus.Enabled = false;
+            this.txtPStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPStatus.Location = new System.Drawing.Point(199, 175);
+            this.txtPStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPStatus.Name = "txtPStatus";
+            this.txtPStatus.PlaceholderText = "";
+            this.txtPStatus.SelectedText = "";
+            this.txtPStatus.Size = new System.Drawing.Size(278, 36);
+            this.txtPStatus.TabIndex = 47;
+            // 
             // ManageReservation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -861,16 +826,13 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2NumericUpDown NumberOfRooms;
         private Guna.UI2.WinForms.Guna2NumericUpDown NumberOfGuests;
-        private Guna.UI2.WinForms.Guna2ComboBox cmboPStatus;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ComboBox cmboBStatus;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpRDate;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckOut;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckIn;
         private Guna.UI2.WinForms.Guna2Button btnSEdits;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnEdit;
-        private System.Windows.Forms.Label lblPassNum;
         private Guna.UI2.WinForms.Guna2TextBox txtRID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblPhone;
@@ -888,5 +850,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label lblPrice;
+        private Guna.UI2.WinForms.Guna2TextBox txtPStatus;
     }
 }

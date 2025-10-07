@@ -213,18 +213,20 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
                 txtRID.Text = SelectedR.Cells["ReservationID"].Value.ToString();
                 txtGid.Text = SelectedR.Cells["GuestID"].Value.ToString();
+                txtPStatus.Text= SelectedR.Cells["PaymentStatus"].Value.ToString();
                 dtpRDate.Value = Convert.ToDateTime(SelectedR.Cells["ReservationDate"].Value);
                 dtpCheckIn.Value = Convert.ToDateTime(SelectedR.Cells["CheckInDate"].Value);
                 dtpCheckOut.Value = Convert.ToDateTime(SelectedR.Cells["CheckOutDate"].Value);
                 NumberOfGuests.Value = Convert.ToDecimal(SelectedR.Cells["NumberOfGuests"].Value);
 
-                string Bstatus = SelectedR.Cells["BookingStatus"].Value.ToString();
-                cmboBStatus.SelectedItem = cmboBStatus.Items.Contains(Bstatus) ? Bstatus : null;
+                
+                int reservationID = Convert.ToInt32(SelectedR.Cells["ReservationID"].Value);
+                
+               
 
-                string Pstatus = SelectedR.Cells["PaymentStatus"].Value.ToString();
-                cmboPStatus.SelectedItem = cmboPStatus.Items.Contains(Pstatus) ? Pstatus : null;
 
-                int reservationID = Convert.ToInt32(SelectedR.Cells["ReservationID"].Value); // declare reservationID
+
+                
                 decimal totalPayment = 0; // declare totalPayment
 
                 //Shows Total Amount from Account Tables

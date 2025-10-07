@@ -3,7 +3,7 @@ FROM sys.check_constraints
 WHERE parent_object_id = OBJECT_ID('Reservations'); --use whatever constarint you get in the next query(for booking status)
 
 ALTER TABLE Reservations  --Run 2nd
-DROP CONSTRAINT CK__Reservati__Booki__4222D4EF; --replace this contraint with the the actual name from above
+DROP CONSTRAINT CK__Reservati__Booki__300424B4; --replace this contraint with the the actual name from above
 
 
 ALTER TABLE Reservations--Run 3rd
@@ -14,7 +14,7 @@ FROM sys.check_constraints
 WHERE parent_object_id = OBJECT_ID('Reservations'); --use whatever constarint you get in the next query(for payment status)
 
 ALTER TABLE Reservations --Run 5th
-DROP CONSTRAINT CK__Reservati__Payme__4316F928;  --replace this contraint with the the actual name from above
+DROP CONSTRAINT CK__Reservati__Payme__30F848ED;  --replace this contraint with the the actual name from above
 
 UPDATE Reservations -- Run 6th
 SET PaymentStatus = 'Deposit Paid'
