@@ -85,17 +85,51 @@ namespace Phumla_Kamnandi.Presentation_Layer
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
-        {
-            string searchRID = txtSearchRid.Text;
 
+
+        {
+            //Makes sure field isnt blank
+            if (string.IsNullOrWhiteSpace(txtSearchRid.Text))
+            {
+                MessageBox.Show("Please enter a Reservation ID.", "Missing Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            int searchRID; 
+            try
+            {
+                
+                searchRID = Convert.ToInt32(txtSearchRid.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Reservation ID must be a number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSearchRid.Clear();
+                return;
+            }
+
+            bool found = false;
+
+            //  Search the DataGridView
             foreach (DataGridViewRow gRow in ReservationData.Rows)
             {
-                if (gRow.Cells["ReservationID"].Value != null && gRow.Cells["ReservationID"].Value.ToString() == searchRID)
+                if (gRow.Cells["ReservationID"].Value != null &&
+                    Convert.ToInt32(gRow.Cells["ReservationID"].Value) == searchRID)
                 {
-                    ReservationData.FirstDisplayedScrollingRowIndex = gRow.Index;
+                    ReservationData.ClearSelection();
                     gRow.Selected = true;
+                    ReservationData.FirstDisplayedScrollingRowIndex = gRow.Index;
+                    found = true;
                     break;
                 }
+            }
+
+            // If RID doesnt match  DataGrid
+            if (!found)
+            {
+                ReservationData.ClearSelection();
+                MessageBox.Show($"No reservation found with ID {searchRID}.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
