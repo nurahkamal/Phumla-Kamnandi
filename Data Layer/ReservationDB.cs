@@ -216,8 +216,8 @@ namespace Phumla_Kamnandi.Data_Layer
 
                 // Insert reservation details into Reservations table
                 string resQuery = @"INSERT INTO Reservations 
-                    (GuestID, NumberOfGuests, CheckInDate, CheckOutDate, ReservationDate, BookingStatus, PaymentStatus)
-                    VALUES (@GuestID, @NumberOfGuests, @CheckIn, @CheckOut, @ReservationDate, 'Confirmed', 'Paid');
+                    (GuestID, NumberOfGuests, CheckInDate, CheckOutDate,ReservationDate, PaymentStatus)
+                    VALUES (@GuestID, @NumberOfGuests, @CheckIn, @CheckOut, @ReservationDate, 'Deposit Paid');
                     SELECT SCOPE_IDENTITY();";
 
                 SqlCommand cmdRes = new SqlCommand(resQuery, connection);

@@ -73,20 +73,21 @@ namespace Phumla_Kamnandi.Data_Layer
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                conn.Open(); // Open database connection
+                conn.Open();// Open database connection
 
-                // Retrieve the guest's loyalty points
+                //Retrieve the guest's loyalty points
                 string loyaltyQuery = "SELECT LoyaltyPoints FROM Guests WHERE GuestID = @GuestID";
                 SqlCommand cmdLoyalty = new SqlCommand(loyaltyQuery, conn);
                 cmdLoyalty.Parameters.AddWithValue("@GuestID", reservation.GuestID);
                 object result = cmdLoyalty.ExecuteScalar();
                 int loyaltyPoints = (result != DBNull.Value) ? Convert.ToInt32(result) : 0;
 
-                // Apply discount if loyalty points >= 5
+                //Apply discount if loyalty points >= 5
                 if (loyaltyPoints >= 5)
                 {
-                    decimal discount = 100; //R100 discount
+                    decimal discount = 100; // R100
                     payment.TotalAmount = payment.TotalAmount - discount;
+                    payment.Balance = 0;
 
                     // Reset loyalty points to 0
                     string resetQuery = "UPDATE Guests SET LoyaltyPoints = 0 WHERE GuestID = @GuestID";
@@ -100,35 +101,44 @@ namespace Phumla_Kamnandi.Data_Layer
                               VALUES (@ReservationID, @Status, @TotalAmount, @Balance);
                               SELECT SCOPE_IDENTITY();";
 
-                int newAccountId;
+                int accountID;
                 using (SqlCommand cmdAcc = new SqlCommand(accountSql, conn))
                 {
                     cmdAcc.Parameters.AddWithValue("@ReservationID", reservation.ReservationID);
                     cmdAcc.Parameters.AddWithValue("@Status", payment.Status);
                     cmdAcc.Parameters.AddWithValue("@TotalAmount", payment.TotalAmount);
-                    cmdAcc.Parameters.AddWithValue("@Balance", payment.TotalAmount);
+                    cmdAcc.Parameters.AddWithValue("@Balance", 0);
 
-                    newAccountId = Convert.ToInt32(cmdAcc.ExecuteScalar());
+                    accountID = Convert.ToInt32(cmdAcc.ExecuteScalar()); // get generated AccountID
                 }
 
-                // Update reservation's payment status to "Outstanding"
+                // Insert into Payments
+                string paymentSql = @"INSERT INTO Payments (AccountID, PaymentDate, PaymentType, AmountPaid) 
+                              VALUES (@AccountID, @PaymentDate, @PaymentType, @AmountPaid)";
+                using (SqlCommand cmd = new SqlCommand(paymentSql, conn)) // Creates a SQL command to execute the payment query using the current connection.
+                {
+                    cmd.Parameters.AddWithValue("@AccountID", accountID);
+                    cmd.Parameters.AddWithValue("@PaymentDate", payment.PaymentDate);
+                    cmd.Parameters.AddWithValue("@PaymentType", payment.PaymentType);
+                    cmd.Parameters.AddWithValue("@AmountPaid", payment.TotalAmount);
+
+                    cmd.ExecuteNonQuery();
+                }
+
+                // Update reservation's payment status to "Paid in Full"
                 string updateReservationSql = @"UPDATE Reservations
                                                 SET PaymentStatus = @PaymentStatus
                                                 WHERE ReservationID = @ReservationID";
 
                 using (SqlCommand cmdUpdate = new SqlCommand(updateReservationSql, conn))
                 {
-                    cmdUpdate.Parameters.AddWithValue("@PaymentStatus", "Outstanding"); 
+                    cmdUpdate.Parameters.AddWithValue("@PaymentStatus", "Paid in Full");
                     cmdUpdate.Parameters.AddWithValue("@ReservationID", reservation.ReservationID);
 
                     cmdUpdate.ExecuteNonQuery();
                 }
-
-
-
-
-
             }
+
 
 
         }
