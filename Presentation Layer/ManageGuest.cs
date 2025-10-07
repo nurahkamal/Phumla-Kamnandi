@@ -136,13 +136,13 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 string LName = selectedRow.Cells["LastName"].Value.ToString();
                 string gid = GuestData.CurrentRow.Cells["GuestID"].Value.ToString();
 
-                DialogResult msgDelete = MessageBox.Show("Are you sure you want to edit this guest ?\n\n"
+                DialogResult msgUpdate = MessageBox.Show("Are you sure you want to edit this guest ?\n\n"
                     + "GuestID: " + gID + "\n"
                    + "Name " + FName + " " + LName + "\n",
                    "Confirm Edited Guest ", MessageBoxButtons.YesNo, MessageBoxIcon.Warning
                     );
 
-                if (msgDelete == DialogResult.Yes)
+                if (msgUpdate == DialogResult.Yes)
                 {
                     //Get Guest ID to delte from tables
                     gController.UpdateGuest(txtGid.Text, txtName.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtID.Text, txtPassNum.Text, txtAddress.Text, Convert.ToInt32(strLpoints.Value));
@@ -159,24 +159,53 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            string searchID = txtSearch.Text;
 
+            //Makes sure field isnt blank
+            if (string.IsNullOrWhiteSpace(txtSearch.Text))
+            {
+                MessageBox.Show("Please enter a Guest ID.", "Missing Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            int searchID;
+            try
+            {
+
+                searchID = Convert.ToInt32(txtSearch.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Guest ID must be a number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSearch.Clear();
+                return;
+            }
+
+            bool found = false;
+
+            //  Search the DataGridView
             foreach (DataGridViewRow gRow in GuestData.Rows)
             {
-                
-
-                if (gRow.Cells["GuestID"].Value != null && gRow.Cells["GuestID"].Value.ToString() == searchID)
+                if (gRow.Cells["GuestID"].Value != null &&
+                    Convert.ToInt32(gRow.Cells["GuestID"].Value) == searchID)
                 {
-                    // Scroll the DataGridView so this row is visible
+                    GuestData.ClearSelection();
+                    gRow.Selected = true;
                     GuestData.FirstDisplayedScrollingRowIndex = gRow.Index;
-
-                    
-
-                    
+                    found = true;
+                    break;
                 }
             }
 
+            // If RID doesnt match  DataGrid
+            if (!found)
+            {
+                GuestData.ClearSelection();
+                MessageBox.Show($"No Guest found with ID {searchID}.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
+        
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
@@ -186,6 +215,19 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void btnExit_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            Login_Form login = new Login_Form();
+            login.Show();
+        }
+
+        private void guna2Button10_Click(object sender, EventArgs e)
+        {
+            ManageEdits manageEdits = new ManageEdits();
+            manageEdits.Show();
+            this.Hide();
         }
     }
 }
