@@ -42,13 +42,7 @@ namespace Phumla_Kamnandi.Business_Layer
 
         //Update a Reservation 
 
-        public bool UpdateReservation(
-           int reservationID,
-           int newNumberOfGuests,
-           DateTime newCheckIn,
-           DateTime newCheckOut,
-           List<int> newRoomIDs,
-           decimal newRoomRate)
+        public bool UpdateReservation( int reservationID, int newNumberOfGuests, DateTime newCheckIn, DateTime newCheckOut, List<int> newRoomIDs, decimal newRoomRate)
         {
             // Forward the call to your ReservationDB method
             return reservationDB.UpdateReservation(
@@ -81,7 +75,11 @@ namespace Phumla_Kamnandi.Business_Layer
             return reservationID;
         }
 
-       
+        //Calls Room Count 
+        public int GetRoomCount(int reservationID)
+        {
+            return reservationDB.GetRoomCount(reservationID);
+        }
 
 
         #endregion

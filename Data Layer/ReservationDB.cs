@@ -39,7 +39,8 @@ namespace Phumla_Kamnandi.Data_Layer
                 SET NumberOfGuests = @NumGuests,
                     CheckInDate = @CheckIn,
                     CheckOutDate = @CheckOut,
-                    ReservationDate = @UpdateDate
+                    ReservationDate = @UpdateDate,
+                    PaymentStatus = 'Pending'
                 WHERE ReservationID = @ResID";
 
                     SqlCommand cmdUpdateRes = new SqlCommand(updateResQuery, connection, transaction);
@@ -126,9 +127,6 @@ namespace Phumla_Kamnandi.Data_Layer
                 }
             }
         }
-
-
-
 
 
         //Deletes ReservationID
@@ -276,9 +274,22 @@ namespace Phumla_Kamnandi.Data_Layer
             }
         }
 
-        
+        //Count Number of rooms in a reservation 
+        public int GetRoomCount(int reservationID)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(
+                "SELECT COUNT(*) FROM ReservationRooms WHERE ReservationID = @ResID", conn))
+            {
+                cmd.Parameters.AddWithValue("@ResID", reservationID);
+                conn.Open();
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
 
-        
+
+
+
     }
 
 }

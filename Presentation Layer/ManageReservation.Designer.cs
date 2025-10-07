@@ -44,8 +44,7 @@
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.ReservationData = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
+            this.txtPStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.NumberOfRooms = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -69,7 +68,6 @@
             this.txtSearchRid = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtPStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReservationData)).BeginInit();
@@ -332,8 +330,6 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.Controls.Add(this.txtPStatus);
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.lblPrice);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.NumberOfRooms);
@@ -359,28 +355,26 @@
             this.panel3.TabIndex = 30;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // label5
+            // txtPStatus
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(837, 279);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 30);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "Check Out Date:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPrice.Location = new System.Drawing.Point(603, 279);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(121, 30);
-            this.lblPrice.TabIndex = 45;
-            this.lblPrice.Text = "Total Price:";
+            this.txtPStatus.AutoRoundedCorners = true;
+            this.txtPStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPStatus.DefaultText = "";
+            this.txtPStatus.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPStatus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPStatus.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPStatus.Enabled = false;
+            this.txtPStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPStatus.Location = new System.Drawing.Point(199, 175);
+            this.txtPStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPStatus.Name = "txtPStatus";
+            this.txtPStatus.PlaceholderText = "";
+            this.txtPStatus.SelectedText = "";
+            this.txtPStatus.Size = new System.Drawing.Size(278, 36);
+            this.txtPStatus.TabIndex = 47;
             // 
             // label4
             // 
@@ -410,6 +404,7 @@
             this.NumberOfRooms.BackColor = System.Drawing.Color.Transparent;
             this.NumberOfRooms.BorderRadius = 18;
             this.NumberOfRooms.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NumberOfRooms.Enabled = false;
             this.NumberOfRooms.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.NumberOfRooms.Location = new System.Drawing.Point(833, 78);
             this.NumberOfRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -439,6 +434,7 @@
             this.NumberOfGuests.BackColor = System.Drawing.Color.Transparent;
             this.NumberOfGuests.BorderRadius = 18;
             this.NumberOfGuests.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NumberOfGuests.Enabled = false;
             this.NumberOfGuests.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.NumberOfGuests.Location = new System.Drawing.Point(833, 11);
             this.NumberOfGuests.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -490,6 +486,7 @@
             this.dtpRDate.AutoRoundedCorners = true;
             this.dtpRDate.BackColor = System.Drawing.Color.Transparent;
             this.dtpRDate.Checked = true;
+            this.dtpRDate.Enabled = false;
             this.dtpRDate.FillColor = System.Drawing.Color.Wheat;
             this.dtpRDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpRDate.ForeColor = System.Drawing.Color.Black;
@@ -507,6 +504,7 @@
             this.dtpCheckOut.AutoRoundedCorners = true;
             this.dtpCheckOut.BackColor = System.Drawing.Color.Transparent;
             this.dtpCheckOut.Checked = true;
+            this.dtpCheckOut.Enabled = false;
             this.dtpCheckOut.FillColor = System.Drawing.Color.Wheat;
             this.dtpCheckOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -524,6 +522,7 @@
             this.dtpCheckIn.AutoRoundedCorners = true;
             this.dtpCheckIn.BackColor = System.Drawing.Color.Transparent;
             this.dtpCheckIn.Checked = true;
+            this.dtpCheckIn.Enabled = false;
             this.dtpCheckIn.FillColor = System.Drawing.Color.Wheat;
             this.dtpCheckIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCheckIn.ForeColor = System.Drawing.Color.Black;
@@ -591,6 +590,7 @@
             this.btnEdit.Size = new System.Drawing.Size(162, 39);
             this.btnEdit.TabIndex = 21;
             this.btnEdit.Text = " Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtRID
             // 
@@ -759,27 +759,6 @@
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Edit Reservation Details";
             // 
-            // txtPStatus
-            // 
-            this.txtPStatus.AutoRoundedCorners = true;
-            this.txtPStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPStatus.DefaultText = "";
-            this.txtPStatus.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPStatus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPStatus.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPStatus.Enabled = false;
-            this.txtPStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPStatus.Location = new System.Drawing.Point(199, 175);
-            this.txtPStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPStatus.Name = "txtPStatus";
-            this.txtPStatus.PlaceholderText = "";
-            this.txtPStatus.SelectedText = "";
-            this.txtPStatus.Size = new System.Drawing.Size(278, 36);
-            this.txtPStatus.TabIndex = 47;
-            // 
             // ManageReservation
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -848,8 +827,6 @@
         private Guna.UI2.WinForms.Guna2Button btnReportIssue;
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblPrice;
         private Guna.UI2.WinForms.Guna2TextBox txtPStatus;
     }
 }

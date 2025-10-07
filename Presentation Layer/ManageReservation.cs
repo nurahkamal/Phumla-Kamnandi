@@ -74,7 +74,15 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 bool success = rController.UpdateReservation(reservationID, newGuests, newCheckIn, newCheckOut, roomIDs, roomRate);
 
                 if (success)
+                {
                     MessageBox.Show("Reservation updated successfully!");
+
+
+                    NumberOfGuests.Enabled = true;
+                    NumberOfRooms.Enabled = true;
+                    dtpCheckIn.Enabled = true;
+                    dtpCheckOut.Enabled = true;
+                }
                 else
                     MessageBox.Show("Failed to update reservation.");
             }
@@ -155,6 +163,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 {
                     rController.DeleteReservation(rID);
                     MessageBox.Show("Guest Deleted Successfully", "Delete Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
             }
         }
@@ -218,15 +227,16 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 dtpCheckIn.Value = Convert.ToDateTime(SelectedR.Cells["CheckInDate"].Value);
                 dtpCheckOut.Value = Convert.ToDateTime(SelectedR.Cells["CheckOutDate"].Value);
                 NumberOfGuests.Value = Convert.ToDecimal(SelectedR.Cells["NumberOfGuests"].Value);
-
-                
-                int reservationID = Convert.ToInt32(SelectedR.Cells["ReservationID"].Value);
-                
                
 
 
+                int reservationID = Convert.ToInt32(SelectedR.Cells["ReservationID"].Value);
+                NumberOfRooms.Value = rController.GetRoomCount(reservationID);
 
-                
+
+
+
+
                 decimal totalPayment = 0; // declare totalPayment
 
                 //Shows Total Amount from Account Tables
@@ -250,6 +260,14 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void label5_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            NumberOfGuests.Enabled = true;
+            NumberOfRooms.Enabled = true;
+            dtpCheckIn.Enabled = true;
+            dtpCheckOut.Enabled = true;
         }
     }
 }
