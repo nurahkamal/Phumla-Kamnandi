@@ -77,7 +77,17 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
-           
+            /// password is succesful takes you to the about page
+            if (username.Equals("admin", StringComparison.OrdinalIgnoreCase) && password == "admin")
+            {
+                this.Hide();
+                About_Page aboutPage = new About_Page();
+                aboutPage.Show();
+            }
+            else
+            {
+                MessageBox.Show($"Invalid username or password. Attempt {loginAttempts} of {MaxLoginAttempts}.");
+            }
         }
 
 
