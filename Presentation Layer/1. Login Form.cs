@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Phumla_Kamnandi.Presentation_Layer
@@ -17,13 +11,17 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private const int MaxLoginAttempts = 3;
         #endregion
 
+        // CONN STRING
+        private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True;";
+
+
         public Login_Form()
         {
             InitializeComponent();
             txtPassword.UseSystemPasswordChar = true;
         }
 
-        #region  Exit and LoginButtons
+        #region Exit and Login Buttons
 
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -32,18 +30,18 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-           
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-           ///Validation 1 : when the username is empty
+            //  Empty username
             if (string.IsNullOrWhiteSpace(username))
             {
                 MessageBox.Show("Please enter your username.");
                 txtUsername.Focus();
                 return;
             }
-            ///validation 2 : when the password is empty
+
+            //  no password
             if (string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please enter your password.");
@@ -51,7 +49,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
-           ///validation 3 : when there is spaces in the username
+            // spaces
             if (username.Contains(" "))
             {
                 MessageBox.Show("Username cannot contain spaces.");
@@ -59,8 +57,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
-            //validation 4 : when ther password is less than 4 characters
-            
+            // length
             if (password.Length < 4)
             {
                 MessageBox.Show("Password must be at least 4 characters long.");
@@ -68,7 +65,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
-            //validation 5:when teh user  has exceeded the login attempts
+            // attemmpts
             loginAttempts++;
             if (loginAttempts > MaxLoginAttempts)
             {
@@ -77,37 +74,57 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
-            /// password is succesful takes you to the about page
-            if (username.Equals("admin", StringComparison.OrdinalIgnoreCase) && password == "admin")
+            // DB
+            try
             {
-                this.Hide();
-                About_Page aboutPage = new About_Page();
-                aboutPage.Show();
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT * FROM Users WHERE Username = @username AND PasswordHash = @password AND IsActive = 1";
+                    using (SqlCommand cmd = new SqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@username", username);
+                        cmd.Parameters.AddWithValue("@password", password);
+
+                        SqlDataReader reader = cmd.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                           
+                            MessageBox.Show($"Welcome {username}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            this.Hide();
+                            About_Page aboutPage = new About_Page();
+                            aboutPage.Show();
+                        }
+                        else
+                        {
+                            MessageBox.Show($"Invalid username or password. Attempt {loginAttempts} of {MaxLoginAttempts}.");
+                        }
+                    }
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show($"Invalid username or password. Attempt {loginAttempts} of {MaxLoginAttempts}.");
+                MessageBox.Show("Error connecting to database: " + ex.Message);
             }
         }
 
-
-
-
         #endregion
-        #region Forgot Password Button
+
+        #region Forgot Password
         private void btnForgotPassword_Click(object sender, EventArgs e)
         {
             MessageBox.Show(
-        "Please contact the system administrator or IT support to reset your password.",
-        "Forgot Password",
-        MessageBoxButtons.OK,
-        MessageBoxIcon.Information );
+                "Please contact the system administrator or IT support to reset your password.",
+                "Forgot Password",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information);
         }
         #endregion
 
         private void Login_Form_Load(object sender, EventArgs e)
         {
-
+            txtUsername.Focus();
         }
     }
 }
