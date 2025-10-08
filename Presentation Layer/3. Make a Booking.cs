@@ -139,7 +139,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 lblRP2.Show();
                 txtRoomPrice.Text = roomRate.ToString("F2");
 
-                btnConfirm.Show(); //
+                btnConfirm.Show();
 
             }
         }
