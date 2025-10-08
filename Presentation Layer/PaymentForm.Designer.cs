@@ -48,20 +48,23 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.btnFullAmount = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlCard = new System.Windows.Forms.Panel();
+            this.rdbFullAmount = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label4 = new System.Windows.Forms.Label();
             this.txtPayableAmt = new Guna.UI2.WinForms.Guna2TextBox();
+            this.rdbDeposit = new Guna.UI2.WinForms.Guna2RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtCVV = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtCardNumber = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnDeposit = new Guna.UI2.WinForms.Guna2Button();
-            this.rdbDeposit = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.rdbFullAmount = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnlCard.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -230,6 +233,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pnlCard);
             this.panel1.Controls.Add(this.btnDeposit);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(221, 146);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1033, 683);
@@ -317,26 +321,45 @@ namespace Phumla_Kamnandi.Presentation_Layer
             // pnlCard
             // 
             this.pnlCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pnlCard.Controls.Add(this.rdbFullAmount);
             this.pnlCard.Controls.Add(this.label4);
             this.pnlCard.Controls.Add(this.txtPayableAmt);
-            this.pnlCard.Controls.Add(this.rdbDeposit);
             this.pnlCard.Controls.Add(this.label5);
             this.pnlCard.Controls.Add(this.label3);
             this.pnlCard.Controls.Add(this.label6);
             this.pnlCard.Controls.Add(this.txtCVV);
             this.pnlCard.Controls.Add(this.txtCardNumber);
-            this.pnlCard.Location = new System.Drawing.Point(309, 391);
+            this.pnlCard.Location = new System.Drawing.Point(566, 389);
             this.pnlCard.Name = "pnlCard";
-            this.pnlCard.Size = new System.Drawing.Size(685, 207);
+            this.pnlCard.Size = new System.Drawing.Size(428, 207);
             this.pnlCard.TabIndex = 17;
+            // 
+            // rdbFullAmount
+            // 
+            this.rdbFullAmount.AutoSize = true;
+            this.rdbFullAmount.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbFullAmount.CheckedState.BorderThickness = 0;
+            this.rdbFullAmount.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbFullAmount.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbFullAmount.CheckedState.InnerOffset = -4;
+            this.rdbFullAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.rdbFullAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.rdbFullAmount.Location = new System.Drawing.Point(19, 108);
+            this.rdbFullAmount.Name = "rdbFullAmount";
+            this.rdbFullAmount.Size = new System.Drawing.Size(189, 32);
+            this.rdbFullAmount.TabIndex = 37;
+            this.rdbFullAmount.Text = "Pay Full Amount";
+            this.rdbFullAmount.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbFullAmount.UncheckedState.BorderThickness = 2;
+            this.rdbFullAmount.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbFullAmount.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbFullAmount.CheckedChanged += new System.EventHandler(this.rdbFullAmount_CheckedChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.label4.Location = new System.Drawing.Point(6, 11);
+            this.label4.Location = new System.Drawing.Point(13, 6);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(184, 31);
             this.label4.TabIndex = 34;
@@ -354,7 +377,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.txtPayableAmt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPayableAmt.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPayableAmt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPayableAmt.Location = new System.Drawing.Point(455, 53);
+            this.txtPayableAmt.Location = new System.Drawing.Point(192, 53);
             this.txtPayableAmt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPayableAmt.Name = "txtPayableAmt";
             this.txtPayableAmt.PlaceholderText = "";
@@ -363,12 +386,33 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.txtPayableAmt.Size = new System.Drawing.Size(210, 40);
             this.txtPayableAmt.TabIndex = 15;
             // 
+            // rdbDeposit
+            // 
+            this.rdbDeposit.AutoSize = true;
+            this.rdbDeposit.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbDeposit.CheckedState.BorderThickness = 0;
+            this.rdbDeposit.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.rdbDeposit.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.rdbDeposit.CheckedState.InnerOffset = -4;
+            this.rdbDeposit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbDeposit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.rdbDeposit.Location = new System.Drawing.Point(19, 70);
+            this.rdbDeposit.Name = "rdbDeposit";
+            this.rdbDeposit.Size = new System.Drawing.Size(146, 32);
+            this.rdbDeposit.TabIndex = 36;
+            this.rdbDeposit.Text = "Pay Deposit";
+            this.rdbDeposit.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.rdbDeposit.UncheckedState.BorderThickness = 2;
+            this.rdbDeposit.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.rdbDeposit.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.rdbDeposit.CheckedChanged += new System.EventHandler(this.rdbDeposit_CheckedChanged);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label5.Location = new System.Drawing.Point(277, 103);
+            this.label5.Location = new System.Drawing.Point(14, 103);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(140, 28);
             this.label5.TabIndex = 10;
@@ -379,7 +423,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label3.Location = new System.Drawing.Point(277, 58);
+            this.label3.Location = new System.Drawing.Point(14, 58);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(163, 28);
             this.label3.TabIndex = 16;
@@ -390,7 +434,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label6.Location = new System.Drawing.Point(281, 148);
+            this.label6.Location = new System.Drawing.Point(18, 148);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 28);
             this.label6.TabIndex = 13;
@@ -408,7 +452,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.txtCVV.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCVV.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCVV.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCVV.Location = new System.Drawing.Point(455, 149);
+            this.txtCVV.Location = new System.Drawing.Point(192, 149);
             this.txtCVV.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCVV.Name = "txtCVV";
             this.txtCVV.PlaceholderText = "";
@@ -428,7 +472,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.txtCardNumber.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtCardNumber.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCardNumber.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtCardNumber.Location = new System.Drawing.Point(455, 101);
+            this.txtCardNumber.Location = new System.Drawing.Point(192, 101);
             this.txtCardNumber.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtCardNumber.Name = "txtCardNumber";
             this.txtCardNumber.PlaceholderText = "";
@@ -454,47 +498,27 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.btnDeposit.Text = "Confirm Deposit Payment";
             this.btnDeposit.Click += new System.EventHandler(this.btnPayment_Click);
             // 
-            // rdbDeposit
+            // panel3
             // 
-            this.rdbDeposit.AutoSize = true;
-            this.rdbDeposit.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdbDeposit.CheckedState.BorderThickness = 0;
-            this.rdbDeposit.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdbDeposit.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdbDeposit.CheckedState.InnerOffset = -4;
-            this.rdbDeposit.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbDeposit.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.rdbDeposit.Location = new System.Drawing.Point(27, 68);
-            this.rdbDeposit.Name = "rdbDeposit";
-            this.rdbDeposit.Size = new System.Drawing.Size(146, 32);
-            this.rdbDeposit.TabIndex = 36;
-            this.rdbDeposit.Text = "Pay Deposit";
-            this.rdbDeposit.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdbDeposit.UncheckedState.BorderThickness = 2;
-            this.rdbDeposit.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdbDeposit.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdbDeposit.CheckedChanged += new System.EventHandler(this.rdbDeposit_CheckedChanged);
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.rdbFullAmount);
+            this.panel3.Controls.Add(this.label7);
+            this.panel3.Controls.Add(this.rdbDeposit);
+            this.panel3.Location = new System.Drawing.Point(309, 389);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(236, 207);
+            this.panel3.TabIndex = 35;
             // 
-            // rdbFullAmount
+            // label7
             // 
-            this.rdbFullAmount.AutoSize = true;
-            this.rdbFullAmount.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdbFullAmount.CheckedState.BorderThickness = 0;
-            this.rdbFullAmount.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.rdbFullAmount.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.rdbFullAmount.CheckedState.InnerOffset = -4;
-            this.rdbFullAmount.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.rdbFullAmount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.rdbFullAmount.Location = new System.Drawing.Point(27, 109);
-            this.rdbFullAmount.Name = "rdbFullAmount";
-            this.rdbFullAmount.Size = new System.Drawing.Size(189, 32);
-            this.rdbFullAmount.TabIndex = 37;
-            this.rdbFullAmount.Text = "Pay Full Amount";
-            this.rdbFullAmount.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.rdbFullAmount.UncheckedState.BorderThickness = 2;
-            this.rdbFullAmount.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.rdbFullAmount.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.rdbFullAmount.CheckedChanged += new System.EventHandler(this.rdbFullAmount_CheckedChanged);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.label7.Location = new System.Drawing.Point(13, 6);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(178, 31);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Pick an Option:";
             // 
             // PaymentForm
             // 
@@ -516,6 +540,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.panel1.PerformLayout();
             this.pnlCard.ResumeLayout(false);
             this.pnlCard.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -549,5 +575,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2RadioButton rdbFullAmount;
         private Guna.UI2.WinForms.Guna2RadioButton rdbDeposit;
+        private Panel panel3;
+        private Label label7;
     }
 }

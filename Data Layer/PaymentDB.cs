@@ -67,6 +67,19 @@ namespace Phumla_Kamnandi.Data_Layer
 
                     cmd.ExecuteNonQuery();
                 }
+
+                // Update reservation's payment status to "Deposit Paid"
+                string updateReservationSql = @"UPDATE Reservations
+                                                SET PaymentStatus = @PaymentStatus
+                                                WHERE ReservationID = @ReservationID";
+
+                using (SqlCommand cmdUpdate = new SqlCommand(updateReservationSql, conn))
+                {
+                    cmdUpdate.Parameters.AddWithValue("@PaymentStatus", "Deposit Paid");
+                    cmdUpdate.Parameters.AddWithValue("@ReservationID", reservation.ReservationID);
+
+                    cmdUpdate.ExecuteNonQuery();
+                }
             }
         }
         public void AddAccount(Payment payment, Reservation reservation)

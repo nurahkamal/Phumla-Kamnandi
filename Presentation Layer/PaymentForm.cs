@@ -43,7 +43,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void PaymentForm_Load(object sender, EventArgs e)
         {
-           
+           pnlCard.Visible = false;
             // Calculate total and deposit
             int numberOfDays = (_reservation.CheckOutDate - _reservation.CheckInDate).Days;
             decimal totalAmount = _reservation.RoomRate * _reservation.NumberOfRooms * numberOfDays;
@@ -282,6 +282,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             if (rdbDeposit.Checked)
             {
+                pnlCard.Visible = true;
                 rdbFullAmount.Checked = false;   // Uncheck the other radio button
                 btnDeposit.Visible = true;         // Show button1
 
@@ -305,6 +306,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             if (rdbFullAmount.Checked)
             {
+                pnlCard.Visible = true;
                 rdbDeposit.Checked = false;   // Uncheck the other radio button
                 btnFullAmount.Visible = true;         // Show button1
 
