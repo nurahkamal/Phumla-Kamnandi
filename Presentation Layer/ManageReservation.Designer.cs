@@ -44,6 +44,8 @@
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.ReservationData = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.NumberOfRooms = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -331,6 +333,8 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.label5);
+            this.panel3.Controls.Add(this.lblPrice);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.NumberOfRooms);
@@ -358,6 +362,29 @@
             this.panel3.Size = new System.Drawing.Size(1188, 391);
             this.panel3.TabIndex = 30;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(837, 279);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(176, 30);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Check Out Date:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
+            // 
+            // lblPrice
+            // 
+            this.lblPrice.AutoSize = true;
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPrice.Location = new System.Drawing.Point(603, 279);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(121, 30);
+            this.lblPrice.TabIndex = 45;
+            this.lblPrice.Text = "Total Price:";
             // 
             // label4
             // 
@@ -511,7 +538,7 @@
             this.dtpRDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpRDate.ForeColor = System.Drawing.Color.Black;
             this.dtpRDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpRDate.Location = new System.Drawing.Point(199, 279);
+            this.dtpRDate.Location = new System.Drawing.Point(199, 284);
             this.dtpRDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpRDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpRDate.Name = "dtpRDate";
@@ -607,7 +634,7 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(162, 39);
             this.btnEdit.TabIndex = 21;
-            this.btnEdit.Text = "Edit";
+            this.btnEdit.Text = " ";
             // 
             // lblPassNum
             // 
@@ -859,5 +886,7 @@
         private Guna.UI2.WinForms.Guna2Button btnReportIssue;
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblPrice;
     }
 }

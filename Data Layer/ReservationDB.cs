@@ -22,44 +22,116 @@ namespace Phumla_Kamnandi.Data_Layer
             return dsMain.Tables[rtable];
         }
 
-        //Update Reservation
+        //Update a reservation 
 
-        public bool UpdateReservation(string rID, string guestID, DateTime rDate, DateTime InDate, DateTime OutDate, int gNum, string bStatus, string pStatus)
+        public bool UpdateReservation(
+    int reservationID,
+    int newNumberOfGuests,
+    DateTime newCheckIn,
+    DateTime newCheckOut,
+    List<int> newRoomIDs,
+    decimal newRoomRate)
         {
-            try
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                FillDataSet("SELECT * FROM dbo.Reservation", rtable);
-                DataRow[] rows = dsMain.Tables[rtable].Select($"ReservationID = {rID}");
-                if (rows.Length == 0)
+                connection.Open();
+                SqlTransaction transaction = connection.BeginTransaction();
+
+                try
                 {
-                    MessageBox.Show("ReservationID not found.");
+                    // 1️⃣ Update main reservation details
+                    string updateResQuery = @"
+                UPDATE Reservations
+                SET NumberOfGuests = @NumGuests,
+                    CheckInDate = @CheckIn,
+                    CheckOutDate = @CheckOut,
+                    ReservationDate = @UpdateDate
+                WHERE ReservationID = @ResID";
+
+                    SqlCommand cmdUpdateRes = new SqlCommand(updateResQuery, connection, transaction);
+                    cmdUpdateRes.Parameters.AddWithValue("@NumGuests", newNumberOfGuests);
+                    cmdUpdateRes.Parameters.AddWithValue("@CheckIn", newCheckIn);
+                    cmdUpdateRes.Parameters.AddWithValue("@CheckOut", newCheckOut);
+                    cmdUpdateRes.Parameters.AddWithValue("@UpdateDate", DateTime.Now);
+                    cmdUpdateRes.Parameters.AddWithValue("@ResID", reservationID);
+                    cmdUpdateRes.ExecuteNonQuery();
+
+                    // 2️⃣ Delete old room allocations
+                    string deleteRoomsQuery = "DELETE FROM ReservationRooms WHERE ReservationID = @ResID";
+                    SqlCommand cmdDelRooms = new SqlCommand(deleteRoomsQuery, connection, transaction);
+                    cmdDelRooms.Parameters.AddWithValue("@ResID", reservationID);
+                    cmdDelRooms.ExecuteNonQuery();
+
+                    string deleteAllocQuery = "DELETE FROM RoomAllocation WHERE ReservationID = @ResID";
+                    SqlCommand cmdDelAlloc = new SqlCommand(deleteAllocQuery, connection, transaction);
+                    cmdDelAlloc.Parameters.AddWithValue("@ResID", reservationID);
+                    cmdDelAlloc.ExecuteNonQuery();
+
+                    // 3️⃣ Reinsert new rooms and allocations
+                    int remainingGuests = newNumberOfGuests;
+                    for (int i = 0; i < newRoomIDs.Count; i++)
+                    {
+                        int roomsLeft = newRoomIDs.Count - i;
+                        int guestsInRoom = Math.Max(1, (int)Math.Ceiling((double)remainingGuests / roomsLeft));
+                        int roomID = newRoomIDs[i];
+
+                        // Insert into ReservationRooms
+                        string insertRoomQuery = @"
+                    INSERT INTO ReservationRooms (ReservationID, RoomID, RateApplied, DiscountApplied, NumberOfGuests)
+                    VALUES (@ResID, @RoomID, @Rate, 0, @GuestsInRoom)";
+                        SqlCommand cmdRoom = new SqlCommand(insertRoomQuery, connection, transaction);
+                        cmdRoom.Parameters.AddWithValue("@ResID", reservationID);
+                        cmdRoom.Parameters.AddWithValue("@RoomID", roomID);
+                        cmdRoom.Parameters.AddWithValue("@Rate", newRoomRate);
+                        cmdRoom.Parameters.AddWithValue("@GuestsInRoom", guestsInRoom);
+                        cmdRoom.ExecuteNonQuery();
+
+                        // Allocate room per day
+                        for (DateTime day = newCheckIn; day < newCheckOut; day = day.AddDays(1))
+                        {
+                            string allocQuery = @"
+                        INSERT INTO RoomAllocation (RoomID, DateAllocated, ReservationID)
+                        VALUES (@RoomID, @Date, @ResID)";
+                            SqlCommand cmdAlloc = new SqlCommand(allocQuery, connection, transaction);
+                            cmdAlloc.Parameters.AddWithValue("@RoomID", roomID);
+                            cmdAlloc.Parameters.AddWithValue("@Date", day);
+                            cmdAlloc.Parameters.AddWithValue("@ResID", reservationID);
+                            cmdAlloc.ExecuteNonQuery();
+                        }
+
+                        remainingGuests -= guestsInRoom;
+                    }
+
+                    // 4️⃣ Recalculate total payment based on rooms and nights
+                    decimal totalNights = (decimal)(newCheckOut - newCheckIn).TotalDays;
+                    decimal totalPrice = totalNights * newRoomRate * newRoomIDs.Count;
+
+                    // 5️⃣ Update Accounts table to reflect new TotalAmount and correct Balance
+                    string updateAccountQuery = @"
+                UPDATE Accounts
+                SET TotalAmount = @NewTotal,
+                    Balance = @NewTotal - ISNULL(
+                                  (SELECT SUM(AmountPaid)
+                                   FROM Payments
+                                   WHERE AccountID = Accounts.AccountID), 0)
+                WHERE ReservationID = @ResID";
+
+                    SqlCommand cmdAccount = new SqlCommand(updateAccountQuery, connection, transaction);
+                    cmdAccount.Parameters.AddWithValue("@NewTotal", totalPrice);
+                    cmdAccount.Parameters.AddWithValue("@ResID", reservationID);
+                    cmdAccount.ExecuteNonQuery();
+
+                    transaction.Commit();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    transaction.Rollback();
+                    Console.WriteLine("Error updating reservation: " + ex.Message);
                     return false;
                 }
-
-                DataRow row = rows[0];
-
-                // Step 3: Update the values in memory
-                row["CheckInDate"] = InDate;
-                row["CheckOutDate"] = OutDate;
-                row["NumberOfGuests"] = gNum;
-                
-                row["BookingStatus"] = bStatus;
-                row["PaymentStatus"] = pStatus;
-                
-
-                return UpdateDataSource("SELECT * FROM dbo.Guests", rtable);
             }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error updating guest: " + ex.Message,
-                                "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return false;
-            }
-
         }
-
-
         //Deletes ReservationID
         public bool DeleteReservation(string reservationID)
         {

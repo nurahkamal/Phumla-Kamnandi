@@ -41,17 +41,5 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
 
         }
-
-        private void guna2Button7_Click(object sender, EventArgs e)
-        {
-            ManageReservation manageReservation = new ManageReservation();
-            manageReservation.Show();
-            this.Hide();
-        }
-
-        private void guna2Button6_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

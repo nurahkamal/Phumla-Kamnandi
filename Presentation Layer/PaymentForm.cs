@@ -173,7 +173,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             paymentDB.AddAccount(payment, _reservation);
 
             // Optionally display confirmation
-            MessageBox.Show("Account successfully recorded!");
+            MessageBox.Show("Your booking has been saved. You can pay your deposit at a later stage.");
 
             btnPaymentNow.Hide();
 
@@ -186,6 +186,41 @@ namespace Phumla_Kamnandi.Presentation_Layer
             
 
 
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            Login_Form login = new Login_Form();
+            login.Show();
+            this.Hide();
+        }
+
+        private void btnReportIssue_Click(object sender, EventArgs e)
+        {
+            ReportIssue report = new ReportIssue(this); // pass "this" form
+            report.Show();
+            this.Hide();
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            About_Page about = new About_Page();
+            about.Show();
+            this.Hide();
+        }
+
+        private void guna2Button5_Click_1(object sender, EventArgs e)
+        {
+            ManageEdits manageEdits = new ManageEdits();
+            manageEdits.Show();
+            this.Hide();
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            MonthlySalesReport report = new MonthlySalesReport();
+            report.Show();
+            this.Hide();
         }
     }
 }
