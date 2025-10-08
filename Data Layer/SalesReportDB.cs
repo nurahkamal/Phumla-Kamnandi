@@ -12,7 +12,7 @@ namespace Phumla_Kamnandi.Data_Layer
     {
         private string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True;";
 
-        #region Chart 1: Expected Revenue from Reservations
+        #region Chart 1: Expected Revenue from Reservations - UPDATED
         public DataTable GetExpectedRevenueTrend(DateTime startDate, DateTime endDate)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -25,7 +25,7 @@ namespace Phumla_Kamnandi.Data_Layer
                     JOIN ReservationRooms rr ON ra.ReservationID = rr.ReservationID AND ra.RoomID = rr.RoomID
                     JOIN Reservations res ON ra.ReservationID = res.ReservationID
                     WHERE ra.DateAllocated BETWEEN @StartDate AND @EndDate
-                    AND res.BookingStatus = 'Confirmed'
+                    -- BookingStatus column removed - include all reservations
                     GROUP BY ra.DateAllocated
                     ORDER BY ra.DateAllocated";
 
@@ -40,7 +40,7 @@ namespace Phumla_Kamnandi.Data_Layer
         }
         #endregion
 
-        #region Chart 2: Seasonal Revenue from Reservations - DYNAMIC
+        #region Chart 2: Seasonal Revenue from Reservations - UPDATED
         public DataTable GetSeasonalRevenueData(DateTime startDate, DateTime endDate)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -51,24 +51,24 @@ namespace Phumla_Kamnandi.Data_Layer
                 DateTime midSeasonEnd = startDate.AddDays(totalDays * 2 / 3 - 1);
 
                 string query = @"
-            SELECT 
-                CASE 
-                    WHEN ra.DateAllocated BETWEEN @StartDate AND @LowSeasonEnd THEN 'Low Season'
-                    WHEN ra.DateAllocated BETWEEN DATEADD(DAY, 1, @LowSeasonEnd) AND @MidSeasonEnd THEN 'Mid Season'
-                    ELSE 'High Season'
-                END as SeasonPeriod,
-                SUM(rr.RateApplied) as Revenue
-            FROM RoomAllocation ra
-            JOIN ReservationRooms rr ON ra.ReservationID = rr.ReservationID AND ra.RoomID = rr.RoomID
-            JOIN Reservations res ON ra.ReservationID = res.ReservationID
-            WHERE ra.DateAllocated BETWEEN @StartDate AND @EndDate
-            AND res.BookingStatus = 'Confirmed'
-            GROUP BY 
-                CASE 
-                    WHEN ra.DateAllocated BETWEEN @StartDate AND @LowSeasonEnd THEN 'Low Season'
-                    WHEN ra.DateAllocated BETWEEN DATEADD(DAY, 1, @LowSeasonEnd) AND @MidSeasonEnd THEN 'Mid Season'
-                    ELSE 'High Season'
-                END";
+                    SELECT 
+                        CASE 
+                            WHEN ra.DateAllocated BETWEEN @StartDate AND @LowSeasonEnd THEN 'Low Season'
+                            WHEN ra.DateAllocated BETWEEN DATEADD(DAY, 1, @LowSeasonEnd) AND @MidSeasonEnd THEN 'Mid Season'
+                            ELSE 'High Season'
+                        END as SeasonPeriod,
+                        SUM(rr.RateApplied) as Revenue
+                    FROM RoomAllocation ra
+                    JOIN ReservationRooms rr ON ra.ReservationID = rr.ReservationID AND ra.RoomID = rr.RoomID
+                    JOIN Reservations res ON ra.ReservationID = res.ReservationID
+                    WHERE ra.DateAllocated BETWEEN @StartDate AND @EndDate
+                    -- BookingStatus column removed - include all reservations
+                    GROUP BY 
+                        CASE 
+                            WHEN ra.DateAllocated BETWEEN @StartDate AND @LowSeasonEnd THEN 'Low Season'
+                            WHEN ra.DateAllocated BETWEEN DATEADD(DAY, 1, @LowSeasonEnd) AND @MidSeasonEnd THEN 'Mid Season'
+                            ELSE 'High Season'
+                        END";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@StartDate", startDate);
@@ -100,7 +100,7 @@ namespace Phumla_Kamnandi.Data_Layer
         }
         #endregion
 
-        #region Chart 3: Daily Revenue (Column Chart)
+        #region Chart 3: Daily Revenue (Column Chart) - UPDATED
         public DataTable GetDailyRevenueData(DateTime startDate, DateTime endDate)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -113,7 +113,7 @@ namespace Phumla_Kamnandi.Data_Layer
                     JOIN ReservationRooms rr ON ra.ReservationID = rr.ReservationID AND ra.RoomID = rr.RoomID
                     JOIN Reservations res ON ra.ReservationID = res.ReservationID
                     WHERE ra.DateAllocated BETWEEN @StartDate AND @EndDate
-                    AND res.BookingStatus = 'Confirmed'
+                    -- BookingStatus column removed - include all reservations
                     GROUP BY ra.DateAllocated
                     ORDER BY ra.DateAllocated";
 
@@ -128,7 +128,7 @@ namespace Phumla_Kamnandi.Data_Layer
         }
         #endregion
 
-        #region Chart 4: Bookings by Date (Area Chart)
+        #region Chart 4: Bookings by Date (Area Chart) - UPDATED
         public DataTable GetBookingsByDateData(DateTime startDate, DateTime endDate)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
@@ -142,7 +142,7 @@ namespace Phumla_Kamnandi.Data_Layer
                     JOIN ReservationRooms rr ON ra.ReservationID = rr.ReservationID AND ra.RoomID = rr.RoomID
                     JOIN Reservations res ON ra.ReservationID = res.ReservationID
                     WHERE ra.DateAllocated BETWEEN @StartDate AND @EndDate
-                    AND res.BookingStatus = 'Confirmed'
+                    -- BookingStatus column removed - include all reservations
                     GROUP BY ra.DateAllocated
                     ORDER BY ra.DateAllocated";
 
@@ -157,25 +157,25 @@ namespace Phumla_Kamnandi.Data_Layer
         }
         #endregion
 
-        #region Chart 5: Guest Count Distribution
+        #region Chart 5: Guest Count Distribution - UPDATED
         public DataTable GetGuestDistributionData(DateTime startDate, DateTime endDate)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
                 string query = @"
-            SELECT 
-                res.GuestID,
-                g.FirstName + ' ' + g.LastName as GuestName,
-                COUNT(ra.ReservationID) as BookingCount,
-                SUM(rr.RateApplied) as TotalSpent
-            FROM RoomAllocation ra
-            JOIN ReservationRooms rr ON ra.ReservationID = rr.ReservationID AND ra.RoomID = rr.RoomID
-            JOIN Reservations res ON ra.ReservationID = res.ReservationID
-            JOIN Guests g ON res.GuestID = g.GuestID
-            WHERE ra.DateAllocated BETWEEN @StartDate AND @EndDate
-            AND res.BookingStatus = 'Confirmed'
-            GROUP BY res.GuestID, g.FirstName, g.LastName
-            ORDER BY TotalSpent DESC";
+                    SELECT 
+                        res.GuestID,
+                        g.FirstName + ' ' + g.LastName as GuestName,
+                        COUNT(ra.ReservationID) as BookingCount,
+                        SUM(rr.RateApplied) as TotalSpent
+                    FROM RoomAllocation ra
+                    JOIN ReservationRooms rr ON ra.ReservationID = rr.ReservationID AND ra.RoomID = rr.RoomID
+                    JOIN Reservations res ON ra.ReservationID = res.ReservationID
+                    JOIN Guests g ON res.GuestID = g.GuestID
+                    WHERE ra.DateAllocated BETWEEN @StartDate AND @EndDate
+                    -- BookingStatus column removed - include all reservations
+                    GROUP BY res.GuestID, g.FirstName, g.LastName
+                    ORDER BY TotalSpent DESC";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@StartDate", startDate);

@@ -74,7 +74,15 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 bool success = rController.UpdateReservation(reservationID, newGuests, newCheckIn, newCheckOut, roomIDs, roomRate);
 
                 if (success)
+                {
                     MessageBox.Show("Reservation updated successfully!");
+
+
+                    NumberOfGuests.Enabled = true;
+                    NumberOfRooms.Enabled = true;
+                    dtpCheckIn.Enabled = true;
+                    dtpCheckOut.Enabled = true;
+                }
                 else
                     MessageBox.Show("Failed to update reservation.");
             }
@@ -85,17 +93,51 @@ namespace Phumla_Kamnandi.Presentation_Layer
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
-        {
-            string searchRID = txtSearchRid.Text;
 
+
+        {
+            //Makes sure field isnt blank
+            if (string.IsNullOrWhiteSpace(txtSearchRid.Text))
+            {
+                MessageBox.Show("Please enter a Reservation ID.", "Missing Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+
+            int searchRID; 
+            try
+            {
+                
+                searchRID = Convert.ToInt32(txtSearchRid.Text);
+            }
+            catch
+            {
+                MessageBox.Show("Reservation ID must be a number.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtSearchRid.Clear();
+                return;
+            }
+
+            bool found = false;
+
+            //  Search the DataGridView
             foreach (DataGridViewRow gRow in ReservationData.Rows)
             {
-                if (gRow.Cells["ReservationID"].Value != null && gRow.Cells["ReservationID"].Value.ToString() == searchRID)
+                if (gRow.Cells["ReservationID"].Value != null &&
+                    Convert.ToInt32(gRow.Cells["ReservationID"].Value) == searchRID)
                 {
-                    ReservationData.FirstDisplayedScrollingRowIndex = gRow.Index;
+                    ReservationData.ClearSelection();
                     gRow.Selected = true;
+                    ReservationData.FirstDisplayedScrollingRowIndex = gRow.Index;
+                    found = true;
                     break;
                 }
+            }
+
+            // If RID doesnt match  DataGrid
+            if (!found)
+            {
+                ReservationData.ClearSelection();
+                MessageBox.Show($"No reservation found with ID {searchRID}.", "Not Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -121,6 +163,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 {
                     rController.DeleteReservation(rID);
                     MessageBox.Show("Guest Deleted Successfully", "Delete Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 }
             }
         }
@@ -179,33 +222,22 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
                 txtRID.Text = SelectedR.Cells["ReservationID"].Value.ToString();
                 txtGid.Text = SelectedR.Cells["GuestID"].Value.ToString();
+                txtPStatus.Text= SelectedR.Cells["PaymentStatus"].Value.ToString();
                 dtpRDate.Value = Convert.ToDateTime(SelectedR.Cells["ReservationDate"].Value);
                 dtpCheckIn.Value = Convert.ToDateTime(SelectedR.Cells["CheckInDate"].Value);
                 dtpCheckOut.Value = Convert.ToDateTime(SelectedR.Cells["CheckOutDate"].Value);
                 NumberOfGuests.Value = Convert.ToDecimal(SelectedR.Cells["NumberOfGuests"].Value);
+               
 
-                string Bstatus = SelectedR.Cells["BookingStatus"].Value.ToString();
-                cmboBStatus.SelectedItem = cmboBStatus.Items.Contains(Bstatus) ? Bstatus : null;
 
-                string Pstatus = SelectedR.Cells["PaymentStatus"].Value.ToString();
-                cmboPStatus.SelectedItem = cmboPStatus.Items.Contains(Pstatus) ? Pstatus : null;
+                int reservationID = Convert.ToInt32(SelectedR.Cells["ReservationID"].Value);
+                NumberOfRooms.Value = rController.GetRoomCount(reservationID);
 
-                int reservationID = Convert.ToInt32(SelectedR.Cells["ReservationID"].Value); // declare reservationID
-                decimal totalPayment = 0; // declare totalPayment
 
-                //Shows Total Amount from Account Tables
-                using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True"))
-                {
-                    conn.Open();
-                    string sql = @"SELECT TotalAmount FROM Accounts WHERE ReservationID = @ResID";
-                    using (SqlCommand cmd = new SqlCommand(sql, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@ResID", reservationID);
-                        object result = cmd.ExecuteScalar();
-                        if (result != null && result != DBNull.Value)
-                            totalPayment = Convert.ToDecimal(result);
-                    }
-                }
+
+
+
+               
 
                 
             }
@@ -214,6 +246,24 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void label5_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            NumberOfGuests.Enabled = true;
+            NumberOfRooms.Enabled = true;
+            dtpCheckIn.Enabled = true;
+            dtpCheckOut.Enabled = true;
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

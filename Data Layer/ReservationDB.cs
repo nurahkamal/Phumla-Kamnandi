@@ -24,13 +24,7 @@ namespace Phumla_Kamnandi.Data_Layer
 
         //Update a reservation 
 
-        public bool UpdateReservation(
-    int reservationID,
-    int newNumberOfGuests,
-    DateTime newCheckIn,
-    DateTime newCheckOut,
-    List<int> newRoomIDs,
-    decimal newRoomRate)
+        public bool UpdateReservation(int reservationID,int newNumberOfGuests,DateTime newCheckIn,DateTime newCheckOut,List<int> newRoomIDs,decimal newRoomRate)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
@@ -39,13 +33,14 @@ namespace Phumla_Kamnandi.Data_Layer
 
                 try
                 {
-                    // 1️⃣ Update main reservation details
+                    //  Update main reservation details
                     string updateResQuery = @"
                 UPDATE Reservations
                 SET NumberOfGuests = @NumGuests,
                     CheckInDate = @CheckIn,
                     CheckOutDate = @CheckOut,
-                    ReservationDate = @UpdateDate
+                    ReservationDate = @UpdateDate,
+                    PaymentStatus = 'Pending'
                 WHERE ReservationID = @ResID";
 
                     SqlCommand cmdUpdateRes = new SqlCommand(updateResQuery, connection, transaction);
@@ -56,7 +51,7 @@ namespace Phumla_Kamnandi.Data_Layer
                     cmdUpdateRes.Parameters.AddWithValue("@ResID", reservationID);
                     cmdUpdateRes.ExecuteNonQuery();
 
-                    // 2️⃣ Delete old room allocations
+                    //  Delete old room allocations
                     string deleteRoomsQuery = "DELETE FROM ReservationRooms WHERE ReservationID = @ResID";
                     SqlCommand cmdDelRooms = new SqlCommand(deleteRoomsQuery, connection, transaction);
                     cmdDelRooms.Parameters.AddWithValue("@ResID", reservationID);
@@ -67,7 +62,7 @@ namespace Phumla_Kamnandi.Data_Layer
                     cmdDelAlloc.Parameters.AddWithValue("@ResID", reservationID);
                     cmdDelAlloc.ExecuteNonQuery();
 
-                    // 3️⃣ Reinsert new rooms and allocations
+                    //  Reinsert new rooms and allocations
                     int remainingGuests = newNumberOfGuests;
                     for (int i = 0; i < newRoomIDs.Count; i++)
                     {
@@ -102,11 +97,11 @@ namespace Phumla_Kamnandi.Data_Layer
                         remainingGuests -= guestsInRoom;
                     }
 
-                    // 4️⃣ Recalculate total payment based on rooms and nights
+                    //  Recalculate total payment based on rooms and nights
                     decimal totalNights = (decimal)(newCheckOut - newCheckIn).TotalDays;
                     decimal totalPrice = totalNights * newRoomRate * newRoomIDs.Count;
 
-                    // 5️⃣ Update Accounts table to reflect new TotalAmount and correct Balance
+                    //  Update Accounts table to reflect new TotalAmount and correct Balance
                     string updateAccountQuery = @"
                 UPDATE Accounts
                 SET TotalAmount = @NewTotal,
@@ -132,6 +127,8 @@ namespace Phumla_Kamnandi.Data_Layer
                 }
             }
         }
+
+
         //Deletes ReservationID
         public bool DeleteReservation(string reservationID)
         {
@@ -216,8 +213,8 @@ namespace Phumla_Kamnandi.Data_Layer
 
                 // Insert reservation details into Reservations table
                 string resQuery = @"INSERT INTO Reservations 
-                    (GuestID, NumberOfGuests, CheckInDate, CheckOutDate, ReservationDate, BookingStatus, PaymentStatus)
-                    VALUES (@GuestID, @NumberOfGuests, @CheckIn, @CheckOut, @ReservationDate, 'Confirmed', 'Paid');
+                    (GuestID, NumberOfGuests, CheckInDate, CheckOutDate,ReservationDate, PaymentStatus)
+                    VALUES (@GuestID, @NumberOfGuests, @CheckIn, @CheckOut, @ReservationDate, 'Pending');
                     SELECT SCOPE_IDENTITY();";
 
                 SqlCommand cmdRes = new SqlCommand(resQuery, connection);
@@ -276,6 +273,23 @@ namespace Phumla_Kamnandi.Data_Layer
                 return reservationID;
             }
         }
+
+        //Count Number of rooms in a reservation 
+        public int GetRoomCount(int reservationID)
+        {
+            using (SqlConnection conn = new SqlConnection(connectionString))
+            using (SqlCommand cmd = new SqlCommand(
+                "SELECT COUNT(*) FROM ReservationRooms WHERE ReservationID = @ResID", conn))
+            {
+                cmd.Parameters.AddWithValue("@ResID", reservationID);
+                conn.Open();
+                return Convert.ToInt32(cmd.ExecuteScalar());
+            }
+        }
+
+
+
+
     }
 
 }

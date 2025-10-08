@@ -12,6 +12,9 @@ namespace Phumla_Kamnandi.Business_Layer
     internal class PaymentController
     {
         private PaymentDB paymentDB = new PaymentDB(); // Instance of the PaymentDB class to interact with the database
+        private Guest guest = new Guest();
+        public int LoyaltyPoints => guest.loyaltyPoints;
+
 
         // Calculate total based on number of rooms and days
         public decimal CalculateTotal(decimal roomPrice, int numberOfRooms, int numberOfDays)
@@ -61,7 +64,9 @@ namespace Phumla_Kamnandi.Business_Layer
             {
                 decimal discount = 100; // R100 discount
                 payment.TotalAmount = payment.TotalAmount - discount;
+                payment.Deposit = payment.TotalAmount * 0.10m;
                 richTextBox.AppendText($"Loyalty Discount: {discount:C}\n");
+                richTextBox.AppendText($"Deposit After Discount: {payment.Deposit:C}\n");
                 richTextBox.AppendText($"Total After Discount: {payment.TotalAmount:C}\n");
             }
         }
@@ -71,5 +76,20 @@ namespace Phumla_Kamnandi.Business_Layer
         {
             paymentDB.AddPaymentAndAccount(payment, reservation);
         }
+
+        public void LoadLoyaltyPoints(int guestID)
+        {
+            using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True"))
+            {
+                conn.Open();
+                string query = "SELECT LoyaltyPoints FROM Guests WHERE GuestID = @GuestID";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                cmd.Parameters.AddWithValue("@GuestID", guestID);
+
+                object result = cmd.ExecuteScalar();
+                guest.loyaltyPoints = (result != DBNull.Value) ? Convert.ToInt32(result) : 0;
+            }
+        }
+
     }
 }

@@ -84,10 +84,10 @@
             this.panel1.Controls.Add(this.btnPrintSummary);
             this.panel1.Controls.Add(this.picBoxLogo);
             this.panel1.Controls.Add(this.lblWelcome);
-            this.panel1.Location = new System.Drawing.Point(2, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(3, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(264, 975);
+            this.panel1.Size = new System.Drawing.Size(352, 1200);
             this.panel1.TabIndex = 2;
             // 
             // btnPrint
@@ -100,10 +100,10 @@
             this.btnPrint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(54, 301);
-            this.btnPrint.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrint.Location = new System.Drawing.Point(72, 370);
+            this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(135, 29);
+            this.btnPrint.Size = new System.Drawing.Size(180, 36);
             this.btnPrint.TabIndex = 22;
             this.btnPrint.Text = "Print Report";
             // 
@@ -117,10 +117,10 @@
             this.btnPrintSummary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.btnPrintSummary.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPrintSummary.ForeColor = System.Drawing.Color.White;
-            this.btnPrintSummary.Location = new System.Drawing.Point(54, 268);
-            this.btnPrintSummary.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrintSummary.Location = new System.Drawing.Point(72, 330);
+            this.btnPrintSummary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrintSummary.Name = "btnPrintSummary";
-            this.btnPrintSummary.Size = new System.Drawing.Size(135, 29);
+            this.btnPrintSummary.Size = new System.Drawing.Size(180, 36);
             this.btnPrintSummary.TabIndex = 21;
             this.btnPrintSummary.Text = "Print Summary";
             // 
@@ -128,10 +128,10 @@
             // 
             this.picBoxLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("picBoxLogo.Image")));
-            this.picBoxLogo.Location = new System.Drawing.Point(76, 33);
-            this.picBoxLogo.Margin = new System.Windows.Forms.Padding(2);
+            this.picBoxLogo.Location = new System.Drawing.Point(101, 41);
+            this.picBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBoxLogo.Name = "picBoxLogo";
-            this.picBoxLogo.Size = new System.Drawing.Size(113, 116);
+            this.picBoxLogo.Size = new System.Drawing.Size(150, 142);
             this.picBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxLogo.TabIndex = 1;
             this.picBoxLogo.TabStop = false;
@@ -141,10 +141,9 @@
             this.lblWelcome.AutoSize = true;
             this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.lblWelcome.Location = new System.Drawing.Point(13, 166);
-            this.lblWelcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblWelcome.Location = new System.Drawing.Point(17, 204);
             this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(239, 100);
+            this.lblWelcome.Size = new System.Drawing.Size(288, 124);
             this.lblWelcome.TabIndex = 0;
             this.lblWelcome.Text = "Welcome to the \r\nPhumla Kamnandi \r\nHotel Reservation System\r\n\r\n";
             this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -159,12 +158,12 @@
             this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnExit.ImageRotate = 0F;
             this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Location = new System.Drawing.Point(1486, 0);
-            this.btnExit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExit.Location = new System.Drawing.Point(1981, 0);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExit.Name = "btnExit";
             this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Size = new System.Drawing.Size(42, 39);
+            this.btnExit.Size = new System.Drawing.Size(56, 48);
             this.btnExit.TabIndex = 7;
             this.btnExit.UseTransparentBackground = true;
             // 
@@ -179,10 +178,10 @@
             this.btnOkay.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(191)))), ((int)(((byte)(99)))));
             this.btnOkay.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnOkay.ForeColor = System.Drawing.Color.White;
-            this.btnOkay.Location = new System.Drawing.Point(597, 23);
-            this.btnOkay.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOkay.Location = new System.Drawing.Point(796, 28);
+            this.btnOkay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnOkay.Name = "btnOkay";
-            this.btnOkay.Size = new System.Drawing.Size(52, 29);
+            this.btnOkay.Size = new System.Drawing.Size(69, 36);
             this.btnOkay.TabIndex = 22;
             this.btnOkay.Text = "OK";
             // 
@@ -194,12 +193,12 @@
             this.dtpEndDate.FillColor = System.Drawing.Color.Wheat;
             this.dtpEndDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEndDate.Location = new System.Drawing.Point(443, 23);
-            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpEndDate.Location = new System.Drawing.Point(591, 28);
+            this.dtpEndDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpEndDate.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
             this.dtpEndDate.MinDate = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(150, 29);
+            this.dtpEndDate.Size = new System.Drawing.Size(200, 36);
             this.dtpEndDate.TabIndex = 21;
             this.dtpEndDate.Value = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
             // 
@@ -211,12 +210,12 @@
             this.dtpStartDate.FillColor = System.Drawing.Color.Wheat;
             this.dtpStartDate.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpStartDate.Location = new System.Drawing.Point(280, 23);
-            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpStartDate.Location = new System.Drawing.Point(373, 28);
+            this.dtpStartDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpStartDate.MaxDate = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
             this.dtpStartDate.MinDate = new System.DateTime(2025, 1, 1, 0, 0, 0, 0);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(150, 29);
+            this.dtpStartDate.Size = new System.Drawing.Size(200, 36);
             this.dtpStartDate.TabIndex = 20;
             this.dtpStartDate.Value = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
             // 
@@ -239,7 +238,8 @@
             legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.chartSalesTrend.Legends.Add(legend1);
-            this.chartSalesTrend.Location = new System.Drawing.Point(280, 122);
+            this.chartSalesTrend.Location = new System.Drawing.Point(373, 150);
+            this.chartSalesTrend.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartSalesTrend.Name = "chartSalesTrend";
             this.chartSalesTrend.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series1.BorderWidth = 3;
@@ -253,7 +253,7 @@
             series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
             series1.Name = "SalesTrend";
             this.chartSalesTrend.Series.Add(series1);
-            this.chartSalesTrend.Size = new System.Drawing.Size(860, 207);
+            this.chartSalesTrend.Size = new System.Drawing.Size(1147, 255);
             this.chartSalesTrend.TabIndex = 27;
             this.chartSalesTrend.Text = "chart1";
             title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -277,7 +277,8 @@
             legend2.IsTextAutoFit = false;
             legend2.Name = "Legend1";
             this.chartSeasonalRevenue.Legends.Add(legend2);
-            this.chartSeasonalRevenue.Location = new System.Drawing.Point(1159, 122);
+            this.chartSeasonalRevenue.Location = new System.Drawing.Point(1545, 150);
+            this.chartSeasonalRevenue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartSeasonalRevenue.Name = "chartSeasonalRevenue";
             this.chartSeasonalRevenue.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series2.ChartArea = "ChartArea1";
@@ -285,7 +286,7 @@
             series2.Legend = "Legend1";
             series2.Name = "SeasonalRevenue";
             this.chartSeasonalRevenue.Series.Add(series2);
-            this.chartSeasonalRevenue.Size = new System.Drawing.Size(353, 464);
+            this.chartSeasonalRevenue.Size = new System.Drawing.Size(471, 571);
             this.chartSeasonalRevenue.TabIndex = 28;
             this.chartSeasonalRevenue.Text = "chart1";
             title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -310,14 +311,15 @@
             legend3.IsTextAutoFit = false;
             legend3.Name = "Legend1";
             this.chartDailyRevenue.Legends.Add(legend3);
-            this.chartDailyRevenue.Location = new System.Drawing.Point(695, 342);
+            this.chartDailyRevenue.Location = new System.Drawing.Point(927, 421);
+            this.chartDailyRevenue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartDailyRevenue.Name = "chartDailyRevenue";
             series3.ChartArea = "ChartArea1";
             series3.Color = System.Drawing.Color.Sienna;
             series3.Legend = "Legend1";
             series3.Name = "DailyRevenue";
             this.chartDailyRevenue.Series.Add(series3);
-            this.chartDailyRevenue.Size = new System.Drawing.Size(445, 244);
+            this.chartDailyRevenue.Size = new System.Drawing.Size(593, 300);
             this.chartDailyRevenue.TabIndex = 29;
             this.chartDailyRevenue.Text = "chart1";
             title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -346,7 +348,8 @@
             legend4.IsTextAutoFit = false;
             legend4.Name = "Legend1";
             this.chartPaymentsByDate.Legends.Add(legend4);
-            this.chartPaymentsByDate.Location = new System.Drawing.Point(281, 342);
+            this.chartPaymentsByDate.Location = new System.Drawing.Point(375, 421);
+            this.chartPaymentsByDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartPaymentsByDate.Name = "chartPaymentsByDate";
             series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
             series4.BackSecondaryColor = System.Drawing.Color.Chocolate;
@@ -358,7 +361,7 @@
             series4.Legend = "Legend1";
             series4.Name = "BookingsCount";
             this.chartPaymentsByDate.Series.Add(series4);
-            this.chartPaymentsByDate.Size = new System.Drawing.Size(407, 244);
+            this.chartPaymentsByDate.Size = new System.Drawing.Size(543, 300);
             this.chartPaymentsByDate.TabIndex = 30;
             this.chartPaymentsByDate.Text = "chart1";
             title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -385,7 +388,8 @@
             legend5.IsTextAutoFit = false;
             legend5.Name = "Legend1";
             this.chartGuestDistribution.Legends.Add(legend5);
-            this.chartGuestDistribution.Location = new System.Drawing.Point(280, 601);
+            this.chartGuestDistribution.Location = new System.Drawing.Point(373, 740);
+            this.chartGuestDistribution.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.chartGuestDistribution.Name = "chartGuestDistribution";
             this.chartGuestDistribution.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series5.ChartArea = "ChartArea1";
@@ -394,7 +398,7 @@
             series5.Name = "PaymentsCount";
             series5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             this.chartGuestDistribution.Series.Add(series5);
-            this.chartGuestDistribution.Size = new System.Drawing.Size(1232, 253);
+            this.chartGuestDistribution.Size = new System.Drawing.Size(1643, 311);
             this.chartGuestDistribution.TabIndex = 31;
             this.chartGuestDistribution.Text = "chart1";
             title5.Alignment = System.Drawing.ContentAlignment.TopLeft;
@@ -409,9 +413,10 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(273, 68);
+            this.lblTitle.Location = new System.Drawing.Point(364, 84);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(545, 37);
+            this.lblTitle.Size = new System.Drawing.Size(677, 46);
             this.lblTitle.TabIndex = 32;
             this.lblTitle.Text = "Phumla Kamnandi Hotels - Sales Report\r\n";
             // 
@@ -419,7 +424,7 @@
             // 
             this.btnToday.AutoRoundedCorners = true;
             this.btnToday.BackColor = System.Drawing.Color.Transparent;
-            this.btnToday.BorderRadius = 13;
+            this.btnToday.BorderRadius = 17;
             this.btnToday.CheckedState.FillColor = System.Drawing.Color.White;
             this.btnToday.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnToday.Cursor = System.Windows.Forms.Cursors.Default;
@@ -431,10 +436,10 @@
             this.btnToday.FocusedColor = System.Drawing.Color.Wheat;
             this.btnToday.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnToday.ForeColor = System.Drawing.Color.White;
-            this.btnToday.Location = new System.Drawing.Point(919, 23);
-            this.btnToday.Margin = new System.Windows.Forms.Padding(2);
+            this.btnToday.Location = new System.Drawing.Point(1225, 28);
+            this.btnToday.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnToday.Name = "btnToday";
-            this.btnToday.Size = new System.Drawing.Size(135, 29);
+            this.btnToday.Size = new System.Drawing.Size(180, 36);
             this.btnToday.TabIndex = 33;
             this.btnToday.Text = "Today";
             // 
@@ -442,7 +447,7 @@
             // 
             this.btnLastSevenDays.AutoRoundedCorners = true;
             this.btnLastSevenDays.BackColor = System.Drawing.Color.Transparent;
-            this.btnLastSevenDays.BorderRadius = 13;
+            this.btnLastSevenDays.BorderRadius = 17;
             this.btnLastSevenDays.CheckedState.FillColor = System.Drawing.Color.Wheat;
             this.btnLastSevenDays.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnLastSevenDays.Cursor = System.Windows.Forms.Cursors.Default;
@@ -454,10 +459,10 @@
             this.btnLastSevenDays.FocusedColor = System.Drawing.Color.Wheat;
             this.btnLastSevenDays.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnLastSevenDays.ForeColor = System.Drawing.Color.White;
-            this.btnLastSevenDays.Location = new System.Drawing.Point(1058, 23);
-            this.btnLastSevenDays.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLastSevenDays.Location = new System.Drawing.Point(1411, 28);
+            this.btnLastSevenDays.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLastSevenDays.Name = "btnLastSevenDays";
-            this.btnLastSevenDays.Size = new System.Drawing.Size(135, 29);
+            this.btnLastSevenDays.Size = new System.Drawing.Size(180, 36);
             this.btnLastSevenDays.TabIndex = 34;
             this.btnLastSevenDays.Text = "Last 7 Days";
             // 
@@ -465,7 +470,7 @@
             // 
             this.btnThisMonth.AutoRoundedCorners = true;
             this.btnThisMonth.BackColor = System.Drawing.Color.Transparent;
-            this.btnThisMonth.BorderRadius = 13;
+            this.btnThisMonth.BorderRadius = 17;
             this.btnThisMonth.CheckedState.FillColor = System.Drawing.Color.Wheat;
             this.btnThisMonth.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnThisMonth.Cursor = System.Windows.Forms.Cursors.Default;
@@ -477,10 +482,10 @@
             this.btnThisMonth.FocusedColor = System.Drawing.Color.Wheat;
             this.btnThisMonth.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnThisMonth.ForeColor = System.Drawing.Color.White;
-            this.btnThisMonth.Location = new System.Drawing.Point(1197, 23);
-            this.btnThisMonth.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThisMonth.Location = new System.Drawing.Point(1596, 28);
+            this.btnThisMonth.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThisMonth.Name = "btnThisMonth";
-            this.btnThisMonth.Size = new System.Drawing.Size(135, 29);
+            this.btnThisMonth.Size = new System.Drawing.Size(180, 36);
             this.btnThisMonth.TabIndex = 35;
             this.btnThisMonth.Text = "This Month";
             // 
@@ -488,7 +493,7 @@
             // 
             this.btnDecember.AutoRoundedCorners = true;
             this.btnDecember.BackColor = System.Drawing.Color.Transparent;
-            this.btnDecember.BorderRadius = 13;
+            this.btnDecember.BorderRadius = 17;
             this.btnDecember.CheckedState.FillColor = System.Drawing.Color.Wheat;
             this.btnDecember.CheckedState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btnDecember.Cursor = System.Windows.Forms.Cursors.Default;
@@ -500,19 +505,19 @@
             this.btnDecember.FocusedColor = System.Drawing.Color.Wheat;
             this.btnDecember.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.btnDecember.ForeColor = System.Drawing.Color.White;
-            this.btnDecember.Location = new System.Drawing.Point(1336, 23);
-            this.btnDecember.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDecember.Location = new System.Drawing.Point(1781, 28);
+            this.btnDecember.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDecember.Name = "btnDecember";
-            this.btnDecember.Size = new System.Drawing.Size(135, 29);
+            this.btnDecember.Size = new System.Drawing.Size(180, 36);
             this.btnDecember.TabIndex = 36;
             this.btnDecember.Text = "December";
             // 
             // MonthlySalesReport
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(188)))), ((int)(((byte)(177)))), ((int)(((byte)(159)))));
-            this.ClientSize = new System.Drawing.Size(1556, 884);
+            this.ClientSize = new System.Drawing.Size(1942, 1088);
             this.Controls.Add(this.btnDecember);
             this.Controls.Add(this.btnThisMonth);
             this.Controls.Add(this.btnLastSevenDays);
@@ -529,9 +534,11 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "MonthlySalesReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.MonthlySalesReport_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();

@@ -222,6 +222,9 @@
     <EmbeddedResource Include="Presentation Layer\4. Edit or Cancel Booking.resx">
       <DependentUpon>4. Edit or Cancel Booking.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\5. Guest Inquiry.resx">
+      <DependentUpon>5. Guest Inquiry.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\Guest Details.resx">
       <DependentUpon>Guest Details.cs</DependentUpon>
     </EmbeddedResource>

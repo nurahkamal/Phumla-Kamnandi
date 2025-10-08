@@ -24,8 +24,7 @@ namespace Phumla_Kamnandi.Data_Layer
                 string reservedQuery = @"SELECT COUNT(rr.ReservationRoomID)
                                  FROM Reservations r
                                  INNER JOIN ReservationRooms rr ON r.ReservationID = rr.ReservationID
-                                 WHERE r.BookingStatus = 'Confirmed'
-                                 AND r.CheckInDate < @CheckOutDate
+                                 WHERE r.CheckInDate < @CheckOutDate
                                  AND r.CheckOutDate > @CheckInDate";
 
                 SqlCommand reservedCmd = new SqlCommand(reservedQuery, connection);

@@ -179,26 +179,27 @@ namespace Phumla_Kamnandi.Data_Layer
         }
         #endregion
 
-        #region Deposit Status 
+        #region Deposit Status - UPDATED FOR NEW PAYMENT STATUS
         public DataTable GetDepositStatus(DateTime startDate, DateTime endDate)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-               
+                // UPDATED QUERY - Uses the new payment status values
                 string query = @"
-            SELECT 
-                'Paid' as Status,
-                COUNT(*) as Count
-            FROM Reservations 
-            WHERE PaymentStatus = 'Paid'
-              AND CheckInDate BETWEEN @StartDate AND @EndDate
-            UNION ALL
-            SELECT 
-                'Due' as Status,
-                COUNT(*) as Count
-            FROM Reservations 
-            WHERE PaymentStatus = 'Outstanding'
-              AND CheckInDate BETWEEN @StartDate AND @EndDate";
+                    SELECT 
+                        PaymentStatus as Status,
+                        COUNT(*) as Count
+                    FROM Reservations 
+                    WHERE CheckInDate BETWEEN @StartDate AND @EndDate
+                      AND PaymentStatus IN ('Deposit Paid', 'Paid in Full', 'Pending')
+                    GROUP BY PaymentStatus
+                    ORDER BY 
+                        CASE 
+                            WHEN PaymentStatus = 'Paid in Full' THEN 1
+                            WHEN PaymentStatus = 'Deposit Paid' THEN 2
+                            WHEN PaymentStatus = 'Pending' THEN 3
+                            ELSE 4
+                        END";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
                 cmd.Parameters.AddWithValue("@StartDate", startDate);

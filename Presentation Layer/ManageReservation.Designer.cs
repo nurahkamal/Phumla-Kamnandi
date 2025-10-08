@@ -40,27 +40,21 @@
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
-            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.ReservationData = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblPrice = new System.Windows.Forms.Label();
+            this.txtPStatus = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.NumberOfRooms = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.NumberOfGuests = new Guna.UI2.WinForms.Guna2NumericUpDown();
-            this.cmboPStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.cmboBStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtpRDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.btnSEdits = new Guna.UI2.WinForms.Guna2Button();
             this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
-            this.lblPassNum = new System.Windows.Forms.Label();
             this.txtRID = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
@@ -69,8 +63,10 @@
             this.txtGid = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblGuestID = new System.Windows.Forms.Label();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
-            this.txtSearchRid = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtSearchRid = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
+            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -97,7 +93,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(264, 884);
+            this.panel2.Size = new System.Drawing.Size(296, 884);
             this.panel2.TabIndex = 6;
             // 
             // btnReportIssue
@@ -181,6 +177,7 @@
             this.guna2Button8.Size = new System.Drawing.Size(222, 43);
             this.guna2Button8.TabIndex = 25;
             this.guna2Button8.Text = "About Us";
+            this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
             // 
             // guna2Button7
             // 
@@ -262,6 +259,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(222, 43);
             this.guna2Button3.TabIndex = 21;
             this.guna2Button3.Text = " Make a Reservation";
+            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
             // 
             // pictureBox1
             // 
@@ -272,45 +270,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnExit.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnExit.ImageRotate = 0F;
-            this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Location = new System.Drawing.Point(1221, 0);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Size = new System.Drawing.Size(76, 64);
-            this.btnExit.TabIndex = 26;
-            this.btnExit.UseTransparentBackground = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.AutoRoundedCorners = true;
-            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefresh.FillColor = System.Drawing.Color.Tan;
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
-            this.btnRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnRefresh.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnRefresh.Location = new System.Drawing.Point(1086, 109);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(159, 40);
-            this.btnRefresh.TabIndex = 22;
-            this.btnRefresh.Text = "Refresh ";
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // ReservationData
             // 
@@ -333,23 +292,19 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.label5);
-            this.panel3.Controls.Add(this.lblPrice);
+            this.panel3.Controls.Add(this.txtPStatus);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
             this.panel3.Controls.Add(this.NumberOfRooms);
             this.panel3.Controls.Add(this.NumberOfGuests);
-            this.panel3.Controls.Add(this.cmboPStatus);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.guna2HtmlLabel2);
-            this.panel3.Controls.Add(this.cmboBStatus);
             this.panel3.Controls.Add(this.dtpRDate);
             this.panel3.Controls.Add(this.dtpCheckOut);
             this.panel3.Controls.Add(this.dtpCheckIn);
             this.panel3.Controls.Add(this.btnSEdits);
             this.panel3.Controls.Add(this.btnDelete);
             this.panel3.Controls.Add(this.btnEdit);
-            this.panel3.Controls.Add(this.lblPassNum);
             this.panel3.Controls.Add(this.txtRID);
             this.panel3.Controls.Add(this.lblID);
             this.panel3.Controls.Add(this.lblPhone);
@@ -363,28 +318,26 @@
             this.panel3.TabIndex = 30;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
-            // label5
+            // txtPStatus
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(837, 279);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(176, 30);
-            this.label5.TabIndex = 46;
-            this.label5.Text = "Check Out Date:";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // lblPrice
-            // 
-            this.lblPrice.AutoSize = true;
-            this.lblPrice.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPrice.Location = new System.Drawing.Point(603, 279);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new System.Drawing.Size(121, 30);
-            this.lblPrice.TabIndex = 45;
-            this.lblPrice.Text = "Total Price:";
+            this.txtPStatus.AutoRoundedCorners = true;
+            this.txtPStatus.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPStatus.DefaultText = "";
+            this.txtPStatus.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtPStatus.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtPStatus.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPStatus.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtPStatus.Enabled = false;
+            this.txtPStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPStatus.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPStatus.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtPStatus.Location = new System.Drawing.Point(199, 175);
+            this.txtPStatus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtPStatus.Name = "txtPStatus";
+            this.txtPStatus.PlaceholderText = "";
+            this.txtPStatus.SelectedText = "";
+            this.txtPStatus.Size = new System.Drawing.Size(278, 36);
+            this.txtPStatus.TabIndex = 47;
             // 
             // label4
             // 
@@ -414,6 +367,7 @@
             this.NumberOfRooms.BackColor = System.Drawing.Color.Transparent;
             this.NumberOfRooms.BorderRadius = 18;
             this.NumberOfRooms.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NumberOfRooms.Enabled = false;
             this.NumberOfRooms.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.NumberOfRooms.Location = new System.Drawing.Point(833, 78);
             this.NumberOfRooms.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -443,6 +397,7 @@
             this.NumberOfGuests.BackColor = System.Drawing.Color.Transparent;
             this.NumberOfGuests.BorderRadius = 18;
             this.NumberOfGuests.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.NumberOfGuests.Enabled = false;
             this.NumberOfGuests.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.NumberOfGuests.Location = new System.Drawing.Point(833, 11);
             this.NumberOfGuests.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -466,32 +421,12 @@
             0,
             0});
             // 
-            // cmboPStatus
-            // 
-            this.cmboPStatus.AutoRoundedCorners = true;
-            this.cmboPStatus.BackColor = System.Drawing.Color.Transparent;
-            this.cmboPStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmboPStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmboPStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmboPStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmboPStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmboPStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmboPStatus.ItemHeight = 30;
-            this.cmboPStatus.Items.AddRange(new object[] {
-            "Outstanding",
-            "Deposit",
-            "Paid"});
-            this.cmboPStatus.Location = new System.Drawing.Point(199, 212);
-            this.cmboPStatus.Name = "cmboPStatus";
-            this.cmboPStatus.Size = new System.Drawing.Size(278, 36);
-            this.cmboPStatus.TabIndex = 40;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(22, 223);
+            this.label2.Location = new System.Drawing.Point(15, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(170, 30);
             this.label2.TabIndex = 39;
@@ -509,36 +444,17 @@
             this.guna2HtmlLabel2.TabIndex = 0;
             this.guna2HtmlLabel2.Text = "Edit Reservation Details";
             // 
-            // cmboBStatus
-            // 
-            this.cmboBStatus.AutoRoundedCorners = true;
-            this.cmboBStatus.BackColor = System.Drawing.Color.Transparent;
-            this.cmboBStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmboBStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmboBStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmboBStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmboBStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmboBStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmboBStatus.ItemHeight = 30;
-            this.cmboBStatus.Items.AddRange(new object[] {
-            "Confirmed",
-            "Cancelled",
-            "Pedning"});
-            this.cmboBStatus.Location = new System.Drawing.Point(199, 145);
-            this.cmboBStatus.Name = "cmboBStatus";
-            this.cmboBStatus.Size = new System.Drawing.Size(278, 36);
-            this.cmboBStatus.TabIndex = 38;
-            // 
             // dtpRDate
             // 
             this.dtpRDate.AutoRoundedCorners = true;
             this.dtpRDate.BackColor = System.Drawing.Color.Transparent;
             this.dtpRDate.Checked = true;
+            this.dtpRDate.Enabled = false;
             this.dtpRDate.FillColor = System.Drawing.Color.Wheat;
             this.dtpRDate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpRDate.ForeColor = System.Drawing.Color.Black;
             this.dtpRDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.dtpRDate.Location = new System.Drawing.Point(199, 284);
+            this.dtpRDate.Location = new System.Drawing.Point(209, 269);
             this.dtpRDate.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpRDate.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpRDate.Name = "dtpRDate";
@@ -551,6 +467,7 @@
             this.dtpCheckOut.AutoRoundedCorners = true;
             this.dtpCheckOut.BackColor = System.Drawing.Color.Transparent;
             this.dtpCheckOut.Checked = true;
+            this.dtpCheckOut.Enabled = false;
             this.dtpCheckOut.FillColor = System.Drawing.Color.Wheat;
             this.dtpCheckOut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCheckOut.Format = System.Windows.Forms.DateTimePickerFormat.Long;
@@ -568,6 +485,7 @@
             this.dtpCheckIn.AutoRoundedCorners = true;
             this.dtpCheckIn.BackColor = System.Drawing.Color.Transparent;
             this.dtpCheckIn.Checked = true;
+            this.dtpCheckIn.Enabled = false;
             this.dtpCheckIn.FillColor = System.Drawing.Color.Wheat;
             this.dtpCheckIn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpCheckIn.ForeColor = System.Drawing.Color.Black;
@@ -634,19 +552,8 @@
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(162, 39);
             this.btnEdit.TabIndex = 21;
-            this.btnEdit.Text = " ";
-            // 
-            // lblPassNum
-            // 
-            this.lblPassNum.AutoSize = true;
-            this.lblPassNum.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPassNum.Location = new System.Drawing.Point(22, 156);
-            this.lblPassNum.Name = "lblPassNum";
-            this.lblPassNum.Size = new System.Drawing.Size(167, 30);
-            this.lblPassNum.TabIndex = 26;
-            this.lblPassNum.Text = "Booking Status:";
-            this.lblPassNum.Click += new System.EventHandler(this.lblPassNum_Click);
+            this.btnEdit.Text = " Edit";
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // txtRID
             // 
@@ -686,7 +593,7 @@
             this.lblPhone.AutoSize = true;
             this.lblPhone.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPhone.Location = new System.Drawing.Point(22, 290);
+            this.lblPhone.Location = new System.Drawing.Point(15, 269);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(188, 30);
             this.lblPhone.TabIndex = 22;
@@ -728,7 +635,7 @@
             this.txtGid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtGid.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtGid.Location = new System.Drawing.Point(199, 78);
+            this.txtGid.Location = new System.Drawing.Point(199, 87);
             this.txtGid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtGid.Name = "txtGid";
             this.txtGid.PlaceholderText = "";
@@ -741,7 +648,7 @@
             this.lblGuestID.AutoSize = true;
             this.lblGuestID.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGuestID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblGuestID.Location = new System.Drawing.Point(22, 89);
+            this.lblGuestID.Location = new System.Drawing.Point(33, 87);
             this.lblGuestID.Name = "lblGuestID";
             this.lblGuestID.Size = new System.Drawing.Size(103, 30);
             this.lblGuestID.TabIndex = 17;
@@ -761,10 +668,26 @@
             this.btnSearch.ImageSize = new System.Drawing.Size(30, 30);
             this.btnSearch.Location = new System.Drawing.Point(279, 109);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(85, 40);
+            this.btnSearch.Size = new System.Drawing.Size(99, 40);
             this.btnSearch.TabIndex = 31;
             this.btnSearch.Text = "Search ";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
+            this.panel1.Controls.Add(this.txtSearchRid);
+            this.panel1.Controls.Add(this.btnSearch);
+            this.panel1.Controls.Add(this.panel3);
+            this.panel1.Controls.Add(this.ReservationData);
+            this.panel1.Controls.Add(this.btnRefresh);
+            this.panel1.Controls.Add(this.btnExit);
+            this.panel1.Controls.Add(this.guna2HtmlLabel1);
+            this.panel1.Location = new System.Drawing.Point(260, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1366, 911);
+            this.panel1.TabIndex = 7;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // txtSearchRid
             // 
@@ -788,21 +711,44 @@
             this.txtSearchRid.Size = new System.Drawing.Size(210, 40);
             this.txtSearchRid.TabIndex = 35;
             // 
-            // panel1
+            // btnRefresh
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
-            this.panel1.Controls.Add(this.txtSearchRid);
-            this.panel1.Controls.Add(this.btnSearch);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.ReservationData);
-            this.panel1.Controls.Add(this.btnRefresh);
-            this.panel1.Controls.Add(this.btnExit);
-            this.panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.panel1.Location = new System.Drawing.Point(247, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1309, 881);
-            this.panel1.TabIndex = 7;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.btnRefresh.AutoRoundedCorners = true;
+            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefresh.FillColor = System.Drawing.Color.Tan;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRefresh.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnRefresh.Location = new System.Drawing.Point(1086, 109);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(159, 40);
+            this.btnRefresh.TabIndex = 22;
+            this.btnRefresh.Text = "Refresh ";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnExit.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnExit.ImageRotate = 0F;
+            this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Location = new System.Drawing.Point(1221, 0);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Size = new System.Drawing.Size(76, 64);
+            this.btnExit.TabIndex = 26;
+            this.btnExit.UseTransparentBackground = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // guna2HtmlLabel1
             // 
@@ -861,16 +807,13 @@
         private System.Windows.Forms.Label label3;
         private Guna.UI2.WinForms.Guna2NumericUpDown NumberOfRooms;
         private Guna.UI2.WinForms.Guna2NumericUpDown NumberOfGuests;
-        private Guna.UI2.WinForms.Guna2ComboBox cmboPStatus;
         private System.Windows.Forms.Label label2;
-        private Guna.UI2.WinForms.Guna2ComboBox cmboBStatus;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpRDate;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckOut;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpCheckIn;
         private Guna.UI2.WinForms.Guna2Button btnSEdits;
         private Guna.UI2.WinForms.Guna2Button btnDelete;
         private Guna.UI2.WinForms.Guna2Button btnEdit;
-        private System.Windows.Forms.Label lblPassNum;
         private Guna.UI2.WinForms.Guna2TextBox txtRID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblPhone;
@@ -886,7 +829,6 @@
         private Guna.UI2.WinForms.Guna2Button btnReportIssue;
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblPrice;
+        private Guna.UI2.WinForms.Guna2TextBox txtPStatus;
     }
 }
