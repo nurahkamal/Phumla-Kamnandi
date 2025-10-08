@@ -237,21 +237,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
 
 
-                decimal totalPayment = 0; // declare totalPayment
-
-                //Shows Total Amount from Account Tables
-                using (SqlConnection conn = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=PhumlaKamnandiHotelsDB;Integrated Security=True"))
-                {
-                    conn.Open();
-                    string sql = @"SELECT TotalAmount FROM Accounts WHERE ReservationID = @ResID";
-                    using (SqlCommand cmd = new SqlCommand(sql, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@ResID", reservationID);
-                        object result = cmd.ExecuteScalar();
-                        if (result != null && result != DBNull.Value)
-                            totalPayment = Convert.ToDecimal(result);
-                    }
-                }
+               
 
                 
             }
@@ -268,6 +254,16 @@ namespace Phumla_Kamnandi.Presentation_Layer
             NumberOfRooms.Enabled = true;
             dtpCheckIn.Enabled = true;
             dtpCheckOut.Enabled = true;
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
