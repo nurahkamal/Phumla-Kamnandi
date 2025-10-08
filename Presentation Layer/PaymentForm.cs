@@ -295,7 +295,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 _paymentController.LoadLoyaltyPoints(_reservation.GuestID);
                 int loyalty = _paymentController.LoyaltyPoints;
 
-                MessageBox.Show(loyalty.ToString()); // Just to verify
 
                 if (loyalty >= 5)
                 {
@@ -332,7 +331,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 _paymentController.LoadLoyaltyPoints(_reservation.GuestID);
                 int loyalty = _paymentController.LoyaltyPoints;
 
-                MessageBox.Show(loyalty.ToString()); // Just to verify
 
                 if (loyalty >= 5)
                 {
