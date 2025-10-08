@@ -265,5 +265,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
 
         }
+
+        private void lblSurname_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

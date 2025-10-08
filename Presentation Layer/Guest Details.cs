@@ -42,10 +42,22 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         }
 
-        private void guna2Button7_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            _3 booking = new _3();
-            booking.Show();
+            this.Close();
+        }
+
+        private void btnReportIssue_Click(object sender, EventArgs e)
+        {
+            ReportIssue report = new ReportIssue(this); // pass "this" form
+            report.Show();
+            this.Hide();
+        }
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            Login_Form login = new Login_Form();
+            login.Show();
             this.Hide();
         }
     }
