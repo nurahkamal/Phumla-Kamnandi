@@ -30,6 +30,7 @@ namespace Phumla_Kamnandi.Data_Layer
                 {
                     decimal discount = 100; // R100
                     payment.TotalAmount = payment.TotalAmount - discount;
+                    payment.AmountPaid = payment.TotalAmount * 0.10m;
                     payment.Balance = payment.TotalAmount - payment.AmountPaid;
 
                     // Reset loyalty points to 0

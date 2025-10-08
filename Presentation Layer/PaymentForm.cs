@@ -18,6 +18,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private Reservation _reservation; // Store the reservation passed from Reservation form
         private PaymentController _paymentController = new PaymentController(); // Controller that handles payment logic
+        private Guest guest = new Guest();
 
         public PaymentForm(Reservation reservation) // Constructor that accepts a Reservation object from the previous form
         {
@@ -291,8 +292,22 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 decimal totalAmount = _reservation.RoomRate * _reservation.NumberOfRooms * numberOfDays;
                 decimal deposit = totalAmount * 0.10m;
 
-                // Show deposit in textbox
-                txtPayableAmt.Text = $"R{deposit:F2}";
+                _paymentController.LoadLoyaltyPoints(_reservation.GuestID);
+                int loyalty = _paymentController.LoyaltyPoints;
+
+                MessageBox.Show(loyalty.ToString()); // Just to verify
+
+                if (loyalty >= 5)
+                {
+                    decimal totalAfterDiscount = totalAmount - 100;
+                    decimal Discount = totalAfterDiscount * 0.10m;
+                    txtPayableAmt.Text = $"R{Discount:F2}";
+                }
+                else
+                {
+                    // Show deposit in textbox
+                    txtPayableAmt.Text = $"R{deposit:F2}";
+                }
 
             }
             else
@@ -314,8 +329,22 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 int numberOfDays = (_reservation.CheckOutDate - _reservation.CheckInDate).Days;
                 decimal totalAmount = _reservation.RoomRate * _reservation.NumberOfRooms * numberOfDays;
 
-                // Show full amount in textbox
-                txtPayableAmt.Text = $"R{totalAmount:F2}";
+                _paymentController.LoadLoyaltyPoints(_reservation.GuestID);
+                int loyalty = _paymentController.LoyaltyPoints;
+
+                MessageBox.Show(loyalty.ToString()); // Just to verify
+
+                if (loyalty >= 5)
+                {
+                    decimal totalAfterDiscount = totalAmount - 100;
+                    txtPayableAmt.Text = $"R{totalAfterDiscount:F2}";
+                }
+                else
+                {
+                    // Show full amount in textbox
+                    txtPayableAmt.Text = $"R{totalAmount:F2}";
+                }
+                
             }
             else
             {
