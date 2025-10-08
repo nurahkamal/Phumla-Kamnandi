@@ -431,9 +431,9 @@
             this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(496, 12);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            this.guna2HtmlLabel1.Size = new System.Drawing.Size(424, 50);
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(441, 50);
             this.guna2HtmlLabel1.TabIndex = 0;
-            this.guna2HtmlLabel1.Text = "Edit Reservation Details";
+            this.guna2HtmlLabel1.Text = "View Reservation Details";
             // 
             // panel2
             // 
