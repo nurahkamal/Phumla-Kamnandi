@@ -49,7 +49,7 @@
             this.NumberOfRooms = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.NumberOfGuests = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
-          
+            this.cmboBStatus = new Guna.UI2.WinForms.Guna2ComboBox();
             this.dtpRDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtpCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -66,8 +66,8 @@
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-          
-            
+            this.btnUser = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReportIssue = new Guna.UI2.WinForms.Guna2Button();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel2.SuspendLayout();
@@ -98,7 +98,41 @@
             this.panel2.Size = new System.Drawing.Size(311, 884);
             this.panel2.TabIndex = 6;
             // 
-            
+            // btnReportIssue
+            // 
+            this.btnReportIssue.AutoRoundedCorners = true;
+            this.btnReportIssue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportIssue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportIssue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReportIssue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReportIssue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(178)))));
+            this.btnReportIssue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportIssue.ForeColor = System.Drawing.Color.White;
+            this.btnReportIssue.Location = new System.Drawing.Point(12, 794);
+            this.btnReportIssue.Name = "btnReportIssue";
+            this.btnReportIssue.Size = new System.Drawing.Size(117, 39);
+            this.btnReportIssue.TabIndex = 31;
+            this.btnReportIssue.Text = "Report Issue";
+            this.btnReportIssue.Click += new System.EventHandler(this.btnReportIssue_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.AutoRoundedCorners = true;
+            this.btnUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnUser.BorderThickness = 2;
+            this.btnUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUser.FillColor = System.Drawing.Color.White;
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnUser.Location = new System.Drawing.Point(16, 712);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(229, 43);
+            this.btnUser.TabIndex = 29;
+            this.btnUser.Text = "User Information";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -235,7 +269,7 @@
             this.btnExit.Size = new System.Drawing.Size(76, 64);
             this.btnExit.TabIndex = 26;
             this.btnExit.UseTransparentBackground = true;
-          
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click_1);
             // 
             // btnRefresh
             // 
@@ -408,7 +442,23 @@
             // 
             // cmboPStatus
             // 
-           
+            this.cmboPStatus.AutoRoundedCorners = true;
+            this.cmboPStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmboPStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmboPStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmboPStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmboPStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmboPStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmboPStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmboPStatus.ItemHeight = 30;
+            this.cmboPStatus.Items.AddRange(new object[] {
+            "Outstanding",
+            "Deposit",
+            "Paid"});
+            this.cmboPStatus.Location = new System.Drawing.Point(199, 212);
+            this.cmboPStatus.Name = "cmboPStatus";
+            this.cmboPStatus.Size = new System.Drawing.Size(278, 36);
+            this.cmboPStatus.TabIndex = 40;
             // 
             // label2
             // 
@@ -424,7 +474,23 @@
             // 
             // cmboBStatus
             // 
-            
+            this.cmboBStatus.AutoRoundedCorners = true;
+            this.cmboBStatus.BackColor = System.Drawing.Color.Transparent;
+            this.cmboBStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmboBStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmboBStatus.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmboBStatus.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmboBStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmboBStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmboBStatus.ItemHeight = 30;
+            this.cmboBStatus.Items.AddRange(new object[] {
+            "Confirmed",
+            "Cancelled",
+            "Pedning"});
+            this.cmboBStatus.Location = new System.Drawing.Point(199, 145);
+            this.cmboBStatus.Name = "cmboBStatus";
+            this.cmboBStatus.Size = new System.Drawing.Size(278, 36);
+            this.cmboBStatus.TabIndex = 38;
             // 
             // dtpRDate
             // 
@@ -538,7 +604,15 @@
             // 
             // lblPassNum
             // 
-           
+            this.lblPassNum.AutoSize = true;
+            this.lblPassNum.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblPassNum.Location = new System.Drawing.Point(22, 156);
+            this.lblPassNum.Name = "lblPassNum";
+            this.lblPassNum.Size = new System.Drawing.Size(141, 25);
+            this.lblPassNum.TabIndex = 26;
+            this.lblPassNum.Text = "Booking Status:";
+            this.lblPassNum.Click += new System.EventHandler(this.lblPassNum_Click);
             // 
             // txtRID
             // 
@@ -658,12 +732,33 @@
             this.btnSearch.TabIndex = 31;
             this.btnSearch.Text = "Search ";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
-            
+            // 
+            // txtSearchRid
+            // 
+            this.txtSearchRid.AutoRoundedCorners = true;
+            this.txtSearchRid.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearchRid.DefaultText = "";
+            this.txtSearchRid.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearchRid.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearchRid.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchRid.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearchRid.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchRid.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
+            this.txtSearchRid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearchRid.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchRid.IconLeft")));
+            this.txtSearchRid.IconLeftOffset = new System.Drawing.Point(5, 0);
+            this.txtSearchRid.Location = new System.Drawing.Point(57, 109);
+            this.txtSearchRid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearchRid.Name = "txtSearchRid";
+            this.txtSearchRid.PlaceholderText = "Enter ID Here";
+            this.txtSearchRid.SelectedText = "";
+            this.txtSearchRid.Size = new System.Drawing.Size(210, 40);
+            this.txtSearchRid.TabIndex = 35;
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
-          
+            this.panel1.Controls.Add(this.txtSearchRid);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.ReservationData);
