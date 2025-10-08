@@ -12,11 +12,10 @@ CREATE TABLE Users (
 );
 GO
 
-
 INSERT INTO Users (FullName, Username, PasswordHash, Role, IsActive)
 VALUES 
 ('Nurah', 'nurah', 'KMLNUR001', 'Receptionist', 1),
-('Vanessa', 'vanessa', 'CHKRAZ002', 'Receptionist', 1),
-('Razina', 'razina', 'MKNRELOO9', 'Manager', 1),
+('Vanessa', 'vanessa', 'MKNRELOO9', 'Receptionist', 1),
+('Razina', 'razina', 'CHKRAZ002', 'Manager', 1),
 ('Camryn', 'camryn', 'PLLCAM008', 'Manager', 1);
 GO
