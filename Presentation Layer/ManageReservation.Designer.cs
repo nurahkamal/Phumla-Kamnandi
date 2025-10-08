@@ -648,7 +648,7 @@
             this.lblGuestID.AutoSize = true;
             this.lblGuestID.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblGuestID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblGuestID.Location = new System.Drawing.Point(33, 87);
+            this.lblGuestID.Location = new System.Drawing.Point(22, 86);
             this.lblGuestID.Name = "lblGuestID";
             this.lblGuestID.Size = new System.Drawing.Size(103, 30);
             this.lblGuestID.TabIndex = 17;
