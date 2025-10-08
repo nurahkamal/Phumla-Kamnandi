@@ -531,5 +531,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
             LoadCharts();
         }
         #endregion
+
+        private void MonthlySalesReport_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
