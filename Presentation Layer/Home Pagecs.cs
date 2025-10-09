@@ -1,5 +1,4 @@
-﻿using Microsoft.Reporting.WinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,52 +10,40 @@ using System.Windows.Forms;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
-    public partial class About_Page : Form
+    public partial class Home_Pagecs : Form
     {
-        public About_Page()
+        public Home_Pagecs()
         {
             InitializeComponent();
         }
         int Count = 0;
-
-        private void label1_Click(object sender, EventArgs e)
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-           
+            if (Count < 11)
+            {
+                pictureBox1.Image = imageList1.Images[Count];
+                Count++;
+            }
+            else
+                Count = 0;
         }
 
-        private void btnSignout_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void guna2Button6_Click(object sender, EventArgs e)
+        private void btnGuestDetails_Click(object sender, EventArgs e)
         {
             frmCreateGuest creatGuest = new frmCreateGuest();
             creatGuest.Show();
             this.Hide();
         }
 
-        private void guna2Button7_Click(object sender, EventArgs e)
+        private void btnReservation_Click(object sender, EventArgs e)
         {
             ManageReservation manageReservation = new ManageReservation();
             manageReservation.Show();
-            this.Hide();
-        }
-
-        private void guna2Button12_Click(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            ManageGuest updatebooking = new ManageGuest();
-            updatebooking.Show();
             this.Hide();
         }
 
@@ -65,10 +52,17 @@ namespace Phumla_Kamnandi.Presentation_Layer
             Application.Exit();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void btnAbout_Click(object sender, EventArgs e)
         {
-            Home_Pagecs home = new Home_Pagecs();
-            home.Show();
+            About_Page about = new About_Page();
+            about.Show();
+            this.Hide();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            ManageGuest updatebooking = new ManageGuest();
+            updatebooking.Show();
             this.Hide();
         }
 

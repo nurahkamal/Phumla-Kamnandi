@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
@@ -94,8 +95,11 @@ namespace Phumla_Kamnandi.Presentation_Layer
         }
 
         private void btnAbout_Click(object sender, EventArgs e)
-        {
-
+        {    
+            About_Page aboutPage = new About_Page();
+            aboutPage.Show();
+            this.Hide();
+ 
         }
 
         private void btnBooking_Click(object sender, EventArgs e)
