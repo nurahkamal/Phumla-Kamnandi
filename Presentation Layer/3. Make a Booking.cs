@@ -95,6 +95,12 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
+            if (!ValidateGuestID())
+                return;
+
+            if (!ValidateNumericFields())
+                return;
+
             int numberOfGuests = (int)NumberOfGuests.Value;
             int numberOfRooms = (int)NumberOfRooms.Value;
             DateTime checkInDate = dtpCheckIn.Value.Date;
@@ -198,6 +204,58 @@ namespace Phumla_Kamnandi.Presentation_Layer
             MonthlySalesReport report = new MonthlySalesReport();
             report.Show();
             this.Hide();
+        }
+        private bool ValidateGuestID()
+        {
+            string input = txtGuestID.Text.Trim();
+
+            // 1. Check empty
+            if (string.IsNullOrEmpty(input))
+            {
+                MessageBox.Show("Please enter a Guest ID.");
+                txtGuestID.Focus();
+                return false;
+            }
+
+            // 2. Check numeric
+            if (!int.TryParse(input, out int guestID))
+            {
+                MessageBox.Show("Guest ID must be a number only.");
+                txtGuestID.Focus();
+                return false;
+            }
+
+            // 3. Check if guest exists in database
+            GuestDB guestDB = new GuestDB(); 
+            bool exists = guestDB.GuestExists(guestID);
+
+            if (!exists)
+            {
+                MessageBox.Show("No guest found with this ID. Please check and try again.");
+                txtGuestID.Focus();
+                return false;
+            }
+
+            return true; 
+        }
+        private bool ValidateNumericFields()
+        {
+            // Check if NumberOfGuests is blank or 0
+            if (string.IsNullOrWhiteSpace(NumberOfGuests.Text) || NumberOfGuests.Value <= 0)
+            {
+                MessageBox.Show("Please enter the number of guests.");
+                NumberOfGuests.Focus();
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(NumberOfRooms.Text) || NumberOfRooms.Value <= 0)
+            {
+                MessageBox.Show("Please select at least one room.");
+                NumberOfRooms.Focus();
+                return false;
+            }
+
+            return true;
         }
 
         private void btnUser_Click(object sender, EventArgs e)
