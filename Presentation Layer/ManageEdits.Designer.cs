@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageEdits));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnReservations = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
@@ -45,7 +46,6 @@
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -69,6 +69,25 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1074, 669);
             this.panel1.TabIndex = 3;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
+            this.btnExit.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
+            this.btnExit.ImageRotate = 0F;
+            this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Location = new System.Drawing.Point(981, 13);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
+            this.btnExit.Size = new System.Drawing.Size(76, 64);
+            this.btnExit.TabIndex = 7;
+            this.btnExit.UseTransparentBackground = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnReservations
             // 
@@ -307,25 +326,6 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.CheckedState.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnExit.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
-            this.btnExit.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
-            this.btnExit.ImageRotate = 0F;
-            this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Location = new System.Drawing.Point(981, 13);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
-            this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Size = new System.Drawing.Size(76, 64);
-            this.btnExit.TabIndex = 7;
-            this.btnExit.UseTransparentBackground = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
             // ManageEdits
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -338,7 +338,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ManageEdits";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ManageEdits";
+            this.Text = " ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ManageEdits_Load);
             this.panel1.ResumeLayout(false);

@@ -42,8 +42,6 @@
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtAddress = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.txtPassNum = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lblPassNum = new System.Windows.Forms.Label();
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.txtPhone = new Guna.UI2.WinForms.Guna2TextBox();
@@ -145,8 +143,6 @@
             this.panel3.Controls.Add(this.txtEmail);
             this.panel3.Controls.Add(this.txtAddress);
             this.panel3.Controls.Add(this.lblAddress);
-            this.panel3.Controls.Add(this.txtPassNum);
-            this.panel3.Controls.Add(this.lblPassNum);
             this.panel3.Controls.Add(this.txtID);
             this.panel3.Controls.Add(this.lblID);
             this.panel3.Controls.Add(this.txtPhone);
@@ -202,7 +198,7 @@
             // 
             // strLpoints
             // 
-            this.strLpoints.Location = new System.Drawing.Point(201, 309);
+            this.strLpoints.Location = new System.Drawing.Point(717, 223);
             this.strLpoints.Name = "strLpoints";
             this.strLpoints.Size = new System.Drawing.Size(120, 28);
             this.strLpoints.TabIndex = 33;
@@ -231,7 +227,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label2.Location = new System.Drawing.Point(13, 307);
+            this.label2.Location = new System.Drawing.Point(527, 215);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(156, 30);
             this.label2.TabIndex = 32;
@@ -282,7 +278,7 @@
             this.txtAddress.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtAddress.Location = new System.Drawing.Point(695, 209);
+            this.txtAddress.Location = new System.Drawing.Point(695, 132);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.PlaceholderText = "";
@@ -295,43 +291,11 @@
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAddress.Location = new System.Drawing.Point(577, 209);
+            this.lblAddress.Location = new System.Drawing.Point(577, 132);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(97, 30);
             this.lblAddress.TabIndex = 28;
             this.lblAddress.Text = "Address:";
-            // 
-            // txtPassNum
-            // 
-            this.txtPassNum.AutoRoundedCorners = true;
-            this.txtPassNum.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPassNum.DefaultText = "";
-            this.txtPassNum.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtPassNum.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtPassNum.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassNum.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtPassNum.Enabled = false;
-            this.txtPassNum.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassNum.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassNum.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassNum.Location = new System.Drawing.Point(695, 143);
-            this.txtPassNum.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtPassNum.Name = "txtPassNum";
-            this.txtPassNum.PlaceholderText = "";
-            this.txtPassNum.SelectedText = "";
-            this.txtPassNum.Size = new System.Drawing.Size(278, 36);
-            this.txtPassNum.TabIndex = 27;
-            // 
-            // lblPassNum
-            // 
-            this.lblPassNum.AutoSize = true;
-            this.lblPassNum.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPassNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblPassNum.Location = new System.Drawing.Point(483, 149);
-            this.lblPassNum.Name = "lblPassNum";
-            this.lblPassNum.Size = new System.Drawing.Size(191, 30);
-            this.lblPassNum.TabIndex = 26;
-            this.lblPassNum.Text = "Passport Number:";
             // 
             // txtID
             // 
@@ -788,8 +752,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSurname;
         private System.Windows.Forms.Label lblSurname;
         private Guna.UI2.WinForms.Guna2TextBox txtName;
-        private Guna.UI2.WinForms.Guna2TextBox txtPassNum;
-        private System.Windows.Forms.Label lblPassNum;
         private Guna.UI2.WinForms.Guna2TextBox txtID;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblAddress;

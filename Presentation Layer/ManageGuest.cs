@@ -91,7 +91,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 txtPhone.Text = SelectedGuest.Cells["Phone"].Value.ToString();
                 txtEmail.Text = SelectedGuest.Cells["Email"].Value.ToString();
                 txtID.Text = SelectedGuest.Cells["IDNumber"].Value.ToString();
-                txtPassNum.Text = SelectedGuest.Cells["PassportNo"].Value.ToString();
+                
                 txtAddress.Text = SelectedGuest.Cells["Address"].Value.ToString();
 
                 strLpoints.Value = Convert.ToInt32(SelectedGuest.Cells["LoyaltyPoints"].Value);
@@ -109,7 +109,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             txtPhone.Enabled = true;
             txtEmail.Enabled = true;
             txtID.Enabled = true;
-            txtPassNum.Enabled = true;
+            
             txtAddress.Enabled = true;
 
 
@@ -145,7 +145,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 if (msgUpdate == DialogResult.Yes)
                 {
                     //Get Guest ID to delte from tables
-                    gController.UpdateGuest(txtGid.Text, txtName.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtID.Text, txtPassNum.Text, txtAddress.Text, Convert.ToInt32(strLpoints.Value));
+                    gController.UpdateGuest(txtGid.Text, txtName.Text, txtSurname.Text, txtPhone.Text, txtEmail.Text, txtID.Text, txtAddress.Text, Convert.ToInt32(strLpoints.Value));
 
 
 

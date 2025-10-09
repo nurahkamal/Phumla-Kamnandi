@@ -32,7 +32,7 @@ namespace Phumla_Kamnandi.Data_Layer
             return dsMain.Tables[gtableName];
         }
 
-        public bool UpdateGuest(string gID, string guestName, string gLastName, string gPhone, string gEmail, string pID, string gPassNum, string gAddress, int lPoints)
+        public bool UpdateGuest(string gID, string guestName, string gLastName, string gPhone, string gEmail, string pID,  string gAddress, int lPoints)
         {
             try
             {
@@ -52,7 +52,6 @@ namespace Phumla_Kamnandi.Data_Layer
                 row["Phone"] = gPhone;
                 row["Email"] = gEmail;
                 row["IDNumber"] = pID;
-                row["PassportNo"] = gPassNum;
                 row["Address"] = gAddress;
                 row["LoyaltyPoints"] = lPoints; 
 

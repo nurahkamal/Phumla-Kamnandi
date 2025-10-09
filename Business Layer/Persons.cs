@@ -82,19 +82,19 @@ namespace Phumla_Kamnandi.Business_Layer
             _Pname = "";
             _Psurname = "";
             _Pid = "";
-            _Ppass = "";
+           
             _Pphone = "";
             _Pemail = "";
             _Paddress = "";
 
         }
 
-        public Persons(string PName, string PSurname, string PID, string PPass, string PPhone, string PEmail, string PADDRESS)
+        public Persons(string PName, string PSurname, string PID,  string PPhone, string PEmail, string PADDRESS)
         {
             _Pname = PName;
             _Psurname = PSurname;
             _Pid = PID;
-            _Ppass = PPass;
+            
             _Pphone = PPhone;
             _Pemail = PEmail;
 
