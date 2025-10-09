@@ -34,6 +34,9 @@
             this.txtSearchRid = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.lblP = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblIRID = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.NumberOfRooms = new Guna.UI2.WinForms.Guna2NumericUpDown();
@@ -64,9 +67,6 @@
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2AnimateWindow1 = new Guna.UI2.WinForms.Guna2AnimateWindow(this.components);
-            this.lblIRID = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblP = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).BeginInit();
@@ -126,7 +126,7 @@
             this.btnSearch.ImageSize = new System.Drawing.Size(30, 30);
             this.btnSearch.Location = new System.Drawing.Point(279, 109);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(85, 40);
+            this.btnSearch.Size = new System.Drawing.Size(98, 40);
             this.btnSearch.TabIndex = 31;
             this.btnSearch.Text = "Search ";
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -156,6 +156,39 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1188, 391);
             this.panel3.TabIndex = 30;
+            // 
+            // lblP
+            // 
+            this.lblP.AutoSize = true;
+            this.lblP.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblP.Location = new System.Drawing.Point(216, 175);
+            this.lblP.Name = "lblP";
+            this.lblP.Size = new System.Drawing.Size(163, 30);
+            this.lblP.TabIndex = 50;
+            this.lblP.Text = "Reservation ID:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label5.Location = new System.Drawing.Point(216, 87);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(163, 30);
+            this.label5.TabIndex = 49;
+            this.label5.Text = "Reservation ID:";
+            // 
+            // lblIRID
+            // 
+            this.lblIRID.AutoSize = true;
+            this.lblIRID.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblIRID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblIRID.Location = new System.Drawing.Point(216, 22);
+            this.lblIRID.Name = "lblIRID";
+            this.lblIRID.Size = new System.Drawing.Size(163, 30);
+            this.lblIRID.TabIndex = 48;
+            this.lblIRID.Text = "Reservation ID:";
             // 
             // label4
             // 
@@ -625,39 +658,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblIRID
-            // 
-            this.lblIRID.AutoSize = true;
-            this.lblIRID.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIRID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblIRID.Location = new System.Drawing.Point(216, 22);
-            this.lblIRID.Name = "lblIRID";
-            this.lblIRID.Size = new System.Drawing.Size(163, 30);
-            this.lblIRID.TabIndex = 48;
-            this.lblIRID.Text = "Reservation ID:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label5.Location = new System.Drawing.Point(216, 87);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(163, 30);
-            this.label5.TabIndex = 49;
-            this.label5.Text = "Reservation ID:";
-            // 
-            // lblP
-            // 
-            this.lblP.AutoSize = true;
-            this.lblP.Font = new System.Drawing.Font("Segoe UI Semibold", 13.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblP.Location = new System.Drawing.Point(216, 175);
-            this.lblP.Name = "lblP";
-            this.lblP.Size = new System.Drawing.Size(163, 30);
-            this.lblP.TabIndex = 50;
-            this.lblP.Text = "Reservation ID:";
             // 
             // _5
             // 

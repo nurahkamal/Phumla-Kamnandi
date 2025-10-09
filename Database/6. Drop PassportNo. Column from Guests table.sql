@@ -1,0 +1,3 @@
+﻿ALTER TABLE Guests
+DROP COLUMN PassportNo;
+
