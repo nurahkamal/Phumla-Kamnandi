@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
@@ -44,41 +44,39 @@
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnHeading = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
+            this.statsPanel = new System.Windows.Forms.Panel();
+            this.cardTotalUsers = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTotalUsers = new System.Windows.Forms.Label();
+            this.lblTotalCount = new System.Windows.Forms.Label();
+            this.cardActiveUsers = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblActiveCount = new System.Windows.Forms.Label();
+            this.lblActiveUsers = new System.Windows.Forms.Label();
+            this.cardTodayLogin = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTodayCount = new System.Windows.Forms.Label();
+            this.lblTodayLogin = new System.Windows.Forms.Label();
+            this.cardCommonRole = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblRoleValue = new System.Windows.Forms.Label();
+            this.lblCommonRole = new System.Windows.Forms.Label();
+            this.controlPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblFilter = new System.Windows.Forms.Label();
+            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
             this.colNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colLoginTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
-            this.statsPanel = new System.Windows.Forms.Panel();
-            this.cardCommonRole = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblRoleValue = new System.Windows.Forms.Label();
-            this.lblCommonRole = new System.Windows.Forms.Label();
-            this.cardTodayLogin = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblTodayCount = new System.Windows.Forms.Label();
-            this.lblTodayLogin = new System.Windows.Forms.Label();
-            this.cardActiveUsers = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblActiveCount = new System.Windows.Forms.Label();
-            this.lblActiveUsers = new System.Windows.Forms.Label();
-            this.cardTotalUsers = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblTotalCount = new System.Windows.Forms.Label();
-            this.lblTotalUsers = new System.Windows.Forms.Label();
-            this.controlPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
-            this.lblFilter = new System.Windows.Forms.Label();
-            this.cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.statsPanel.SuspendLayout();
-            this.cardCommonRole.SuspendLayout();
-            this.cardTodayLogin.SuspendLayout();
-            this.cardActiveUsers.SuspendLayout();
             this.cardTotalUsers.SuspendLayout();
+            this.cardActiveUsers.SuspendLayout();
+            this.cardTodayLogin.SuspendLayout();
+            this.cardCommonRole.SuspendLayout();
             this.controlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,8 +84,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Controls.Add(this.guna2Button3);
-            this.panel2.Controls.Add(this.btnHome);
             this.panel2.Controls.Add(this.guna2Button1);
             this.panel2.Controls.Add(this.guna2Button2);
             this.panel2.Controls.Add(this.btnUser);
@@ -148,12 +144,11 @@
             this.btnUser.FillColor = System.Drawing.Color.White;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnUser.Location = new System.Drawing.Point(48, 517);
+            this.btnUser.Location = new System.Drawing.Point(42, 485);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(252, 47);
             this.btnUser.TabIndex = 21;
             this.btnUser.Text = "User Information";
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnAbout
             // 
@@ -167,12 +162,11 @@
             this.btnAbout.FillColor = System.Drawing.Color.White;
             this.btnAbout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnAbout.Location = new System.Drawing.Point(48, 584);
+            this.btnAbout.Location = new System.Drawing.Point(42, 578);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(252, 47);
             this.btnAbout.TabIndex = 20;
             this.btnAbout.Text = "About Us";
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // btnReport
             // 
@@ -186,12 +180,11 @@
             this.btnReport.FillColor = System.Drawing.Color.White;
             this.btnReport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnReport.Location = new System.Drawing.Point(48, 450);
+            this.btnReport.Location = new System.Drawing.Point(42, 400);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(252, 47);
             this.btnReport.TabIndex = 19;
             this.btnReport.Text = "View Reports";
-            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnGuest
             // 
@@ -205,12 +198,11 @@
             this.btnGuest.FillColor = System.Drawing.Color.White;
             this.btnGuest.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuest.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnGuest.Location = new System.Drawing.Point(48, 383);
+            this.btnGuest.Location = new System.Drawing.Point(42, 314);
             this.btnGuest.Name = "btnGuest";
             this.btnGuest.Size = new System.Drawing.Size(252, 47);
             this.btnGuest.TabIndex = 18;
             this.btnGuest.Text = "Guest Enquiries";
-            this.btnGuest.Click += new System.EventHandler(this.btnGuest_Click);
             // 
             // btnReservation
             // 
@@ -224,12 +216,11 @@
             this.btnReservation.FillColor = System.Drawing.Color.White;
             this.btnReservation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnReservation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnReservation.Location = new System.Drawing.Point(48, 316);
+            this.btnReservation.Location = new System.Drawing.Point(42, 232);
             this.btnReservation.Name = "btnReservation";
             this.btnReservation.Size = new System.Drawing.Size(252, 47);
             this.btnReservation.TabIndex = 17;
             this.btnReservation.Text = "Update a Reservation";
-            this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
             // 
             // pictureBox1
             // 
@@ -273,16 +264,16 @@
             // 
             // guna2DataGridView1
             // 
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.guna2DataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 18;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -292,14 +283,14 @@
             this.colFullName,
             this.colLoginTime,
             this.colStatus});
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
             this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.guna2DataGridView1.Location = new System.Drawing.Point(18, 85);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
@@ -330,6 +321,226 @@
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.guna2DataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.guna2DataGridView1_CellContentClick);
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoRoundedCorners = true;
+            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnRefresh.ForeColor = System.Drawing.Color.White;
+            this.btnRefresh.Location = new System.Drawing.Point(639, 19);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(180, 36);
+            this.btnRefresh.TabIndex = 10;
+            this.btnRefresh.Text = "Refresh";
+            // 
+            // statsPanel
+            // 
+            this.statsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            this.statsPanel.Controls.Add(this.cardCommonRole);
+            this.statsPanel.Controls.Add(this.cardTodayLogin);
+            this.statsPanel.Controls.Add(this.cardActiveUsers);
+            this.statsPanel.Controls.Add(this.cardTotalUsers);
+            this.statsPanel.Location = new System.Drawing.Point(503, 140);
+            this.statsPanel.Name = "statsPanel";
+            this.statsPanel.Size = new System.Drawing.Size(1042, 202);
+            this.statsPanel.TabIndex = 13;
+            // 
+            // cardTotalUsers
+            // 
+            this.cardTotalUsers.Controls.Add(this.lblTotalCount);
+            this.cardTotalUsers.Controls.Add(this.lblTotalUsers);
+            this.cardTotalUsers.Location = new System.Drawing.Point(33, 30);
+            this.cardTotalUsers.Name = "cardTotalUsers";
+            this.cardTotalUsers.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.cardTotalUsers.Size = new System.Drawing.Size(200, 100);
+            this.cardTotalUsers.TabIndex = 0;
+            // 
+            // lblTotalUsers
+            // 
+            this.lblTotalUsers.AutoSize = true;
+            this.lblTotalUsers.Location = new System.Drawing.Point(51, 11);
+            this.lblTotalUsers.Name = "lblTotalUsers";
+            this.lblTotalUsers.Size = new System.Drawing.Size(101, 16);
+            this.lblTotalUsers.TabIndex = 0;
+            this.lblTotalUsers.Text = "TOTAL USERS";
+            // 
+            // lblTotalCount
+            // 
+            this.lblTotalCount.AutoSize = true;
+            this.lblTotalCount.Location = new System.Drawing.Point(82, 48);
+            this.lblTotalCount.Name = "lblTotalCount";
+            this.lblTotalCount.Size = new System.Drawing.Size(14, 16);
+            this.lblTotalCount.TabIndex = 1;
+            this.lblTotalCount.Text = "0";
+            // 
+            // cardActiveUsers
+            // 
+            this.cardActiveUsers.Controls.Add(this.lblActiveCount);
+            this.cardActiveUsers.Controls.Add(this.lblActiveUsers);
+            this.cardActiveUsers.Location = new System.Drawing.Point(275, 30);
+            this.cardActiveUsers.Name = "cardActiveUsers";
+            this.cardActiveUsers.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.cardActiveUsers.Size = new System.Drawing.Size(200, 100);
+            this.cardActiveUsers.TabIndex = 2;
+            // 
+            // lblActiveCount
+            // 
+            this.lblActiveCount.AutoSize = true;
+            this.lblActiveCount.Location = new System.Drawing.Point(82, 48);
+            this.lblActiveCount.Name = "lblActiveCount";
+            this.lblActiveCount.Size = new System.Drawing.Size(14, 16);
+            this.lblActiveCount.TabIndex = 1;
+            this.lblActiveCount.Text = "0";
+            // 
+            // lblActiveUsers
+            // 
+            this.lblActiveUsers.AutoSize = true;
+            this.lblActiveUsers.Location = new System.Drawing.Point(51, 11);
+            this.lblActiveUsers.Name = "lblActiveUsers";
+            this.lblActiveUsers.Size = new System.Drawing.Size(105, 16);
+            this.lblActiveUsers.TabIndex = 0;
+            this.lblActiveUsers.Text = "ACTIVE USERS";
+            // 
+            // cardTodayLogin
+            // 
+            this.cardTodayLogin.Controls.Add(this.lblTodayCount);
+            this.cardTodayLogin.Controls.Add(this.lblTodayLogin);
+            this.cardTodayLogin.Location = new System.Drawing.Point(525, 30);
+            this.cardTodayLogin.Name = "cardTodayLogin";
+            this.cardTodayLogin.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.cardTodayLogin.Size = new System.Drawing.Size(200, 100);
+            this.cardTodayLogin.TabIndex = 3;
+            // 
+            // lblTodayCount
+            // 
+            this.lblTodayCount.AutoSize = true;
+            this.lblTodayCount.Location = new System.Drawing.Point(82, 48);
+            this.lblTodayCount.Name = "lblTodayCount";
+            this.lblTodayCount.Size = new System.Drawing.Size(14, 16);
+            this.lblTodayCount.TabIndex = 1;
+            this.lblTodayCount.Text = "0";
+            // 
+            // lblTodayLogin
+            // 
+            this.lblTodayLogin.AutoSize = true;
+            this.lblTodayLogin.Location = new System.Drawing.Point(51, 11);
+            this.lblTodayLogin.Name = "lblTodayLogin";
+            this.lblTodayLogin.Size = new System.Drawing.Size(113, 16);
+            this.lblTodayLogin.TabIndex = 0;
+            this.lblTodayLogin.Text = "LOGGED TODAY";
+            // 
+            // cardCommonRole
+            // 
+            this.cardCommonRole.Controls.Add(this.lblRoleValue);
+            this.cardCommonRole.Controls.Add(this.lblCommonRole);
+            this.cardCommonRole.Location = new System.Drawing.Point(772, 30);
+            this.cardCommonRole.Name = "cardCommonRole";
+            this.cardCommonRole.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.cardCommonRole.Size = new System.Drawing.Size(200, 100);
+            this.cardCommonRole.TabIndex = 4;
+            // 
+            // lblRoleValue
+            // 
+            this.lblRoleValue.AutoSize = true;
+            this.lblRoleValue.Location = new System.Drawing.Point(82, 48);
+            this.lblRoleValue.Name = "lblRoleValue";
+            this.lblRoleValue.Size = new System.Drawing.Size(30, 16);
+            this.lblRoleValue.TabIndex = 1;
+            this.lblRoleValue.Text = "N/A";
+            // 
+            // lblCommonRole
+            // 
+            this.lblCommonRole.AutoSize = true;
+            this.lblCommonRole.Location = new System.Drawing.Point(51, 11);
+            this.lblCommonRole.Name = "lblCommonRole";
+            this.lblCommonRole.Size = new System.Drawing.Size(107, 16);
+            this.lblCommonRole.TabIndex = 0;
+            this.lblCommonRole.Text = "COMMON ROLE";
+            // 
+            // controlPanel
+            // 
+            this.controlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            this.controlPanel.Controls.Add(this.btnAddUser);
+            this.controlPanel.Controls.Add(this.lblFilter);
+            this.controlPanel.Controls.Add(this.guna2DataGridView1);
+            this.controlPanel.Controls.Add(this.cmbFilter);
+            this.controlPanel.Controls.Add(this.txtSearch);
+            this.controlPanel.Controls.Add(this.btnRefresh);
+            this.controlPanel.Location = new System.Drawing.Point(503, 401);
+            this.controlPanel.Name = "controlPanel";
+            this.controlPanel.Size = new System.Drawing.Size(1042, 275);
+            this.controlPanel.TabIndex = 14;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.AutoRoundedCorners = true;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.IconLeft = global::Phumla_Kamnandi.Properties.Resources.search_icon_png_5;
+            this.txtSearch.Location = new System.Drawing.Point(18, 16);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "Search Here";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(229, 39);
+            this.txtSearch.TabIndex = 0;
+            // 
+            // cmbFilter
+            // 
+            this.cmbFilter.AutoRoundedCorners = true;
+            this.cmbFilter.BackColor = System.Drawing.Color.Transparent;
+            this.cmbFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFilter.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbFilter.ItemHeight = 30;
+            this.cmbFilter.Items.AddRange(new object[] {
+            "All Users",
+            "Active Only",
+            "Inactive Only",
+            "Managers",
+            "Receptionists"});
+            this.cmbFilter.Location = new System.Drawing.Point(431, 19);
+            this.cmbFilter.Name = "cmbFilter";
+            this.cmbFilter.Size = new System.Drawing.Size(160, 36);
+            this.cmbFilter.TabIndex = 1;
+            // 
+            // lblFilter
+            // 
+            this.lblFilter.AutoSize = true;
+            this.lblFilter.Location = new System.Drawing.Point(318, 31);
+            this.lblFilter.Name = "lblFilter";
+            this.lblFilter.Size = new System.Drawing.Size(53, 16);
+            this.lblFilter.TabIndex = 11;
+            this.lblFilter.Text = "FILTER";
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.AutoRoundedCorners = true;
+            this.btnAddUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddUser.ForeColor = System.Drawing.Color.White;
+            this.btnAddUser.Location = new System.Drawing.Point(840, 19);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(180, 36);
+            this.btnAddUser.TabIndex = 12;
+            this.btnAddUser.Text = "Add User";
             // 
             // colNumber
             // 
@@ -368,267 +579,6 @@
             this.colStatus.MinimumWidth = 6;
             this.colStatus.Name = "colStatus";
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.AutoRoundedCorners = true;
-            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(639, 19);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(180, 36);
-            this.btnRefresh.TabIndex = 10;
-            this.btnRefresh.Text = "Refresh";
-            // 
-            // statsPanel
-            // 
-            this.statsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            this.statsPanel.Controls.Add(this.cardCommonRole);
-            this.statsPanel.Controls.Add(this.cardTodayLogin);
-            this.statsPanel.Controls.Add(this.cardActiveUsers);
-            this.statsPanel.Controls.Add(this.cardTotalUsers);
-            this.statsPanel.Location = new System.Drawing.Point(503, 140);
-            this.statsPanel.Name = "statsPanel";
-            this.statsPanel.Size = new System.Drawing.Size(1042, 202);
-            this.statsPanel.TabIndex = 13;
-            // 
-            // cardCommonRole
-            // 
-            this.cardCommonRole.Controls.Add(this.lblRoleValue);
-            this.cardCommonRole.Controls.Add(this.lblCommonRole);
-            this.cardCommonRole.Location = new System.Drawing.Point(772, 30);
-            this.cardCommonRole.Name = "cardCommonRole";
-            this.cardCommonRole.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.cardCommonRole.Size = new System.Drawing.Size(200, 100);
-            this.cardCommonRole.TabIndex = 4;
-            // 
-            // lblRoleValue
-            // 
-            this.lblRoleValue.AutoSize = true;
-            this.lblRoleValue.Location = new System.Drawing.Point(82, 48);
-            this.lblRoleValue.Name = "lblRoleValue";
-            this.lblRoleValue.Size = new System.Drawing.Size(30, 16);
-            this.lblRoleValue.TabIndex = 1;
-            this.lblRoleValue.Text = "N/A";
-            // 
-            // lblCommonRole
-            // 
-            this.lblCommonRole.AutoSize = true;
-            this.lblCommonRole.Location = new System.Drawing.Point(51, 11);
-            this.lblCommonRole.Name = "lblCommonRole";
-            this.lblCommonRole.Size = new System.Drawing.Size(107, 16);
-            this.lblCommonRole.TabIndex = 0;
-            this.lblCommonRole.Text = "COMMON ROLE";
-            // 
-            // cardTodayLogin
-            // 
-            this.cardTodayLogin.Controls.Add(this.lblTodayCount);
-            this.cardTodayLogin.Controls.Add(this.lblTodayLogin);
-            this.cardTodayLogin.Location = new System.Drawing.Point(525, 30);
-            this.cardTodayLogin.Name = "cardTodayLogin";
-            this.cardTodayLogin.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.cardTodayLogin.Size = new System.Drawing.Size(200, 100);
-            this.cardTodayLogin.TabIndex = 3;
-            // 
-            // lblTodayCount
-            // 
-            this.lblTodayCount.AutoSize = true;
-            this.lblTodayCount.Location = new System.Drawing.Point(82, 48);
-            this.lblTodayCount.Name = "lblTodayCount";
-            this.lblTodayCount.Size = new System.Drawing.Size(14, 16);
-            this.lblTodayCount.TabIndex = 1;
-            this.lblTodayCount.Text = "0";
-            // 
-            // lblTodayLogin
-            // 
-            this.lblTodayLogin.AutoSize = true;
-            this.lblTodayLogin.Location = new System.Drawing.Point(51, 11);
-            this.lblTodayLogin.Name = "lblTodayLogin";
-            this.lblTodayLogin.Size = new System.Drawing.Size(113, 16);
-            this.lblTodayLogin.TabIndex = 0;
-            this.lblTodayLogin.Text = "LOGGED TODAY";
-            // 
-            // cardActiveUsers
-            // 
-            this.cardActiveUsers.Controls.Add(this.lblActiveCount);
-            this.cardActiveUsers.Controls.Add(this.lblActiveUsers);
-            this.cardActiveUsers.Location = new System.Drawing.Point(275, 30);
-            this.cardActiveUsers.Name = "cardActiveUsers";
-            this.cardActiveUsers.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.cardActiveUsers.Size = new System.Drawing.Size(200, 100);
-            this.cardActiveUsers.TabIndex = 2;
-            // 
-            // lblActiveCount
-            // 
-            this.lblActiveCount.AutoSize = true;
-            this.lblActiveCount.Location = new System.Drawing.Point(82, 48);
-            this.lblActiveCount.Name = "lblActiveCount";
-            this.lblActiveCount.Size = new System.Drawing.Size(14, 16);
-            this.lblActiveCount.TabIndex = 1;
-            this.lblActiveCount.Text = "0";
-            // 
-            // lblActiveUsers
-            // 
-            this.lblActiveUsers.AutoSize = true;
-            this.lblActiveUsers.Location = new System.Drawing.Point(51, 11);
-            this.lblActiveUsers.Name = "lblActiveUsers";
-            this.lblActiveUsers.Size = new System.Drawing.Size(105, 16);
-            this.lblActiveUsers.TabIndex = 0;
-            this.lblActiveUsers.Text = "ACTIVE USERS";
-            // 
-            // cardTotalUsers
-            // 
-            this.cardTotalUsers.Controls.Add(this.lblTotalCount);
-            this.cardTotalUsers.Controls.Add(this.lblTotalUsers);
-            this.cardTotalUsers.Location = new System.Drawing.Point(33, 30);
-            this.cardTotalUsers.Name = "cardTotalUsers";
-            this.cardTotalUsers.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.cardTotalUsers.Size = new System.Drawing.Size(200, 100);
-            this.cardTotalUsers.TabIndex = 0;
-            // 
-            // lblTotalCount
-            // 
-            this.lblTotalCount.AutoSize = true;
-            this.lblTotalCount.Location = new System.Drawing.Point(82, 48);
-            this.lblTotalCount.Name = "lblTotalCount";
-            this.lblTotalCount.Size = new System.Drawing.Size(14, 16);
-            this.lblTotalCount.TabIndex = 1;
-            this.lblTotalCount.Text = "0";
-            // 
-            // lblTotalUsers
-            // 
-            this.lblTotalUsers.AutoSize = true;
-            this.lblTotalUsers.Location = new System.Drawing.Point(51, 11);
-            this.lblTotalUsers.Name = "lblTotalUsers";
-            this.lblTotalUsers.Size = new System.Drawing.Size(101, 16);
-            this.lblTotalUsers.TabIndex = 0;
-            this.lblTotalUsers.Text = "TOTAL USERS";
-            // 
-            // controlPanel
-            // 
-            this.controlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            this.controlPanel.Controls.Add(this.btnAddUser);
-            this.controlPanel.Controls.Add(this.lblFilter);
-            this.controlPanel.Controls.Add(this.guna2DataGridView1);
-            this.controlPanel.Controls.Add(this.cmbFilter);
-            this.controlPanel.Controls.Add(this.txtSearch);
-            this.controlPanel.Controls.Add(this.btnRefresh);
-            this.controlPanel.Location = new System.Drawing.Point(503, 401);
-            this.controlPanel.Name = "controlPanel";
-            this.controlPanel.Size = new System.Drawing.Size(1042, 275);
-            this.controlPanel.TabIndex = 14;
-            // 
-            // btnAddUser
-            // 
-            this.btnAddUser.AutoRoundedCorners = true;
-            this.btnAddUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddUser.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddUser.Location = new System.Drawing.Point(840, 19);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(180, 36);
-            this.btnAddUser.TabIndex = 12;
-            this.btnAddUser.Text = "Add User";
-            // 
-            // lblFilter
-            // 
-            this.lblFilter.AutoSize = true;
-            this.lblFilter.Location = new System.Drawing.Point(318, 31);
-            this.lblFilter.Name = "lblFilter";
-            this.lblFilter.Size = new System.Drawing.Size(53, 16);
-            this.lblFilter.TabIndex = 11;
-            this.lblFilter.Text = "FILTER";
-            // 
-            // cmbFilter
-            // 
-            this.cmbFilter.AutoRoundedCorners = true;
-            this.cmbFilter.BackColor = System.Drawing.Color.Transparent;
-            this.cmbFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.cmbFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cmbFilter.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.cmbFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.cmbFilter.ItemHeight = 30;
-            this.cmbFilter.Items.AddRange(new object[] {
-            "All Users",
-            "Active Only",
-            "Inactive Only",
-            "Managers",
-            "Receptionists"});
-            this.cmbFilter.Location = new System.Drawing.Point(431, 19);
-            this.cmbFilter.Name = "cmbFilter";
-            this.cmbFilter.Size = new System.Drawing.Size(160, 36);
-            this.cmbFilter.TabIndex = 1;
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.AutoRoundedCorners = true;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.IconLeft = global::Phumla_Kamnandi.Properties.Resources.search_icon_png_5;
-            this.txtSearch.Location = new System.Drawing.Point(18, 16);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "Search Here";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(229, 39);
-            this.txtSearch.TabIndex = 0;
-            // 
-            // btnHome
-            // 
-            this.btnHome.AutoRoundedCorners = true;
-            this.btnHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnHome.BorderThickness = 2;
-            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHome.FillColor = System.Drawing.Color.White;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnHome.Location = new System.Drawing.Point(42, 190);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(264, 43);
-            this.btnHome.TabIndex = 40;
-            this.btnHome.Text = "Home";
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.AutoRoundedCorners = true;
-            this.guna2Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.guna2Button3.BorderThickness = 2;
-            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button3.FillColor = System.Drawing.Color.White;
-            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.Location = new System.Drawing.Point(42, 253);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(264, 43);
-            this.guna2Button3.TabIndex = 41;
-            this.guna2Button3.Text = " Make a Reservation";
-            this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
-            // 
             // User
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -649,14 +599,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.statsPanel.ResumeLayout(false);
-            this.cardCommonRole.ResumeLayout(false);
-            this.cardCommonRole.PerformLayout();
-            this.cardTodayLogin.ResumeLayout(false);
-            this.cardTodayLogin.PerformLayout();
-            this.cardActiveUsers.ResumeLayout(false);
-            this.cardActiveUsers.PerformLayout();
             this.cardTotalUsers.ResumeLayout(false);
             this.cardTotalUsers.PerformLayout();
+            this.cardActiveUsers.ResumeLayout(false);
+            this.cardActiveUsers.PerformLayout();
+            this.cardTodayLogin.ResumeLayout(false);
+            this.cardTodayLogin.PerformLayout();
+            this.cardCommonRole.ResumeLayout(false);
+            this.cardCommonRole.PerformLayout();
             this.controlPanel.ResumeLayout(false);
             this.controlPanel.PerformLayout();
             this.ResumeLayout(false);
@@ -703,7 +653,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colFullName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colLoginTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
-        private Guna.UI2.WinForms.Guna2Button btnHome;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }
 }

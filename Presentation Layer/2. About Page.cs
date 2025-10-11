@@ -56,8 +56,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            ManageEdits manageEdits = new ManageEdits();
-            manageEdits.Show();
+            ManageGuest updatebooking = new ManageGuest();
+            updatebooking.Show();
             this.Hide();
         }
 

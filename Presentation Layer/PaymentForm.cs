@@ -277,8 +277,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
-            ReportLoginFormcs reportLoginForm = new ReportLoginFormcs();
-            reportLoginForm.Show();
+            MonthlySalesReport report = new MonthlySalesReport();
+            report.Show();
             this.Hide();
         }
 
@@ -356,27 +356,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            Home_Pagecs home_Page = new Home_Pagecs();
-            home_Page.Show();
-            this.Hide();
-        }
-
-        private void guna2Button6_Click(object sender, EventArgs e)
-        {
-            _5 guest_enquiries = new _5();
-            guest_enquiries.Show();
-            this.Hide();
-        }
-
-        private void btnUser_Click(object sender, EventArgs e)
-        {
-            User user = new User();
-            user.Show();
-            this.Hide();
         }
     }
 }
