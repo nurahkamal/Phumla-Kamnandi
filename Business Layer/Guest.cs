@@ -16,6 +16,7 @@ namespace Phumla_Kamnandi.Business_Layer
         #endregion
 
 
+
         #region Property Methods 
         public int Gid
         {
@@ -40,10 +41,11 @@ namespace Phumla_Kamnandi.Business_Layer
 
         public Guest ()
         {
-            _loyaltyPoints = 0; 
+            _loyaltyPoints = 0;
         }
 
-        public Guest (int GuestID ,  int LoyaltyPoints)
+        public Guest (string name, string lastname, string PhoneNo, string id, string address, string email, int GuestID ,  int LoyaltyPoints) 
+            :base (name, lastname, PhoneNo, id, address, email)
         {
 
             _GID = GuestID;

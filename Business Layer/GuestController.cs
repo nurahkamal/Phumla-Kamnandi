@@ -50,6 +50,12 @@ namespace Phumla_Kamnandi.Business_Layer
         { 
            guestDB.UpdateGuest(gID , guestName , gLastName , gPhone , gEmail , pID  , gAddress , lpoints);
                }
+
+        public void AddGuest(Guest guest)
+
+        { 
+            guestDB.AddToDatabase(guest);
+        }
         #endregion
     }
 }

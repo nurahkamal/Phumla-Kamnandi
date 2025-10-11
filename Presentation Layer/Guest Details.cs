@@ -1,22 +1,29 @@
-﻿using System;
+﻿using Phumla_Kamnandi.Business_Layer;
+using Phumla_Kamnandi.Data_Layer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
     public partial class frmCreateGuest : Form
     {
+        private GuestController guestController;
         public frmCreateGuest()
         {
             InitializeComponent();
+            guestController = new GuestController();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -37,6 +44,26 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void label3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void DisplayGuestDetails(Guest guest)
+        {
+            txtName.Text = guest.Pname;
+            txtLastname.Text = guest.Psurname;
+            txtID.Text = guest.Pid;
+            txtEmail.Text = guest.Pemail;
+            txtPhoneNo.Text = guest.Pphone;
+            txtAddress.Text = guest.Paddress;
+        }
+
+        private void Clear()
+        {
+            txtName.Clear();
+            txtLastname.Clear();
+            txtID.Clear();
+            txtEmail.Clear();
+            txtPhoneNo.Clear();
+            txtAddress.Clear();
         }
 
         private void guna2Button14_Click(object sender, EventArgs e)
@@ -86,12 +113,61 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
+            Guest newGuest = new Guest();
 
+            //save to database
+            try
+            {
+                guestController.AddGuest(newGuest);
+                MessageBox.Show("Guest added to records successfully!", "Success",MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DisplayGuestDetails(newGuest);
+                Clear();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error adding Guest to records" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
             int guestID = Convert.ToInt32(txtSearch.Text);
+
+            //ensure guestid textbox is not empty
+            if (string.IsNullOrEmpty(txtSearch.Text))
+            {
+                MessageBox.Show("Enter information in field", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!int.TryParse(txtSearch.Text.Trim(), out guestID))
+            {
+                MessageBox.Show("GuestID must be a number", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+           
+                
+                GuestDB guestDB = new GuestDB();
+
+            //search for GuestID
+                if (guestDB.GuestExists(guestID))
+                {
+                    MessageBox.Show("Guest already exists in records", "Guest Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    ManageReservation manageReservation = new ManageReservation();
+                    manageReservation.Show();
+                    this.Hide();
+
+                }
+                else
+                {
+                    MessageBox.Show("Guest does not exist in records", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    pnlNewGuest.Visible = true;
+
+                }
+            
+            
         }
 
         private void btnAbout_Click(object sender, EventArgs e)

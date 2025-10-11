@@ -58,7 +58,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlNewGuest = new System.Windows.Forms.Panel();
             this.txtLastname = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblLastname = new System.Windows.Forms.Label();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
@@ -82,7 +82,7 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
+            this.pnlNewGuest.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -541,7 +541,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
-            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.pnlNewGuest);
             this.panel3.Controls.Add(this.btnSearch);
             this.panel3.Controls.Add(this.guna2ImageButton11);
             this.panel3.Controls.Add(this.txtSearch);
@@ -551,27 +551,28 @@
             this.panel3.Size = new System.Drawing.Size(754, 586);
             this.panel3.TabIndex = 6;
             // 
-            // panel4
+            // pnlNewGuest
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
-            this.panel4.Controls.Add(this.txtLastname);
-            this.panel4.Controls.Add(this.lblLastname);
-            this.panel4.Controls.Add(this.btnAdd);
-            this.panel4.Controls.Add(this.txtAddress);
-            this.panel4.Controls.Add(this.txtEmail);
-            this.panel4.Controls.Add(this.txtPhoneNo);
-            this.panel4.Controls.Add(this.txtID);
-            this.panel4.Controls.Add(this.txtName);
-            this.panel4.Controls.Add(this.lblEmail);
-            this.panel4.Controls.Add(this.lblAddress);
-            this.panel4.Controls.Add(this.lblID);
-            this.panel4.Controls.Add(this.lblPhoneNo);
-            this.panel4.Controls.Add(this.lblName);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(29, 122);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(656, 453);
-            this.panel4.TabIndex = 37;
+            this.pnlNewGuest.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
+            this.pnlNewGuest.Controls.Add(this.txtLastname);
+            this.pnlNewGuest.Controls.Add(this.lblLastname);
+            this.pnlNewGuest.Controls.Add(this.btnAdd);
+            this.pnlNewGuest.Controls.Add(this.txtAddress);
+            this.pnlNewGuest.Controls.Add(this.txtEmail);
+            this.pnlNewGuest.Controls.Add(this.txtPhoneNo);
+            this.pnlNewGuest.Controls.Add(this.txtID);
+            this.pnlNewGuest.Controls.Add(this.txtName);
+            this.pnlNewGuest.Controls.Add(this.lblEmail);
+            this.pnlNewGuest.Controls.Add(this.lblAddress);
+            this.pnlNewGuest.Controls.Add(this.lblID);
+            this.pnlNewGuest.Controls.Add(this.lblPhoneNo);
+            this.pnlNewGuest.Controls.Add(this.lblName);
+            this.pnlNewGuest.Controls.Add(this.label2);
+            this.pnlNewGuest.Location = new System.Drawing.Point(29, 122);
+            this.pnlNewGuest.Name = "pnlNewGuest";
+            this.pnlNewGuest.Size = new System.Drawing.Size(656, 453);
+            this.pnlNewGuest.TabIndex = 37;
+            this.pnlNewGuest.Visible = false;
             // 
             // txtLastname
             // 
@@ -818,7 +819,7 @@
             this.guna2ImageButton11.ImageOffset = new System.Drawing.Point(0, 0);
             this.guna2ImageButton11.ImageRotate = 0F;
             this.guna2ImageButton11.ImageSize = new System.Drawing.Size(30, 30);
-            this.guna2ImageButton11.Location = new System.Drawing.Point(216, 47);
+            this.guna2ImageButton11.Location = new System.Drawing.Point(411, 47);
             this.guna2ImageButton11.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.guna2ImageButton11.Name = "guna2ImageButton11";
             this.guna2ImageButton11.PressedState.ImageSize = new System.Drawing.Size(64, 64);
@@ -879,8 +880,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.pnlNewGuest.ResumeLayout(false);
+            this.pnlNewGuest.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -920,7 +921,7 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton11;
         private Guna.UI2.WinForms.Guna2Button btnSearch;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel pnlNewGuest;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label lblPhoneNo;
