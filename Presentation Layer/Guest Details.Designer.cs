@@ -46,7 +46,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnReportIssue = new Guna.UI2.WinForms.Guna2Button();
-<<<<<<< HEAD
+
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.btnReports = new Guna.UI2.WinForms.Guna2Button();
@@ -54,8 +54,7 @@
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnBooking = new Guna.UI2.WinForms.Guna2Button();
             this.btnAbout = new Guna.UI2.WinForms.Guna2Button();
-=======
->>>>>>> 5c864a5e87563d48ca0fae4cf8d578381b38e3b4
+
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
@@ -73,16 +72,15 @@
             this.lblLastname = new System.Windows.Forms.Label();
             this.txtLastname = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-<<<<<<< HEAD
-=======
-            this.btnUser = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAbout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnReports = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEnquiries = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBooking = new Guna.UI2.WinForms.Guna2Button();
->>>>>>> 5c864a5e87563d48ca0fae4cf8d578381b38e3b4
+
+           
+            
+            
+           
+         
+            
+            
+
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -336,7 +334,7 @@
             this.panel1.TabIndex = 5;
             // 
             // btnSignOut
-<<<<<<< HEAD
+
             // 
             this.btnSignOut.AutoRoundedCorners = true;
             this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -406,8 +404,7 @@
             this.btnHome.Text = "Home";
             // 
             // btnReports
-=======
->>>>>>> 5c864a5e87563d48ca0fae4cf8d578381b38e3b4
+
             // 
             this.btnSignOut.AutoRoundedCorners = true;
             this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -719,8 +716,7 @@
             this.panel4.TabIndex = 37;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
-<<<<<<< HEAD
-=======
+
             // btnUser
             // 
             this.btnUser.AutoRoundedCorners = true;
@@ -738,7 +734,7 @@
             this.btnUser.Size = new System.Drawing.Size(272, 47);
             this.btnUser.TabIndex = 36;
             this.btnUser.Text = "User Information";
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+        
             // 
             // btnAbout
             // 
@@ -778,7 +774,7 @@
             this.btnReports.Size = new System.Drawing.Size(260, 43);
             this.btnReports.TabIndex = 27;
             this.btnReports.Text = "  View Reports";
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
+            
             // 
             // btnUpdate
             // 
@@ -798,7 +794,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(260, 43);
             this.btnUpdate.TabIndex = 25;
             this.btnUpdate.Text = "       Update booking";
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            
             // 
             // btnHome
             // 
@@ -818,7 +814,7 @@
             this.btnHome.Size = new System.Drawing.Size(264, 43);
             this.btnHome.TabIndex = 35;
             this.btnHome.Text = "Home";
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            
             // 
             // btnEnquiries
             // 
@@ -838,7 +834,7 @@
             this.btnEnquiries.Size = new System.Drawing.Size(260, 43);
             this.btnEnquiries.TabIndex = 26;
             this.btnEnquiries.Text = "    Guest Enquries";
-            this.btnEnquiries.Click += new System.EventHandler(this.btnEnquiries_Click);
+           
             // 
             // btnBooking
             // 
@@ -860,7 +856,6 @@
             this.btnBooking.Text = "      Make a Booking";
             this.btnBooking.Click += new System.EventHandler(this.btnBooking_Click);
             // 
->>>>>>> 5c864a5e87563d48ca0fae4cf8d578381b38e3b4
             // frmCreateGuest
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -878,7 +873,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GuestDetails";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.frmCreateGuest_Load);
+            
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
