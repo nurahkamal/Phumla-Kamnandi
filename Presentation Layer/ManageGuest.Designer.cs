@@ -461,13 +461,13 @@
             // 
             this.GuestData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.GuestData.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.GuestData.Location = new System.Drawing.Point(171, 187);
+            this.GuestData.Location = new System.Drawing.Point(105, 187);
             this.GuestData.Name = "GuestData";
             this.GuestData.ReadOnly = true;
             this.GuestData.RowHeadersWidth = 62;
             this.GuestData.RowTemplate.Height = 28;
             this.GuestData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GuestData.Size = new System.Drawing.Size(988, 227);
+            this.GuestData.Size = new System.Drawing.Size(1114, 227);
             this.GuestData.TabIndex = 28;
             this.GuestData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.GuestData_CellContentClick);
             this.GuestData.SelectionChanged += new System.EventHandler(this.GuestData_SelectionChanged);

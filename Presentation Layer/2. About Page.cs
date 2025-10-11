@@ -78,5 +78,29 @@ namespace Phumla_Kamnandi.Presentation_Layer
             guestenquiries.Show();
             this.Hide();
         }
+
+        private void txtAbout_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReportIssue_Click(object sender, EventArgs e)
+        {
+            ReportIssue report = new ReportIssue(this);
+            report.Show();
+            this.Hide();
+        }
+
+        private void btnSignOut_Click_1(object sender, EventArgs e)
+        {
+            Login_Form login = new Login_Form();
+            login.Show();
+            this.Hide();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

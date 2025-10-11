@@ -276,7 +276,7 @@
             this.ReservationData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ReservationData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ReservationData.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.ReservationData.Location = new System.Drawing.Point(57, 32);
+            this.ReservationData.Location = new System.Drawing.Point(65, 174);
             this.ReservationData.Name = "ReservationData";
             this.ReservationData.ReadOnly = true;
             this.ReservationData.RowHeadersWidth = 62;
