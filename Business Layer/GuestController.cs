@@ -26,6 +26,13 @@ namespace Phumla_Kamnandi.Business_Layer
 
         #region Methods
 
+        public void AddGuest(Guest guest)
+
+        {
+            guestDB.AddToDatabase(guest);
+        }
+
+
         // Get all guests 
 
         public DataTable GetAllGuests()
