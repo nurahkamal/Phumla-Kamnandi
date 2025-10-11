@@ -23,6 +23,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void User_Load(object sender, EventArgs e)
         {
             LoadActiveUsers();
+            LoadUserStatistics();
         }
 
         private void LoadActiveUsers()
@@ -33,16 +34,25 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 {
                     conn.Open();
 
-                    string query = @"SELECT Username, Role, FullName, 
-                                    ISNULL(CONVERT(varchar, LastLoginTime, 120), 'Never logged in') AS LoginTime
-                                    FROM Users 
-                                    WHERE IsActive = 1";
+                    string query = @"SELECT 
+                            UserID,
+                            Username, 
+                            Role, 
+                            FullName, 
+                            ISNULL(CONVERT(varchar, LastLoginTime, 120), 'Never logged in') AS LoginTime,
+                            CASE 
+                                WHEN IsActive = 1 THEN 'Active'
+                                ELSE 'Inactive'
+                            END AS Status
+                            FROM Users 
+                            ORDER BY IsActive DESC, LastLoginTime DESC";
 
                     SqlDataAdapter da = new SqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
                     guna2DataGridView1.DataSource = dt;
+                    FormatDataGridView(); // CALL THIS AFTER DATA BIND
                 }
             }
             catch (Exception ex)
@@ -96,6 +106,79 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadActiveUsers();
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+        private void FormatDataGridView()
+        {
+            // Auto-generate numbers
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                row.Cells["colNumber"].Value = row.Index + 1;
+            }
+
+            // Color coding for status
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                if (row.Cells["colStatus"].Value?.ToString() == "Active")
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(230, 255, 230); // Light Green
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 230, 230); // Light Red
+                }
+            }
+
+            // Center align number column
+            guna2DataGridView1.Columns["colNumber"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+
+        private void LoadUserStatistics()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    // Total users
+                    string totalQuery = "SELECT COUNT(*) FROM Users";
+                    SqlCommand totalCmd = new SqlCommand(totalQuery, conn);
+                    lblTotalCount.Text = totalCmd.ExecuteScalar().ToString();
+
+                    // Active users
+                    string activeQuery = "SELECT COUNT(*) FROM Users WHERE IsActive = 1";
+                    SqlCommand activeCmd = new SqlCommand(activeQuery, conn);
+                    lblActiveCount.Text = activeCmd.ExecuteScalar().ToString();
+
+                    // Users logged in today
+                    string todayQuery = "SELECT COUNT(*) FROM Users WHERE CAST(LastLoginTime AS DATE) = CAST(GETDATE() AS DATE)";
+                    SqlCommand todayCmd = new SqlCommand(todayQuery, conn);
+                    lblTodayCount.Text = todayCmd.ExecuteScalar().ToString();
+
+                    // Most common role
+                    string roleQuery = @"SELECT TOP 1 Role FROM Users 
+                               WHERE IsActive = 1 
+                               GROUP BY Role 
+                               ORDER BY COUNT(*) DESC";
+                    SqlCommand roleCmd = new SqlCommand(roleQuery, conn);
+                    var result = roleCmd.ExecuteScalar();
+                    lblRoleValue.Text = result?.ToString() ?? "N/A";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading statistics: " + ex.Message);
+            }
         }
     }
 }
