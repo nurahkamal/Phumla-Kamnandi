@@ -29,31 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MonthlySalesReport));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title4 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title5 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend11 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title11 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend12 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title12 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend13 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title13 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend14 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title14 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend15 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title15 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPrint = new Guna.UI2.WinForms.Guna2Button();
             this.btnPrintSummary = new Guna.UI2.WinForms.Guna2Button();
             this.picBoxLogo = new System.Windows.Forms.PictureBox();
-            this.lblWelcome = new System.Windows.Forms.Label();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.btnOkay = new Guna.UI2.WinForms.Guna2Button();
             this.dtpEndDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -68,6 +67,15 @@
             this.btnLastSevenDays = new Guna.UI2.WinForms.Guna2Button();
             this.btnThisMonth = new Guna.UI2.WinForms.Guna2Button();
             this.btnDecember = new Guna.UI2.WinForms.Guna2Button();
+            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReportIssue = new Guna.UI2.WinForms.Guna2Button();
+            this.btnUser = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartSalesTrend)).BeginInit();
@@ -80,14 +88,23 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
+            this.panel1.Controls.Add(this.btnHome);
+            this.panel1.Controls.Add(this.btnReportIssue);
+            this.panel1.Controls.Add(this.btnUser);
+            this.panel1.Controls.Add(this.btnSignOut);
+            this.panel1.Controls.Add(this.guna2Button8);
+            this.panel1.Controls.Add(this.guna2Button7);
+            this.panel1.Controls.Add(this.guna2Button6);
+            this.panel1.Controls.Add(this.guna2Button5);
+            this.panel1.Controls.Add(this.guna2Button3);
             this.panel1.Controls.Add(this.btnPrint);
             this.panel1.Controls.Add(this.btnPrintSummary);
             this.panel1.Controls.Add(this.picBoxLogo);
-            this.panel1.Controls.Add(this.lblWelcome);
-            this.panel1.Location = new System.Drawing.Point(3, 0);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(352, 1200);
+            this.panel1.Size = new System.Drawing.Size(352, 1088);
             this.panel1.TabIndex = 2;
             // 
             // btnPrint
@@ -100,10 +117,10 @@
             this.btnPrint.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.btnPrint.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPrint.ForeColor = System.Drawing.Color.White;
-            this.btnPrint.Location = new System.Drawing.Point(72, 370);
+            this.btnPrint.Location = new System.Drawing.Point(190, 205);
             this.btnPrint.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrint.Name = "btnPrint";
-            this.btnPrint.Size = new System.Drawing.Size(180, 36);
+            this.btnPrint.Size = new System.Drawing.Size(141, 36);
             this.btnPrint.TabIndex = 22;
             this.btnPrint.Text = "Print Report";
             // 
@@ -117,36 +134,23 @@
             this.btnPrintSummary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.btnPrintSummary.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnPrintSummary.ForeColor = System.Drawing.Color.White;
-            this.btnPrintSummary.Location = new System.Drawing.Point(72, 330);
+            this.btnPrintSummary.Location = new System.Drawing.Point(15, 205);
             this.btnPrintSummary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPrintSummary.Name = "btnPrintSummary";
-            this.btnPrintSummary.Size = new System.Drawing.Size(180, 36);
+            this.btnPrintSummary.Size = new System.Drawing.Size(141, 36);
             this.btnPrintSummary.TabIndex = 21;
             this.btnPrintSummary.Text = "Print Summary";
             // 
             // picBoxLogo
             // 
-            this.picBoxLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.picBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("picBoxLogo.Image")));
-            this.picBoxLogo.Location = new System.Drawing.Point(101, 41);
+            this.picBoxLogo.Location = new System.Drawing.Point(83, 11);
             this.picBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBoxLogo.Name = "picBoxLogo";
-            this.picBoxLogo.Size = new System.Drawing.Size(150, 142);
+            this.picBoxLogo.Size = new System.Drawing.Size(191, 176);
             this.picBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBoxLogo.TabIndex = 1;
             this.picBoxLogo.TabStop = false;
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.lblWelcome.Location = new System.Drawing.Point(17, 204);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(288, 124);
-            this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome to the \r\nPhumla Kamnandi \r\nHotel Reservation System\r\n\r\n";
-            this.lblWelcome.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnExit
             // 
@@ -222,191 +226,191 @@
             // chartSalesTrend
             // 
             this.chartSalesTrend.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisX.MajorGrid.LineWidth = 0;
-            chartArea1.AxisX.TitleFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea1.AxisY.MajorGrid.LineWidth = 0;
-            chartArea1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea1.Name = "ChartArea1";
-            this.chartSalesTrend.ChartAreas.Add(chartArea1);
-            legend1.Alignment = System.Drawing.StringAlignment.Far;
-            legend1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            legend1.IsTextAutoFit = false;
-            legend1.Name = "Legend1";
-            this.chartSalesTrend.Legends.Add(legend1);
+            chartArea11.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea11.AxisX.MajorGrid.LineWidth = 0;
+            chartArea11.AxisX.TitleFont = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            chartArea11.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea11.AxisY.MajorGrid.LineWidth = 0;
+            chartArea11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            chartArea11.Name = "ChartArea1";
+            this.chartSalesTrend.ChartAreas.Add(chartArea11);
+            legend11.Alignment = System.Drawing.StringAlignment.Far;
+            legend11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            legend11.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend11.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            legend11.IsTextAutoFit = false;
+            legend11.Name = "Legend1";
+            this.chartSalesTrend.Legends.Add(legend11);
             this.chartSalesTrend.Location = new System.Drawing.Point(373, 150);
             this.chartSalesTrend.Margin = new System.Windows.Forms.Padding(4);
             this.chartSalesTrend.Name = "chartSalesTrend";
             this.chartSalesTrend.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series1.BorderWidth = 3;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            series1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            series1.Legend = "Legend1";
-            series1.MarkerBorderColor = System.Drawing.Color.Maroon;
-            series1.MarkerBorderWidth = 4;
-            series1.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
-            series1.Name = "SalesTrend";
-            this.chartSalesTrend.Series.Add(series1);
+            series11.BorderWidth = 3;
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series11.Color = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            series11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            series11.Legend = "Legend1";
+            series11.MarkerBorderColor = System.Drawing.Color.Maroon;
+            series11.MarkerBorderWidth = 4;
+            series11.MarkerStyle = System.Windows.Forms.DataVisualization.Charting.MarkerStyle.Circle;
+            series11.Name = "SalesTrend";
+            this.chartSalesTrend.Series.Add(series11);
             this.chartSalesTrend.Size = new System.Drawing.Size(1147, 255);
             this.chartSalesTrend.TabIndex = 27;
             this.chartSalesTrend.Text = "chart1";
-            title1.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            title1.Name = "Sales Trend Over Time";
-            title1.Text = "Sales Trend Over Time";
-            this.chartSalesTrend.Titles.Add(title1);
+            title11.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title11.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            title11.Name = "Sales Trend Over Time";
+            title11.Text = "Sales Trend Over Time";
+            this.chartSalesTrend.Titles.Add(title11);
             // 
             // chartSeasonalRevenue
             // 
             this.chartSeasonalRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea2.Name = "ChartArea1";
-            this.chartSeasonalRevenue.ChartAreas.Add(chartArea2);
-            legend2.Alignment = System.Drawing.StringAlignment.Center;
-            legend2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            legend2.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
-            legend2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            legend2.IsTextAutoFit = false;
-            legend2.Name = "Legend1";
-            this.chartSeasonalRevenue.Legends.Add(legend2);
+            chartArea12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            chartArea12.Name = "ChartArea1";
+            this.chartSeasonalRevenue.ChartAreas.Add(chartArea12);
+            legend12.Alignment = System.Drawing.StringAlignment.Center;
+            legend12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            legend12.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Bottom;
+            legend12.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            legend12.IsTextAutoFit = false;
+            legend12.Name = "Legend1";
+            this.chartSeasonalRevenue.Legends.Add(legend12);
             this.chartSeasonalRevenue.Location = new System.Drawing.Point(1545, 150);
             this.chartSeasonalRevenue.Margin = new System.Windows.Forms.Padding(4);
             this.chartSeasonalRevenue.Name = "chartSeasonalRevenue";
             this.chartSeasonalRevenue.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series2.Legend = "Legend1";
-            series2.Name = "SeasonalRevenue";
-            this.chartSeasonalRevenue.Series.Add(series2);
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series12.Legend = "Legend1";
+            series12.Name = "SeasonalRevenue";
+            this.chartSeasonalRevenue.Series.Add(series12);
             this.chartSeasonalRevenue.Size = new System.Drawing.Size(471, 571);
             this.chartSeasonalRevenue.TabIndex = 28;
             this.chartSeasonalRevenue.Text = "chart1";
-            title2.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            title2.Name = "Revenue by Season Period";
-            title2.Text = "Revenue by Season Period";
-            this.chartSeasonalRevenue.Titles.Add(title2);
+            title12.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title12.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            title12.Name = "Revenue by Season Period";
+            title12.Text = "Revenue by Season Period";
+            this.chartSeasonalRevenue.Titles.Add(title12);
             // 
             // chartDailyRevenue
             // 
             this.chartDailyRevenue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea3.AxisX.IsMarginVisible = false;
-            chartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea3.AxisX.MajorGrid.LineWidth = 0;
-            chartArea3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea3.Name = "ChartArea1";
-            this.chartDailyRevenue.ChartAreas.Add(chartArea3);
-            legend3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            legend3.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend3.IsTextAutoFit = false;
-            legend3.Name = "Legend1";
-            this.chartDailyRevenue.Legends.Add(legend3);
+            chartArea13.AxisX.IsMarginVisible = false;
+            chartArea13.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea13.AxisX.MajorGrid.LineWidth = 0;
+            chartArea13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            chartArea13.Name = "ChartArea1";
+            this.chartDailyRevenue.ChartAreas.Add(chartArea13);
+            legend13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            legend13.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend13.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend13.IsTextAutoFit = false;
+            legend13.Name = "Legend1";
+            this.chartDailyRevenue.Legends.Add(legend13);
             this.chartDailyRevenue.Location = new System.Drawing.Point(927, 421);
             this.chartDailyRevenue.Margin = new System.Windows.Forms.Padding(4);
             this.chartDailyRevenue.Name = "chartDailyRevenue";
-            series3.ChartArea = "ChartArea1";
-            series3.Color = System.Drawing.Color.Sienna;
-            series3.Legend = "Legend1";
-            series3.Name = "DailyRevenue";
-            this.chartDailyRevenue.Series.Add(series3);
+            series13.ChartArea = "ChartArea1";
+            series13.Color = System.Drawing.Color.Sienna;
+            series13.Legend = "Legend1";
+            series13.Name = "DailyRevenue";
+            this.chartDailyRevenue.Series.Add(series13);
             this.chartDailyRevenue.Size = new System.Drawing.Size(593, 300);
             this.chartDailyRevenue.TabIndex = 29;
             this.chartDailyRevenue.Text = "chart1";
-            title3.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            title3.Name = "Daily Revenue";
-            title3.Text = "Daily Revenue";
-            this.chartDailyRevenue.Titles.Add(title3);
+            title13.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title13.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            title13.Name = "Daily Revenue";
+            title13.Text = "Daily Revenue";
+            this.chartDailyRevenue.Titles.Add(title13);
             // 
             // chartPaymentsByDate
             // 
             this.chartPaymentsByDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea4.AxisX.IsMarginVisible = false;
-            chartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea4.AxisX.MajorGrid.LineWidth = 0;
-            chartArea4.AxisY.IsMarginVisible = false;
-            chartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea4.AxisY.MajorGrid.LineWidth = 0;
-            chartArea4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea4.Name = "ChartArea1";
-            this.chartPaymentsByDate.ChartAreas.Add(chartArea4);
-            legend4.Alignment = System.Drawing.StringAlignment.Far;
-            legend4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            legend4.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend4.IsTextAutoFit = false;
-            legend4.Name = "Legend1";
-            this.chartPaymentsByDate.Legends.Add(legend4);
+            chartArea14.AxisX.IsMarginVisible = false;
+            chartArea14.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea14.AxisX.MajorGrid.LineWidth = 0;
+            chartArea14.AxisY.IsMarginVisible = false;
+            chartArea14.AxisY.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea14.AxisY.MajorGrid.LineWidth = 0;
+            chartArea14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            chartArea14.Name = "ChartArea1";
+            this.chartPaymentsByDate.ChartAreas.Add(chartArea14);
+            legend14.Alignment = System.Drawing.StringAlignment.Far;
+            legend14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            legend14.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend14.IsTextAutoFit = false;
+            legend14.Name = "Legend1";
+            this.chartPaymentsByDate.Legends.Add(legend14);
             this.chartPaymentsByDate.Location = new System.Drawing.Point(375, 421);
             this.chartPaymentsByDate.Margin = new System.Windows.Forms.Padding(4);
             this.chartPaymentsByDate.Name = "chartPaymentsByDate";
-            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
-            series4.BackSecondaryColor = System.Drawing.Color.Chocolate;
-            series4.BorderColor = System.Drawing.Color.Maroon;
-            series4.ChartArea = "ChartArea1";
-            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
-            series4.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            series4.LabelBackColor = System.Drawing.Color.Transparent;
-            series4.Legend = "Legend1";
-            series4.Name = "BookingsCount";
-            this.chartPaymentsByDate.Series.Add(series4);
+            series14.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
+            series14.BackSecondaryColor = System.Drawing.Color.Chocolate;
+            series14.BorderColor = System.Drawing.Color.Maroon;
+            series14.ChartArea = "ChartArea1";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Area;
+            series14.Color = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            series14.LabelBackColor = System.Drawing.Color.Transparent;
+            series14.Legend = "Legend1";
+            series14.Name = "BookingsCount";
+            this.chartPaymentsByDate.Series.Add(series14);
             this.chartPaymentsByDate.Size = new System.Drawing.Size(543, 300);
             this.chartPaymentsByDate.TabIndex = 30;
             this.chartPaymentsByDate.Text = "chart1";
-            title4.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title4.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            title4.Name = "Payments by Date";
-            title4.Text = "Payments by Date";
-            this.chartPaymentsByDate.Titles.Add(title4);
+            title14.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title14.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            title14.Name = "Payments by Date";
+            title14.Text = "Payments by Date";
+            this.chartPaymentsByDate.Titles.Add(title14);
             // 
             // chartGuestDistribution
             // 
             this.chartGuestDistribution.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea5.AxisX.IsMarginVisible = false;
-            chartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
-            chartArea5.AxisX.MajorGrid.LineWidth = 0;
-            chartArea5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            chartArea5.Name = "ChartArea1";
-            this.chartGuestDistribution.ChartAreas.Add(chartArea5);
-            legend5.Alignment = System.Drawing.StringAlignment.Far;
-            legend5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
-            legend5.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
-            legend5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            legend5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            legend5.IsTextAutoFit = false;
-            legend5.Name = "Legend1";
-            this.chartGuestDistribution.Legends.Add(legend5);
+            chartArea15.AxisX.IsMarginVisible = false;
+            chartArea15.AxisX.MajorGrid.LineColor = System.Drawing.Color.White;
+            chartArea15.AxisX.MajorGrid.LineWidth = 0;
+            chartArea15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            chartArea15.Name = "ChartArea1";
+            this.chartGuestDistribution.ChartAreas.Add(chartArea15);
+            legend15.Alignment = System.Drawing.StringAlignment.Far;
+            legend15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            legend15.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend15.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            legend15.IsTextAutoFit = false;
+            legend15.Name = "Legend1";
+            this.chartGuestDistribution.Legends.Add(legend15);
             this.chartGuestDistribution.Location = new System.Drawing.Point(373, 740);
             this.chartGuestDistribution.Margin = new System.Windows.Forms.Padding(4);
             this.chartGuestDistribution.Name = "chartGuestDistribution";
             this.chartGuestDistribution.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            series5.ChartArea = "ChartArea1";
-            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series5.Legend = "Legend1";
-            series5.Name = "PaymentsCount";
-            series5.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
-            this.chartGuestDistribution.Series.Add(series5);
+            series15.ChartArea = "ChartArea1";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series15.Legend = "Legend1";
+            series15.Name = "PaymentsCount";
+            series15.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
+            this.chartGuestDistribution.Series.Add(series15);
             this.chartGuestDistribution.Size = new System.Drawing.Size(1643, 311);
             this.chartGuestDistribution.TabIndex = 31;
             this.chartGuestDistribution.Text = "chart1";
-            title5.Alignment = System.Drawing.ContentAlignment.TopLeft;
-            title5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            title5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            title5.Name = "Guest Count Distribution";
-            title5.Text = "Guest Count Distribution";
-            this.chartGuestDistribution.Titles.Add(title5);
+            title15.Alignment = System.Drawing.ContentAlignment.TopLeft;
+            title15.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            title15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            title15.Name = "Guest Count Distribution";
+            title15.Text = "Guest Count Distribution";
+            this.chartGuestDistribution.Titles.Add(title15);
             // 
             // lblTitle
             // 
@@ -512,6 +516,170 @@
             this.btnDecember.TabIndex = 36;
             this.btnDecember.Text = "December";
             // 
+            // btnHome
+            // 
+            this.btnHome.AutoRoundedCorners = true;
+            this.btnHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnHome.BorderThickness = 2;
+            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHome.FillColor = System.Drawing.Color.White;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnHome.Location = new System.Drawing.Point(15, 272);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(316, 43);
+            this.btnHome.TabIndex = 47;
+            this.btnHome.Text = "Home";
+            // 
+            // btnReportIssue
+            // 
+            this.btnReportIssue.AutoRoundedCorners = true;
+            this.btnReportIssue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportIssue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportIssue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReportIssue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReportIssue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(178)))));
+            this.btnReportIssue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportIssue.ForeColor = System.Drawing.Color.White;
+            this.btnReportIssue.Location = new System.Drawing.Point(15, 975);
+            this.btnReportIssue.Name = "btnReportIssue";
+            this.btnReportIssue.Size = new System.Drawing.Size(141, 39);
+            this.btnReportIssue.TabIndex = 46;
+            this.btnReportIssue.Text = "Report Issue";
+            // 
+            // btnUser
+            // 
+            this.btnUser.AutoRoundedCorners = true;
+            this.btnUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnUser.BorderThickness = 2;
+            this.btnUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUser.FillColor = System.Drawing.Color.White;
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnUser.Location = new System.Drawing.Point(15, 879);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(316, 43);
+            this.btnUser.TabIndex = 44;
+            this.btnUser.Text = "User Information";
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.AutoRoundedCorners = true;
+            this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.Location = new System.Drawing.Point(190, 975);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(141, 39);
+            this.btnSignOut.TabIndex = 45;
+            this.btnSignOut.Text = "Sign Out";
+            // 
+            // guna2Button8
+            // 
+            this.guna2Button8.AutoRoundedCorners = true;
+            this.guna2Button8.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button8.BorderThickness = 2;
+            this.guna2Button8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button8.FillColor = System.Drawing.Color.White;
+            this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button8.Location = new System.Drawing.Point(15, 371);
+            this.guna2Button8.Name = "guna2Button8";
+            this.guna2Button8.Size = new System.Drawing.Size(316, 43);
+            this.guna2Button8.TabIndex = 43;
+            this.guna2Button8.Text = "About Us";
+            // 
+            // guna2Button7
+            // 
+            this.guna2Button7.AutoRoundedCorners = true;
+            this.guna2Button7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button7.BorderThickness = 2;
+            this.guna2Button7.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button7.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button7.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button7.FillColor = System.Drawing.Color.White;
+            this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button7.Location = new System.Drawing.Point(15, 779);
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.Size = new System.Drawing.Size(316, 43);
+            this.guna2Button7.TabIndex = 42;
+            this.guna2Button7.Text = "View Reports";
+            // 
+            // guna2Button6
+            // 
+            this.guna2Button6.AutoRoundedCorners = true;
+            this.guna2Button6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button6.BorderThickness = 2;
+            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button6.FillColor = System.Drawing.Color.White;
+            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button6.Location = new System.Drawing.Point(15, 669);
+            this.guna2Button6.Name = "guna2Button6";
+            this.guna2Button6.Size = new System.Drawing.Size(316, 43);
+            this.guna2Button6.TabIndex = 41;
+            this.guna2Button6.Text = "Guest Enquiries";
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.AutoRoundedCorners = true;
+            this.guna2Button5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button5.BorderThickness = 2;
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.FillColor = System.Drawing.Color.White;
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.guna2Button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button5.Location = new System.Drawing.Point(15, 575);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Size = new System.Drawing.Size(316, 43);
+            this.guna2Button5.TabIndex = 40;
+            this.guna2Button5.Text = "Update a Booking";
+            // 
+            // guna2Button3
+            // 
+            this.guna2Button3.AutoRoundedCorners = true;
+            this.guna2Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2Button3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button3.BorderThickness = 2;
+            this.guna2Button3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button3.FillColor = System.Drawing.Color.White;
+            this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2Button3.Location = new System.Drawing.Point(15, 473);
+            this.guna2Button3.Name = "guna2Button3";
+            this.guna2Button3.Size = new System.Drawing.Size(316, 43);
+            this.guna2Button3.TabIndex = 39;
+            this.guna2Button3.Text = " Make a Reservation";
+            // 
             // MonthlySalesReport
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -540,7 +708,6 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MonthlySalesReport_Load);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picBoxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartSalesTrend)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartSeasonalRevenue)).EndInit();
@@ -557,7 +724,6 @@
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnPrintSummary;
         private System.Windows.Forms.PictureBox picBoxLogo;
-        private System.Windows.Forms.Label lblWelcome;
         private Guna.UI2.WinForms.Guna2ImageButton btnExit;
         private Guna.UI2.WinForms.Guna2Button btnOkay;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpEndDate;
@@ -573,5 +739,14 @@
         private Guna.UI2.WinForms.Guna2Button btnLastSevenDays;
         private Guna.UI2.WinForms.Guna2Button btnThisMonth;
         private Guna.UI2.WinForms.Guna2Button btnDecember;
+        private Guna.UI2.WinForms.Guna2Button btnHome;
+        private Guna.UI2.WinForms.Guna2Button btnReportIssue;
+        private Guna.UI2.WinForms.Guna2Button btnUser;
+        private Guna.UI2.WinForms.Guna2Button btnSignOut;
+        private Guna.UI2.WinForms.Guna2Button guna2Button8;
+        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2Button guna2Button6;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button guna2Button3;
     }
 }
