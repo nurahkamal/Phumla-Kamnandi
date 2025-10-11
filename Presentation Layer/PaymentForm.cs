@@ -24,7 +24,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             InitializeComponent();
             _reservation = reservation;
+
         }
+        
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -348,6 +351,11 @@ namespace Phumla_Kamnandi.Presentation_Layer
             {
                 btnFullAmount.Visible = false;       // Hide button1 if not checked
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
