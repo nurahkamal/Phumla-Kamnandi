@@ -49,6 +49,7 @@
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.btnReportIssue = new Guna.UI2.WinForms.Guna2Button();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
@@ -57,7 +58,6 @@
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfGuests)).BeginInit();
@@ -327,7 +327,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(425, 732);
+            this.guna2Button1.Location = new System.Drawing.Point(853, 732);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(245, 45);
             this.guna2Button1.TabIndex = 11;
@@ -337,11 +337,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.label1.Location = new System.Drawing.Point(825, 120);
+            this.label1.Location = new System.Drawing.Point(433, 152);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(213, 31);
+            this.label1.Size = new System.Drawing.Size(220, 31);
             this.label1.TabIndex = 1;
             this.label1.Text = "Reservation Details";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -394,6 +394,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(352, 841);
             this.panel2.TabIndex = 1;
+            // 
+            // btnHome
+            // 
+            this.btnHome.AutoRoundedCorners = true;
+            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHome.FillColor = System.Drawing.Color.White;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnHome.Location = new System.Drawing.Point(37, 230);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(264, 43);
+            this.btnHome.TabIndex = 34;
+            this.btnHome.Text = "Home";
             // 
             // btnReportIssue
             // 
@@ -532,23 +549,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnHome
-            // 
-            this.btnHome.AutoRoundedCorners = true;
-            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHome.FillColor = System.Drawing.Color.White;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnHome.Location = new System.Drawing.Point(37, 230);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(264, 43);
-            this.btnHome.TabIndex = 34;
-            this.btnHome.Text = "Home";
             // 
             // _3
             // 

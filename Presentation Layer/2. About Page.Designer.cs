@@ -38,7 +38,6 @@
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnReservation = new Guna.UI2.WinForms.Guna2Button();
             this.btnGuestDetails = new Guna.UI2.WinForms.Guna2Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.lblAbout = new System.Windows.Forms.Label();
@@ -62,7 +61,6 @@
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnReservation);
             this.panel1.Controls.Add(this.btnGuestDetails);
-            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -212,18 +210,6 @@
             this.btnGuestDetails.Text = "Guest Details";
             this.btnGuestDetails.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.label1.Location = new System.Drawing.Point(115, 222);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(136, 38);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "About Us";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -343,7 +329,6 @@
             this.Text = "_2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -358,7 +343,6 @@
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Button btnReservation;
         private Guna.UI2.WinForms.Guna2Button btnGuestDetails;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI2.WinForms.Guna2ImageButton btnExit;
         private Guna.UI2.WinForms.Guna2Button btnHome;
