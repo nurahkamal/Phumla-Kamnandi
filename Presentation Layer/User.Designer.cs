@@ -46,38 +46,54 @@
             this.guna2DataGridView1 = new Guna.UI2.WinForms.Guna2DataGridView();
             this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.statsPanel = new System.Windows.Forms.Panel();
-            this.cardTotalUsers = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblTotalUsers = new System.Windows.Forms.Label();
-            this.lblTotalCount = new System.Windows.Forms.Label();
-            this.cardActiveUsers = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblActiveCount = new System.Windows.Forms.Label();
-            this.lblActiveUsers = new System.Windows.Forms.Label();
-            this.cardTodayLogin = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblTodayCount = new System.Windows.Forms.Label();
-            this.lblTodayLogin = new System.Windows.Forms.Label();
             this.cardCommonRole = new Guna.UI2.WinForms.Guna2Panel();
             this.lblRoleValue = new System.Windows.Forms.Label();
             this.lblCommonRole = new System.Windows.Forms.Label();
+            this.cardTodayLogin = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTodayCount = new System.Windows.Forms.Label();
+            this.lblTodayLogin = new System.Windows.Forms.Label();
+            this.cardActiveUsers = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblActiveCount = new System.Windows.Forms.Label();
+            this.lblActiveUsers = new System.Windows.Forms.Label();
+            this.cardTotalUsers = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblTotalCount = new System.Windows.Forms.Label();
+            this.lblTotalUsers = new System.Windows.Forms.Label();
             this.controlPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lblFilter = new System.Windows.Forms.Label();
             this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
-            this.colNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLoginTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblFilter = new System.Windows.Forms.Label();
+            this.cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.detailsPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnResetPassword = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDeactivate = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEditUser = new Guna.UI2.WinForms.Guna2Button();
+            this.panelLastLogin = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblLastLoginValue = new System.Windows.Forms.Label();
+            this.lblLastLoginTitle = new System.Windows.Forms.Label();
+            this.panelStatus = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblStatusValue = new System.Windows.Forms.Label();
+            this.lblStatusTitle = new System.Windows.Forms.Label();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblRoleValue2 = new System.Windows.Forms.Label();
+            this.Role = new System.Windows.Forms.Label();
+            this.panelUsername = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblUsernameValue = new System.Windows.Forms.Label();
+            this.lblUsernameTitle = new System.Windows.Forms.Label();
+            this.lblDetailsTitle = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.statsPanel.SuspendLayout();
-            this.cardTotalUsers.SuspendLayout();
-            this.cardActiveUsers.SuspendLayout();
-            this.cardTodayLogin.SuspendLayout();
             this.cardCommonRole.SuspendLayout();
+            this.cardTodayLogin.SuspendLayout();
+            this.cardActiveUsers.SuspendLayout();
+            this.cardTotalUsers.SuspendLayout();
             this.controlPanel.SuspendLayout();
+            this.detailsPanel.SuspendLayout();
+            this.panelLastLogin.SuspendLayout();
+            this.panelStatus.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
+            this.panelUsername.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -256,7 +272,7 @@
             this.btnHeading.BackColor = System.Drawing.Color.Transparent;
             this.btnHeading.Font = new System.Drawing.Font("Segoe UI Black", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnHeading.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.btnHeading.Location = new System.Drawing.Point(759, 70);
+            this.btnHeading.Location = new System.Drawing.Point(763, 30);
             this.btnHeading.Name = "btnHeading";
             this.btnHeading.Size = new System.Drawing.Size(465, 50);
             this.btnHeading.TabIndex = 8;
@@ -276,13 +292,6 @@
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 18;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colNumber,
-            this.colUsername,
-            this.colRole,
-            this.colFullName,
-            this.colLoginTime,
-            this.colStatus});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -344,94 +353,10 @@
             this.statsPanel.Controls.Add(this.cardTodayLogin);
             this.statsPanel.Controls.Add(this.cardActiveUsers);
             this.statsPanel.Controls.Add(this.cardTotalUsers);
-            this.statsPanel.Location = new System.Drawing.Point(503, 140);
+            this.statsPanel.Location = new System.Drawing.Point(507, 100);
             this.statsPanel.Name = "statsPanel";
             this.statsPanel.Size = new System.Drawing.Size(1042, 202);
             this.statsPanel.TabIndex = 13;
-            // 
-            // cardTotalUsers
-            // 
-            this.cardTotalUsers.Controls.Add(this.lblTotalCount);
-            this.cardTotalUsers.Controls.Add(this.lblTotalUsers);
-            this.cardTotalUsers.Location = new System.Drawing.Point(33, 30);
-            this.cardTotalUsers.Name = "cardTotalUsers";
-            this.cardTotalUsers.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.cardTotalUsers.Size = new System.Drawing.Size(200, 100);
-            this.cardTotalUsers.TabIndex = 0;
-            // 
-            // lblTotalUsers
-            // 
-            this.lblTotalUsers.AutoSize = true;
-            this.lblTotalUsers.Location = new System.Drawing.Point(51, 11);
-            this.lblTotalUsers.Name = "lblTotalUsers";
-            this.lblTotalUsers.Size = new System.Drawing.Size(101, 16);
-            this.lblTotalUsers.TabIndex = 0;
-            this.lblTotalUsers.Text = "TOTAL USERS";
-            // 
-            // lblTotalCount
-            // 
-            this.lblTotalCount.AutoSize = true;
-            this.lblTotalCount.Location = new System.Drawing.Point(82, 48);
-            this.lblTotalCount.Name = "lblTotalCount";
-            this.lblTotalCount.Size = new System.Drawing.Size(14, 16);
-            this.lblTotalCount.TabIndex = 1;
-            this.lblTotalCount.Text = "0";
-            // 
-            // cardActiveUsers
-            // 
-            this.cardActiveUsers.Controls.Add(this.lblActiveCount);
-            this.cardActiveUsers.Controls.Add(this.lblActiveUsers);
-            this.cardActiveUsers.Location = new System.Drawing.Point(275, 30);
-            this.cardActiveUsers.Name = "cardActiveUsers";
-            this.cardActiveUsers.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.cardActiveUsers.Size = new System.Drawing.Size(200, 100);
-            this.cardActiveUsers.TabIndex = 2;
-            // 
-            // lblActiveCount
-            // 
-            this.lblActiveCount.AutoSize = true;
-            this.lblActiveCount.Location = new System.Drawing.Point(82, 48);
-            this.lblActiveCount.Name = "lblActiveCount";
-            this.lblActiveCount.Size = new System.Drawing.Size(14, 16);
-            this.lblActiveCount.TabIndex = 1;
-            this.lblActiveCount.Text = "0";
-            // 
-            // lblActiveUsers
-            // 
-            this.lblActiveUsers.AutoSize = true;
-            this.lblActiveUsers.Location = new System.Drawing.Point(51, 11);
-            this.lblActiveUsers.Name = "lblActiveUsers";
-            this.lblActiveUsers.Size = new System.Drawing.Size(105, 16);
-            this.lblActiveUsers.TabIndex = 0;
-            this.lblActiveUsers.Text = "ACTIVE USERS";
-            // 
-            // cardTodayLogin
-            // 
-            this.cardTodayLogin.Controls.Add(this.lblTodayCount);
-            this.cardTodayLogin.Controls.Add(this.lblTodayLogin);
-            this.cardTodayLogin.Location = new System.Drawing.Point(525, 30);
-            this.cardTodayLogin.Name = "cardTodayLogin";
-            this.cardTodayLogin.ShadowDecoration.Color = System.Drawing.Color.White;
-            this.cardTodayLogin.Size = new System.Drawing.Size(200, 100);
-            this.cardTodayLogin.TabIndex = 3;
-            // 
-            // lblTodayCount
-            // 
-            this.lblTodayCount.AutoSize = true;
-            this.lblTodayCount.Location = new System.Drawing.Point(82, 48);
-            this.lblTodayCount.Name = "lblTodayCount";
-            this.lblTodayCount.Size = new System.Drawing.Size(14, 16);
-            this.lblTodayCount.TabIndex = 1;
-            this.lblTodayCount.Text = "0";
-            // 
-            // lblTodayLogin
-            // 
-            this.lblTodayLogin.AutoSize = true;
-            this.lblTodayLogin.Location = new System.Drawing.Point(51, 11);
-            this.lblTodayLogin.Name = "lblTodayLogin";
-            this.lblTodayLogin.Size = new System.Drawing.Size(113, 16);
-            this.lblTodayLogin.TabIndex = 0;
-            this.lblTodayLogin.Text = "LOGGED TODAY";
             // 
             // cardCommonRole
             // 
@@ -461,6 +386,90 @@
             this.lblCommonRole.TabIndex = 0;
             this.lblCommonRole.Text = "COMMON ROLE";
             // 
+            // cardTodayLogin
+            // 
+            this.cardTodayLogin.Controls.Add(this.lblTodayCount);
+            this.cardTodayLogin.Controls.Add(this.lblTodayLogin);
+            this.cardTodayLogin.Location = new System.Drawing.Point(525, 30);
+            this.cardTodayLogin.Name = "cardTodayLogin";
+            this.cardTodayLogin.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.cardTodayLogin.Size = new System.Drawing.Size(200, 100);
+            this.cardTodayLogin.TabIndex = 3;
+            // 
+            // lblTodayCount
+            // 
+            this.lblTodayCount.AutoSize = true;
+            this.lblTodayCount.Location = new System.Drawing.Point(82, 48);
+            this.lblTodayCount.Name = "lblTodayCount";
+            this.lblTodayCount.Size = new System.Drawing.Size(14, 16);
+            this.lblTodayCount.TabIndex = 1;
+            this.lblTodayCount.Text = "0";
+            // 
+            // lblTodayLogin
+            // 
+            this.lblTodayLogin.AutoSize = true;
+            this.lblTodayLogin.Location = new System.Drawing.Point(51, 11);
+            this.lblTodayLogin.Name = "lblTodayLogin";
+            this.lblTodayLogin.Size = new System.Drawing.Size(113, 16);
+            this.lblTodayLogin.TabIndex = 0;
+            this.lblTodayLogin.Text = "LOGGED TODAY";
+            // 
+            // cardActiveUsers
+            // 
+            this.cardActiveUsers.Controls.Add(this.lblActiveCount);
+            this.cardActiveUsers.Controls.Add(this.lblActiveUsers);
+            this.cardActiveUsers.Location = new System.Drawing.Point(275, 30);
+            this.cardActiveUsers.Name = "cardActiveUsers";
+            this.cardActiveUsers.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.cardActiveUsers.Size = new System.Drawing.Size(200, 100);
+            this.cardActiveUsers.TabIndex = 2;
+            // 
+            // lblActiveCount
+            // 
+            this.lblActiveCount.AutoSize = true;
+            this.lblActiveCount.Location = new System.Drawing.Point(82, 48);
+            this.lblActiveCount.Name = "lblActiveCount";
+            this.lblActiveCount.Size = new System.Drawing.Size(14, 16);
+            this.lblActiveCount.TabIndex = 1;
+            this.lblActiveCount.Text = "0";
+            // 
+            // lblActiveUsers
+            // 
+            this.lblActiveUsers.AutoSize = true;
+            this.lblActiveUsers.Location = new System.Drawing.Point(51, 11);
+            this.lblActiveUsers.Name = "lblActiveUsers";
+            this.lblActiveUsers.Size = new System.Drawing.Size(105, 16);
+            this.lblActiveUsers.TabIndex = 0;
+            this.lblActiveUsers.Text = "ACTIVE USERS";
+            // 
+            // cardTotalUsers
+            // 
+            this.cardTotalUsers.Controls.Add(this.lblTotalCount);
+            this.cardTotalUsers.Controls.Add(this.lblTotalUsers);
+            this.cardTotalUsers.Location = new System.Drawing.Point(33, 30);
+            this.cardTotalUsers.Name = "cardTotalUsers";
+            this.cardTotalUsers.ShadowDecoration.Color = System.Drawing.Color.White;
+            this.cardTotalUsers.Size = new System.Drawing.Size(200, 100);
+            this.cardTotalUsers.TabIndex = 0;
+            // 
+            // lblTotalCount
+            // 
+            this.lblTotalCount.AutoSize = true;
+            this.lblTotalCount.Location = new System.Drawing.Point(82, 48);
+            this.lblTotalCount.Name = "lblTotalCount";
+            this.lblTotalCount.Size = new System.Drawing.Size(14, 16);
+            this.lblTotalCount.TabIndex = 1;
+            this.lblTotalCount.Text = "0";
+            // 
+            // lblTotalUsers
+            // 
+            this.lblTotalUsers.AutoSize = true;
+            this.lblTotalUsers.Location = new System.Drawing.Point(51, 11);
+            this.lblTotalUsers.Name = "lblTotalUsers";
+            this.lblTotalUsers.Size = new System.Drawing.Size(101, 16);
+            this.lblTotalUsers.TabIndex = 0;
+            this.lblTotalUsers.Text = "TOTAL USERS";
+            // 
             // controlPanel
             // 
             this.controlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
@@ -470,31 +479,35 @@
             this.controlPanel.Controls.Add(this.cmbFilter);
             this.controlPanel.Controls.Add(this.txtSearch);
             this.controlPanel.Controls.Add(this.btnRefresh);
-            this.controlPanel.Location = new System.Drawing.Point(503, 401);
+            this.controlPanel.Location = new System.Drawing.Point(507, 337);
             this.controlPanel.Name = "controlPanel";
             this.controlPanel.Size = new System.Drawing.Size(1042, 275);
             this.controlPanel.TabIndex = 14;
             // 
-            // txtSearch
+            // btnAddUser
             // 
-            this.txtSearch.AutoRoundedCorners = true;
-            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtSearch.DefaultText = "";
-            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.IconLeft = global::Phumla_Kamnandi.Properties.Resources.search_icon_png_5;
-            this.txtSearch.Location = new System.Drawing.Point(18, 16);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.PlaceholderText = "Search Here";
-            this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(229, 39);
-            this.txtSearch.TabIndex = 0;
+            this.btnAddUser.AutoRoundedCorners = true;
+            this.btnAddUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddUser.ForeColor = System.Drawing.Color.White;
+            this.btnAddUser.Location = new System.Drawing.Point(840, 19);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(180, 36);
+            this.btnAddUser.TabIndex = 12;
+            this.btnAddUser.Text = "Add User";
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
+            // 
+            // lblFilter
+            // 
+            this.lblFilter.AutoSize = true;
+            this.lblFilter.Location = new System.Drawing.Point(318, 31);
+            this.lblFilter.Name = "lblFilter";
+            this.lblFilter.Size = new System.Drawing.Size(53, 16);
+            this.lblFilter.TabIndex = 11;
+            this.lblFilter.Text = "FILTER";
             // 
             // cmbFilter
             // 
@@ -517,73 +530,217 @@
             this.cmbFilter.Name = "cmbFilter";
             this.cmbFilter.Size = new System.Drawing.Size(160, 36);
             this.cmbFilter.TabIndex = 1;
+            this.cmbFilter.SelectedIndexChanged += new System.EventHandler(this.cmbFilter_SelectedIndexChanged);
             // 
-            // lblFilter
+            // txtSearch
             // 
-            this.lblFilter.AutoSize = true;
-            this.lblFilter.Location = new System.Drawing.Point(318, 31);
-            this.lblFilter.Name = "lblFilter";
-            this.lblFilter.Size = new System.Drawing.Size(53, 16);
-            this.lblFilter.TabIndex = 11;
-            this.lblFilter.Text = "FILTER";
+            this.txtSearch.AutoRoundedCorners = true;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.IconLeft = global::Phumla_Kamnandi.Properties.Resources.search_icon_png_5;
+            this.txtSearch.Location = new System.Drawing.Point(18, 16);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "Search Here";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(229, 39);
+            this.txtSearch.TabIndex = 0;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
-            // btnAddUser
+            // detailsPanel
             // 
-            this.btnAddUser.AutoRoundedCorners = true;
-            this.btnAddUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnAddUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnAddUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnAddUser.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAddUser.ForeColor = System.Drawing.Color.White;
-            this.btnAddUser.Location = new System.Drawing.Point(840, 19);
-            this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.Size = new System.Drawing.Size(180, 36);
-            this.btnAddUser.TabIndex = 12;
-            this.btnAddUser.Text = "Add User";
+            this.detailsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            this.detailsPanel.Controls.Add(this.btnResetPassword);
+            this.detailsPanel.Controls.Add(this.btnDeactivate);
+            this.detailsPanel.Controls.Add(this.btnEditUser);
+            this.detailsPanel.Controls.Add(this.panelLastLogin);
+            this.detailsPanel.Controls.Add(this.panelStatus);
+            this.detailsPanel.Controls.Add(this.guna2Panel1);
+            this.detailsPanel.Controls.Add(this.panelUsername);
+            this.detailsPanel.Controls.Add(this.lblDetailsTitle);
+            this.detailsPanel.Location = new System.Drawing.Point(507, 656);
+            this.detailsPanel.Name = "detailsPanel";
+            this.detailsPanel.Size = new System.Drawing.Size(1042, 293);
+            this.detailsPanel.TabIndex = 15;
             // 
-            // colNumber
+            // btnResetPassword
             // 
-            this.colNumber.HeaderText = "#";
-            this.colNumber.MinimumWidth = 6;
-            this.colNumber.Name = "colNumber";
-            this.colNumber.ReadOnly = true;
+            this.btnResetPassword.AutoRoundedCorners = true;
+            this.btnResetPassword.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnResetPassword.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnResetPassword.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnResetPassword.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnResetPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnResetPassword.ForeColor = System.Drawing.Color.White;
+            this.btnResetPassword.Location = new System.Drawing.Point(411, 230);
+            this.btnResetPassword.Name = "btnResetPassword";
+            this.btnResetPassword.Size = new System.Drawing.Size(180, 45);
+            this.btnResetPassword.TabIndex = 9;
+            this.btnResetPassword.Text = "Reset Password";
+            this.btnResetPassword.Click += new System.EventHandler(this.btnResetPassword_Click);
             // 
-            // colUsername
+            // btnDeactivate
             // 
-            this.colUsername.HeaderText = "USERNAME";
-            this.colUsername.MinimumWidth = 6;
-            this.colUsername.Name = "colUsername";
+            this.btnDeactivate.AutoRoundedCorners = true;
+            this.btnDeactivate.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeactivate.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDeactivate.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDeactivate.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDeactivate.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDeactivate.ForeColor = System.Drawing.Color.White;
+            this.btnDeactivate.Location = new System.Drawing.Point(610, 230);
+            this.btnDeactivate.Name = "btnDeactivate";
+            this.btnDeactivate.Size = new System.Drawing.Size(180, 45);
+            this.btnDeactivate.TabIndex = 8;
+            this.btnDeactivate.Text = "Deactivate";
+            this.btnDeactivate.Click += new System.EventHandler(this.btnDeactivate_Click);
             // 
-            // colRole
+            // btnEditUser
             // 
-            this.colRole.HeaderText = "ROLE";
-            this.colRole.MinimumWidth = 6;
-            this.colRole.Name = "colRole";
+            this.btnEditUser.AutoRoundedCorners = true;
+            this.btnEditUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnEditUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnEditUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnEditUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEditUser.ForeColor = System.Drawing.Color.White;
+            this.btnEditUser.Location = new System.Drawing.Point(826, 230);
+            this.btnEditUser.Name = "btnEditUser";
+            this.btnEditUser.Size = new System.Drawing.Size(180, 45);
+            this.btnEditUser.TabIndex = 7;
+            this.btnEditUser.Text = "Edit User";
+            this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
             // 
-            // colFullName
+            // panelLastLogin
             // 
-            this.colFullName.HeaderText = "FULL NAME";
-            this.colFullName.MinimumWidth = 6;
-            this.colFullName.Name = "colFullName";
+            this.panelLastLogin.Controls.Add(this.lblLastLoginValue);
+            this.panelLastLogin.Controls.Add(this.lblLastLoginTitle);
+            this.panelLastLogin.Location = new System.Drawing.Point(772, 78);
+            this.panelLastLogin.Name = "panelLastLogin";
+            this.panelLastLogin.Size = new System.Drawing.Size(200, 100);
+            this.panelLastLogin.TabIndex = 6;
             // 
-            // colLoginTime
+            // lblLastLoginValue
             // 
-            this.colLoginTime.HeaderText = "LOGIN TIME";
-            this.colLoginTime.MinimumWidth = 6;
-            this.colLoginTime.Name = "colLoginTime";
+            this.lblLastLoginValue.AutoSize = true;
+            this.lblLastLoginValue.Location = new System.Drawing.Point(12, 50);
+            this.lblLastLoginValue.Name = "lblLastLoginValue";
+            this.lblLastLoginValue.Size = new System.Drawing.Size(11, 16);
+            this.lblLastLoginValue.TabIndex = 3;
+            this.lblLastLoginValue.Text = "-";
             // 
-            // colStatus
+            // lblLastLoginTitle
             // 
-            this.colStatus.HeaderText = "STATUS";
-            this.colStatus.MinimumWidth = 6;
-            this.colStatus.Name = "colStatus";
+            this.lblLastLoginTitle.AutoSize = true;
+            this.lblLastLoginTitle.Location = new System.Drawing.Point(12, 11);
+            this.lblLastLoginTitle.Name = "lblLastLoginTitle";
+            this.lblLastLoginTitle.Size = new System.Drawing.Size(68, 16);
+            this.lblLastLoginTitle.TabIndex = 2;
+            this.lblLastLoginTitle.Text = "Last Login";
+            // 
+            // panelStatus
+            // 
+            this.panelStatus.Controls.Add(this.lblStatusValue);
+            this.panelStatus.Controls.Add(this.lblStatusTitle);
+            this.panelStatus.Location = new System.Drawing.Point(525, 78);
+            this.panelStatus.Name = "panelStatus";
+            this.panelStatus.Size = new System.Drawing.Size(200, 100);
+            this.panelStatus.TabIndex = 5;
+            // 
+            // lblStatusValue
+            // 
+            this.lblStatusValue.AutoSize = true;
+            this.lblStatusValue.Location = new System.Drawing.Point(12, 50);
+            this.lblStatusValue.Name = "lblStatusValue";
+            this.lblStatusValue.Size = new System.Drawing.Size(11, 16);
+            this.lblStatusValue.TabIndex = 3;
+            this.lblStatusValue.Text = "-";
+            // 
+            // lblStatusTitle
+            // 
+            this.lblStatusTitle.AutoSize = true;
+            this.lblStatusTitle.Location = new System.Drawing.Point(12, 11);
+            this.lblStatusTitle.Name = "lblStatusTitle";
+            this.lblStatusTitle.Size = new System.Drawing.Size(44, 16);
+            this.lblStatusTitle.TabIndex = 2;
+            this.lblStatusTitle.Text = "Status";
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.lblRoleValue2);
+            this.guna2Panel1.Controls.Add(this.Role);
+            this.guna2Panel1.Location = new System.Drawing.Point(275, 78);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(200, 100);
+            this.guna2Panel1.TabIndex = 4;
+            // 
+            // lblRoleValue2
+            // 
+            this.lblRoleValue2.AutoSize = true;
+            this.lblRoleValue2.Location = new System.Drawing.Point(12, 50);
+            this.lblRoleValue2.Name = "lblRoleValue2";
+            this.lblRoleValue2.Size = new System.Drawing.Size(11, 16);
+            this.lblRoleValue2.TabIndex = 3;
+            this.lblRoleValue2.Text = "-";
+            // 
+            // Role
+            // 
+            this.Role.AutoSize = true;
+            this.Role.Location = new System.Drawing.Point(12, 11);
+            this.Role.Name = "Role";
+            this.Role.Size = new System.Drawing.Size(39, 16);
+            this.Role.TabIndex = 2;
+            this.Role.Text = "Role:";
+            // 
+            // panelUsername
+            // 
+            this.panelUsername.Controls.Add(this.lblUsernameValue);
+            this.panelUsername.Controls.Add(this.lblUsernameTitle);
+            this.panelUsername.Location = new System.Drawing.Point(18, 78);
+            this.panelUsername.Name = "panelUsername";
+            this.panelUsername.Size = new System.Drawing.Size(200, 100);
+            this.panelUsername.TabIndex = 1;
+            // 
+            // lblUsernameValue
+            // 
+            this.lblUsernameValue.AutoSize = true;
+            this.lblUsernameValue.Location = new System.Drawing.Point(12, 50);
+            this.lblUsernameValue.Name = "lblUsernameValue";
+            this.lblUsernameValue.Size = new System.Drawing.Size(11, 16);
+            this.lblUsernameValue.TabIndex = 3;
+            this.lblUsernameValue.Text = "-";
+            // 
+            // lblUsernameTitle
+            // 
+            this.lblUsernameTitle.AutoSize = true;
+            this.lblUsernameTitle.Location = new System.Drawing.Point(12, 11);
+            this.lblUsernameTitle.Name = "lblUsernameTitle";
+            this.lblUsernameTitle.Size = new System.Drawing.Size(73, 16);
+            this.lblUsernameTitle.TabIndex = 2;
+            this.lblUsernameTitle.Text = "Username:";
+            // 
+            // lblDetailsTitle
+            // 
+            this.lblDetailsTitle.AutoSize = true;
+            this.lblDetailsTitle.Location = new System.Drawing.Point(7, 9);
+            this.lblDetailsTitle.Name = "lblDetailsTitle";
+            this.lblDetailsTitle.Size = new System.Drawing.Size(178, 16);
+            this.lblDetailsTitle.TabIndex = 0;
+            this.lblDetailsTitle.Text = "SELECTED USER DETAILS";
             // 
             // User
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
             this.ClientSize = new System.Drawing.Size(1717, 1061);
+            this.Controls.Add(this.detailsPanel);
             this.Controls.Add(this.controlPanel);
             this.Controls.Add(this.statsPanel);
             this.Controls.Add(this.btnHeading);
@@ -599,16 +756,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).EndInit();
             this.statsPanel.ResumeLayout(false);
-            this.cardTotalUsers.ResumeLayout(false);
-            this.cardTotalUsers.PerformLayout();
-            this.cardActiveUsers.ResumeLayout(false);
-            this.cardActiveUsers.PerformLayout();
-            this.cardTodayLogin.ResumeLayout(false);
-            this.cardTodayLogin.PerformLayout();
             this.cardCommonRole.ResumeLayout(false);
             this.cardCommonRole.PerformLayout();
+            this.cardTodayLogin.ResumeLayout(false);
+            this.cardTodayLogin.PerformLayout();
+            this.cardActiveUsers.ResumeLayout(false);
+            this.cardActiveUsers.PerformLayout();
+            this.cardTotalUsers.ResumeLayout(false);
+            this.cardTotalUsers.PerformLayout();
             this.controlPanel.ResumeLayout(false);
             this.controlPanel.PerformLayout();
+            this.detailsPanel.ResumeLayout(false);
+            this.detailsPanel.PerformLayout();
+            this.panelLastLogin.ResumeLayout(false);
+            this.panelLastLogin.PerformLayout();
+            this.panelStatus.ResumeLayout(false);
+            this.panelStatus.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            this.panelUsername.ResumeLayout(false);
+            this.panelUsername.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -647,11 +814,22 @@
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
         private System.Windows.Forms.Label lblFilter;
         private Guna.UI2.WinForms.Guna2ComboBox cmbFilter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colUsername;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colRole;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colFullName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colLoginTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
+        private Guna.UI2.WinForms.Guna2Panel detailsPanel;
+        private System.Windows.Forms.Label lblDetailsTitle;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Label lblRoleValue2;
+        private System.Windows.Forms.Label Role;
+        private Guna.UI2.WinForms.Guna2Panel panelUsername;
+        private System.Windows.Forms.Label lblUsernameValue;
+        private System.Windows.Forms.Label lblUsernameTitle;
+        private Guna.UI2.WinForms.Guna2Panel panelStatus;
+        private System.Windows.Forms.Label lblStatusValue;
+        private System.Windows.Forms.Label lblStatusTitle;
+        private Guna.UI2.WinForms.Guna2Button btnEditUser;
+        private Guna.UI2.WinForms.Guna2Panel panelLastLogin;
+        private System.Windows.Forms.Label lblLastLoginValue;
+        private System.Windows.Forms.Label lblLastLoginTitle;
+        private Guna.UI2.WinForms.Guna2Button btnResetPassword;
+        private Guna.UI2.WinForms.Guna2Button btnDeactivate;
     }
 }
