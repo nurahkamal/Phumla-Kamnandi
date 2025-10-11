@@ -36,8 +36,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.txtRoomPrice = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblRoomPrice = new System.Windows.Forms.Label();
-            this.btnConfirm = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label5 = new System.Windows.Forms.Label();
             this.txtGuestID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,6 +43,8 @@
             this.dtpCheckOut = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpCheckIn = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.btnConfirm = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -57,6 +57,7 @@
             this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfRooms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumberOfGuests)).BeginInit();
@@ -199,40 +200,6 @@
             this.lblRoomPrice.TabIndex = 13;
             this.lblRoomPrice.Text = "Room Price:";
             // 
-            // btnConfirm
-            // 
-            this.btnConfirm.AutoRoundedCorners = true;
-            this.btnConfirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnConfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnConfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.btnConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfirm.ForeColor = System.Drawing.Color.White;
-            this.btnConfirm.Location = new System.Drawing.Point(1134, 732);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(245, 45);
-            this.btnConfirm.TabIndex = 12;
-            this.btnConfirm.Text = "Confirm Reservation";
-            this.btnConfirm.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.AutoRoundedCorners = true;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(425, 732);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(245, 45);
-            this.guna2Button1.TabIndex = 11;
-            this.guna2Button1.Text = "Check Availability";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -333,6 +300,40 @@
             this.dtpCheckIn.Value = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
             this.dtpCheckIn.ValueChanged += new System.EventHandler(this.guna2DateTimePicker1_ValueChanged);
             // 
+            // btnConfirm
+            // 
+            this.btnConfirm.AutoRoundedCorners = true;
+            this.btnConfirm.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirm.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnConfirm.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnConfirm.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnConfirm.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.btnConfirm.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfirm.ForeColor = System.Drawing.Color.White;
+            this.btnConfirm.Location = new System.Drawing.Point(1134, 732);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(245, 45);
+            this.btnConfirm.TabIndex = 12;
+            this.btnConfirm.Text = "Confirm Reservation";
+            this.btnConfirm.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.AutoRoundedCorners = true;
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(425, 732);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(245, 45);
+            this.guna2Button1.TabIndex = 11;
+            this.guna2Button1.Text = "Check Availability";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -379,7 +380,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
-            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.btnHome);
             this.panel2.Controls.Add(this.btnReportIssue);
             this.panel2.Controls.Add(this.btnSignOut);
             this.panel2.Controls.Add(this.btnUser);
@@ -404,7 +405,7 @@
             this.btnReportIssue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(178)))));
             this.btnReportIssue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportIssue.ForeColor = System.Drawing.Color.White;
-            this.btnReportIssue.Location = new System.Drawing.Point(49, 772);
+            this.btnReportIssue.Location = new System.Drawing.Point(37, 772);
             this.btnReportIssue.Name = "btnReportIssue";
             this.btnReportIssue.Size = new System.Drawing.Size(117, 44);
             this.btnReportIssue.TabIndex = 23;
@@ -440,9 +441,9 @@
             this.btnUser.FillColor = System.Drawing.Color.White;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnUser.Location = new System.Drawing.Point(49, 512);
+            this.btnUser.Location = new System.Drawing.Point(33, 562);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(252, 47);
+            this.btnUser.Size = new System.Drawing.Size(272, 47);
             this.btnUser.TabIndex = 21;
             this.btnUser.Text = "User Information";
             this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
@@ -459,9 +460,9 @@
             this.guna2Button8.FillColor = System.Drawing.Color.White;
             this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.guna2Button8.Location = new System.Drawing.Point(49, 598);
+            this.guna2Button8.Location = new System.Drawing.Point(33, 646);
             this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(252, 47);
+            this.guna2Button8.Size = new System.Drawing.Size(272, 47);
             this.guna2Button8.TabIndex = 20;
             this.guna2Button8.Text = "About Us";
             this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
@@ -478,9 +479,9 @@
             this.guna2Button7.FillColor = System.Drawing.Color.White;
             this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.guna2Button7.Location = new System.Drawing.Point(49, 426);
+            this.guna2Button7.Location = new System.Drawing.Point(33, 478);
             this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(252, 47);
+            this.guna2Button7.Size = new System.Drawing.Size(272, 47);
             this.guna2Button7.TabIndex = 19;
             this.guna2Button7.Text = "View Reports";
             this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
@@ -497,9 +498,9 @@
             this.guna2Button6.FillColor = System.Drawing.Color.White;
             this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.guna2Button6.Location = new System.Drawing.Point(49, 340);
+            this.guna2Button6.Location = new System.Drawing.Point(37, 394);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(252, 47);
+            this.guna2Button6.Size = new System.Drawing.Size(264, 47);
             this.guna2Button6.TabIndex = 18;
             this.guna2Button6.Text = "Guest Enquiries";
             // 
@@ -515,9 +516,9 @@
             this.guna2Button5.FillColor = System.Drawing.Color.White;
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.guna2Button5.Location = new System.Drawing.Point(49, 254);
+            this.guna2Button5.Location = new System.Drawing.Point(37, 310);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(252, 47);
+            this.guna2Button5.Size = new System.Drawing.Size(264, 47);
             this.guna2Button5.TabIndex = 17;
             this.guna2Button5.Text = "Update a Reservation";
             this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
@@ -525,12 +526,29 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(77, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(69, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(209, 195);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
+            // 
+            // btnHome
+            // 
+            this.btnHome.AutoRoundedCorners = true;
+            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHome.FillColor = System.Drawing.Color.White;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnHome.Location = new System.Drawing.Point(37, 230);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(264, 43);
+            this.btnHome.TabIndex = 34;
+            this.btnHome.Text = "Home";
             // 
             // _3
             // 
@@ -591,5 +609,6 @@
         private Guna.UI2.WinForms.Guna2Button btnUser;
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2Button btnReportIssue;
+        private Guna.UI2.WinForms.Guna2Button btnHome;
     }
 }

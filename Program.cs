@@ -17,7 +17,7 @@ namespace Phumla_Kamnandi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new About_Page()); 
+            Application.Run(new _3()); 
         }
     }
 }

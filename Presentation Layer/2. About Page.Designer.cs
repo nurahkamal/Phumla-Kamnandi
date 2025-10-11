@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(About_Page));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
+            this.btnReportIssue = new Guna.UI2.WinForms.Guna2Button();
             this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.btnReport = new Guna.UI2.WinForms.Guna2Button();
             this.btnGuestEnquiries = new Guna.UI2.WinForms.Guna2Button();
@@ -45,8 +47,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnReportIssue = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -69,6 +69,40 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(352, 1102);
             this.panel1.TabIndex = 6;
+            // 
+            // btnSignOut
+            // 
+            this.btnSignOut.AutoRoundedCorners = true;
+            this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.Location = new System.Drawing.Point(184, 1003);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(138, 39);
+            this.btnSignOut.TabIndex = 35;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click_1);
+            // 
+            // btnReportIssue
+            // 
+            this.btnReportIssue.AutoRoundedCorners = true;
+            this.btnReportIssue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportIssue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportIssue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReportIssue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReportIssue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(178)))));
+            this.btnReportIssue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportIssue.ForeColor = System.Drawing.Color.White;
+            this.btnReportIssue.Location = new System.Drawing.Point(24, 1003);
+            this.btnReportIssue.Name = "btnReportIssue";
+            this.btnReportIssue.Size = new System.Drawing.Size(138, 39);
+            this.btnReportIssue.TabIndex = 34;
+            this.btnReportIssue.Text = "Report Issue";
+            this.btnReportIssue.Click += new System.EventHandler(this.btnReportIssue_Click);
             // 
             // btnHome
             // 
@@ -287,40 +321,6 @@
             this.label5.TabIndex = 14;
             this.label5.Text = "The Phumla Kamnandi Hotel Group was proudly founded by:\n\nVanessa Mokoena\n\nRazina " +
     "Chikte\n\nCamryn Pillay\n\nNurah Kamal";
-            // 
-            // btnReportIssue
-            // 
-            this.btnReportIssue.AutoRoundedCorners = true;
-            this.btnReportIssue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnReportIssue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnReportIssue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnReportIssue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnReportIssue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(178)))));
-            this.btnReportIssue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnReportIssue.ForeColor = System.Drawing.Color.White;
-            this.btnReportIssue.Location = new System.Drawing.Point(24, 1003);
-            this.btnReportIssue.Name = "btnReportIssue";
-            this.btnReportIssue.Size = new System.Drawing.Size(138, 39);
-            this.btnReportIssue.TabIndex = 34;
-            this.btnReportIssue.Text = "Report Issue";
-            this.btnReportIssue.Click += new System.EventHandler(this.btnReportIssue_Click);
-            // 
-            // btnSignOut
-            // 
-            this.btnSignOut.AutoRoundedCorners = true;
-            this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
-            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSignOut.ForeColor = System.Drawing.Color.White;
-            this.btnSignOut.Location = new System.Drawing.Point(184, 1003);
-            this.btnSignOut.Name = "btnSignOut";
-            this.btnSignOut.Size = new System.Drawing.Size(138, 39);
-            this.btnSignOut.TabIndex = 35;
-            this.btnSignOut.Text = "Sign Out";
-            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click_1);
             // 
             // About_Page
             // 
