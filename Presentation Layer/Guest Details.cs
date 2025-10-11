@@ -152,7 +152,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 GuestDB guestDB = new GuestDB();
 
             //search for GuestID
-                if (guestDB.GuestExists(guestID))
+                if (guestDB.GuestRecordExists(guestID))
                 {
                     MessageBox.Show("Guest already exists in records", "Guest Found", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ManageReservation manageReservation = new ManageReservation();
@@ -180,9 +180,46 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnBooking_Click(object sender, EventArgs e)
         {
-            ManageReservation manageReservation = new ManageReservation();
-            manageReservation.Show();
+            frmCreateGuest creatGuest = new frmCreateGuest();
+            creatGuest.Show();
             this.Hide();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnReportIssue_Click(object sender, EventArgs e)
+        {
+
+            ReportIssue report = new ReportIssue(this); // pass "this" form
+            report.Show();
+            this.Hide();
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            Login_Form login = new Login_Form();
+            login.Show();
+            this.Hide();
+        }
+
+        private void frmCreateGuest_Load(object sender, EventArgs e)
+        {
+
+        }
     }
-}
+    }
+
+

@@ -1,6 +1,6 @@
 ﻿namespace Phumla_Kamnandi.Presentation_Layer
 {
-    partial class Login_Form
+    partial class ReportLoginFormcs
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login_Form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReportLoginFormcs));
             this.loginPanel = new System.Windows.Forms.Panel();
             this.btnForgotPassword = new Guna.UI2.WinForms.Guna2Button();
             this.lblTermsandConditions = new System.Windows.Forms.Label();
@@ -64,8 +64,7 @@
             this.loginPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(1052, 602);
-            this.loginPanel.TabIndex = 2;
-            this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.loginPanel_Paint);
+            this.loginPanel.TabIndex = 3;
             // 
             // btnForgotPassword
             // 
@@ -86,7 +85,6 @@
             this.btnForgotPassword.Size = new System.Drawing.Size(219, 41);
             this.btnForgotPassword.TabIndex = 8;
             this.btnForgotPassword.Text = "Forgot Password?";
-            this.btnForgotPassword.Click += new System.EventHandler(this.btnForgotPassword_Click);
             // 
             // lblTermsandConditions
             // 
@@ -116,7 +114,6 @@
             this.btnLogin.Size = new System.Drawing.Size(219, 41);
             this.btnLogin.TabIndex = 6;
             this.btnLogin.Text = "Login";
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // panel1
             // 
@@ -170,7 +167,6 @@
             this.btnExit.Size = new System.Drawing.Size(76, 64);
             this.btnExit.TabIndex = 5;
             this.btnExit.UseTransparentBackground = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // lblPassword
             // 
@@ -251,21 +247,18 @@
             this.lblPlease.TabIndex = 0;
             this.lblPlease.Text = "Please Login With Your Details : ";
             // 
-            // Login_Form
+            // ReportLoginFormcs
             // 
-            this.AccessibleName = "Login_Form";
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackgroundImage = global::Phumla_Kamnandi.Properties.Resources.BackgroundImage1;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1432, 772);
             this.Controls.Add(this.loginPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "Login_Form";
+            this.Name = "ReportLoginFormcs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Login_Form";
+            this.Text = "ReportLoginFormcs";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Login_Form_Load);
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -280,15 +273,15 @@
         private System.Windows.Forms.Panel loginPanel;
         private Guna.UI2.WinForms.Guna2Button btnForgotPassword;
         private System.Windows.Forms.Label lblTermsandConditions;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblWelcome;
         private Guna.UI2.WinForms.Guna2ImageButton btnExit;
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label lblUsername;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtUsername;
         private System.Windows.Forms.Label lblPlease;
-        private Guna.UI2.WinForms.Guna2Button btnLogin;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblWelcome;
     }
 }
