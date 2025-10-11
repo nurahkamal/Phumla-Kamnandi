@@ -81,7 +81,7 @@
             this.btnAbout.FillColor = System.Drawing.Color.White;
             this.btnAbout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnAbout.Location = new System.Drawing.Point(48, 626);
+            this.btnAbout.Location = new System.Drawing.Point(46, 628);
             this.btnAbout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(264, 43);
@@ -99,7 +99,7 @@
             this.btnReport.FillColor = System.Drawing.Color.White;
             this.btnReport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnReport.Location = new System.Drawing.Point(48, 545);
+            this.btnReport.Location = new System.Drawing.Point(48, 555);
             this.btnReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(260, 43);
@@ -116,7 +116,7 @@
             this.btnGuestEnquiries.FillColor = System.Drawing.Color.White;
             this.btnGuestEnquiries.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuestEnquiries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnGuestEnquiries.Location = new System.Drawing.Point(56, 456);
+            this.btnGuestEnquiries.Location = new System.Drawing.Point(48, 482);
             this.btnGuestEnquiries.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuestEnquiries.Name = "btnGuestEnquiries";
             this.btnGuestEnquiries.Size = new System.Drawing.Size(260, 43);
@@ -134,7 +134,7 @@
             this.btnUpdate.FillColor = System.Drawing.Color.White;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnUpdate.Location = new System.Drawing.Point(56, 396);
+            this.btnUpdate.Location = new System.Drawing.Point(48, 409);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(260, 43);
@@ -152,7 +152,7 @@
             this.btnReservation.FillColor = System.Drawing.Color.White;
             this.btnReservation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnReservation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnReservation.Location = new System.Drawing.Point(52, 325);
+            this.btnReservation.Location = new System.Drawing.Point(46, 336);
             this.btnReservation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReservation.Name = "btnReservation";
             this.btnReservation.Size = new System.Drawing.Size(264, 43);
@@ -170,7 +170,7 @@
             this.btnGuestDetails.FillColor = System.Drawing.Color.White;
             this.btnGuestDetails.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuestDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnGuestDetails.Location = new System.Drawing.Point(52, 264);
+            this.btnGuestDetails.Location = new System.Drawing.Point(46, 263);
             this.btnGuestDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuestDetails.Name = "btnGuestDetails";
             this.btnGuestDetails.Size = new System.Drawing.Size(264, 43);
@@ -253,7 +253,7 @@
             this.btnHome.FillColor = System.Drawing.Color.White;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnHome.Location = new System.Drawing.Point(52, 190);
+            this.btnHome.Location = new System.Drawing.Point(46, 190);
             this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(264, 43);
@@ -272,7 +272,7 @@
             this.btnUser.FillColor = System.Drawing.Color.White;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnUser.Location = new System.Drawing.Point(44, 703);
+            this.btnUser.Location = new System.Drawing.Point(42, 701);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(272, 47);
             this.btnUser.TabIndex = 37;
