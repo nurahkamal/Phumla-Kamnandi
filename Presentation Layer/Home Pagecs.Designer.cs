@@ -40,7 +40,6 @@
             this.btnGuestEnquiries = new Guna.UI2.WinForms.Guna2Button();
             this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
             this.btnReservation = new Guna.UI2.WinForms.Guna2Button();
-            this.btnGuestDetails = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -63,7 +62,6 @@
             this.panel1.Controls.Add(this.btnGuestEnquiries);
             this.panel1.Controls.Add(this.btnUpdate);
             this.panel1.Controls.Add(this.btnReservation);
-            this.panel1.Controls.Add(this.btnGuestDetails);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -100,7 +98,7 @@
             this.btnUser.FillColor = System.Drawing.Color.White;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnUser.Location = new System.Drawing.Point(42, 701);
+            this.btnUser.Location = new System.Drawing.Point(44, 641);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(272, 47);
             this.btnUser.TabIndex = 37;
@@ -135,7 +133,7 @@
             this.btnHome.FillColor = System.Drawing.Color.White;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnHome.Location = new System.Drawing.Point(46, 190);
+            this.btnHome.Location = new System.Drawing.Point(48, 202);
             this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(264, 43);
@@ -154,7 +152,7 @@
             this.btnAbout.FillColor = System.Drawing.Color.White;
             this.btnAbout.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnAbout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnAbout.Location = new System.Drawing.Point(46, 628);
+            this.btnAbout.Location = new System.Drawing.Point(48, 568);
             this.btnAbout.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(264, 43);
@@ -173,12 +171,13 @@
             this.btnReport.FillColor = System.Drawing.Color.White;
             this.btnReport.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnReport.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnReport.Location = new System.Drawing.Point(48, 555);
+            this.btnReport.Location = new System.Drawing.Point(50, 495);
             this.btnReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReport.Name = "btnReport";
             this.btnReport.Size = new System.Drawing.Size(260, 43);
             this.btnReport.TabIndex = 27;
             this.btnReport.Text = "  View Reports";
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
             // 
             // btnGuestEnquiries
             // 
@@ -191,7 +190,7 @@
             this.btnGuestEnquiries.FillColor = System.Drawing.Color.White;
             this.btnGuestEnquiries.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnGuestEnquiries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnGuestEnquiries.Location = new System.Drawing.Point(48, 482);
+            this.btnGuestEnquiries.Location = new System.Drawing.Point(50, 422);
             this.btnGuestEnquiries.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGuestEnquiries.Name = "btnGuestEnquiries";
             this.btnGuestEnquiries.Size = new System.Drawing.Size(260, 43);
@@ -210,7 +209,7 @@
             this.btnUpdate.FillColor = System.Drawing.Color.White;
             this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnUpdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnUpdate.Location = new System.Drawing.Point(48, 409);
+            this.btnUpdate.Location = new System.Drawing.Point(50, 349);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(260, 43);
@@ -229,32 +228,14 @@
             this.btnReservation.FillColor = System.Drawing.Color.White;
             this.btnReservation.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnReservation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnReservation.Location = new System.Drawing.Point(46, 336);
+            this.btnReservation.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.btnReservation.Location = new System.Drawing.Point(48, 276);
             this.btnReservation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnReservation.Name = "btnReservation";
             this.btnReservation.Size = new System.Drawing.Size(264, 43);
             this.btnReservation.TabIndex = 24;
             this.btnReservation.Text = "      Make a Booking";
             this.btnReservation.Click += new System.EventHandler(this.btnReservation_Click);
-            // 
-            // btnGuestDetails
-            // 
-            this.btnGuestDetails.AutoRoundedCorners = true;
-            this.btnGuestDetails.BorderThickness = 2;
-            this.btnGuestDetails.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnGuestDetails.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnGuestDetails.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnGuestDetails.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnGuestDetails.FillColor = System.Drawing.Color.White;
-            this.btnGuestDetails.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnGuestDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnGuestDetails.Location = new System.Drawing.Point(46, 263);
-            this.btnGuestDetails.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnGuestDetails.Name = "btnGuestDetails";
-            this.btnGuestDetails.Size = new System.Drawing.Size(264, 43);
-            this.btnGuestDetails.TabIndex = 23;
-            this.btnGuestDetails.Text = "Guest Details";
-            this.btnGuestDetails.Click += new System.EventHandler(this.btnGuestDetails_Click);
             // 
             // pictureBox2
             // 
@@ -348,7 +329,6 @@
         private Guna.UI2.WinForms.Guna2Button btnGuestEnquiries;
         private Guna.UI2.WinForms.Guna2Button btnUpdate;
         private Guna.UI2.WinForms.Guna2Button btnReservation;
-        private Guna.UI2.WinForms.Guna2Button btnGuestDetails;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
