@@ -101,8 +101,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void guna2Button5_Click(object sender, EventArgs e)
         {
-            ManageGuest updatebooking = new ManageGuest();
-            updatebooking.Show();
+            ManageEdits manageEdits = new ManageEdits();
+            manageEdits.Show();
             this.Hide();
         }
 

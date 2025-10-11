@@ -148,8 +148,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            ManageGuest updatebooking = new ManageGuest();
-            updatebooking.Show();
+            ManageEdits manageEdits = new ManageEdits();
+            manageEdits.Show();
             this.Hide();
         }
 
