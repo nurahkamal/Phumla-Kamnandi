@@ -613,6 +613,46 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.Hide();
         }
 
-        
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            _5 guest_enquiries = new _5();
+            guest_enquiries.Show();
+            this.Hide();
+        }
+
+        private void guna2Button7_Click(object sender, EventArgs e)
+        {
+            ReportSelectionForm reportSelectionForm = new ReportSelectionForm();
+            reportSelectionForm.Show();
+            this.Hide();
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.Show();
+            this.Hide();
+        }
+
+        private void guna2Button8_Click(object sender, EventArgs e)
+        {
+            About_Page about = new About_Page();
+            about.Show();
+            this.Hide();
+        }
+
+        private void btnReportIssue_Click(object sender, EventArgs e)
+        {
+            ReportIssue report = new ReportIssue(this);
+            report.Show();
+            this.Hide();
+        }
+
+        private void btnSignOut_Click(object sender, EventArgs e)
+        {
+            Login_Form login = new Login_Form();
+            login.Show();
+            this.Hide();
+        }
     }
 }

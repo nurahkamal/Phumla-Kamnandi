@@ -337,7 +337,7 @@
             this.btnSignOut.Size = new System.Drawing.Size(117, 44);
             this.btnSignOut.TabIndex = 38;
             this.btnSignOut.Text = "Sign Out";
-            
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
             // 
             // btnReportIssue
             // 
@@ -354,7 +354,8 @@
             this.btnReportIssue.Size = new System.Drawing.Size(117, 44);
             this.btnReportIssue.TabIndex = 37;
             this.btnReportIssue.Text = "Report Issue";
-            
+            this.btnReportIssue.Click += new System.EventHandler(this.btnReportIssue_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -650,7 +651,7 @@
             this.btnUser.Size = new System.Drawing.Size(272, 47);
             this.btnUser.TabIndex = 36;
             this.btnUser.Text = "User Information";
-            
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnAbout
             // 
@@ -670,7 +671,7 @@
             this.btnAbout.Size = new System.Drawing.Size(264, 43);
             this.btnAbout.TabIndex = 23;
             this.btnAbout.Text = "About Us";
-            
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // btnReports
             // 
@@ -690,7 +691,7 @@
             this.btnReports.Size = new System.Drawing.Size(260, 43);
             this.btnReports.TabIndex = 27;
             this.btnReports.Text = "  View Reports";
-            
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnUpdate
             // 
@@ -710,7 +711,7 @@
             this.btnUpdate.Size = new System.Drawing.Size(260, 43);
             this.btnUpdate.TabIndex = 25;
             this.btnUpdate.Text = "       Update booking";
-           
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnHome
             // 
@@ -730,7 +731,7 @@
             this.btnHome.Size = new System.Drawing.Size(264, 43);
             this.btnHome.TabIndex = 35;
             this.btnHome.Text = "Home";
-           
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnEnquiries
             // 
@@ -749,8 +750,8 @@
             this.btnEnquiries.Name = "btnEnquiries";
             this.btnEnquiries.Size = new System.Drawing.Size(260, 43);
             this.btnEnquiries.TabIndex = 26;
-           
-         
+            this.btnEnquiries.Text = "    Guest Enquries";
+            this.btnEnquiries.Click += new System.EventHandler(this.btnEnquiries_Click);
             // 
             // btnBooking
             // 
@@ -770,7 +771,7 @@
             this.btnBooking.Size = new System.Drawing.Size(264, 43);
             this.btnBooking.TabIndex = 24;
             this.btnBooking.Text = "      Make a Booking";
-            
+            this.btnBooking.Click += new System.EventHandler(this.btnBooking_Click);
             // 
             // frmCreateGuest
             // 
