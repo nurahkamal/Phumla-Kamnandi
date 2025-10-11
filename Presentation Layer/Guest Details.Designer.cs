@@ -332,7 +332,96 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(352, 869);
             this.panel1.TabIndex = 5;
-            
+
+            // 
+            // btnSignOut
+
+            // 
+            this.btnSignOut.AutoRoundedCorners = true;
+            this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.Location = new System.Drawing.Point(183, 802);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(117, 44);
+            this.btnSignOut.TabIndex = 38;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+            // 
+            // btnReportIssue
+            // 
+            this.btnReportIssue.AutoRoundedCorners = true;
+            this.btnReportIssue.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportIssue.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnReportIssue.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnReportIssue.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnReportIssue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(178)))));
+            this.btnReportIssue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportIssue.ForeColor = System.Drawing.Color.White;
+            this.btnReportIssue.Location = new System.Drawing.Point(46, 802);
+            this.btnReportIssue.Name = "btnReportIssue";
+            this.btnReportIssue.Size = new System.Drawing.Size(117, 44);
+            this.btnReportIssue.TabIndex = 37;
+            this.btnReportIssue.Text = "Report Issue";
+            this.btnReportIssue.Click += new System.EventHandler(this.btnReportIssue_Click);
+            // 
+            // btnUser
+            // 
+            this.btnUser.AutoRoundedCorners = true;
+            this.btnUser.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnUser.BorderThickness = 2;
+            this.btnUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnUser.FillColor = System.Drawing.Color.White;
+            this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnUser.Location = new System.Drawing.Point(40, 630);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(272, 47);
+            this.btnUser.TabIndex = 36;
+            this.btnUser.Text = "User Information";
+            // 
+            // btnHome
+            // 
+            this.btnHome.AutoRoundedCorners = true;
+            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnHome.FillColor = System.Drawing.Color.White;
+            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnHome.Location = new System.Drawing.Point(44, 220);
+            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(264, 43);
+            this.btnHome.TabIndex = 35;
+            this.btnHome.Text = "Home";
+            // 
+            // btnReports
+
+            // 
+            this.btnSignOut.AutoRoundedCorners = true;
+            this.btnSignOut.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSignOut.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSignOut.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
+            this.btnSignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSignOut.ForeColor = System.Drawing.Color.White;
+            this.btnSignOut.Location = new System.Drawing.Point(183, 802);
+            this.btnSignOut.Name = "btnSignOut";
+            this.btnSignOut.Size = new System.Drawing.Size(117, 44);
+            this.btnSignOut.TabIndex = 38;
+            this.btnSignOut.Text = "Sign Out";
+            this.btnSignOut.Click += new System.EventHandler(this.btnSignOut_Click);
+>>>>>>> 585f0c02a4f8bbc358ba077cef7765fb6f824649
             // 
             // btnReportIssue
             // 
@@ -783,8 +872,13 @@
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(272, 47);
             this.btnUser.TabIndex = 36;
+<<<<<<< HEAD
            
 
+=======
+            this.btnUser.Text = "User Information";
+        
+>>>>>>> 585f0c02a4f8bbc358ba077cef7765fb6f824649
             // 
             // btnAbout
             // 
@@ -865,6 +959,10 @@
             this.btnHome.Size = new System.Drawing.Size(264, 43);
             this.btnHome.TabIndex = 35;
             this.btnHome.Text = "Home";
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 585f0c02a4f8bbc358ba077cef7765fb6f824649
             // 
             // btnEnquiries
             // 
@@ -883,10 +981,15 @@
             this.btnEnquiries.Name = "btnEnquiries";
             this.btnEnquiries.Size = new System.Drawing.Size(260, 43);
             this.btnEnquiries.TabIndex = 26;
+<<<<<<< HEAD
 
            
            
 
+=======
+            this.btnEnquiries.Text = "    Guest Enquries";
+           
+>>>>>>> 585f0c02a4f8bbc358ba077cef7765fb6f824649
             // 
             // btnBooking
             // 
