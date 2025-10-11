@@ -769,7 +769,6 @@
             this.pnlNewGuest.Name = "pnlNewGuest";
             this.pnlNewGuest.Size = new System.Drawing.Size(959, 527);
             this.pnlNewGuest.TabIndex = 37;
-            this.pnlNewGuest.Visible = false;
             this.pnlNewGuest.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // btnAddGuest
