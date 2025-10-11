@@ -149,5 +149,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
             Application.Exit();
         }
         #endregion
+
+        private void frmCreateGuest_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
