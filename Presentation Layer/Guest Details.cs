@@ -138,5 +138,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
             login.Show();
             this.Hide();
         }
+
+        private void frmCreateGuest_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
