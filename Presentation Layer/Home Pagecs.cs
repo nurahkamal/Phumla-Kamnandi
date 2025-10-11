@@ -15,6 +15,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         public Home_Pagecs()
         {
             InitializeComponent();
+
         }
         int Count = 0;
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -86,6 +87,20 @@ namespace Phumla_Kamnandi.Presentation_Layer
             Login_Form login = new Login_Form();
             login.Show();
             this.Hide();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Home_Pagecs_Load(object sender, EventArgs e)
+        {
+            // Set Home button as selected
+            btnHome.FillColor = Color.FromArgb(75, 65, 57);
+            btnHome.ForeColor = Color.White;
+            btnHome.BorderColor = Color.FromArgb(177, 153, 127);
+            btnHome.BorderThickness = 1;
         }
     }
 }

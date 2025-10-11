@@ -93,8 +93,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
                             MessageBox.Show($"Welcome {username}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             this.Hide();
-                            About_Page aboutPage = new About_Page();
-                            aboutPage.Show();
+                            Home_Pagecs homePage = new Home_Pagecs();
+                            homePage.Show();
                         }
                         else
                         {

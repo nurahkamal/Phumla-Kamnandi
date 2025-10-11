@@ -200,7 +200,7 @@
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(200, 36);
             this.dtpEndDate.TabIndex = 21;
-            this.dtpEndDate.Value = new System.DateTime(2025, 12, 1, 0, 0, 0, 0);
+            this.dtpEndDate.Value = new System.DateTime(2025, 12, 31, 0, 0, 0, 0);
             // 
             // dtpStartDate
             // 
@@ -239,7 +239,7 @@
             legend1.Name = "Legend1";
             this.chartSalesTrend.Legends.Add(legend1);
             this.chartSalesTrend.Location = new System.Drawing.Point(373, 150);
-            this.chartSalesTrend.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartSalesTrend.Margin = new System.Windows.Forms.Padding(4);
             this.chartSalesTrend.Name = "chartSalesTrend";
             this.chartSalesTrend.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series1.BorderWidth = 3;
@@ -278,7 +278,7 @@
             legend2.Name = "Legend1";
             this.chartSeasonalRevenue.Legends.Add(legend2);
             this.chartSeasonalRevenue.Location = new System.Drawing.Point(1545, 150);
-            this.chartSeasonalRevenue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartSeasonalRevenue.Margin = new System.Windows.Forms.Padding(4);
             this.chartSeasonalRevenue.Name = "chartSeasonalRevenue";
             this.chartSeasonalRevenue.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series2.ChartArea = "ChartArea1";
@@ -312,7 +312,7 @@
             legend3.Name = "Legend1";
             this.chartDailyRevenue.Legends.Add(legend3);
             this.chartDailyRevenue.Location = new System.Drawing.Point(927, 421);
-            this.chartDailyRevenue.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartDailyRevenue.Margin = new System.Windows.Forms.Padding(4);
             this.chartDailyRevenue.Name = "chartDailyRevenue";
             series3.ChartArea = "ChartArea1";
             series3.Color = System.Drawing.Color.Sienna;
@@ -349,7 +349,7 @@
             legend4.Name = "Legend1";
             this.chartPaymentsByDate.Legends.Add(legend4);
             this.chartPaymentsByDate.Location = new System.Drawing.Point(375, 421);
-            this.chartPaymentsByDate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartPaymentsByDate.Margin = new System.Windows.Forms.Padding(4);
             this.chartPaymentsByDate.Name = "chartPaymentsByDate";
             series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.LeftRight;
             series4.BackSecondaryColor = System.Drawing.Color.Chocolate;
@@ -389,7 +389,7 @@
             legend5.Name = "Legend1";
             this.chartGuestDistribution.Legends.Add(legend5);
             this.chartGuestDistribution.Location = new System.Drawing.Point(373, 740);
-            this.chartGuestDistribution.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chartGuestDistribution.Margin = new System.Windows.Forms.Padding(4);
             this.chartGuestDistribution.Name = "chartGuestDistribution";
             this.chartGuestDistribution.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series5.ChartArea = "ChartArea1";
@@ -534,7 +534,7 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MonthlySalesReport";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
