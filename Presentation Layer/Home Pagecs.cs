@@ -43,8 +43,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnReservation_Click(object sender, EventArgs e)
         {
-            ManageReservation manageReservation = new ManageReservation();
-            manageReservation.Show();
+            frmCreateGuest creatGuest = new frmCreateGuest();
+            creatGuest.Show();
             this.Hide();
         }
 
@@ -69,8 +69,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnGuestEnquiries_Click(object sender, EventArgs e)
         {
-            ManageGuest guestenquiries = new ManageGuest();
-            guestenquiries.Show();
+            _5 guest_enquiries = new _5();
+            guest_enquiries.Show();
             this.Hide();
         }
 
@@ -91,7 +91,9 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnHome_Click(object sender, EventArgs e)
         {
-
+            Home_Pagecs home_Page = new Home_Pagecs();
+            home_Page.Show();
+            this.Hide();
         }
 
         private void Home_Pagecs_Load(object sender, EventArgs e)
@@ -107,6 +109,13 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             User userForm = new User();
             userForm.Show();
+            this.Hide();
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            ReportLoginFormcs reportLoginForm = new ReportLoginFormcs();
+            reportLoginForm.Show();
             this.Hide();
         }
     }

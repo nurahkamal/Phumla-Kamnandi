@@ -266,8 +266,9 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            Login_Form login = new Login_Form();
-            login.Show();
+            About_Page about = new About_Page();
+            about.Show();
+            this.Hide();
         }
 
         private void guna2Button10_Click(object sender, EventArgs e)
@@ -293,6 +294,41 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             Login_Form login = new Login_Form();
             login.Show();
+            this.Hide();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Home_Pagecs home_Page = new Home_Pagecs();
+            home_Page.Show();
+            this.Hide();
+        }
+
+        private void guna2Button11_Click(object sender, EventArgs e)
+        {
+            frmCreateGuest creatGuest = new frmCreateGuest();
+            creatGuest.Show();
+            this.Hide();
+        }
+
+        private void guna2Button9_Click(object sender, EventArgs e)
+        {
+            _5 guest_enquiries = new _5();
+            guest_enquiries.Show();
+            this.Hide();
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+            ReportLoginFormcs reportLoginForm = new ReportLoginFormcs();
+            reportLoginForm.Show();
+            this.Hide();
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.Show();
             this.Hide();
         }
     }

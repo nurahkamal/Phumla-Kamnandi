@@ -104,8 +104,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void btnBooking_Click(object sender, EventArgs e)
         {
-            ManageReservation manageReservation = new ManageReservation();
-            manageReservation.Show();
+            frmCreateGuest creatGuest = new frmCreateGuest();
+            creatGuest.Show();
             this.Hide();
         }
 
@@ -139,9 +139,46 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.Hide();
         }
 
+<<<<<<< HEAD
         private void frmCreateGuest_Load(object sender, EventArgs e)
         {
 
+=======
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Home_Pagecs home_Page = new Home_Pagecs();
+            home_Page.Show();
+            this.Hide();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            ManageGuest updatebooking = new ManageGuest();
+            updatebooking.Show();
+            this.Hide();
+        }
+
+        private void btnEnquiries_Click(object sender, EventArgs e)
+        {
+            _5 guest_enquiries = new _5();
+            guest_enquiries.Show();
+            this.Hide();
+        }
+        
+
+        private void btnReports_Click(object sender, EventArgs e)
+        {
+            ReportLoginFormcs reportLoginForm = new ReportLoginFormcs();
+            reportLoginForm.Show();
+            this.Hide();
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.Show();
+            this.Hide();
+>>>>>>> 5c864a5e87563d48ca0fae4cf8d578381b38e3b4
         }
     }
 }

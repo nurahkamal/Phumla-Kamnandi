@@ -398,6 +398,8 @@
             // btnHome
             // 
             this.btnHome.AutoRoundedCorners = true;
+            this.btnHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.btnHome.BorderThickness = 2;
             this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -411,6 +413,7 @@
             this.btnHome.Size = new System.Drawing.Size(264, 43);
             this.btnHome.TabIndex = 34;
             this.btnHome.Text = "Home";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnReportIssue
             // 
@@ -520,6 +523,7 @@
             this.guna2Button6.Size = new System.Drawing.Size(264, 47);
             this.guna2Button6.TabIndex = 18;
             this.guna2Button6.Text = "Guest Enquiries";
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // guna2Button5
             // 

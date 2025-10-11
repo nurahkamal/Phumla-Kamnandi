@@ -61,8 +61,8 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void guna2Button7_Click(object sender, EventArgs e)
         {
-            MonthlySalesReport report = new MonthlySalesReport();
-            report.Show();
+            ReportLoginFormcs reportLoginForm = new ReportLoginFormcs();
+            reportLoginForm.Show();
             this.Hide();
         }
 
@@ -77,6 +77,46 @@ namespace Phumla_Kamnandi.Presentation_Layer
         {
             ReportIssue report = new ReportIssue(this); // pass "this" form
             report.Show();
+            this.Hide();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Home_Pagecs home_Page = new Home_Pagecs();
+            home_Page.Show();
+            this.Hide();
+        }
+
+        private void btnGuestDetails_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReservation_Click(object sender, EventArgs e)
+        {
+            frmCreateGuest creatGuest = new frmCreateGuest();
+            creatGuest.Show();
+            this.Hide();
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            ManageGuest updatebooking = new ManageGuest();
+            updatebooking.Show();
+            this.Hide();
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            _5 guest_enquiries = new _5();
+            guest_enquiries.Show();
+            this.Hide();
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            user.Show();
             this.Hide();
         }
     }

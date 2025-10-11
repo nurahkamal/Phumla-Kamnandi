@@ -553,12 +553,13 @@
             this.btnHome.FillColor = System.Drawing.Color.White;
             this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnHome.Location = new System.Drawing.Point(42, 194);
+            this.btnHome.Location = new System.Drawing.Point(42, 248);
             this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnHome.Name = "btnHome";
             this.btnHome.Size = new System.Drawing.Size(264, 43);
             this.btnHome.TabIndex = 37;
             this.btnHome.Text = "Home";
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnReportIssue
             // 
@@ -589,11 +590,12 @@
             this.btnUser.FillColor = System.Drawing.Color.White;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnUser.Location = new System.Drawing.Point(39, 639);
+            this.btnUser.Location = new System.Drawing.Point(42, 618);
             this.btnUser.Name = "btnUser";
             this.btnUser.Size = new System.Drawing.Size(271, 43);
             this.btnUser.TabIndex = 29;
             this.btnUser.Text = "User Information";
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // btnSignOut
             // 
@@ -624,7 +626,7 @@
             this.guna2Button1.FillColor = System.Drawing.Color.White;
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.guna2Button1.Location = new System.Drawing.Point(40, 728);
+            this.guna2Button1.Location = new System.Drawing.Point(45, 692);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(268, 43);
             this.guna2Button1.TabIndex = 25;
@@ -644,11 +646,12 @@
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
             this.guna2Button4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button4.Location = new System.Drawing.Point(42, 550);
+            this.guna2Button4.Location = new System.Drawing.Point(42, 544);
             this.guna2Button4.Name = "guna2Button4";
             this.guna2Button4.Size = new System.Drawing.Size(264, 43);
             this.guna2Button4.TabIndex = 24;
             this.guna2Button4.Text = "View Reports";
+            this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button9
             // 
@@ -663,11 +666,12 @@
             this.guna2Button9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
             this.guna2Button9.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button9.Location = new System.Drawing.Point(42, 461);
+            this.guna2Button9.Location = new System.Drawing.Point(42, 470);
             this.guna2Button9.Name = "guna2Button9";
             this.guna2Button9.Size = new System.Drawing.Size(264, 43);
             this.guna2Button9.TabIndex = 23;
             this.guna2Button9.Text = "Guest Enquiries";
+            this.guna2Button9.Click += new System.EventHandler(this.guna2Button9_Click);
             // 
             // guna2Button10
             // 
@@ -682,7 +686,7 @@
             this.guna2Button10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
             this.guna2Button10.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button10.Location = new System.Drawing.Point(42, 372);
+            this.guna2Button10.Location = new System.Drawing.Point(42, 396);
             this.guna2Button10.Name = "guna2Button10";
             this.guna2Button10.Size = new System.Drawing.Size(264, 43);
             this.guna2Button10.TabIndex = 22;
@@ -703,11 +707,12 @@
             this.guna2Button11.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
             this.guna2Button11.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button11.Location = new System.Drawing.Point(42, 283);
+            this.guna2Button11.Location = new System.Drawing.Point(42, 322);
             this.guna2Button11.Name = "guna2Button11";
             this.guna2Button11.Size = new System.Drawing.Size(264, 43);
             this.guna2Button11.TabIndex = 21;
             this.guna2Button11.Text = " Make a Reservation";
+            this.guna2Button11.Click += new System.EventHandler(this.guna2Button11_Click);
             // 
             // pictureBox2
             // 
