@@ -23,6 +23,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void User_Load(object sender, EventArgs e)
         {
             LoadActiveUsers();
+            LoadUserStatistics();
         }
 
         private void LoadActiveUsers()
@@ -96,6 +97,55 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             LoadActiveUsers();
+        }
+
+        private void guna2DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LoadUserStatistics()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    // Total users
+                    string totalQuery = "SELECT COUNT(*) FROM Users";
+                    SqlCommand totalCmd = new SqlCommand(totalQuery, conn);
+                    lblTotalCount.Text = totalCmd.ExecuteScalar().ToString();
+
+                    // Active users
+                    string activeQuery = "SELECT COUNT(*) FROM Users WHERE IsActive = 1";
+                    SqlCommand activeCmd = new SqlCommand(activeQuery, conn);
+                    lblActiveCount.Text = activeCmd.ExecuteScalar().ToString();
+
+                    // Users logged in today
+                    string todayQuery = "SELECT COUNT(*) FROM Users WHERE CAST(LastLoginTime AS DATE) = CAST(GETDATE() AS DATE)";
+                    SqlCommand todayCmd = new SqlCommand(todayQuery, conn);
+                    lblTodayCount.Text = todayCmd.ExecuteScalar().ToString();
+
+                    // Most common role
+                    string roleQuery = @"SELECT TOP 1 Role FROM Users 
+                               WHERE IsActive = 1 
+                               GROUP BY Role 
+                               ORDER BY COUNT(*) DESC";
+                    SqlCommand roleCmd = new SqlCommand(roleQuery, conn);
+                    var result = roleCmd.ExecuteScalar();
+                    lblRoleValue.Text = result?.ToString() ?? "N/A";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading statistics: " + ex.Message);
+            }
         }
     }
 }
