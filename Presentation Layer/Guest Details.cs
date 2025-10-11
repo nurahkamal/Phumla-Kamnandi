@@ -56,10 +56,10 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 MessageBox.Show("Enter information in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            
+
             //lastname and name is only letters
 
-            if (!Regex.IsMatch(name, @"^[a-zA-Z\s]+$" ) || !Regex.IsMatch(lastname, @"^[a-zA-Z\s]+$"))
+            if (!Regex.IsMatch(name, @"^[a-zA-Z\s]+$") || !Regex.IsMatch(lastname, @"^[a-zA-Z\s]+$"))
             {
                 MessageBox.Show("Fields can only contain letters and spaces", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -95,7 +95,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
         }
 
 
-     
+
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
@@ -112,6 +112,4 @@ namespace Phumla_Kamnandi.Presentation_Layer
             Application.Exit();
         }
 
-     
-    }
-}
+    }   }
