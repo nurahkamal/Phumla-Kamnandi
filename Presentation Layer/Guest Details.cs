@@ -139,40 +139,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             this.Hide();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            Home_Pagecs home_Page = new Home_Pagecs();
-            home_Page.Show();
-            this.Hide();
-        }
-
-        private void btnUpdate_Click(object sender, EventArgs e)
-        {
-            ManageGuest updatebooking = new ManageGuest();
-            updatebooking.Show();
-            this.Hide();
-        }
-
-        private void btnEnquiries_Click(object sender, EventArgs e)
-        {
-            _5 guest_enquiries = new _5();
-            guest_enquiries.Show();
-            this.Hide();
-        }
-        
-
-        private void btnReports_Click(object sender, EventArgs e)
-        {
-            ReportLoginFormcs reportLoginForm = new ReportLoginFormcs();
-            reportLoginForm.Show();
-            this.Hide();
-        }
-
-        private void btnUser_Click(object sender, EventArgs e)
-        {
-            User user = new User();
-            user.Show();
-            this.Hide();
         }
     }
-}
+
+
