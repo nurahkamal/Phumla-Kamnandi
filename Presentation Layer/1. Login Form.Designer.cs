@@ -65,6 +65,7 @@
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(1052, 602);
             this.loginPanel.TabIndex = 2;
+            this.loginPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.loginPanel_Paint);
             // 
             // btnForgotPassword
             // 

@@ -102,5 +102,12 @@ namespace Phumla_Kamnandi.Presentation_Layer
             btnHome.BorderColor = Color.FromArgb(177, 153, 127);
             btnHome.BorderThickness = 1;
         }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            User userForm = new User();
+            userForm.Show();
+            this.Hide();
+        }
     }
 }
