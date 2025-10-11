@@ -71,13 +71,8 @@
             this.txtLastname = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
 
-            this.btnUser = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAbout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnReports = new Guna.UI2.WinForms.Guna2Button();
-            this.btnUpdate = new Guna.UI2.WinForms.Guna2Button();
-            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
-            this.btnEnquiries = new Guna.UI2.WinForms.Guna2Button();
-            this.btnBooking = new Guna.UI2.WinForms.Guna2Button();
+            
+         
 
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
