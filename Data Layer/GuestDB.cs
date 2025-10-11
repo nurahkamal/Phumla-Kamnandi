@@ -147,54 +147,6 @@ namespace Phumla_Kamnandi.Data_Layer
             }
         }
 
-        //add guest details to guest database
-        public void AddToDatabase(Guest guest)
-        {
-            using (SqlConnection connection = new SqlConnection(stringConn))
-            {
-                connection.Open();
-                string query = "INSERT INTO dbo.Guests (Firstname, LastName, IDNumber, Phone, Email, Address) " +
-                    "VALUES (@Name, @Lastname, @ID, @PhoneNo, @email, @Address)";
-
-                using (SqlCommand cmd = new SqlCommand(query, connection))
-                {
-                    cmd.Parameters.AddWithValue("@Name", guest.Pname);
-                    cmd.Parameters.AddWithValue("@Lastname", guest.Psurname);
-                    cmd.Parameters.AddWithValue("@ID", guest.Pid);
-                    cmd.Parameters.AddWithValue("@PhoneNo", guest.Pphone);
-                    cmd.Parameters.AddWithValue("@email", guest.Pemail);
-                    cmd.Parameters.AddWithValue("@address", guest.Paddress);
-
-
-
-                    cmd.ExecuteNonQuery();
-                }
-            }
-
-        }
-
-        //search if guestId exists already
-        public bool GuestExists (int GuestID)
-        {
-            bool exists = false;
-
-            using (SqlConnection connection = new SqlConnection(stringConn))
-            {
-                string query = "SELECT COUNT(*) FROM dbo.Guests WHERE GuestID = @guestID";
-                SqlCommand cmd = new SqlCommand(query, connection);
-                cmd.Parameters.AddWithValue("@GuestID", GuestID);
-                connection.Open();
-                int Count = (int)cmd.ExecuteScalar();
-
-                if (Count > 0) 
-                    exists = true;
-
-
-            }
-            return exists;
-
-        }
-
         #endregion
 
 
