@@ -8,11 +8,8 @@ using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
@@ -139,50 +136,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 string LName = selectedRow.Cells["LastName"].Value.ToString();
                 string gid = GuestData.CurrentRow.Cells["GuestID"].Value.ToString();
 
-                string name = txtName.Text;
-                string lastname = txtSurname.Text;
-                string ID = txtID.Text;
-                string address = txtAddress.Text;
-                string PhoneNo = txtPhone.Text;
-                string email = txtEmail.Text;
-
-
-                if (string.IsNullOrEmpty(name) || string.IsNullOrEmpty(lastname) || string.IsNullOrEmpty(ID)
-    || string.IsNullOrEmpty(address) || string.IsNullOrEmpty(PhoneNo) || string.IsNullOrEmpty(email))
-                {
-                    MessageBox.Show("Enter information in all fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // lastname and name must only contain letters
-                if (!Regex.IsMatch(name, @"^[a-zA-Z\s]+$") || !Regex.IsMatch(lastname, @"^[a-zA-Z\s]+$"))
-                {
-                    MessageBox.Show("Name and surname can only contain letters and spaces", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // ID must be 13 digits
-                if (!long.TryParse(ID, out _) || ID.Length != 13)
-                {
-                    MessageBox.Show("ID must be 13 digits", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Phone number must be 10 digits
-                if (!long.TryParse(PhoneNo, out _) || PhoneNo.Length != 10)
-                {
-                    MessageBox.Show("Phone number must be 10 digits", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-                // Email must contain @
-                if (!email.Contains("@"))
-                {
-                    MessageBox.Show("Invalid email, email should contain '@'", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
-
-
                 DialogResult msgUpdate = MessageBox.Show("Are you sure you want to edit this guest ?\n\n"
                     + "GuestID: " + gID + "\n"
                    + "Name " + FName + " " + LName + "\n",
@@ -266,69 +219,14 @@ namespace Phumla_Kamnandi.Presentation_Layer
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            About_Page about = new About_Page();
-            about.Show();
-            this.Hide();
+            Login_Form login = new Login_Form();
+            login.Show();
         }
 
         private void guna2Button10_Click(object sender, EventArgs e)
         {
             ManageEdits manageEdits = new ManageEdits();
             manageEdits.Show();
-            this.Hide();
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void btnReportIssue_Click(object sender, EventArgs e)
-        {
-            ReportIssue report = new ReportIssue(this);
-            report.Show();
-            this.Hide();
-        }
-
-        private void btnSignOut_Click(object sender, EventArgs e)
-        {
-            Login_Form login = new Login_Form();
-            login.Show();
-            this.Hide();
-        }
-
-        private void btnHome_Click(object sender, EventArgs e)
-        {
-            Home_Pagecs home_Page = new Home_Pagecs();
-            home_Page.Show();
-            this.Hide();
-        }
-
-        private void guna2Button11_Click(object sender, EventArgs e)
-        {
-            frmCreateGuest creatGuest = new frmCreateGuest();
-            creatGuest.Show();
-            this.Hide();
-        }
-
-        private void guna2Button9_Click(object sender, EventArgs e)
-        {
-            _5 guest_enquiries = new _5();
-            guest_enquiries.Show();
-            this.Hide();
-        }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            ReportLoginFormcs reportLoginForm = new ReportLoginFormcs();
-            reportLoginForm.Show();
-            this.Hide();
-        }
-
-        private void btnUser_Click(object sender, EventArgs e)
-        {
-            User user = new User();
-            user.Show();
             this.Hide();
         }
     }

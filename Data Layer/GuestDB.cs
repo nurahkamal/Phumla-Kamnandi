@@ -31,19 +31,6 @@ namespace Phumla_Kamnandi.Data_Layer
             FillDataSet("SELECT * FROM dbo.Guests", gtableName);
             return dsMain.Tables[gtableName];
         }
-        public bool GuestExists(int guestID)
-        {
-            using (SqlConnection conn = new SqlConnection(stringConn))
-            {
-                string query = "SELECT COUNT(*) FROM Guests WHERE GuestID = @GuestID";
-                SqlCommand cmd = new SqlCommand(query, conn);
-                cmd.Parameters.AddWithValue("@GuestID", guestID);
-
-                conn.Open();
-                int count = (int)cmd.ExecuteScalar();
-                return count > 0; // true if guest exists
-            }
-        }
 
         public bool UpdateGuest(string gID, string guestName, string gLastName, string gPhone, string gEmail, string pID,  string gAddress, int lPoints)
         {
@@ -187,7 +174,7 @@ namespace Phumla_Kamnandi.Data_Layer
         }
 
         //search if guestId exists already
-        public bool GuestRecordExists (int GuestID)
+        public bool GuestExists (int GuestID)
         {
             bool exists = false;
 

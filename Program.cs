@@ -1,5 +1,4 @@
-﻿using Phumla_Kamnandi.Business_Layer;
-using Phumla_Kamnandi.Presentation_Layer;
+﻿using Phumla_Kamnandi.Presentation_Layer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +17,7 @@ namespace Phumla_Kamnandi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmCreateGuest()); 
+            Application.Run(new _3()); 
         }
     }
 }

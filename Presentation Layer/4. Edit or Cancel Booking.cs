@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Phumla_Kamnandi.Presentation_Layer
 {
-    public partial class User : Form
+    public partial class _4 : Form
     {
-        public User()
+        public _4()
         {
             InitializeComponent();
+        }
+
+        private void _4_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

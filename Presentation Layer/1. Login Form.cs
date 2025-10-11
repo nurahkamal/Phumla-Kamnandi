@@ -33,6 +33,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
+            //  Empty username
             if (string.IsNullOrWhiteSpace(username))
             {
                 MessageBox.Show("Please enter your username.");
@@ -40,6 +41,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
+            //  no password
             if (string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Please enter your password.");
@@ -47,6 +49,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
+            // spaces
             if (username.Contains(" "))
             {
                 MessageBox.Show("Username cannot contain spaces.");
@@ -54,6 +57,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
+            // length
             if (password.Length < 4)
             {
                 MessageBox.Show("Password must be at least 4 characters long.");
@@ -61,6 +65,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
+            // attemmpts
             loginAttempts++;
             if (loginAttempts > MaxLoginAttempts)
             {
@@ -69,6 +74,7 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 return;
             }
 
+            // DB
             try
             {
                 using (SqlConnection conn = new SqlConnection(connectionString))
@@ -83,13 +89,12 @@ namespace Phumla_Kamnandi.Presentation_Layer
                         SqlDataReader reader = cmd.ExecuteReader();
                         if (reader.HasRows)
                         {
-                            UpdateLoginTime(username);
-
+                           
                             MessageBox.Show($"Welcome {username}!", "Login Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             this.Hide();
-                            Home_Pagecs homePage = new Home_Pagecs();
-                            homePage.Show();
+                            About_Page aboutPage = new About_Page();
+                            aboutPage.Show();
                         }
                         else
                         {
@@ -101,29 +106,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
             catch (Exception ex)
             {
                 MessageBox.Show("Error connecting to database: " + ex.Message);
-            }
-        }
-
-        private void UpdateLoginTime(string username)
-        {
-            try
-            {
-                using (SqlConnection conn = new SqlConnection(connectionString))
-                {
-                    conn.Open();
-                    string query = "UPDATE Users SET LastLoginTime = @loginTime WHERE Username = @username";
-
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@loginTime", DateTime.Now);
-                        cmd.Parameters.AddWithValue("@username", username);
-                        cmd.ExecuteNonQuery();
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine("Error updating login time: " + ex.Message);
             }
         }
 
@@ -143,11 +125,6 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void Login_Form_Load(object sender, EventArgs e)
         {
             txtUsername.Focus();
-        }
-
-        private void loginPanel_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

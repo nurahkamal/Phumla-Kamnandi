@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManageReservation));
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnHome = new Guna.UI2.WinForms.Guna2Button();
             this.btnReportIssue = new Guna.UI2.WinForms.Guna2Button();
             this.btnUser = new Guna.UI2.WinForms.Guna2Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnSignOut = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
@@ -64,8 +64,8 @@
             this.lblGuestID = new System.Windows.Forms.Label();
             this.btnSearch = new Guna.UI2.WinForms.Guna2Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearchRid = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnRefresh = new Guna.UI2.WinForms.Guna2Button();
             this.btnExit = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel2.SuspendLayout();
@@ -80,9 +80,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(177)))), ((int)(((byte)(153)))), ((int)(((byte)(127)))));
-            this.panel2.Controls.Add(this.btnHome);
             this.panel2.Controls.Add(this.btnReportIssue);
             this.panel2.Controls.Add(this.btnUser);
+            this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.btnSignOut);
             this.panel2.Controls.Add(this.guna2Button8);
             this.panel2.Controls.Add(this.guna2Button7);
@@ -93,29 +93,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(352, 884);
+            this.panel2.Size = new System.Drawing.Size(296, 884);
             this.panel2.TabIndex = 6;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
-            // 
-            // btnHome
-            // 
-            this.btnHome.AutoRoundedCorners = true;
-            this.btnHome.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnHome.BorderThickness = 2;
-            this.btnHome.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnHome.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnHome.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnHome.FillColor = System.Drawing.Color.White;
-            this.btnHome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
-            this.btnHome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnHome.Location = new System.Drawing.Point(49, 225);
-            this.btnHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(264, 43);
-            this.btnHome.TabIndex = 38;
-            this.btnHome.Text = "Home";
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
             // btnReportIssue
             // 
@@ -127,7 +106,7 @@
             this.btnReportIssue.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(151)))), ((int)(((byte)(178)))));
             this.btnReportIssue.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportIssue.ForeColor = System.Drawing.Color.White;
-            this.btnReportIssue.Location = new System.Drawing.Point(49, 771);
+            this.btnReportIssue.Location = new System.Drawing.Point(12, 794);
             this.btnReportIssue.Name = "btnReportIssue";
             this.btnReportIssue.Size = new System.Drawing.Size(117, 39);
             this.btnReportIssue.TabIndex = 31;
@@ -146,12 +125,22 @@
             this.btnUser.FillColor = System.Drawing.Color.White;
             this.btnUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.btnUser.Location = new System.Drawing.Point(49, 558);
+            this.btnUser.Location = new System.Drawing.Point(16, 712);
             this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(271, 43);
+            this.btnUser.Size = new System.Drawing.Size(229, 43);
             this.btnUser.TabIndex = 29;
             this.btnUser.Text = "User Information";
-            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.label7.Location = new System.Drawing.Point(9, 188);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(310, 32);
+            this.label7.TabIndex = 28;
+            this.label7.Text = "Phumlani Kamnandi Hotels";
             // 
             // btnSignOut
             // 
@@ -163,7 +152,7 @@
             this.btnSignOut.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(49)))), ((int)(((byte)(49)))));
             this.btnSignOut.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSignOut.ForeColor = System.Drawing.Color.White;
-            this.btnSignOut.Location = new System.Drawing.Point(196, 771);
+            this.btnSignOut.Location = new System.Drawing.Point(137, 794);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Size = new System.Drawing.Size(117, 39);
             this.btnSignOut.TabIndex = 30;
@@ -182,9 +171,10 @@
             this.guna2Button8.FillColor = System.Drawing.Color.White;
             this.guna2Button8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
-            this.guna2Button8.Location = new System.Drawing.Point(49, 620);
+            this.guna2Button8.Image = global::Phumla_Kamnandi.Properties.Resources.AboutUS;
+            this.guna2Button8.Location = new System.Drawing.Point(19, 242);
             this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.Size = new System.Drawing.Size(264, 43);
+            this.guna2Button8.Size = new System.Drawing.Size(222, 43);
             this.guna2Button8.TabIndex = 25;
             this.guna2Button8.Text = "About Us";
             this.guna2Button8.Click += new System.EventHandler(this.guna2Button8_Click);
@@ -201,13 +191,13 @@
             this.guna2Button7.FillColor = System.Drawing.Color.White;
             this.guna2Button7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button7.Image = global::Phumla_Kamnandi.Properties.Resources.NewReport;
             this.guna2Button7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button7.Location = new System.Drawing.Point(49, 497);
+            this.guna2Button7.Location = new System.Drawing.Point(19, 618);
             this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.Size = new System.Drawing.Size(264, 43);
+            this.guna2Button7.Size = new System.Drawing.Size(222, 43);
             this.guna2Button7.TabIndex = 24;
             this.guna2Button7.Text = "View Reports";
-            this.guna2Button7.Click += new System.EventHandler(this.guna2Button7_Click);
             // 
             // guna2Button6
             // 
@@ -221,13 +211,13 @@
             this.guna2Button6.FillColor = System.Drawing.Color.White;
             this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button6.Image = global::Phumla_Kamnandi.Properties.Resources.search_icon_png_5;
             this.guna2Button6.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button6.Location = new System.Drawing.Point(49, 429);
+            this.guna2Button6.Location = new System.Drawing.Point(19, 524);
             this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.Size = new System.Drawing.Size(264, 43);
+            this.guna2Button6.Size = new System.Drawing.Size(222, 43);
             this.guna2Button6.TabIndex = 23;
             this.guna2Button6.Text = "Guest Enquiries";
-            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
             // 
             // guna2Button5
             // 
@@ -241,13 +231,13 @@
             this.guna2Button5.FillColor = System.Drawing.Color.White;
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.guna2Button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button5.Image = global::Phumla_Kamnandi.Properties.Resources.free_refresh_icon_3104_thumb;
             this.guna2Button5.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button5.Location = new System.Drawing.Point(49, 361);
+            this.guna2Button5.Location = new System.Drawing.Point(19, 430);
             this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.Size = new System.Drawing.Size(264, 43);
+            this.guna2Button5.Size = new System.Drawing.Size(222, 43);
             this.guna2Button5.TabIndex = 22;
             this.guna2Button5.Text = "Update a Booking";
-            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
             // 
             // guna2Button3
             // 
@@ -262,10 +252,11 @@
             this.guna2Button3.FillColor = System.Drawing.Color.White;
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(75)))), ((int)(((byte)(65)))), ((int)(((byte)(57)))));
+            this.guna2Button3.Image = global::Phumla_Kamnandi.Properties.Resources._2460877;
             this.guna2Button3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.guna2Button3.Location = new System.Drawing.Point(49, 293);
+            this.guna2Button3.Location = new System.Drawing.Point(19, 336);
             this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.Size = new System.Drawing.Size(264, 43);
+            this.guna2Button3.Size = new System.Drawing.Size(222, 43);
             this.guna2Button3.TabIndex = 21;
             this.guna2Button3.Text = " Make a Reservation";
             this.guna2Button3.Click += new System.EventHandler(this.guna2Button3_Click);
@@ -273,7 +264,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(87, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(47, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(167, 159);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -285,13 +276,13 @@
             this.ReservationData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ReservationData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ReservationData.GridColor = System.Drawing.SystemColors.ButtonFace;
-            this.ReservationData.Location = new System.Drawing.Point(112, 176);
+            this.ReservationData.Location = new System.Drawing.Point(57, 32);
             this.ReservationData.Name = "ReservationData";
             this.ReservationData.ReadOnly = true;
             this.ReservationData.RowHeadersWidth = 62;
             this.ReservationData.RowTemplate.Height = 28;
             this.ReservationData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.ReservationData.Size = new System.Drawing.Size(1141, 227);
+            this.ReservationData.Size = new System.Drawing.Size(1188, 227);
             this.ReservationData.TabIndex = 28;
             this.ReservationData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReservationData_CellClick);
             this.ReservationData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ReservationData_CellContentClick);
@@ -321,9 +312,9 @@
             this.panel3.Controls.Add(this.lblName);
             this.panel3.Controls.Add(this.txtGid);
             this.panel3.Controls.Add(this.lblGuestID);
-            this.panel3.Location = new System.Drawing.Point(112, 444);
+            this.panel3.Location = new System.Drawing.Point(57, 442);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1141, 391);
+            this.panel3.Size = new System.Drawing.Size(1188, 391);
             this.panel3.TabIndex = 30;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -519,7 +510,7 @@
             this.btnSEdits.ForeColor = System.Drawing.Color.White;
             this.btnSEdits.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSEdits.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSEdits.Location = new System.Drawing.Point(772, 326);
+            this.btnSEdits.Location = new System.Drawing.Point(833, 329);
             this.btnSEdits.Name = "btnSEdits";
             this.btnSEdits.Size = new System.Drawing.Size(162, 39);
             this.btnSEdits.TabIndex = 34;
@@ -538,7 +529,7 @@
             this.btnDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnDelete.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDelete.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnDelete.Location = new System.Drawing.Point(940, 326);
+            this.btnDelete.Location = new System.Drawing.Point(1001, 329);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(171, 37);
             this.btnDelete.TabIndex = 23;
@@ -557,7 +548,7 @@
             this.btnEdit.ForeColor = System.Drawing.Color.White;
             this.btnEdit.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnEdit.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnEdit.Location = new System.Drawing.Point(604, 326);
+            this.btnEdit.Location = new System.Drawing.Point(665, 329);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(162, 39);
             this.btnEdit.TabIndex = 21;
@@ -675,7 +666,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnSearch.Location = new System.Drawing.Point(334, 111);
+            this.btnSearch.Location = new System.Drawing.Point(279, 109);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(99, 40);
             this.btnSearch.TabIndex = 31;
@@ -685,11 +676,11 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
-            this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.txtSearchRid);
             this.panel1.Controls.Add(this.btnSearch);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.ReservationData);
+            this.panel1.Controls.Add(this.btnRefresh);
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.guna2HtmlLabel1);
             this.panel1.Location = new System.Drawing.Point(260, 0);
@@ -697,24 +688,6 @@
             this.panel1.Size = new System.Drawing.Size(1366, 911);
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.AutoRoundedCorners = true;
-            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnRefresh.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
-            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Image = global::Phumla_Kamnandi.Properties.Resources.free_refresh_icon_3104_thumb;
-            this.btnRefresh.ImageSize = new System.Drawing.Size(30, 30);
-            this.btnRefresh.Location = new System.Drawing.Point(1109, 111);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(159, 40);
-            this.btnRefresh.TabIndex = 36;
-            this.btnRefresh.Text = "Refresh ";
             // 
             // txtSearchRid
             // 
@@ -730,13 +703,33 @@
             this.txtSearchRid.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearchRid.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtSearchRid.IconLeft")));
             this.txtSearchRid.IconLeftOffset = new System.Drawing.Point(5, 0);
-            this.txtSearchRid.Location = new System.Drawing.Point(112, 111);
+            this.txtSearchRid.Location = new System.Drawing.Point(57, 109);
             this.txtSearchRid.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearchRid.Name = "txtSearchRid";
             this.txtSearchRid.PlaceholderText = "Enter ID Here";
             this.txtSearchRid.SelectedText = "";
             this.txtSearchRid.Size = new System.Drawing.Size(210, 40);
             this.txtSearchRid.TabIndex = 35;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.AutoRoundedCorners = true;
+            this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnRefresh.FillColor = System.Drawing.Color.Tan;
+            this.btnRefresh.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(93)))), ((int)(((byte)(71)))));
+            this.btnRefresh.Image = ((System.Drawing.Image)(resources.GetObject("btnRefresh.Image")));
+            this.btnRefresh.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnRefresh.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnRefresh.Location = new System.Drawing.Point(1086, 109);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(159, 40);
+            this.btnRefresh.TabIndex = 22;
+            this.btnRefresh.Text = "Refresh ";
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // btnExit
             // 
@@ -748,7 +741,7 @@
             this.btnExit.ImageOffset = new System.Drawing.Point(0, 0);
             this.btnExit.ImageRotate = 0F;
             this.btnExit.ImageSize = new System.Drawing.Size(40, 40);
-            this.btnExit.Location = new System.Drawing.Point(1192, -2);
+            this.btnExit.Location = new System.Drawing.Point(1221, 0);
             this.btnExit.Name = "btnExit";
             this.btnExit.PressedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnExit.PressedState.ImageSize = new System.Drawing.Size(40, 40);
@@ -783,6 +776,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.ManageReservation_Load);
             this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReservationData)).EndInit();
             this.panel3.ResumeLayout(false);
@@ -798,6 +792,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label7;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
@@ -805,6 +800,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2ImageButton btnExit;
+        private Guna.UI2.WinForms.Guna2Button btnRefresh;
         private System.Windows.Forms.DataGridView ReservationData;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label4;
@@ -834,7 +830,5 @@
         private Guna.UI2.WinForms.Guna2Button btnSignOut;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TextBox txtPStatus;
-        private Guna.UI2.WinForms.Guna2Button btnRefresh;
-        private Guna.UI2.WinForms.Guna2Button btnHome;
     }
 }

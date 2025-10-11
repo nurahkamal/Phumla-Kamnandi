@@ -126,6 +126,12 @@
     <Compile Include="Presentation Layer\3. Make a Booking.Designer.cs">
       <DependentUpon>3. Make a Booking.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentation Layer\4. Edit or Cancel Booking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentation Layer\4. Edit or Cancel Booking.Designer.cs">
+      <DependentUpon>4. Edit or Cancel Booking.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentation Layer\5. Guest Inquiry.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,18 +193,6 @@
     <Compile Include="Presentation Layer\ReportIssue.Designer.cs">
       <DependentUpon>ReportIssue.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentation Layer\ReportLoginFormcs.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\ReportLoginFormcs.Designer.cs">
-      <DependentUpon>ReportLoginFormcs.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentation Layer\ReportSelectionForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentation Layer\ReportSelectionForm.Designer.cs">
-      <DependentUpon>ReportSelectionForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Presentation Layer\User.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -231,6 +225,9 @@
       <DependentUpon>3. Make a Booking.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\4. Edit or Cancel Booking.resx">
+      <DependentUpon>4. Edit or Cancel Booking.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\5. Guest Inquiry.resx">
       <DependentUpon>5. Guest Inquiry.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,12 +257,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\ReportIssue.resx">
       <DependentUpon>ReportIssue.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\ReportLoginFormcs.resx">
-      <DependentUpon>ReportLoginFormcs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentation Layer\ReportSelectionForm.resx">
-      <DependentUpon>ReportSelectionForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\User.resx">
       <DependentUpon>User.cs</DependentUpon>

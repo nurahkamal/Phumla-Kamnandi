@@ -47,17 +47,17 @@ namespace Phumla_Kamnandi.Presentation_Layer
             btnExit.Click += btnExit_Click;
             btnToday.Click += btnToday_Click;
             btnLastSevenDays.Click += btnLastSevenDays_Click;
-            btnDecember.Click += btnThisMonth_Click;
+            btnThisMonth.Click += btnThisMonth_Click;
             btnDecember.Click += btnDecember_Click;
             btnPrint.Click += btnPrint_Click;
-            btnPrintSummary.Click += btnPrintSummary_Click; 
+            btnPrintSummary.Click += btnPrintSummary_Click; // Add this line for the new button
         }
         #endregion
 
         #region Date config
         private DateTime GetDecemberDate()
         {
-            return new DateTime(2025, 12, 12); 
+            return new DateTime(2025, 12, 12); // System thinks today is Dec 12, 2025
         }
 
         private void SetDefaultDates()
