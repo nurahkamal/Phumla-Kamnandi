@@ -34,16 +34,25 @@ namespace Phumla_Kamnandi.Presentation_Layer
                 {
                     conn.Open();
 
-                    string query = @"SELECT Username, Role, FullName, 
-                                    ISNULL(CONVERT(varchar, LastLoginTime, 120), 'Never logged in') AS LoginTime
-                                    FROM Users 
-                                    WHERE IsActive = 1";
+                    string query = @"SELECT 
+                            UserID,
+                            Username, 
+                            Role, 
+                            FullName, 
+                            ISNULL(CONVERT(varchar, LastLoginTime, 120), 'Never logged in') AS LoginTime,
+                            CASE 
+                                WHEN IsActive = 1 THEN 'Active'
+                                ELSE 'Inactive'
+                            END AS Status
+                            FROM Users 
+                            ORDER BY IsActive DESC, LastLoginTime DESC";
 
                     SqlDataAdapter da = new SqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     da.Fill(dt);
 
                     guna2DataGridView1.DataSource = dt;
+                    FormatDataGridView(); // CALL THIS AFTER DATA BIND
                 }
             }
             catch (Exception ex)
@@ -107,6 +116,30 @@ namespace Phumla_Kamnandi.Presentation_Layer
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+        private void FormatDataGridView()
+        {
+            // Auto-generate numbers
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                row.Cells["colNumber"].Value = row.Index + 1;
+            }
+
+            // Color coding for status
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                if (row.Cells["colStatus"].Value?.ToString() == "Active")
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(230, 255, 230); // Light Green
+                }
+                else
+                {
+                    row.DefaultCellStyle.BackColor = Color.FromArgb(255, 230, 230); // Light Red
+                }
+            }
+
+            // Center align number column
+            guna2DataGridView1.Columns["colNumber"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void LoadUserStatistics()

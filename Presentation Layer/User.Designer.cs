@@ -58,6 +58,17 @@
             this.cardCommonRole = new Guna.UI2.WinForms.Guna2Panel();
             this.lblRoleValue = new System.Windows.Forms.Label();
             this.lblCommonRole = new System.Windows.Forms.Label();
+            this.controlPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblFilter = new System.Windows.Forms.Label();
+            this.btnAddUser = new Guna.UI2.WinForms.Guna2Button();
+            this.colNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colUsername = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colRole = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colFullName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLoginTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
@@ -66,6 +77,7 @@
             this.cardActiveUsers.SuspendLayout();
             this.cardTodayLogin.SuspendLayout();
             this.cardCommonRole.SuspendLayout();
+            this.controlPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -83,7 +95,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(352, 877);
+            this.panel2.Size = new System.Drawing.Size(352, 1061);
             this.panel2.TabIndex = 2;
             // 
             // guna2Button1
@@ -264,6 +276,13 @@
             this.guna2DataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.guna2DataGridView1.ColumnHeadersHeight = 18;
             this.guna2DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.guna2DataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colNumber,
+            this.colUsername,
+            this.colRole,
+            this.colFullName,
+            this.colLoginTime,
+            this.colStatus});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -272,13 +291,13 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.guna2DataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.guna2DataGridView1.Location = new System.Drawing.Point(385, 566);
+            this.guna2DataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.guna2DataGridView1.Location = new System.Drawing.Point(18, 85);
             this.guna2DataGridView1.Name = "guna2DataGridView1";
             this.guna2DataGridView1.RowHeadersVisible = false;
             this.guna2DataGridView1.RowHeadersWidth = 51;
             this.guna2DataGridView1.RowTemplate.Height = 24;
-            this.guna2DataGridView1.Size = new System.Drawing.Size(535, 150);
+            this.guna2DataGridView1.Size = new System.Drawing.Size(1002, 163);
             this.guna2DataGridView1.TabIndex = 9;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -286,7 +305,7 @@
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.guna2DataGridView1.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.guna2DataGridView1.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.guna2DataGridView1.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -305,17 +324,18 @@
             // 
             // btnRefresh
             // 
+            this.btnRefresh.AutoRoundedCorners = true;
             this.btnRefresh.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnRefresh.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnRefresh.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnRefresh.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnRefresh.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnRefresh.ForeColor = System.Drawing.Color.White;
-            this.btnRefresh.Location = new System.Drawing.Point(1131, 617);
+            this.btnRefresh.Location = new System.Drawing.Point(639, 19);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(180, 45);
+            this.btnRefresh.Size = new System.Drawing.Size(180, 36);
             this.btnRefresh.TabIndex = 10;
-            this.btnRefresh.Text = "guna2Button3";
+            this.btnRefresh.Text = "Refresh";
             // 
             // statsPanel
             // 
@@ -324,9 +344,9 @@
             this.statsPanel.Controls.Add(this.cardTodayLogin);
             this.statsPanel.Controls.Add(this.cardActiveUsers);
             this.statsPanel.Controls.Add(this.cardTotalUsers);
-            this.statsPanel.Location = new System.Drawing.Point(385, 141);
+            this.statsPanel.Location = new System.Drawing.Point(503, 140);
             this.statsPanel.Name = "statsPanel";
-            this.statsPanel.Size = new System.Drawing.Size(1148, 369);
+            this.statsPanel.Size = new System.Drawing.Size(1042, 202);
             this.statsPanel.TabIndex = 13;
             // 
             // cardTotalUsers
@@ -441,14 +461,131 @@
             this.lblCommonRole.TabIndex = 0;
             this.lblCommonRole.Text = "COMMON ROLE";
             // 
+            // controlPanel
+            // 
+            this.controlPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(210)))), ((int)(((byte)(193)))));
+            this.controlPanel.Controls.Add(this.btnAddUser);
+            this.controlPanel.Controls.Add(this.lblFilter);
+            this.controlPanel.Controls.Add(this.guna2DataGridView1);
+            this.controlPanel.Controls.Add(this.cmbFilter);
+            this.controlPanel.Controls.Add(this.txtSearch);
+            this.controlPanel.Controls.Add(this.btnRefresh);
+            this.controlPanel.Location = new System.Drawing.Point(503, 401);
+            this.controlPanel.Name = "controlPanel";
+            this.controlPanel.Size = new System.Drawing.Size(1042, 275);
+            this.controlPanel.TabIndex = 14;
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.AutoRoundedCorners = true;
+            this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtSearch.DefaultText = "";
+            this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.IconLeft = global::Phumla_Kamnandi.Properties.Resources.search_icon_png_5;
+            this.txtSearch.Location = new System.Drawing.Point(18, 16);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.PlaceholderText = "Search Here";
+            this.txtSearch.SelectedText = "";
+            this.txtSearch.Size = new System.Drawing.Size(229, 39);
+            this.txtSearch.TabIndex = 0;
+            // 
+            // cmbFilter
+            // 
+            this.cmbFilter.AutoRoundedCorners = true;
+            this.cmbFilter.BackColor = System.Drawing.Color.Transparent;
+            this.cmbFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbFilter.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbFilter.ItemHeight = 30;
+            this.cmbFilter.Items.AddRange(new object[] {
+            "All Users",
+            "Active Only",
+            "Inactive Only",
+            "Managers",
+            "Receptionists"});
+            this.cmbFilter.Location = new System.Drawing.Point(431, 19);
+            this.cmbFilter.Name = "cmbFilter";
+            this.cmbFilter.Size = new System.Drawing.Size(160, 36);
+            this.cmbFilter.TabIndex = 1;
+            // 
+            // lblFilter
+            // 
+            this.lblFilter.AutoSize = true;
+            this.lblFilter.Location = new System.Drawing.Point(318, 31);
+            this.lblFilter.Name = "lblFilter";
+            this.lblFilter.Size = new System.Drawing.Size(53, 16);
+            this.lblFilter.TabIndex = 11;
+            this.lblFilter.Text = "FILTER";
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.AutoRoundedCorners = true;
+            this.btnAddUser.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddUser.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnAddUser.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnAddUser.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnAddUser.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAddUser.ForeColor = System.Drawing.Color.White;
+            this.btnAddUser.Location = new System.Drawing.Point(840, 19);
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.Size = new System.Drawing.Size(180, 36);
+            this.btnAddUser.TabIndex = 12;
+            this.btnAddUser.Text = "Add User";
+            // 
+            // colNumber
+            // 
+            this.colNumber.HeaderText = "#";
+            this.colNumber.MinimumWidth = 6;
+            this.colNumber.Name = "colNumber";
+            this.colNumber.ReadOnly = true;
+            // 
+            // colUsername
+            // 
+            this.colUsername.HeaderText = "USERNAME";
+            this.colUsername.MinimumWidth = 6;
+            this.colUsername.Name = "colUsername";
+            // 
+            // colRole
+            // 
+            this.colRole.HeaderText = "ROLE";
+            this.colRole.MinimumWidth = 6;
+            this.colRole.Name = "colRole";
+            // 
+            // colFullName
+            // 
+            this.colFullName.HeaderText = "FULL NAME";
+            this.colFullName.MinimumWidth = 6;
+            this.colFullName.Name = "colFullName";
+            // 
+            // colLoginTime
+            // 
+            this.colLoginTime.HeaderText = "LOGIN TIME";
+            this.colLoginTime.MinimumWidth = 6;
+            this.colLoginTime.Name = "colLoginTime";
+            // 
+            // colStatus
+            // 
+            this.colStatus.HeaderText = "STATUS";
+            this.colStatus.MinimumWidth = 6;
+            this.colStatus.Name = "colStatus";
+            // 
             // User
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(218)))), ((int)(((byte)(205)))));
-            this.ClientSize = new System.Drawing.Size(1570, 877);
+            this.ClientSize = new System.Drawing.Size(1717, 1061);
+            this.Controls.Add(this.controlPanel);
             this.Controls.Add(this.statsPanel);
-            this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.guna2DataGridView1);
             this.Controls.Add(this.btnHeading);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.panel2);
@@ -470,6 +607,8 @@
             this.cardTodayLogin.PerformLayout();
             this.cardCommonRole.ResumeLayout(false);
             this.cardCommonRole.PerformLayout();
+            this.controlPanel.ResumeLayout(false);
+            this.controlPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -503,5 +642,16 @@
         private Guna.UI2.WinForms.Guna2Panel cardCommonRole;
         private System.Windows.Forms.Label lblRoleValue;
         private System.Windows.Forms.Label lblCommonRole;
+        private Guna.UI2.WinForms.Guna2Panel controlPanel;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2Button btnAddUser;
+        private System.Windows.Forms.Label lblFilter;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbFilter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNumber;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colUsername;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colRole;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colFullName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLoginTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colStatus;
     }
 }
