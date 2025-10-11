@@ -264,6 +264,9 @@
     <EmbeddedResource Include="Presentation Layer\ReportLoginFormcs.resx">
       <DependentUpon>ReportLoginFormcs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentation Layer\ReportSelectionForm.resx">
+      <DependentUpon>ReportSelectionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentation Layer\User.resx">
       <DependentUpon>User.cs</DependentUpon>
     </EmbeddedResource>

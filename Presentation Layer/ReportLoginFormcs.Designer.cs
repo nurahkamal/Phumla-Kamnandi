@@ -60,7 +60,7 @@
             this.loginPanel.Controls.Add(this.txtPassword);
             this.loginPanel.Controls.Add(this.txtUsername);
             this.loginPanel.Controls.Add(this.lblPlease);
-            this.loginPanel.Location = new System.Drawing.Point(404, 251);
+            this.loginPanel.Location = new System.Drawing.Point(476, 274);
             this.loginPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.loginPanel.Name = "loginPanel";
             this.loginPanel.Size = new System.Drawing.Size(1052, 602);
